@@ -1,4 +1,4 @@
-package com.healingPill.MemberController;
+package com.healingpill.controller;
 
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
