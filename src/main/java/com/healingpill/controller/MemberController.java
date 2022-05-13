@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value = "/memberJoin")
 public class MemberController {
     // 로그 기록을 남기기 위한 Logger 클래스
     private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
     // 회원가입 페이지 이동
     @RequestMapping(value = "memberJoin", method = RequestMethod.GET)
-    public void memberJoinGET() {
+    public void memberJoinPOST() {
         logger.debug("회원가입 페이지 이동");
+
     }
     
     // 로그인 페이지 이동
