@@ -2,7 +2,7 @@ package com.healingpill.model;
 
 public class MemberVO {
 
-    private int mem_no;
+    private int mem_num;
     private String mem_id;
     private String mem_password;
     private String mem_name;
@@ -16,12 +16,12 @@ public class MemberVO {
     private int mem_register_datetime;
     private int mem_is_admin;
 
-    public int getMem_no() {
-        return mem_no;
+    public int getMem_num() {
+        return mem_num;
     }
 
-    public void setMem_no(int mem_no) {
-        this.mem_no = mem_no;
+    public void setMem_num(int mem_num) {
+        this.mem_num = mem_num;
     }
 
     public String getMem_id() {
@@ -123,7 +123,7 @@ public class MemberVO {
     @Override
     public String toString() {
         return "MemberVO{" +
-                "mem_no=" + mem_no +
+                "mem_num=" + mem_num +
                 ", mem_id='" + mem_id + '\'' +
                 ", mem_password='" + mem_password + '\'' +
                 ", mem_name='" + mem_name + '\'' +
