@@ -12,9 +12,9 @@ public class MemberVO {
     private int mem_birth_day;
     private String mem_address;
     private String mem_email;
-    private int mem_sex;
+    private String mem_sex;
     private int mem_register_datetime;
-    private int mem_is_admin;
+    private String mem_is_admin;
 
     public int getMem_num() {
         return mem_num;
@@ -96,11 +96,11 @@ public class MemberVO {
         this.mem_email = mem_email;
     }
 
-    public int getMem_sex() {
+    public String getMem_sex() {
         return mem_sex;
     }
 
-    public void setMem_sex(int mem_sex) {
+    public void setMem_sex(String mem_sex) {
         this.mem_sex = mem_sex;
     }
 
@@ -112,11 +112,11 @@ public class MemberVO {
         this.mem_register_datetime = mem_register_datetime;
     }
 
-    public int getMem_is_admin() {
+    public String getMem_is_admin() {
         return mem_is_admin;
     }
 
-    public void setMem_is_admin(int mem_is_admin) {
+    public void setMem_is_admin(String mem_is_admin) {
         this.mem_is_admin = mem_is_admin;
     }
 

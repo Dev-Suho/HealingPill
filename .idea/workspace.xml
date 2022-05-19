@@ -9,21 +9,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+      <change afterPath="$PROJECT_DIR$/lib/ojdbc8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/servlets/MemberAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/servlets/MemberListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/model/MemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/model/MemberVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/memberJoin.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lsh17831048 &lt;ars8129@naver.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -72,7 +86,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/HealingPill/web",
+    "last_opened_file_path": "D:/HealingPill/lib/ojdbc8.jar",
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -201,8 +215,17 @@
       <workItem from="1652405420665" duration="613000" />
       <workItem from="1652407992456" duration="143000" />
       <workItem from="1652408157683" duration="583000" />
-      <workItem from="1652888422128" duration="2712000" />
+      <workItem from="1652888422128" duration="2868000" />
+      <workItem from="1652969042751" duration="6702000" />
     </task>
+    <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+      <created>1652891332188</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652891332188</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,5 +241,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경" />
   </component>
 </project>
