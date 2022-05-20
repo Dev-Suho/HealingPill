@@ -12,14 +12,14 @@ public class MemberController {
     private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
     // 회원가입 페이지 이동
-    @RequestMapping(value = "memberJoin", method = RequestMethod.GET)
+    @RequestMapping(value = "/memberJoin", method = RequestMethod.GET)
     public void memberJoinPOST() {
         logger.debug("회원가입 페이지 이동");
 
     }
     
     // 로그인 페이지 이동
-    @RequestMapping(value = "memberLogin", method = RequestMethod.GET)
+    @RequestMapping(value = "/memberLogin", method = RequestMethod.GET)
     public void memberLoginGET() {
         logger.debug("로그인 페이지 이동");
     }
