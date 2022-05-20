@@ -21,6 +21,7 @@ public class MemberController {
     // 로그인 페이지 이동
     @RequestMapping(value = "memberLogin", method = RequestMethod.GET)
     public void memberLoginGET() {
+
         logger.debug("로그인 페이지 이동");
     }
 }
