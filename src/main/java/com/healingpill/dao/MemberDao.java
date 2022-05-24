@@ -1,4 +1,4 @@
-package com.healingpill.member;
+package com.healingpill.dao;
 
 import com.healingpill.config.DB;
 

@@ -100,7 +100,7 @@
                             </ul>
                         </div> <!-- navbar collapse -->
                         <div class="button add-list-button">
-                            <a href="/memberLogin" class="btn">로그인하기</a>
+                            <a href="/Login" class="btn">로그인하기</a>
                         </div>
                     </nav>
                     <!-- End Navbar -->

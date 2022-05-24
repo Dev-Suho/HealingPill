@@ -20,6 +20,7 @@
 </div>
 <!-- End Breadcrumbs -->
 
+
 <!-- ====== Forms Section Start -->
 <section class="bg-[#F4F7FF] py-14 lg:py-20">
     <div class="container">
@@ -37,11 +38,13 @@
                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
                         </a>
                     </div>
-                    <form>
+                    <form action = "memberLogin" method="post">
+                        <input type="hidden" value="login">
                         <div class="mb-6">
                             <input
                                     type="text"
                                     placeholder="아이디"
+                                    id = "mem_id"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
@@ -49,6 +52,7 @@
                             <input
                                     type="password"
                                     placeholder="비밀번호"
+                                    id = "mem_password"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
@@ -56,6 +60,7 @@
                             <input
                                     type="submit"
                                     value="로그인"
+                                    id = "loginButton"
                                     class="bordder-secondary w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
                             />
                         </div>

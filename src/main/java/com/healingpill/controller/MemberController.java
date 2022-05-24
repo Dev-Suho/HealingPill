@@ -13,17 +13,11 @@ public class MemberController {
 
     // 회원가입 페이지 이동
     @RequestMapping(value = "/memberJoin", method = RequestMethod.GET)
-    public void memberJoinPOST() {
+    public String memberJoinPOST() {
         logger.debug("회원가입 페이지 이동");
-
+        return "memberJoin";
     }
-    
-    // 로그인 페이지 이동
-    @RequestMapping(value = "/memberLogin", method = RequestMethod.GET)
-    public void memberLoginPOST() {
 
-        logger.debug("로그인 페이지 이동");
-    }
 
     // 로그인 성공 페이지 이동
     @RequestMapping(value = "/memberJoinSuccess", method = RequestMethod.POST)

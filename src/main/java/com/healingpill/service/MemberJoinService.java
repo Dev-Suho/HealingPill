@@ -1,6 +1,6 @@
 package com.healingpill.service;
 
-import com.healingpill.member.MemberDao;
+import com.healingpill.dao.MemberDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
