@@ -1,6 +1,6 @@
-package com.healingpill.controller;
+package com.healingpill.service;
 
-import com.healingpill.domain.member.MemberDao;
+import com.healingpill.member.MemberDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/ex12Join")
-public class ex12Join extends HttpServlet {
+@WebServlet("/MemberJoinService")
+public class MemberJoinService extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
@@ -37,8 +37,8 @@ public class ex12Join extends HttpServlet {
             result = dao.Join(mem_id, mem_password, mem_username, mem_phone, mem_birth_year, mem_birth_month, mem_birth_day, mem_address, mem_email, mem_sex, mem_is_admin);
             if(result > 0){
                 System.out.println("회원 정보 - 아이디 : " + mem_id + ",\t 비밀번호 : " + mem_password + ",\t 이름 : " + mem_username);
-                //response.sendRedirect("ex12Login.jsp"); //Now They made "ex12JoinSuccess.jsp". We need to pass through that page.
-                RequestDispatcher dis = request.getRequestDispatcher("/ex12JoinSuccess");
+                //response.sendRedirect("ex12Login.jsp"); //Now They made "memberJoinSuccess.jsp". We need to pass through that page.
+                RequestDispatcher dis = request.getRequestDispatcher("/memberJoinSuccess");
                 request.setAttribute("mem_id", mem_id);
                 request.setAttribute("mem_password", mem_password);
                 request.setAttribute("mem_username", mem_username);
@@ -54,7 +54,7 @@ public class ex12Join extends HttpServlet {
                 dis.forward(request, response);
             } else {
                 System.out.println(result + " 회원가입 오류 ");
-                response.sendRedirect("/ex12LoginFail");
+                response.sendRedirect("/memberLoginFail");
             }
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();

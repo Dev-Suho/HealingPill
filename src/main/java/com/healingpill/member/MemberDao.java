@@ -1,4 +1,4 @@
-package com.healingpill.domain.member;
+package com.healingpill.member;
 
 import com.healingpill.config.DB;
 

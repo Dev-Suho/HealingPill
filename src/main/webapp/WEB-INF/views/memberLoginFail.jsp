@@ -34,7 +34,7 @@
         <h1>로그인 실패</h1>
     </legend>
     <h3>
-        <a href="ex12Login.jsp">아이디와 패스워드를 확인해주세요</a>
+        <a href="memberLoginFail.jsp">아이디와 패스워드를 확인해주세요</a>
     </h3>
 
 </fieldset>

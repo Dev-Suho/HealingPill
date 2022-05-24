@@ -37,7 +37,7 @@
                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
                         </a>
                     </div>
-                    <form method="post" action="/ex12Join">
+                    <form method="post" action="/MemberJoinService">
                         <div class="mb-6">
                             <input
                                     name = "mem_id"
@@ -116,7 +116,7 @@
                                     type="radio"
                                     value="1" checked
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
-                            /> &nbsp;
+                            />
                             여성 <input
                                 name = "mem_sex"
                                 type="radio"

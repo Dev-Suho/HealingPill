@@ -47,7 +47,7 @@
 
 
 <fieldset>
-    <legend>회원가입성공</legend>
+    <legend>회원 가입 성공</legend>
     <%= mem_id %>(<%=mem_username %>)환영합니다! <br />
 </fieldset>
 
