@@ -28,6 +28,15 @@ public class MemberController {
     // 매거진 페이지 이동
     @RequestMapping(value = "magazine", method = RequestMethod.GET)
     public void magazine() {
-        logger.debug("게시판 페이지 이동");
+        logger.debug("매거진 페이지 이동");
+    }
+    @RequestMapping(value = "main", method = RequestMethod.GET)
+    public void main() {
+        logger.debug("메인 페이지 이동");
+    }
+    @RequestMapping(value = "magazineWrite", method = RequestMethod.GET)
+    public void magazineWrite()
+    {
+        logger.debug("매거진 글쓰기 페이지 이동");
     }
 }

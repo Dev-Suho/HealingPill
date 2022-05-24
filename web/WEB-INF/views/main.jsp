@@ -6,7 +6,7 @@
     <div class = "login_button"><a href = "/memberLogin">로그인</a></div>
     <span><a href = "/memberJoin">회원가입</a></span>
     <br>
-    <span><a href= "/magazine"> 매거진 </a> </span>
+    <span><a href= "/magazine"> 매거진11 </a> </span>
 </div>
 </body>
 </html>
