@@ -12,9 +12,37 @@ public class MenuController {
     private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
     // about-us 페이지 이동
-    @RequestMapping(value = "/about-us", method = RequestMethod.GET)
+    @RequestMapping(value = "/about-us", method = RequestMethod.POST)
     public void aboutusPOST() {
         logger.debug("about-us 페이지 이동");
+
+    }
+
+    // magazine 페이지 이동
+    @RequestMapping(value = "/magazine", method = RequestMethod.GET)
+    public void magazineGET() {
+        logger.debug("magazine 페이지 이동");
+
+    }
+
+    // magazineDetail 페이지 이동
+    @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
+    public void magazineDetailGET() {
+        logger.debug("magazineDetail 페이지 이동");
+
+    }
+
+    // FAQ 페이지 이동
+    @RequestMapping(value = "/faq", method = RequestMethod.GET)
+    public void faqGET() {
+        logger.debug("FAQ 페이지 이동");
+
+    }
+
+    // 이벤트 페이지 이동
+    @RequestMapping(value = "/event", method = RequestMethod.GET)
+    public void eventGET() {
+        logger.debug("FAQ 페이지 이동");
 
     }
 

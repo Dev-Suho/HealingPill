@@ -28,6 +28,7 @@
     <script>
         new WOW().init();
     </script>
+
 </head>
 
 <body>
@@ -70,30 +71,19 @@
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                        data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
                                        aria-expanded="false" aria-label="Toggle navigation">전 제품 보기</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-1">
-                                        <li class="nav-item"><a href="about-us.jsp">About Us</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">Our Pricing</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">Faq</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">Mail Success</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">404 Error</a></li>
-                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                        data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
                                        aria-expanded="false" aria-label="Toggle navigation">나만의 영양제 찾기</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-2">
-                                        <li class="nav-item"><a href="javascript:void(0)">Services</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">Service Details</a></li>
-                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                        data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent"
                                        aria-expanded="false" aria-label="Toggle navigation">커뮤니티</a>
                                     <ul class="sub-menu collapse" id="submenu-1-3">
-                                        <li class="nav-item"><a href="javascript:void(0)">FAQ</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">매거진</a></li>
+                                        <li class="nav-item"><a href="/faq">FAQ</a></li>
+                                        <li class="nav-item"><a href="/magazine">매거진</a></li>
                                         <li class="nav-item"><a href="javascript:void(0)">이벤트 정보 안내</a></li>
                                     </ul>
                                 </li>

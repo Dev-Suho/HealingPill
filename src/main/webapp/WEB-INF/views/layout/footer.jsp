@@ -17,15 +17,13 @@
                         </div>
                         <p>Making the world a better place through constructing elegant hierarchies.</p>
                         <ul class="social">
-                            <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
-                            <li><a href="javascript:void(0)"><i class="lni lni-pinterest"></i></a></li>
+                            <li><a href="https://ko-kr.facebook.com/"><i class="lni lni-facebook-filled"></i></a></li>
+                            <li><a href="https://twitter.com/"><i class="lni lni-twitter-original"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="lni lni-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="lni lni-youtube"></i></a></li>
+                            <li><a href="https://www.pinterest.co.kr/"><i class="lni lni-pinterest"></i></a></li>
                         </ul>
-                        <p class="copyright-text">Designed and Developed by <a href="https://graygrids.com/"
-                                                                               rel="nofollow" target="_blank">GrayGrids</a>
+                        <p class="copyright-text">Copyright &copy; 2022 <a href="/" rel="nofollow" target="_blank">HealingPill </a> All rights reserved.
                         </p>
                     </div>
                     <!-- End Single Widget -->
@@ -35,13 +33,19 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Solutions</h3>
+                                <h3>제품 안내</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Marketing</a></li>
-                                    <li><a href="javascript:void(0)">Analytics</a></li>
-                                    <li><a href="javascript:void(0)">Commerce</a></li>
-                                    <li><a href="javascript:void(0)">Insights</a></li>
-                                    <li><a href="javascript:void(0)">Promotion</a></li>
+                                    <li><a href="javascript:void(0)">전 제품보기</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Single Widget -->
+                            <div class="single-footer f-link">
+                                <h3>1:1 맞춤 영양제</h3>
+                                <ul>
+                                    <li><a href="javascript:void(0)">나만의 영양제 찾기</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -49,45 +53,16 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Support</h3>
+                                <h3>커뮤니티</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Pricing</a></li>
-                                    <li><a href="javascript:void(0)">Documentation</a></li>
-                                    <li><a href="javascript:void(0)">Guides</a></li>
-                                    <li><a href="javascript:void(0)">API Status</a></li>
-                                    <li><a href="javascript:void(0)">Live Support</a></li>
+                                    <li><a href="/faq">FAQ</a></li>
+                                    <li><a href="/magazine">매거진</a></li>
+                                    <li><a href="/event">이벤트 정보 안내</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <!-- Single Widget -->
-                            <div class="single-footer f-link">
-                                <h3>Company</h3>
-                                <ul>
-                                    <li><a href="javascript:void(0)">About Us</a></li>
-                                    <li><a href="javascript:void(0)">Our Blog</a></li>
-                                    <li><a href="javascript:void(0)">Jobs</a></li>
-                                    <li><a href="javascript:void(0)">Press</a></li>
-                                    <li><a href="javascript:void(0)">Contact Us</a></li>
-                                </ul>
-                            </div>
-                            <!-- End Single Widget -->
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <!-- Single Widget -->
-                            <div class="single-footer f-link">
-                                <h3>Legal</h3>
-                                <ul>
-                                    <li><a href="javascript:void(0)">Terms & Conditions</a></li>
-                                    <li><a href="javascript:void(0)">Privacy Policy</a></li>
-                                    <li><a href="javascript:void(0)">Catering Services</a></li>
-                                    <li><a href="javascript:void(0)">Customer Relations</a></li>
-                                    <li><a href="javascript:void(0)">Innovation</a></li>
-                                </ul>
-                            </div>
-                            <!-- End Single Widget -->
-                        </div>
+
                     </div>
                 </div>
             </div>
