@@ -110,13 +110,15 @@
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
-                        <div class="mb-6">
+                        <div class="mb-6 form-check form-check-inline">
                             남성 <input
                                     name = "mem_sex"
                                     type="radio"
                                     value="1" checked
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
+                        </div>
+                        <div class="mb-6 form-check form-check-inline">
                             여성 <input
                                 name = "mem_sex"
                                 type="radio"
