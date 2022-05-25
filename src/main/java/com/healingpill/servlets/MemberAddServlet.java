@@ -13,6 +13,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
 
+
+/*
 @WebServlet("/memberJoin")
 public class MemberAddServlet extends HttpServlet {
 
@@ -46,8 +48,8 @@ public class MemberAddServlet extends HttpServlet {
 
         String driver = "oracle.jdbc.driver.OracleDriver";
         String user = "healingpill";
-        String pw = "123456";
-        String url = "jdbc:oracle:thin:@localhost:1521:xe";
+        String pw = "healingpill";
+        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 
         try {
 
@@ -104,4 +106,4 @@ public class MemberAddServlet extends HttpServlet {
             }
         }
     }
-}
+}*/
