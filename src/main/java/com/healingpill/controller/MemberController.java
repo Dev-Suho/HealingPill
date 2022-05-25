@@ -20,7 +20,15 @@ public class MemberController {
     
     // 로그인 페이지 이동
     @RequestMapping(value = "/memberLogin", method = RequestMethod.GET)
-    public void memberLoginGET() {
+    public void memberLoginPOST() {
+
         logger.debug("로그인 페이지 이동");
+    }
+
+    // 로그인 성공 페이지 이동
+    @RequestMapping(value = "/memberJoinSuccess", method = RequestMethod.POST)
+    public void memberJoinSuccessPOST() {
+
+        logger.debug("로그인 성공 페이지 이동");
     }
 }
