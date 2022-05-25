@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
-
+/*
 public class MemberListServlet extends GenericServlet {
 
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
@@ -20,7 +20,8 @@ public class MemberListServlet extends GenericServlet {
 
         Properties jdbcProperties = new Properties();
         jdbcProperties.setProperty("user", "healingpill");
-        jdbcProperties.setProperty("password", "123456");
+        jdbcProperties.setProperty("password", "healingpill");
 
     }
 }
+*/
