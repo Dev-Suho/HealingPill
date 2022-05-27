@@ -84,7 +84,7 @@
                                     <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a href="/faq">FAQ</a></li>
                                         <li class="nav-item"><a href="/magazine">매거진</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">이벤트 정보 안내</a></li>
+                                        <li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>
                                     </ul>
                                 </li>
                             </ul>
