@@ -1,0 +1,49 @@
+<changelist name="2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]" date="1653291474973" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="2022-05-23 오후 4:37, 체크아웃 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.persistence.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.persistence.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.transaction.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.transaction.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.servlet.jsp.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.jms.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.jms.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.ejb.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.ejb.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.annotation.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.annotation.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.servlet.jsp.jstl.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jstl.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.servlet.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/javax.resource.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.resource.jar" />
+  </binary>
+</changelist>
