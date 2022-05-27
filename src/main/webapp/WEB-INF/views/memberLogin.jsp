@@ -69,7 +69,7 @@
                     <ul class="-mx-2 mb-12 flex justify-between">
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://ko-kr.facebook.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -88,7 +88,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://twitter.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -107,7 +107,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://www.google.co.kr/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -129,12 +129,18 @@
                             href="javascript:void(0)"
                             class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
                     >
-                        Forget Password?
+                        아이디 찾기
+                    </a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                    <a
+                            href="javascript:void(0)"
+                            class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
+                    >
+                        비밀번호 찾기
                     </a>
                     <p class="text-base text-[#adadad]">
-                        Not a member yet?
+                        아직 힐링필 회원이 아니신가요?
                         <a href="/memberJoin" class="text-primary hover:underline">
-                            Sign Up
+                            &nbsp;회원가입
                         </a>
                     </p>
 

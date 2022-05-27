@@ -42,7 +42,14 @@ public class MenuController {
     // 이벤트 페이지 이동
     @RequestMapping(value = "/event", method = RequestMethod.GET)
     public void eventGET() {
-        logger.debug("FAQ 페이지 이동");
+        logger.debug("이벤트 페이지 이동");
+
+    }
+
+    // jusoPopup 페이지 이동
+    @RequestMapping(value = "/jusoPopup", method = RequestMethod.GET)
+    public void jusoPopupGET() {
+        logger.debug("jusoPopup 페이지 이동");
 
     }
 
