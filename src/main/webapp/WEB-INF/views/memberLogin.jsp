@@ -44,17 +44,17 @@
                             <input
                                     type="text"
                                     placeholder="아이디"
-                                    id = "mem_id"
+                                    name = "mem_id"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
-                            />
+                            >
                         </div>
                         <div class="mb-6">
                             <input
                                     type="password"
                                     placeholder="비밀번호"
-                                    id = "mem_password"
+                                    name = "mem_password"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
-                            />
+                            >
                         </div>
                         <div class="mb-10">
                             <input
@@ -62,7 +62,7 @@
                                     value="로그인"
                                     id = "loginButton"
                                     class="bordder-secondary w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
-                            />
+                            >
                         </div>
                     </form>
                     <p class="mb-6 text-base text-[#adadad]">Connect With</p>

@@ -10,15 +10,16 @@ import org.springframework.stereotype.Repository;
 @Repository // 현재 클래스를 dao bean으로 등록
 public class MemberLoginDAOImpl implements MemberLoginDAO {
 
-   // @Autowired
-  //  private SqlSessionTemplate sqlSession;
+    @Autowired
+    private SqlSessionTemplate sqlSession;
 
     @Override
     public MemberDTO login(MemberDTO memberDTO) {
         MemberDTO res = null;
 
         try {
-          //  res =  sqlSession.selectOne(NAMESPACE + "login", memberDTO);
+          res =  sqlSession.selectOne(NAMESPACE + "login", memberDTO);
+          System.out.println(res);
         } catch (Exception e) {
             e.printStackTrace();
         }

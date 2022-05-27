@@ -6,4 +6,24 @@
 
     <mybatis-spring:component-scan base-package="com.healingpill.mapper"/>
 
+    <!-- Oracle dataSource -->
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+        <property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
+        <property value="jdbc:oracle:thin:@localhost:1521:xe" name="url" />
+        <!-- 오라클 사용자 이름 -->
+        <property value="healingpill" name="username" />
+        <!-- 오라클 사용자 비밀번호 -->
+        <property value="123456" name="password" />
+    </bean>
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="configLocation" value="classpath:/com.healingpill.mapper/config.xml"/>
+    </bean>
+
+
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSession"/>
+    </bean>
+
 </beans>
