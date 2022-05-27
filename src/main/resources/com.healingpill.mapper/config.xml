@@ -6,7 +6,7 @@
         <typeAliases>
             <typeAlias type="com.healingpill.model.MemberDTO" alias="memberDTO" />
         </typeAliases>
-
+    
     <mappers>
         <mapper resource="/com.healingpill.mapper/MemberLoginMapper.xml"/>
     </mappers>
