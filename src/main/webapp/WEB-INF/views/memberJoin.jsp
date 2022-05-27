@@ -37,14 +37,18 @@
                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
                         </a>
                     </div>
-                    <form method="post" action="/MemberJoinService">
+                    <form method="post" action="/MemberJoinService" id="form" name="form">
                         <div class="mb-6">
                             <input
+                                    id = "mem_id"
                                     name = "mem_id"
                                     type="text"
                                     placeholder="아이디"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
+                        </div>
+                        <div class="mb-6">
+                            <button type="button" class="btn btn-outline-info" onclick="goPopup();">아이디 중복 체크</button>
                         </div>
                         <div class="mb-6">
                             <input
@@ -95,11 +99,16 @@
                             />
                         </div>
                         <div class="mb-6">
+                            <button type="button" class="btn btn-outline-info" onclick="goPopup();">주소 찾기</button>
+                        </div>
+                        <div class="mb-6">
                             <input
-                                    name = "mem_address"
+                                    id="roadAddress"
+                                    name="mem_address"
                                     type="text"
                                     placeholder="주소"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
+                                    required readonly
                             />
                         </div>
                         <div class="mb-6">
@@ -130,7 +139,7 @@
                             <input
                                     type="submit"
                                     value="회원가입"
-                                    class="bordder-secondary w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
+                                    class="bordder-info w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
                             />
                         </div>
                     </form>
@@ -138,7 +147,7 @@
                     <ul class="-mx-2 mb-12 flex justify-between">
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://ko-kr.facebook.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -157,7 +166,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://twitter.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -176,7 +185,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://www.google.co.kr/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -196,9 +205,9 @@
                     </ul>
 
                     <p class="text-base text-[#adadad]">
-                        Already have an account?
+                        이미 계정이 있으신가요? &nbsp;
                         <a href="/memberLogin" class="text-primary hover:underline">
-                            Sign In
+                            로그인
                         </a>
                     </p>
 
@@ -427,5 +436,18 @@
 </section>
 <!-- ====== Forms Section End -->
 
+<script language="javascript">
+    function goPopup() {
+        // 주소검색을 수행할 팝업 페이지를 호출합니다.
+        // 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
+        var pop = window.open("/juso","pop","width=570,height=420, scrollbars=yes, resizable=yes");
+    }
+
+    function jusoCallBack(roadFullAddr) {
+        var roadAddress = document.querySelector("#roadAddress");
+        roadAddress.value = roadFullAddr;
+
+    }
+</script>
 
 <%@ include file="layout/footer.jsp" %>
