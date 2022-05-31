@@ -45,6 +45,7 @@ public class MemberLoginController {
         if (res!= null) {
             session.setAttribute("res", res);
             System.out.println("로그인성공");
+            
             return "redirect:index";
         } else {
             System.out.println("로그인실패");

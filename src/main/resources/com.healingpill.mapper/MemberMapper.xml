@@ -5,6 +5,8 @@
 
 <mapper namespace = "com.healingpill.mapper.MemberMapper">
     <insert id = "memberJoin">
-        insert into member values(#{mem_num}, #{mem_id}, #{mem_password}, #{mem_name}, #{mem_phone}, #{mem_birth_year}, #{mem_birth_month}, #{mem_birth_day}, #{mem_sex}, #{mem_address}, #{mem_email}, sysdate, #{mem_is_admin});
+        insert into member
+        values(#{mem_num}, #{mem_id}, #{mem_password}, #{mem_name}, #{mem_phone}, #{mem_birth_year}, #{mem_birth_month},
+               #{mem_birth_day}, #{mem_sex}, #{mem_address}, #{mem_email}, sysdate, #{mem_is_admin});
     </insert>
 </mapper>
