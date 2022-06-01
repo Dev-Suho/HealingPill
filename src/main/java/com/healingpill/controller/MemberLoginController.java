@@ -28,25 +28,24 @@ public class MemberLoginController {
     }
 
     @RequestMapping(value = "/memberLogin", method = RequestMethod.POST)
-    public String memberLogin(MemberDTO memberDTO, HttpServletRequest request, Model model) {
+    public String memberLogin(MemberDTO memberDTO, HttpServletRequest request) {
         logger.debug("Login 성공");
-        System.out.println("userLogin.do 실행");
 
-        String id = request.getParameter("mem_id");
-        String pwd = request.getParameter("mem_password");
-
-        System.out.println(id);
-        System.out.println(pwd);
-
-
+        // 세션 생성
         HttpSession session = request.getSession();
+        System.out.println("세션 아이디 : " + session.getId());
+
+        // 세션 유효시간
+        session.setMaxInactiveInterval(3600);
+        System.out.println("세션 유효시간 : " + session.getMaxInactiveInterval());
+
         MemberDTO res = memberLoginService.login(memberDTO);
 
         if (res!= null) {
             session.setAttribute("res", res);
             System.out.println("로그인성공");
 
-            return "redirect:index";
+            return "MainPage";
         } else {
             System.out.println("로그인실패");
             return "redirect:Login";
