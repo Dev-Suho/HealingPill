@@ -20,6 +20,14 @@
   </properties>
 
   <dependencies>
+    <!-- inject -->
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <version>1</version>
+    </dependency>
+
+
     <!-- log4j -->
     <dependency>
       <groupId>log4j</groupId>

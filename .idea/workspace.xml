@@ -9,28 +9,94 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="회원가입 기능 추가&#10;mybatis 사용">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberJoinDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MemberJoinServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_23_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_23_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_30_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_30_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_37_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_37_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_42_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_42_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_33_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_33_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_23_________Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_30_________Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_37_________Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_42_________Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_05,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_30,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_4_37,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_41,_체크아웃_전에_커밋되지_않은_변경_내용_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23_오후_5_42,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_33_________Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25_오후_12_33,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com.healingpill.mapper/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com.healingpill.mapper/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberJoinController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberJoinDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/mapper/MemberMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/model/MemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dto/MemberDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MemberJoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MemberJoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MemberLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MemberLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MemberLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MemberLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoinSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoinSuccess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +106,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -108,9 +175,10 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/HealingPill/lib/ojdbc8.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;아티팩트&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;1a1d9ae8b535a29c6271ac731fda4f2b&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -128,6 +196,7 @@
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views\layout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\HealingPill\src\main\resources" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
@@ -263,7 +332,10 @@
       <workItem from="1653437680842" duration="7924000" />
       <workItem from="1653610985110" duration="3083000" />
       <workItem from="1653614192032" duration="241000" />
-      <workItem from="1653993930353" duration="4410000" />
+      <workItem from="1653993930353" duration="18193000" />
+      <workItem from="1654023323697" duration="8957000" />
+      <workItem from="1654082083974" duration="2016000" />
+      <workItem from="1654085141395" duration="854000" />
     </task>
     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
       <created>1652891332188</created>
@@ -286,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653368705464</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="회원가입 Form 변경">
+      <created>1654005180827</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654005180827</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +386,9 @@
     <MESSAGE value="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경" />
     <MESSAGE value="회원가입, 로그인 폼 추가" />
     <MESSAGE value="회원가입, 로그인 폼 JSP 파일 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입, 로그인 폼 JSP 파일 추가" />
+    <MESSAGE value="회원가입 Form 변경" />
+    <MESSAGE value="회원가입 기능 추가&#10;mybatis 사용" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 기능 추가&#10;mybatis 사용" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,6 @@
 package com.healingpill.controller;
 
-import com.healingpill.model.MemberDTO;
+import com.healingpill.dto.MemberDTO;
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,7 @@ public class MemberLoginController {
         if (res!= null) {
             session.setAttribute("res", res);
             System.out.println("로그인성공");
-            
+
             return "redirect:index";
         } else {
             System.out.println("로그인실패");

@@ -14,6 +14,7 @@
           <element id="module-output" name="HealingPill" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.3.RELEASE" />

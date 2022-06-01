@@ -4,7 +4,6 @@
        xmlns:mybatis-spring="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <mybatis-spring:component-scan base-package="com.healingpill.mapper"/>
 
     <!-- Oracle dataSource -->
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
@@ -18,7 +17,7 @@
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="configLocation" value="classpath:/com.healingpill.mapper/config.xml"/>
+        <property name="configLocation" value="classpath:/mybatis-config.xml"/>
     </bean>
 
 

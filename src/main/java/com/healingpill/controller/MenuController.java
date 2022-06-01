@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MenuController {
     // 로그 기록을 남기기 위한 Logger 클래스
-    private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
+    private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
 
     // about-us 페이지 이동
     @RequestMapping(value = "/about-us", method = RequestMethod.POST)
