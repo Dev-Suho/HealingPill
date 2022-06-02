@@ -25,27 +25,17 @@
         class="relative z-20 overflow-hidden bg-[#f3f4ff] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
 >
     <div class="container">
-        <div class="-mx-4 flex flex-wrap">
-            <div class="w-full px-4">
-                <div class="mx-auto mb-[60px] max-w-[620px] text-center lg:mb-20">
-              <span class="mb-2 block text-lg font-semibold text-primary">
-                FAQ
-              </span>
-                    <h2
-                            class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
-                    >
-                        Any Questions? Answered
-                    </h2>
-                    <p
-                            class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
-                    >
-                        There are many variations of passages of Lorem Ipsum available
-                        but the majority have suffered alteration in some form.
-                    </p>
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">FAQ</h3><br>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">자주 묻는 질문</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">FAQ를 통해 궁금증을 해결해보세요.</p>
                 </div>
             </div>
         </div>
-
+    </div>
+    <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
