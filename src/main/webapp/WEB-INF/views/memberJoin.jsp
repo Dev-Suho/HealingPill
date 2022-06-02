@@ -37,7 +37,7 @@
                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
                         </a>
                     </div>
-                    <form method="post" action="/MemberJoinService" id="form" name="form">
+                    <form method="post" action="memberJoin" id="form" name="form">
                         <div class="mb-6">
                             <input
                                     id = "mem_id"
@@ -123,7 +123,7 @@
                             남성 <input
                                     name = "mem_sex"
                                     type="radio"
-                                    value="1" checked
+                                    value="Male" checked
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
                         </div>
@@ -131,9 +131,13 @@
                             여성 <input
                                 name = "mem_sex"
                                 type="radio"
-                                value="2"
+                                value="Female"
                                 class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                         />
+                        </div>
+                        <div>
+                            <!-- 일반회원 -->
+                            <input type="hidden" name="mem_is_admin" value="General">
                         </div>
                         <div class="mb-10">
                             <input
