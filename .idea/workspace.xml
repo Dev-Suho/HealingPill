@@ -9,10 +9,164 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war.xml" afterDir="false" />
+    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="mybatis 사용 로그인 구현">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com.healingpill.mapper/MemberLoginMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com.healingpill.mapper/MemberMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com.healingpill.mapper/config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/config/DB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/dao/MemberDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/dao/MemberLoginDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/dao/MemberLoginDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/mapper/MemberMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/model/MemberDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/service/MemberJoinService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/service/MemberLoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/service/MemberLoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/log4jdbc-log4j2-jdbc4.1-1.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/mybatis-3.5.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/mybatis-spring-2.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/ojdbc8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-aop-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-aspects-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-beans-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-beans-5.3.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-context-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-context-support-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-core-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-core-5.3.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-expression-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-instrument-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-jcl-5.3.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-jdbc-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-jdbc-5.3.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-jms-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-messaging-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-orm-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-oxm-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-test-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-tx-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-tx-5.3.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-web-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/spring-webmvc-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/about-us.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/magazine.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/magazineDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoinSuccess.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLoginFail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css/LineIcons.2.0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css/glightbox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css/tiny-slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css_login/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css_login/tailwind.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/fonts/LineIcons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/fonts/LineIcons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/fonts/LineIcons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/fonts/LineIcons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/fonts/LineIcons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/about/about-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/article-author-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/article-author-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/article-author-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/article-author-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/author-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/bannder-ad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/blog-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/blog-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/blog-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/blog-details-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/dotted-shape.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/blog/quote-bg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/hero/hero-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/logo/healingpill_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/logo/healingpill_logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/logo/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images/logo/white-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/about/about-image.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/article-author-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/article-author-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/article-author-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/article-author-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/author-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/bannder-ad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/blog-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/blog-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/blog-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/blog-details-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/dotted-shape.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/blog/quote-bg.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/brands/ayroui.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/brands/ecommerce-html.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/brands/graygrids.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/brands/lineicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/brands/tailgrids.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/brands/tailwindtemplates.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/brands/uideck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/ayroui.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/ecommerce-html.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/graygrids.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/lineicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/plainadmin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/tailgrids.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/tailwindtemplates.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/brands/uideck.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/shape-1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/footer/shape-3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/hero/brand.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/hero/hero-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/logo/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/logo/logo-white.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/logo/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/team/dotted-shape.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/team/shape-2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/team/team-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/team/team-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/team/team-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/team/team-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/testimonials/author-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/testimonials/author-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/images_login/testimonials/author-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/count-up.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/glightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/imagesloaded.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/isotope.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/tiny-slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js_login/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/js_login/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/mail/mail.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +204,8 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -83,18 +237,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/HealingPill/src/main/webapp",
-    "project.structure.last.edited": "아티팩트",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "1a1d9ae8b535a29c6271ac731fda4f2b"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="project.structure.last.edited" value="아티팩트" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css_login" />
@@ -119,7 +267,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.43" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
