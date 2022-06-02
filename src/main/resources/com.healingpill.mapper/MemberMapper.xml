@@ -24,4 +24,9 @@
                #{mem_sex, jdbcType = VARCHAR}, #{mem_address, jdbcType = VARCHAR},
                #{mem_email, jdbcType = VARCHAR}, sysdate, #{mem_is_admin, jdbcType = VARCHAR})
     </insert>
+
+    <select id="idCheck" resultType="com.healingpill.dto.MemberDTO">
+        select MEM_ID from MEMBER
+        where MEM_ID = #{mem_id, jdbcType = VARCHAR}
+    </select>
 </mapper>

@@ -51,4 +51,10 @@ public class MemberLoginController {
             return "redirect:Login";
         }
     }
+
+    @RequestMapping(value = "/Logout", method = RequestMethod.GET)
+    public String memberLogout(HttpSession session) throws Exception {
+        session.invalidate();
+        return "MainPage";
+    }
 }

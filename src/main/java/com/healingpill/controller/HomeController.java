@@ -16,7 +16,7 @@ public class HomeController {
         return "MainPage";
     }
 
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
         return "MainPage";
     }
