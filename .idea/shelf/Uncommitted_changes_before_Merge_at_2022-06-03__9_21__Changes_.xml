@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Merge_at_2022-06-03_오전_9_21_[Changes]" date="1654215931682" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022-06-03_오전_9_21_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 2022-06-03 오전 9:21 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" />
+    <option name="AFTER_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022-06-03_오전_9_21_[Changes]/MenuController.class" />
+  </binary>
+</changelist>
