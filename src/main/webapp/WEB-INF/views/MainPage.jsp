@@ -8,6 +8,7 @@
         <div class="row align-items-center">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
                 <div class="hero-content">
+                    <h5 class="wow fadeInUp" data-wow-delay=".2s">${res.mem_username}님 안녕하세요</h5>
                     <h5 class="wow fadeInUp" data-wow-delay=".2s">Expert People, Quality Solutions</h5>
                     <h1 class="wow fadeInUp" data-wow-delay=".4s">힐링필에서 나에게 맞는<span>영양제를 찾아보세요!</span>
                     </h1>

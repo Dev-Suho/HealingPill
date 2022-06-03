@@ -1,12 +1,15 @@
-package com.healingpill.model;
+package com.healingpill.dto;
 
 import java.util.Date;
 
 public class MemberDTO {
-    private String mem_num;
+    public MemberDTO() {
+    }
+
+    private int mem_num;
     private String mem_id;
     private String mem_password;
-    private String mem_name;
+    private String mem_username;
     private String mem_phone;
     private String mem_birth_year;
     private String mem_birth_month;
@@ -17,11 +20,11 @@ public class MemberDTO {
     private Date mem_register_datetime;
     private String mem_is_admin;
 
-    public String getMem_num() {
+    public int getMem_num() {
         return mem_num;
     }
 
-    public void setMem_num(String mem_num) {
+    public void setMem_num(int mem_num) {
         this.mem_num = mem_num;
     }
 
@@ -41,12 +44,12 @@ public class MemberDTO {
         this.mem_password = mem_password;
     }
 
-    public String getMem_name() {
-        return mem_name;
+    public String getMem_username() {
+        return mem_username;
     }
 
-    public void setMem_name(String mem_name) {
-        this.mem_name = mem_name;
+    public void setMem_username(String mem_username) {
+        this.mem_username = mem_username;
     }
 
     public String getMem_phone() {
@@ -127,7 +130,7 @@ public class MemberDTO {
                 "mem_num=" + mem_num +
                 ", mem_id='" + mem_id + '\'' +
                 ", mem_password='" + mem_password + '\'' +
-                ", mem_name='" + mem_name + '\'' +
+                ", mem_username='" + mem_username + '\'' +
                 ", mem_phone='" + mem_phone + '\'' +
                 ", mem_birth_year='" + mem_birth_year + '\'' +
                 ", mem_birth_month=" + mem_birth_month +
@@ -140,11 +143,11 @@ public class MemberDTO {
                 '}';
     }
 
-    public MemberDTO(String mem_num, String mem_id, String mem_password, String mem_name, String mem_phone, String mem_birth_year, String mem_birth_month, String mem_birth_day, String mem_address, String mem_email, String mem_sex, Date mem_register_datetime, String mem_is_admin) {
+    public MemberDTO(int mem_num, String mem_id, String mem_password, String mem_username, String mem_phone, String mem_birth_year, String mem_birth_month, String mem_birth_day, String mem_address, String mem_email, String mem_sex, Date mem_register_datetime, String mem_is_admin) {
         this.mem_num = mem_num;
         this.mem_id = mem_id;
         this.mem_password = mem_password;
-        this.mem_name = mem_name;
+        this.mem_username = mem_username;
         this.mem_phone = mem_phone;
         this.mem_birth_year = mem_birth_year;
         this.mem_birth_month = mem_birth_month;

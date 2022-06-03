@@ -141,7 +141,7 @@
                     </a>
                     <p class="text-base text-[#adadad]">
                         아직 힐링필 회원이 아니신가요?
-                        <a href="/memberJoin" class="text-primary hover:underline">
+                        <a href="Join" class="text-primary hover:underline">
                             &nbsp;회원가입
                         </a>
                     </p>

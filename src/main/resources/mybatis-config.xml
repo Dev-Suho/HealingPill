@@ -4,11 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
     <configuration>
         <typeAliases>
-            <typeAlias type="com.healingpill.model.MemberDTO" alias="memberDTO" />
+            <typeAlias type="com.healingpill.dto.MemberDTO" alias="memberDTO" />
         </typeAliases>
-    
-    <mappers>
-        <mapper resource="/com.healingpill.mapper/MemberLoginMapper.xml"/>
-    </mappers>
+
 </configuration>
 

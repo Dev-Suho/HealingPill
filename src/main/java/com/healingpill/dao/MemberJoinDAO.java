@@ -2,8 +2,9 @@ package com.healingpill.dao;
 
 import com.healingpill.dto.MemberDTO;
 
-public interface MemberLoginDAO {
+public interface MemberJoinDAO {
+
     String NAMESPACE = "member.";
 
-    public MemberDTO login(MemberDTO memberDTO);
+    public void memberJoin(MemberDTO memberDTO);
 }
