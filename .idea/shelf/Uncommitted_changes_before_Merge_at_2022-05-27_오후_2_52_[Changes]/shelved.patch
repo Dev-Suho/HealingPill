@@ -1,0 +1,807 @@
+Index: src/main/java/com/healingpill/controller/MemberLoginController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.healingpill.controller;\r\n\r\nimport com.healingpill.model.MemberDTO;\r\nimport com.sun.org.slf4j.internal.Logger;\r\nimport com.sun.org.slf4j.internal.LoggerFactory;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Controller;\r\nimport org.springframework.ui.Model;\r\nimport org.springframework.web.bind.annotation.RequestMapping;\r\nimport org.springframework.web.bind.annotation.RequestMethod;\r\nimport com.healingpill.service.MemberLoginService;\r\n\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport javax.servlet.http.HttpSession;\r\n\r\n@Controller\r\npublic class MemberLoginController {\r\n    private Logger logger = LoggerFactory.getLogger(MemberLoginController.class);\r\n\r\n    @Autowired\r\n    private MemberLoginService memberLoginService;\r\n\r\n    @RequestMapping(value = \"/Login\")\r\n    public String login() {\r\n        logger.debug(\"로그인 페이지 이동\");\r\n        System.out.println(\"로그인 페이지 이동\");\r\n        return \"memberLogin\";\r\n    }\r\n\r\n    @RequestMapping(value = \"/memberLogin\", method = RequestMethod.POST)\r\n    public String memberLogin(MemberDTO memberDTO, HttpServletRequest request, Model model) {\r\n        logger.debug(\"Login 성공\");\r\n        System.out.println(\"userLogin.do 실행\");\r\n\r\n        String id = request.getParameter(\"mem_id\");\r\n        String pwd = request.getParameter(\"mem_password\");\r\n\r\n        System.out.println(id);\r\n        System.out.println(pwd);\r\n\r\n\r\n        HttpSession session = request.getSession();\r\n        MemberDTO res = memberLoginService.login(memberDTO);\r\n\r\n        if (res!= null) {\r\n            session.setAttribute(\"res\", res);\r\n            System.out.println(\"로그인성공\");\r\n            return \"redirect:index\";\r\n        } else {\r\n            System.out.println(\"로그인실패\");\r\n            return \"redirect:Login\";\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/healingpill/controller/MemberLoginController.java b/src/main/java/com/healingpill/controller/MemberLoginController.java
+--- a/src/main/java/com/healingpill/controller/MemberLoginController.java	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/src/main/java/com/healingpill/controller/MemberLoginController.java	(date 1653628102104)
+@@ -44,10 +44,10 @@
+ 
+         if (res!= null) {
+             session.setAttribute("res", res);
+-            System.out.println("로그인성공");
++            System.out.println("로그인 성공");
+             return "redirect:index";
+         } else {
+-            System.out.println("로그인실패");
++            System.out.println("로그인 실패");
+             return "redirect:Login";
+         }
+     }
+Index: .idea/shelf/2022-05-20__10_23_________Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/2022-05-20__10_23_________Changes_.xml b/.idea/shelf/2022-05-20__10_23_________Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/2022-05-20__10_23_________Changes_.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ /dev/null	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
+@@ -1,4 +0,0 @@
+-<changelist name="2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]" date="1653009830303" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="2022-05-20 오전 10:23, 업데이트 전에 커밋되지 않은 변경 내용 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch b/.idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ /dev/null	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
+@@ -1,19 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"HealingPill:war exploded\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"Changes\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/dataSources.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/model/MemberVO.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/model/MemberVO.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberMapper.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberMapper.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"295S89URQvd8gO5kJwPZmBob2E8\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DatabaseDriversLRU\" value=\"oracle\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/lib/ojdbc8.jar\" />\r\n    <property name=\"project.structure.last.edited\" value=\"아티팩트\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"File.Encoding\" />\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Tomcat 9.0.43\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 9.0.43\" ALTERNATIVE_JRE_ENABLED=\"false\" nameIsGenerated=\"true\">\r\n      <option name=\"COMMON_VM_ARGUMENTS\" value=\"-Dfile.encoding=UTF-8\" />\r\n      <option name=\"UPDATING_POLICY\" value=\"restart-server\" />\r\n      <deployment>\r\n        <artifact name=\"HealingPill:war exploded\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"81608cb2-df9e-4bbd-81e4-91df91e800fe\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"51090\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"HealingPill:war exploded\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"\" />\r\n      <created>1652401293967</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1652401293967</updated>\r\n      <workItem from=\"1652401298461\" duration=\"358000\" />\r\n      <workItem from=\"1652401681304\" duration=\"1224000\" />\r\n      <workItem from=\"1652402941140\" duration=\"290000\" />\r\n      <workItem from=\"1652403259528\" duration=\"134000\" />\r\n      <workItem from=\"1652403423182\" duration=\"1698000\" />\r\n      <workItem from=\"1652405420665\" duration=\"613000\" />\r\n      <workItem from=\"1652407992456\" duration=\"143000\" />\r\n      <workItem from=\"1652408157683\" duration=\"583000\" />\r\n      <workItem from=\"1652415699403\" duration=\"134000\" />\r\n      <workItem from=\"1652416793592\" duration=\"434000\" />\r\n      <workItem from=\"1652859346901\" duration=\"5410000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Changes\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Changes\" />\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision b59e5757d7ff064974af47903243c208fea874ea)
+-+++ b/.idea/workspace.xml	(date 1653009815059)
+-@@ -213,6 +213,8 @@
+-       <workItem from="1652415699403" duration="134000" />
+-       <workItem from="1652416793592" duration="434000" />
+-       <workItem from="1652859346901" duration="5410000" />
+-+      <workItem from="1652884572891" duration="55000" />
+-+      <workItem from="1653009021768" duration="701000" />
+-     </task>
+-     <servers />
+-   </component>
+Index: out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Manifest-Version: 1.0\r\nCreated-By: IntelliJ IDEA\r\nBuilt-By: ars81\r\nBuild-Jdk: Oracle OpenJDK version 1.8.0_281\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF b/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF
+--- a/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF	(date 1653630552218)
+@@ -1,5 +1,5 @@
+ Manifest-Version: 1.0
+ Created-By: IntelliJ IDEA
+-Built-By: ars81
+-Build-Jdk: Oracle OpenJDK version 1.8.0_281
++Built-By: pc
++Build-Jdk: 1.8.0_241
+ 
+Index: src/main/java/com/healingpill/config/DB.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.healingpill.config;\r\n\r\nimport java.sql.Connection;\r\nimport java.sql.DriverManager;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\n\r\npublic class DB {\r\n\r\n    public static Connection getConnection() {\r\n\r\n        try {\r\n            //동적 로딩\r\n            Class.forName(\"oracle.jdbc.driver.OracleDriver\");\r\n            System.out.println(\"Jdbc Driver 로딩 성공\");\r\n\r\n            //DBMS에 id와 pw를 인증받고 DB를 핸들링 할 수 있는 Connection 객체를 생성\r\n            Connection conn = DriverManager.getConnection(\"jdbc:oracle:thin:@localhost:1521:xe\", \"healingpill\", \"123456\");\r\n            System.out.println(\"Oracle Database 연결 성공\");\r\n\r\n            return conn;\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n        return null;\r\n    }\r\n\r\n    public static void close(Connection conn, PreparedStatement pstmt) {\r\n        try {\r\n            pstmt.close();\r\n            conn.close();\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n\r\n    public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {\r\n        try {\r\n            rs.close();\r\n            pstmt.close();\r\n            conn.close();\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/healingpill/config/DB.java b/src/main/java/com/healingpill/config/DB.java
+--- a/src/main/java/com/healingpill/config/DB.java	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/src/main/java/com/healingpill/config/DB.java	(date 1653619368562)
+@@ -15,7 +15,7 @@
+             System.out.println("Jdbc Driver 로딩 성공");
+ 
+             //DBMS에 id와 pw를 인증받고 DB를 핸들링 할 수 있는 Connection 객체를 생성
+-            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "healingpill", "123456");
++            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "healingpill", "healingpill");
+             System.out.println("Oracle Database 연결 성공");
+ 
+             return conn;
+Index: src/main/webapp/WEB-INF/applicationContext.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<beans xmlns=\"http://www.springframework.org/schema/beans\"\r\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n       xmlns:mybatis-spring=\"http://www.springframework.org/schema/context\"\r\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd\">\r\n\r\n    <mybatis-spring:component-scan base-package=\"com.healingpill.mapper\"/>\r\n\r\n    <!-- Oracle dataSource -->\r\n    <bean class=\"org.springframework.jdbc.datasource.DriverManagerDataSource\" id=\"dataSource\">\r\n        <property value=\"oracle.jdbc.driver.OracleDriver\" name=\"driverClassName\" />\r\n        <property value=\"jdbc:oracle:thin:@localhost:1521:xe\" name=\"url\" />\r\n        <!-- 오라클 사용자 이름 -->\r\n        <property value=\"healingpill\" name=\"username\" />\r\n        <!-- 오라클 사용자 비밀번호 -->\r\n        <property value=\"123456\" name=\"password\" />\r\n    </bean>\r\n\r\n    <bean id=\"sqlSession\" class=\"org.mybatis.spring.SqlSessionFactoryBean\">\r\n        <property name=\"dataSource\" ref=\"dataSource\" />\r\n        <property name=\"configLocation\" value=\"classpath:/com.healingpill.mapper/config.xml\"/>\r\n    </bean>\r\n\r\n\r\n    <bean id=\"sqlSessionTemplate\" class=\"org.mybatis.spring.SqlSessionTemplate\">\r\n        <constructor-arg index=\"0\" ref=\"sqlSession\"/>\r\n    </bean>\r\n\r\n</beans>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/WEB-INF/applicationContext.xml b/src/main/webapp/WEB-INF/applicationContext.xml
+--- a/src/main/webapp/WEB-INF/applicationContext.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/src/main/webapp/WEB-INF/applicationContext.xml	(date 1653619368617)
+@@ -9,11 +9,11 @@
+     <!-- Oracle dataSource -->
+     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+         <property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
+-        <property value="jdbc:oracle:thin:@localhost:1521:xe" name="url" />
++        <property value="jdbc:oracle:thin:@localhost:1521:orcl" name="url" />
+         <!-- 오라클 사용자 이름 -->
+         <property value="healingpill" name="username" />
+         <!-- 오라클 사용자 비밀번호 -->
+-        <property value="123456" name="password" />
++        <property value="healingpill" name="password" />
+     </bean>
+ 
+     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+Index: out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n         pageEncoding=\"UTF-8\"%>\r\n<%@ include file=\"layout/header.jsp\" %>\r\n\r\n<!-- Start Breadcrumbs -->\r\n<div class=\"breadcrumbs\">\r\n    <div class=\"container\">\r\n        <div class=\"row align-items-center\">\r\n            <div class=\"col-lg-8 offset-lg-2 col-md-12 col-12\">\r\n                <div class=\"breadcrumbs-content\">\r\n                    <h1 class=\"page-title\">Sign In</h1>\r\n                </div>\r\n                <ul class=\"breadcrumb-nav\">\r\n                    <li><a href=\"/\">Home</a></li>\r\n                    <li>Sign In</li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- End Breadcrumbs -->\r\n\r\n\r\n<!-- ====== Forms Section Start -->\r\n<section class=\"bg-[#F4F7FF] py-14 lg:py-20\">\r\n    <div class=\"container\">\r\n        <div class=\"-mx-4 flex flex-wrap\">\r\n            <div class=\"w-full px-4\">\r\n                <div\r\n                        class=\"wow fadeInUp relative mx-auto max-w-[780px] overflow-hidden rounded-lg bg-white py-14 px-8 text-center sm:px-12 md:px-[60px]\"\r\n                        data-wow-delay=\".15s\"\r\n                >\r\n                    <div class=\"mb-10 text-center\">\r\n                        <a\r\n                                href=\"/\"\r\n                                class=\"mx-auto inline-block max-w-[160px]\"\r\n                        >\r\n                            <img src=\"resources/assets/images/logo/healingpill_logo2.png\" alt=\"logo\" />\r\n                        </a>\r\n                    </div>\r\n                    <form action = \"memberLogin\" method=\"post\">\r\n                        <input type=\"hidden\" value=\"login\">\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    type=\"text\"\r\n                                    placeholder=\"아이디\"\r\n                                    name = \"mem_id\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            >\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    type=\"password\"\r\n                                    placeholder=\"비밀번호\"\r\n                                    name = \"mem_password\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            >\r\n                        </div>\r\n                        <div class=\"mb-10\">\r\n                            <input\r\n                                    type=\"submit\"\r\n                                    value=\"로그인\"\r\n                                    id = \"loginButton\"\r\n                                    class=\"bordder-secondary w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md\"\r\n                            >\r\n                        </div>\r\n                    </form>\r\n                    <p class=\"mb-6 text-base text-[#adadad]\">Connect With</p>\r\n                    <ul class=\"-mx-2 mb-12 flex justify-between\">\r\n                        <li class=\"w-full px-2\">\r\n                            <a\r\n                                    href=\"javascript:void(0)\"\r\n                                    class=\"flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90\"\r\n                            >\r\n                                <svg\r\n                                        width=\"10\"\r\n                                        height=\"20\"\r\n                                        viewBox=\"0 0 10 20\"\r\n                                        fill=\"none\"\r\n                                        xmlns=\"http://www.w3.org/2000/svg\"\r\n                                >\r\n                                    <path\r\n                                            d=\"M9.29878 8H7.74898H7.19548V7.35484V5.35484V4.70968H7.74898H8.91133C9.21575 4.70968 9.46483 4.45161 9.46483 4.06452V0.645161C9.46483 0.290323 9.24343 0 8.91133 0H6.89106C4.70474 0 3.18262 1.80645 3.18262 4.48387V7.29032V7.93548H2.62912H0.747223C0.359774 7.93548 0 8.29032 0 8.80645V11.129C0 11.5806 0.304424 12 0.747223 12H2.57377H3.12727V12.6452V19.129C3.12727 19.5806 3.43169 20 3.87449 20H6.47593C6.64198 20 6.78036 19.9032 6.89106 19.7742C7.00176 19.6452 7.08478 19.4194 7.08478 19.2258V12.6774V12.0323H7.66596H8.91133C9.2711 12.0323 9.54785 11.7742 9.6032 11.3871V11.3548V11.3226L9.99065 9.09677C10.0183 8.87097 9.99065 8.6129 9.8246 8.35484C9.76925 8.19355 9.52018 8.03226 9.29878 8Z\"\r\n                                            fill=\"white\"\r\n                                    />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"w-full px-2\">\r\n                            <a\r\n                                    href=\"javascript:void(0)\"\r\n                                    class=\"flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90\"\r\n                            >\r\n                                <svg\r\n                                        width=\"22\"\r\n                                        height=\"16\"\r\n                                        viewBox=\"0 0 22 16\"\r\n                                        fill=\"none\"\r\n                                        xmlns=\"http://www.w3.org/2000/svg\"\r\n                                >\r\n                                    <path\r\n                                            d=\"M19.5516 2.75538L20.9 1.25245C21.2903 0.845401 21.3968 0.53229 21.4323 0.375734C20.3677 0.939335 19.3742 1.1272 18.7355 1.1272H18.4871L18.3452 1.00196C17.4935 0.344423 16.429 0 15.2935 0C12.8097 0 10.8581 1.81605 10.8581 3.91389C10.8581 4.03914 10.8581 4.22701 10.8935 4.35225L11 4.97847L10.2548 4.94716C5.7129 4.82192 1.9871 1.37769 1.38387 0.782779C0.390323 2.34834 0.958064 3.85127 1.56129 4.79061L2.76774 6.54403L0.851613 5.6047C0.887097 6.91977 1.45484 7.95303 2.55484 8.7045L3.5129 9.33072L2.55484 9.67515C3.15806 11.272 4.50645 11.9296 5.5 12.18L6.8129 12.4932L5.57097 13.2446C3.58387 14.4971 1.1 14.4031 0 14.3092C2.23548 15.6869 4.89677 16 6.74194 16C8.12581 16 9.15484 15.8748 9.40322 15.7808C19.3387 13.7143 19.8 5.8865 19.8 4.32094V4.10176L20.0129 3.97652C21.2194 2.97456 21.7161 2.44227 22 2.12916C21.8935 2.16047 21.7516 2.22309 21.6097 2.2544L19.5516 2.75538Z\"\r\n                                            fill=\"white\"\r\n                                    />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"w-full px-2\">\r\n                            <a\r\n                                    href=\"javascript:void(0)\"\r\n                                    class=\"flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90\"\r\n                            >\r\n                                <svg\r\n                                        width=\"18\"\r\n                                        height=\"18\"\r\n                                        viewBox=\"0 0 18 18\"\r\n                                        fill=\"none\"\r\n                                        xmlns=\"http://www.w3.org/2000/svg\"\r\n                                >\r\n                                    <path\r\n                                            d=\"M17.8477 8.17132H9.29628V10.643H15.4342C15.1065 14.0743 12.2461 15.5574 9.47506 15.5574C5.95916 15.5574 2.8306 12.8821 2.8306 9.01461C2.8306 5.29251 5.81018 2.47185 9.47506 2.47185C12.2759 2.47185 13.9742 4.24567 13.9742 4.24567L15.7024 2.47185C15.7024 2.47185 13.3783 0.000145544 9.35587 0.000145544C4.05223 -0.0289334 0 4.30383 0 8.98553C0 13.5218 3.81386 18 9.44526 18C14.4212 18 17.9967 14.7141 17.9967 9.79974C18.0264 8.78198 17.8477 8.17132 17.8477 8.17132Z\"\r\n                                            fill=\"white\"\r\n                                    />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n                    <a\r\n                            href=\"javascript:void(0)\"\r\n                            class=\"mb-2 inline-block text-base text-[#adadad] hover:text-primary\"\r\n                    >\r\n                        Forget Password?\r\n                    </a>\r\n                    <p class=\"text-base text-[#adadad]\">\r\n                        Not a member yet?\r\n                        <a href=\"/memberJoin\" class=\"text-primary hover:underline\">\r\n                            Sign Up\r\n                        </a>\r\n                    </p>\r\n\r\n                    <div>\r\n                <span class=\"absolute top-1 right-1\">\r\n                  <svg\r\n                          width=\"40\"\r\n                          height=\"40\"\r\n                          viewBox=\"0 0 40 40\"\r\n                          fill=\"none\"\r\n                          xmlns=\"http://www.w3.org/2000/svg\"\r\n                  >\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                  </svg>\r\n                </span>\r\n                        <span class=\"absolute left-1 bottom-1\">\r\n                  <svg\r\n                          width=\"29\"\r\n                          height=\"40\"\r\n                          viewBox=\"0 0 29 40\"\r\n                          fill=\"none\"\r\n                          xmlns=\"http://www.w3.org/2000/svg\"\r\n                  >\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"25.9912\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 25.9912)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"25.9911\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 25.9911)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"25.9911\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 25.9911)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"13.6944\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 13.6944)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"13.6943\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 13.6943)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"13.6943\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 13.6943)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"38.0087\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 38.0087)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"1.39739\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 1.39739)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"38.0089\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 38.0089)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"38.0089\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 38.0089)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"1.39761\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 1.39761)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"1.39761\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 1.39761)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                  </svg>\r\n                </span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n<!-- ====== Forms Section End -->\r\n\r\n\r\n<%@ include file=\"layout/footer.jsp\" %>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp
+--- a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp	(date 1653619344963)
+@@ -69,7 +69,7 @@
+                     <ul class="-mx-2 mb-12 flex justify-between">
+                         <li class="w-full px-2">
+                             <a
+-                                    href="javascript:void(0)"
++                                    href="https://ko-kr.facebook.com/"
+                                     class="flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90"
+                             >
+                                 <svg
+@@ -88,7 +88,7 @@
+                         </li>
+                         <li class="w-full px-2">
+                             <a
+-                                    href="javascript:void(0)"
++                                    href="https://twitter.com/"
+                                     class="flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90"
+                             >
+                                 <svg
+@@ -107,7 +107,7 @@
+                         </li>
+                         <li class="w-full px-2">
+                             <a
+-                                    href="javascript:void(0)"
++                                    href="https://www.google.co.kr/"
+                                     class="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
+                             >
+                                 <svg
+@@ -129,12 +129,18 @@
+                             href="javascript:void(0)"
+                             class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
+                     >
+-                        Forget Password?
++                        아이디 찾기
++                    </a> &nbsp;&nbsp; | &nbsp;&nbsp;
++                    <a
++                            href="javascript:void(0)"
++                            class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
++                    >
++                        비밀번호 찾기
+                     </a>
+                     <p class="text-base text-[#adadad]">
+-                        Not a member yet?
++                        아직 힐링필 회원이 아니신가요?
+                         <a href="/memberJoin" class="text-primary hover:underline">
+-                            Sign Up
++                            &nbsp;회원가입
+                         </a>
+                     </p>
+ 
+Index: out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n         pageEncoding=\"UTF-8\"%>\r\n<%@ include file=\"layout/header.jsp\" %>\r\n\r\n<!-- Start Breadcrumbs -->\r\n<div class=\"breadcrumbs\">\r\n    <div class=\"container\">\r\n        <div class=\"row align-items-center\">\r\n            <div class=\"col-lg-8 offset-lg-2 col-md-12 col-12\">\r\n                <div class=\"breadcrumbs-content\">\r\n                    <h1 class=\"page-title\">Sign Up</h1>\r\n                </div>\r\n                <ul class=\"breadcrumb-nav\">\r\n                    <li><a href=\"/\">Home</a></li>\r\n                    <li>Sign Up</li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- End Breadcrumbs -->\r\n\r\n<!-- ====== Forms Section Start -->\r\n<section class=\"bg-[#F4F7FF] py-14 lg:py-20\">\r\n    <div class=\"container\">\r\n        <div class=\"-mx-4 flex flex-wrap\">\r\n            <div class=\"w-full px-4\">\r\n                <div\r\n                        class=\"wow fadeInUp relative mx-auto max-w-[780px] overflow-hidden rounded-lg bg-white py-14 px-8 text-center sm:px-12 md:px-[60px]\"\r\n                        data-wow-delay=\".15s\"\r\n                >\r\n                    <div class=\"mb-10 text-center\">\r\n                        <a\r\n                                href=\"/\"\r\n                                class=\"mx-auto inline-block max-w-[160px]\"\r\n                        >\r\n                            <img src=\"resources/assets/images/logo/healingpill_logo2.png\" alt=\"logo\" />\r\n                        </a>\r\n                    </div>\r\n                    <form method=\"post\" action=\"/MemberJoinService\">\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_id\"\r\n                                    type=\"text\"\r\n                                    placeholder=\"아이디\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_password\"\r\n                                    type=\"password\"\r\n                                    placeholder=\"비밀번호\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_username\"\r\n                                    type=\"text\"\r\n                                    placeholder=\"이름\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_phone\"\r\n                                    type=\"text\"\r\n                                    placeholder=\"휴대전화\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_birth_year\"\r\n                                    type=\"text\"\r\n                                    placeholder=\"년\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_birth_month\"\r\n                                    type=\"text\"\r\n                                    placeholder=\"월\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_birth_day\"\r\n                                    type=\"text\"\r\n                                    placeholder=\"일\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_address\"\r\n                                    type=\"text\"\r\n                                    placeholder=\"주소\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6\">\r\n                            <input\r\n                                    name = \"mem_email\"\r\n                                    type=\"email\"\r\n                                    placeholder=\"이메일\"\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6 form-check form-check-inline\">\r\n                            남성 <input\r\n                                    name = \"mem_sex\"\r\n                                    type=\"radio\"\r\n                                    value=\"1\" checked\r\n                                    class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                            />\r\n                        </div>\r\n                        <div class=\"mb-6 form-check form-check-inline\">\r\n                            여성 <input\r\n                                name = \"mem_sex\"\r\n                                type=\"radio\"\r\n                                value=\"2\"\r\n                                class=\"bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none\"\r\n                        />\r\n                        </div>\r\n                        <div class=\"mb-10\">\r\n                            <input\r\n                                    type=\"submit\"\r\n                                    value=\"회원가입\"\r\n                                    class=\"bordder-secondary w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md\"\r\n                            />\r\n                        </div>\r\n                    </form>\r\n                    <p class=\"mb-6 text-base text-[#adadad]\">Connect With</p>\r\n                    <ul class=\"-mx-2 mb-12 flex justify-between\">\r\n                        <li class=\"w-full px-2\">\r\n                            <a\r\n                                    href=\"javascript:void(0)\"\r\n                                    class=\"flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90\"\r\n                            >\r\n                                <svg\r\n                                        width=\"10\"\r\n                                        height=\"20\"\r\n                                        viewBox=\"0 0 10 20\"\r\n                                        fill=\"none\"\r\n                                        xmlns=\"http://www.w3.org/2000/svg\"\r\n                                >\r\n                                    <path\r\n                                            d=\"M9.29878 8H7.74898H7.19548V7.35484V5.35484V4.70968H7.74898H8.91133C9.21575 4.70968 9.46483 4.45161 9.46483 4.06452V0.645161C9.46483 0.290323 9.24343 0 8.91133 0H6.89106C4.70474 0 3.18262 1.80645 3.18262 4.48387V7.29032V7.93548H2.62912H0.747223C0.359774 7.93548 0 8.29032 0 8.80645V11.129C0 11.5806 0.304424 12 0.747223 12H2.57377H3.12727V12.6452V19.129C3.12727 19.5806 3.43169 20 3.87449 20H6.47593C6.64198 20 6.78036 19.9032 6.89106 19.7742C7.00176 19.6452 7.08478 19.4194 7.08478 19.2258V12.6774V12.0323H7.66596H8.91133C9.2711 12.0323 9.54785 11.7742 9.6032 11.3871V11.3548V11.3226L9.99065 9.09677C10.0183 8.87097 9.99065 8.6129 9.8246 8.35484C9.76925 8.19355 9.52018 8.03226 9.29878 8Z\"\r\n                                            fill=\"white\"\r\n                                    />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"w-full px-2\">\r\n                            <a\r\n                                    href=\"javascript:void(0)\"\r\n                                    class=\"flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90\"\r\n                            >\r\n                                <svg\r\n                                        width=\"22\"\r\n                                        height=\"16\"\r\n                                        viewBox=\"0 0 22 16\"\r\n                                        fill=\"none\"\r\n                                        xmlns=\"http://www.w3.org/2000/svg\"\r\n                                >\r\n                                    <path\r\n                                            d=\"M19.5516 2.75538L20.9 1.25245C21.2903 0.845401 21.3968 0.53229 21.4323 0.375734C20.3677 0.939335 19.3742 1.1272 18.7355 1.1272H18.4871L18.3452 1.00196C17.4935 0.344423 16.429 0 15.2935 0C12.8097 0 10.8581 1.81605 10.8581 3.91389C10.8581 4.03914 10.8581 4.22701 10.8935 4.35225L11 4.97847L10.2548 4.94716C5.7129 4.82192 1.9871 1.37769 1.38387 0.782779C0.390323 2.34834 0.958064 3.85127 1.56129 4.79061L2.76774 6.54403L0.851613 5.6047C0.887097 6.91977 1.45484 7.95303 2.55484 8.7045L3.5129 9.33072L2.55484 9.67515C3.15806 11.272 4.50645 11.9296 5.5 12.18L6.8129 12.4932L5.57097 13.2446C3.58387 14.4971 1.1 14.4031 0 14.3092C2.23548 15.6869 4.89677 16 6.74194 16C8.12581 16 9.15484 15.8748 9.40322 15.7808C19.3387 13.7143 19.8 5.8865 19.8 4.32094V4.10176L20.0129 3.97652C21.2194 2.97456 21.7161 2.44227 22 2.12916C21.8935 2.16047 21.7516 2.22309 21.6097 2.2544L19.5516 2.75538Z\"\r\n                                            fill=\"white\"\r\n                                    />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                        <li class=\"w-full px-2\">\r\n                            <a\r\n                                    href=\"javascript:void(0)\"\r\n                                    class=\"flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90\"\r\n                            >\r\n                                <svg\r\n                                        width=\"18\"\r\n                                        height=\"18\"\r\n                                        viewBox=\"0 0 18 18\"\r\n                                        fill=\"none\"\r\n                                        xmlns=\"http://www.w3.org/2000/svg\"\r\n                                >\r\n                                    <path\r\n                                            d=\"M17.8477 8.17132H9.29628V10.643H15.4342C15.1065 14.0743 12.2461 15.5574 9.47506 15.5574C5.95916 15.5574 2.8306 12.8821 2.8306 9.01461C2.8306 5.29251 5.81018 2.47185 9.47506 2.47185C12.2759 2.47185 13.9742 4.24567 13.9742 4.24567L15.7024 2.47185C15.7024 2.47185 13.3783 0.000145544 9.35587 0.000145544C4.05223 -0.0289334 0 4.30383 0 8.98553C0 13.5218 3.81386 18 9.44526 18C14.4212 18 17.9967 14.7141 17.9967 9.79974C18.0264 8.78198 17.8477 8.17132 17.8477 8.17132Z\"\r\n                                            fill=\"white\"\r\n                                    />\r\n                                </svg>\r\n                            </a>\r\n                        </li>\r\n                    </ul>\r\n\r\n                    <p class=\"text-base text-[#adadad]\">\r\n                        Already have an account?\r\n                        <a href=\"/memberLogin\" class=\"text-primary hover:underline\">\r\n                            Sign In\r\n                        </a>\r\n                    </p>\r\n\r\n                    <div>\r\n                <span class=\"absolute top-1 right-1\">\r\n                  <svg\r\n                          width=\"40\"\r\n                          height=\"40\"\r\n                          viewBox=\"0 0 40 40\"\r\n                          fill=\"none\"\r\n                          xmlns=\"http://www.w3.org/2000/svg\"\r\n                  >\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"38.6026\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 38.6026)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"1.99122\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 1.99122)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"26.3057\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 26.3057)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"1.39737\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 1.39737 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"13.6943\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 13.6943 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"25.9911\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 25.9911 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"38.288\"\r\n                            cy=\"14.0086\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 38.288 14.0086)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                  </svg>\r\n                </span>\r\n                        <span class=\"absolute left-1 bottom-1\">\r\n                  <svg\r\n                          width=\"29\"\r\n                          height=\"40\"\r\n                          viewBox=\"0 0 29 40\"\r\n                          fill=\"none\"\r\n                          xmlns=\"http://www.w3.org/2000/svg\"\r\n                  >\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"25.9912\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 25.9912)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"25.9911\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 25.9911)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"25.9911\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 25.9911)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"13.6944\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 13.6944)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"13.6943\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 13.6943)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"13.6943\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 13.6943)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"38.0087\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 38.0087)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"2.288\"\r\n                            cy=\"1.39739\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 2.288 1.39739)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"38.0089\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 38.0089)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"38.0089\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 38.0089)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"14.5849\"\r\n                            cy=\"1.39761\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 14.5849 1.39761)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                    <circle\r\n                            cx=\"26.7216\"\r\n                            cy=\"1.39761\"\r\n                            r=\"1.39737\"\r\n                            transform=\"rotate(-90 26.7216 1.39761)\"\r\n                            fill=\"#3056D3\"\r\n                    />\r\n                  </svg>\r\n                </span>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n<!-- ====== Forms Section End -->\r\n\r\n\r\n<%@ include file=\"layout/footer.jsp\" %>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp
+--- a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp	(date 1653616650621)
+@@ -37,14 +37,18 @@
+                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
+                         </a>
+                     </div>
+-                    <form method="post" action="/MemberJoinService">
++                    <form method="post" action="/MemberJoinService" id="form" name="form">
+                         <div class="mb-6">
+                             <input
++                                    id = "mem_id"
+                                     name = "mem_id"
+                                     type="text"
+                                     placeholder="아이디"
+                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
+                             />
++                        </div>
++                        <div class="mb-6">
++                            <button type="button" class="btn btn-outline-info" onclick="goPopup();">아이디 중복 체크</button>
+                         </div>
+                         <div class="mb-6">
+                             <input
+@@ -93,13 +97,18 @@
+                                     placeholder="일"
+                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
+                             />
++                        </div>
++                        <div class="mb-6">
++                            <button type="button" class="btn btn-outline-info" onclick="goPopup();">주소 찾기</button>
+                         </div>
+                         <div class="mb-6">
+                             <input
+-                                    name = "mem_address"
++                                    id="roadAddress"
++                                    name="mem_address"
+                                     type="text"
+                                     placeholder="주소"
+                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
++                                    required readonly
+                             />
+                         </div>
+                         <div class="mb-6">
+@@ -130,7 +139,7 @@
+                             <input
+                                     type="submit"
+                                     value="회원가입"
+-                                    class="bordder-secondary w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
++                                    class="bordder-info w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
+                             />
+                         </div>
+                     </form>
+@@ -138,7 +147,7 @@
+                     <ul class="-mx-2 mb-12 flex justify-between">
+                         <li class="w-full px-2">
+                             <a
+-                                    href="javascript:void(0)"
++                                    href="https://ko-kr.facebook.com/"
+                                     class="flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90"
+                             >
+                                 <svg
+@@ -157,7 +166,7 @@
+                         </li>
+                         <li class="w-full px-2">
+                             <a
+-                                    href="javascript:void(0)"
++                                    href="https://twitter.com/"
+                                     class="flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90"
+                             >
+                                 <svg
+@@ -176,7 +185,7 @@
+                         </li>
+                         <li class="w-full px-2">
+                             <a
+-                                    href="javascript:void(0)"
++                                    href="https://www.google.co.kr/"
+                                     class="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
+                             >
+                                 <svg
+@@ -196,9 +205,9 @@
+                     </ul>
+ 
+                     <p class="text-base text-[#adadad]">
+-                        Already have an account?
++                        이미 계정이 있으신가요? &nbsp;
+                         <a href="/memberLogin" class="text-primary hover:underline">
+-                            Sign In
++                            로그인
+                         </a>
+                     </p>
+ 
+@@ -427,5 +436,18 @@
+ </section>
+ <!-- ====== Forms Section End -->
+ 
++<script language="javascript">
++    function goPopup() {
++        // 주소검색을 수행할 팝업 페이지를 호출합니다.
++        // 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
++        var pop = window.open("/juso","pop","width=570,height=420, scrollbars=yes, resizable=yes");
++    }
++
++    function jusoCallBack(roadFullAddr) {
++        var roadAddress = document.querySelector("#roadAddress");
++        roadAddress.value = roadFullAddr;
++
++    }
++</script>
+ 
+ <%@ include file="layout/footer.jsp" %>
+\ No newline at end of file
+Index: out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%--\r\n  Created by IntelliJ IDEA.\r\n  User: pc\r\n  Date: 2022-05-25\r\n  Time: 오전 11:49\r\n  To change this template use File | Settings | File Templates.\r\n--%>\r\n<%@ page contentType=\"text/html;charset=UTF-8\" language=\"java\" %>\r\n<html>\r\n<head>\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp
+--- a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp	(date 1653616650612)
+@@ -1,16 +1,87 @@
+-<%--
+-  Created by IntelliJ IDEA.
+-  User: pc
+-  Date: 2022-05-25
+-  Time: 오전 11:49
+-  To change this template use File | Settings | File Templates.
+---%>
+-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+-<html>
+-<head>
+-    <title>Title</title>
+-</head>
+-<body>
++<%@ page language="java" contentType="text/html; charset=UTF-8"
++         pageEncoding="UTF-8"%>
++<%@ include file="layout/header.jsp" %>
++
++<!-- Start Breadcrumbs -->
++<div class="breadcrumbs">
++    <div class="container">
++        <div class="row align-items-center">
++            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
++                <div class="breadcrumbs-content">
++                    <h1 class="page-title">이벤트 정보 안내</h1>
++                </div>
++                <ul class="breadcrumb-nav">
++                    <li><a href="/">Home</a></li>
++                    <li>이벤트 정보 안내</li>
++                </ul>
++            </div>
++        </div>
++    </div>
++</div>
++<!-- End Breadcrumbs -->
+ 
+-</body>
+-</html>
++
++<!-- Start Features Area -->
++<section class="features section">
++    <img class="shape" src="assets/images/shapes/shape.png" alt="#">
++    <div class="container">
++        <div class="row">
++            <div class="col-12">
++                <div class="section-title">
++                    <h3 class="wow zoomIn" data-wow-delay=".2s">Event Information Guide</h3><br>
++                    <h2 class="wow fadeInUp" data-wow-delay=".4s">힐링필 선물 대전<br>~72% OFF</h2>
++                    <p class="wow fadeInUp" data-wow-delay=".6s">온 가족의 건강 고민은 힐링필이 해결!</p>
++                </div>
++            </div>
++        </div>
++        <div class="row">
++            <div class="col-lg-6 col-md-6 col-12">
++                <!-- Start Single Feature -->
++                <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
++                    <div class="list-icon">
++                        <i class="lni lni-bolt"></i>
++                    </div>
++                    <h3>Faster Loading Speed</h3>
++                    <p>Composed in a pseudo-Latin language which more or less pseudo-Latin language corresponds.
++                    </p>
++                </div>
++                <!-- End Single Feature -->
++                <!-- Start Single List -->
++                <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
++                    <div class="list-icon">
++                        <i class="lni lni-lock"></i>
++                    </div>
++                    <h3>100% Safe and Secure</h3>
++                    <p>Composed in a pseudo-Latin language which more or less pseudo-Latin language corresponds.
++                    </p>
++                </div>
++                <!-- End Single List -->
++            </div>
++            <div class="col-lg-6 col-md-6 col-12">
++                <!-- Start Single Feature -->
++                <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
++                    <div class="list-icon">
++                        <i class="lni lni-dashboard"></i>
++                    </div>
++                    <h3>99% Uptime Guarantee</h3>
++                    <p>Composed in a pseudo-Latin language which more or less pseudo-Latin language corresponds.
++                    </p>
++                </div>
++                <!-- End Single Feature -->
++                <!-- Start Single Feature -->
++                <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
++                    <div class="list-icon">
++                        <i class="lni lni-headphone"></i>
++                    </div>
++                    <h3>24/7 Customer Support</h3>
++                    <p>Composed in a pseudo-Latin language which more or less pseudo-Latin language corresponds.
++                    </p>
++                </div>
++                <!-- End Single Feature -->
++            </div>
++        </div>
++    </div>
++</section>
++<!-- End Features Area -->
++
++<%@ include file="layout/footer.jsp" %>
+\ No newline at end of file
+Index: out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n         pageEncoding=\"UTF-8\"%>\r\n<%@ include file=\"layout/header.jsp\" %>\r\n\r\n<!-- Start Breadcrumbs -->\r\n<div class=\"breadcrumbs\">\r\n    <div class=\"container\">\r\n        <div class=\"row align-items-center\">\r\n            <div class=\"col-lg-8 offset-lg-2 col-md-12 col-12\">\r\n                <div class=\"breadcrumbs-content\">\r\n                    <h1 class=\"page-title\">FAQ</h1>\r\n                </div>\r\n                <ul class=\"breadcrumb-nav\">\r\n                    <li><a href=\"/\">Home</a></li>\r\n                    <li>FAQ</li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- End Breadcrumbs -->\r\n\r\n<!-- ====== Faq Section Start -->\r\n<section\r\n        class=\"relative z-20 overflow-hidden bg-[#f3f4ff] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]\"\r\n>\r\n    <div class=\"container\">\r\n        <div class=\"-mx-4 flex flex-wrap\">\r\n            <div class=\"w-full px-4\">\r\n                <div class=\"mx-auto mb-[60px] max-w-[620px] text-center lg:mb-20\">\r\n              <span class=\"mb-2 block text-lg font-semibold text-primary\">\r\n                FAQ\r\n              </span>\r\n                    <h2\r\n                            class=\"mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]\"\r\n                    >\r\n                        Any Questions? Answered\r\n                    </h2>\r\n                    <p\r\n                            class=\"text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed\"\r\n                    >\r\n                        There are many variations of passages of Lorem Ipsum available\r\n                        but the majority have suffered alteration in some form.\r\n                    </p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"accordion\" id=\"accordionExample\">\r\n            <div class=\"accordion-item\">\r\n                <h2 class=\"accordion-header\" id=\"headingOne\">\r\n                    <button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapseOne\" aria-expanded=\"true\" aria-controls=\"collapseOne\">\r\n                        Accordion Item #1\r\n                    </button>\r\n                </h2>\r\n                <div id=\"collapseOne\" class=\"accordion-collapse collapse show\" aria-labelledby=\"headingOne\" data-bs-parent=\"#accordionExample\">\r\n                    <div class=\"accordion-body\">\r\n                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"accordion-item\">\r\n                <h2 class=\"accordion-header\" id=\"headingTwo\">\r\n                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapseTwo\" aria-expanded=\"false\" aria-controls=\"collapseTwo\">\r\n                        Accordion Item #2\r\n                    </button>\r\n                </h2>\r\n                <div id=\"collapseTwo\" class=\"accordion-collapse collapse\" aria-labelledby=\"headingTwo\" data-bs-parent=\"#accordionExample\">\r\n                    <div class=\"accordion-body\">\r\n                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"accordion-item\">\r\n                <h2 class=\"accordion-header\" id=\"headingThree\">\r\n                    <button class=\"accordion-button collapsed\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapseThree\" aria-expanded=\"false\" aria-controls=\"collapseThree\">\r\n                        Accordion Item #3\r\n                    </button>\r\n                </h2>\r\n                <div id=\"collapseThree\" class=\"accordion-collapse collapse\" aria-labelledby=\"headingThree\" data-bs-parent=\"#accordionExample\">\r\n                    <div class=\"accordion-body\">\r\n                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"absolute bottom-0 right-0 z-[-1]\">\r\n        <svg\r\n                width=\"1440\"\r\n                height=\"886\"\r\n                viewBox=\"0 0 1440 886\"\r\n                fill=\"none\"\r\n                xmlns=\"http://www.w3.org/2000/svg\"\r\n        >\r\n            <path\r\n                    opacity=\"0.5\"\r\n                    d=\"M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z\"\r\n                    fill=\"url(#paint0_linear)\"\r\n            />\r\n            <defs>\r\n                <linearGradient\r\n                        id=\"paint0_linear\"\r\n                        x1=\"1308.65\"\r\n                        y1=\"1142.58\"\r\n                        x2=\"602.827\"\r\n                        y2=\"-418.681\"\r\n                        gradientUnits=\"userSpaceOnUse\"\r\n                >\r\n                    <stop stop-color=\"#3056D3\" stop-opacity=\"0.36\" />\r\n                    <stop offset=\"1\" stop-color=\"#F5F2FD\" stop-opacity=\"0\" />\r\n                    <stop offset=\"1\" stop-color=\"#F5F2FD\" stop-opacity=\"0.096144\" />\r\n                </linearGradient>\r\n            </defs>\r\n        </svg>\r\n    </div>\r\n</section>\r\n<!-- ====== Faq Section End -->\r\n\r\n<%@ include file=\"layout/footer.jsp\" %>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp
+--- a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp	(date 1653616650617)
+@@ -25,27 +25,17 @@
+         class="relative z-20 overflow-hidden bg-[#f3f4ff] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
+ >
+     <div class="container">
+-        <div class="-mx-4 flex flex-wrap">
+-            <div class="w-full px-4">
+-                <div class="mx-auto mb-[60px] max-w-[620px] text-center lg:mb-20">
+-              <span class="mb-2 block text-lg font-semibold text-primary">
+-                FAQ
+-              </span>
+-                    <h2
+-                            class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
+-                    >
+-                        Any Questions? Answered
+-                    </h2>
+-                    <p
+-                            class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
+-                    >
+-                        There are many variations of passages of Lorem Ipsum available
+-                        but the majority have suffered alteration in some form.
+-                    </p>
++        <div class="row">
++            <div class="col-12">
++                <div class="section-title">
++                    <h3 class="wow zoomIn" data-wow-delay=".2s">FAQ</h3><br>
++                    <h2 class="wow fadeInUp" data-wow-delay=".4s">자주 묻는 질문</h2>
++                    <p class="wow fadeInUp" data-wow-delay=".6s">FAQ를 통해 궁금증을 해결해보세요.</p>
+                 </div>
+             </div>
+         </div>
+-
++    </div>
++    <div class="container">
+         <div class="accordion" id="accordionExample">
+             <div class="accordion-item">
+                 <h2 class="accordion-header" id="headingOne">
+Index: out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><%@ page language=\"java\" contentType=\"text/html; charset=UTF-8\"\r\n         pageEncoding=\"UTF-8\"%>\r\n<!DOCTYPE html>\r\n<html class=\"no-js\" lang=\"zxx\">\r\n\r\n<head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\" />\r\n    <title>HealingPill - 나만의 영양제 찾기</title>\r\n    <meta name=\"description\" content=\"\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n    <link rel=\"shortcut icon\" type=\"resources/assets/image/x-icon\" href=\"resources/assets/images/favicon.svg\" />\r\n\r\n    <!-- ========================= CSS here ========================= -->\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css/bootstrap.min.css\" />\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css/LineIcons.2.0.css\" />\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css/animate.css\" />\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css/tiny-slider.css\" />\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css/glightbox.min.css\" />\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css/main.css\" />\r\n\r\n    <!-- 추가 -->\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css_login/animate.css\" />\r\n    <link rel=\"stylesheet\" href=\"resources/assets/css_login/tailwind.css\" />\r\n\r\n    <!-- ==== WOW JS ==== -->\r\n    <script src=\"resources/assets/js_login/wow.min.js\"></script>\r\n    <script>\r\n        new WOW().init();\r\n    </script>\r\n\r\n</head>\r\n\r\n<body>\r\n\r\n<!-- Preloader -->\r\n<div class=\"preloader\">\r\n    <div class=\"preloader-inner\">\r\n        <div class=\"preloader-icon\">\r\n            <span></span>\r\n            <span></span>\r\n        </div>\r\n    </div>\r\n</div>\r\n<!-- /End Preloader -->\r\n\r\n<!-- Start Header Area -->\r\n<header class=\"header navbar-area\">\r\n    <div class=\"container\">\r\n        <div class=\"row align-items-center\">\r\n            <div class=\"col-lg-12\">\r\n                <div class=\"nav-inner\">\r\n                    <!-- Start Navbar -->\r\n                    <nav class=\"navbar navbar-expand-lg\">\r\n                        <a class=\"navbar-brand\" href=\"/\">\r\n                            <img src=\"resources/assets/images/logo/healingpill_logo.png\" alt=\"Logo\">\r\n                        </a>\r\n                        <button class=\"navbar-toggler mobile-menu-btn\" type=\"button\" data-bs-toggle=\"collapse\"\r\n                                data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\r\n                                aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n                            <span class=\"toggler-icon\"></span>\r\n                            <span class=\"toggler-icon\"></span>\r\n                            <span class=\"toggler-icon\"></span>\r\n                        </button>\r\n                        <div class=\"collapse navbar-collapse sub-menu-bar\" id=\"navbarSupportedContent\">\r\n                            <ul id=\"nav\" class=\"navbar-nav ms-auto\">\r\n                                <li class=\"nav-item\">\r\n                                    <a href=\"/\" class=\"active\" aria-label=\"Toggle navigation\">Home</a>\r\n                                </li>\r\n                                <li class=\"nav-item\">\r\n                                    <a class=\"dd-menu collapsed\" href=\"javascript:void(0)\" data-bs-toggle=\"collapse\"\r\n                                       data-bs-target=\"#submenu-1-1\" aria-controls=\"navbarSupportedContent\"\r\n                                       aria-expanded=\"false\" aria-label=\"Toggle navigation\">전 제품 보기</a>\r\n                                </li>\r\n                                <li class=\"nav-item\">\r\n                                    <a class=\"dd-menu collapsed\" href=\"javascript:void(0)\" data-bs-toggle=\"collapse\"\r\n                                       data-bs-target=\"#submenu-1-2\" aria-controls=\"navbarSupportedContent\"\r\n                                       aria-expanded=\"false\" aria-label=\"Toggle navigation\">나만의 영양제 찾기</a>\r\n                                </li>\r\n                                <li class=\"nav-item\">\r\n                                    <a class=\"dd-menu collapsed\" href=\"javascript:void(0)\" data-bs-toggle=\"collapse\"\r\n                                       data-bs-target=\"#submenu-1-3\" aria-controls=\"navbarSupportedContent\"\r\n                                       aria-expanded=\"false\" aria-label=\"Toggle navigation\">커뮤니티</a>\r\n                                    <ul class=\"sub-menu collapse\" id=\"submenu-1-3\">\r\n                                        <li class=\"nav-item\"><a href=\"/faq\">FAQ</a></li>\r\n                                        <li class=\"nav-item\"><a href=\"/magazine\">매거진</a></li>\r\n                                        <li class=\"nav-item\"><a href=\"javascript:void(0)\">이벤트 정보 안내</a></li>\r\n                                    </ul>\r\n                                </li>\r\n                            </ul>\r\n                        </div> <!-- navbar collapse -->\r\n                        <div class=\"button add-list-button\">\r\n                            <a href=\"/Login\" class=\"btn\">로그인하기</a>\r\n                        </div>\r\n                    </nav>\r\n                    <!-- End Navbar -->\r\n                </div>\r\n            </div>\r\n        </div> <!-- row -->\r\n    </div> <!-- container -->\r\n</header>\r\n<!-- End Header Area -->
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp
+--- a/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp	(date 1653619314695)
+@@ -84,7 +84,7 @@
+                                     <ul class="sub-menu collapse" id="submenu-1-3">
+                                         <li class="nav-item"><a href="/faq">FAQ</a></li>
+                                         <li class="nav-item"><a href="/magazine">매거진</a></li>
+-                                        <li class="nav-item"><a href="javascript:void(0)">이벤트 정보 안내</a></li>
++                                        <li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>
+                                     </ul>
+                                 </li>
+                             </ul>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"HealingPill:war exploded\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/jpa-buddy.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"CSS File\" />\r\n        <option value=\"Jsp File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\r\n      <list>\r\n        <option value=\"lsh17831048 &lt;ars8129@naver.com&gt;\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"sumin_branch\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"295S89URQvd8gO5kJwPZmBob2E8\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml\" />\r\n    <property name=\"project.structure.last.edited\" value=\"아티팩트\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\\css_login\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\\css\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\\layout\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Tomcat 9.0.43\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 9.0.43\" ALTERNATIVE_JRE_ENABLED=\"false\" nameIsGenerated=\"true\">\r\n      <option name=\"COMMON_VM_ARGUMENTS\" value=\"-Dfile.encoding=UTF-8\" />\r\n      <option name=\"UPDATING_POLICY\" value=\"restart-server\" />\r\n      <deployment>\r\n        <artifact name=\"HealingPill:war exploded\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"5f79389c-9b5f-4c8a-ae7a-f03d68f9fd39\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"58693\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"HealingPill:war exploded\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"\" />\r\n      <created>1652401293967</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1652401293967</updated>\r\n      <workItem from=\"1652401298461\" duration=\"358000\" />\r\n      <workItem from=\"1652401681304\" duration=\"1224000\" />\r\n      <workItem from=\"1652402941140\" duration=\"290000\" />\r\n      <workItem from=\"1652403259528\" duration=\"134000\" />\r\n      <workItem from=\"1652403423182\" duration=\"1698000\" />\r\n      <workItem from=\"1652405420665\" duration=\"613000\" />\r\n      <workItem from=\"1652407992456\" duration=\"143000\" />\r\n      <workItem from=\"1652408157683\" duration=\"583000\" />\r\n      <workItem from=\"1652888422128\" duration=\"2868000\" />\r\n      <workItem from=\"1652969042751\" duration=\"6702000\" />\r\n      <workItem from=\"1653130018506\" duration=\"8822000\" />\r\n      <workItem from=\"1653139746867\" duration=\"18467000\" />\r\n      <workItem from=\"1653162630245\" duration=\"5778000\" />\r\n      <workItem from=\"1653217758222\" duration=\"8451000\" />\r\n      <workItem from=\"1653229691814\" duration=\"431000\" />\r\n      <workItem from=\"1653290409805\" duration=\"3148000\" />\r\n      <workItem from=\"1653295597643\" duration=\"67000\" />\r\n      <workItem from=\"1653368556229\" duration=\"2944000\" />\r\n      <workItem from=\"1653373830138\" duration=\"4171000\" />\r\n      <workItem from=\"1653394945825\" duration=\"8612000\" />\r\n      <workItem from=\"1653437680842\" duration=\"7924000\" />\r\n      <workItem from=\"1653610985110\" duration=\"3083000\" />\r\n      <workItem from=\"1653614192032\" duration=\"241000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\">\r\n      <created>1652891332188</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652891332188</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"회원가입, 로그인 폼 추가\">\r\n      <created>1653290510042</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1653290510042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"회원가입, 로그인 폼 JSP 파일 추가\">\r\n      <created>1653368705464</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1653368705464</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\" />\r\n    <MESSAGE value=\"회원가입, 로그인 폼 추가\" />\r\n    <MESSAGE value=\"회원가입, 로그인 폼 JSP 파일 추가\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"회원가입, 로그인 폼 JSP 파일 추가\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/.idea/workspace.xml	(date 1653630413221)
+@@ -9,23 +9,43 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war.xml" beforeDir="false" />
++    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="Add 'jusoPopup' JSP File">
+       <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_23_________Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_30_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_30_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_37_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_37_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_42_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_42_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_33_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_33_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/config/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/config/DB.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberLoginController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/ojdbc8.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/ojdbc8.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/event.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/faq.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/layout/header.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberJoin.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/views/memberLogin.jsp" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css_login/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/resources/assets/css_login/tailwind.css" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -96,13 +116,24 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">
+-    <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+-    <property name="project.structure.last.edited" value="아티팩트" />
+-    <property name="project.structure.proportion" value="0.15" />
+-    <property name="project.structure.side.proportion" value="0.2" />
+-  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "C:/orai18n-21.5.0.0.jar",
++    "node.js.detected.package.eslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "spring.configuration.checksum": "1a1d9ae8b535a29c6271ac731fda4f2b"
++  },
++  "keyToStringList": {
++    "DatabaseDriversLRU": [
++      "oracle"
++    ]
++  }
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css_login" />
+@@ -112,10 +143,15 @@
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views\layout" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\pc\intellij-workspace\HealingPill\lib" />
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.38">
++    <configuration name="orai18n-21.5.0.0.jar" type="JarApplication" temporary="true">
++      <option name="JAR_PATH" value="$PROJECT_DIR$/../../../../orai18n-21.5.0.0.jar!/" />
++      <method v="2" />
++    </configuration>
+     <configuration default="true" type="JetRunConfigurationType">
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -127,8 +163,11 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.43" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
++    <configuration name="Tomcat 9.0.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.38" ALTERNATIVE_JRE_ENABLED="false">
++      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
++      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
++      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+       <option name="UPDATING_POLICY" value="restart-server" />
+       <deployment>
+         <artifact name="HealingPill:war exploded">
+@@ -215,6 +254,11 @@
+         </option>
+       </method>
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="JAR Application.orai18n-21.5.0.0.jar" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -247,6 +291,9 @@
+       <workItem from="1653437680842" duration="7924000" />
+       <workItem from="1653610985110" duration="3083000" />
+       <workItem from="1653614192032" duration="241000" />
++      <workItem from="1653618541217" duration="678000" />
++      <workItem from="1653619258723" duration="626000" />
++      <workItem from="1653627414459" duration="2968000" />
+     </task>
+     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+       <created>1652891332188</created>
+@@ -291,6 +338,22 @@
+     <MESSAGE value="회원가입, 로그인 폼 추가" />
+     <MESSAGE value="회원가입, 로그인 폼 JSP 파일 추가" />
+     <option name="LAST_COMMIT_MESSAGE" value="회원가입, 로그인 폼 JSP 파일 추가" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java</url>
++          <line>32</line>
++          <option name="timeStamp" value="7" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java</url>
++          <line>41</line>
++          <option name="timeStamp" value="8" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: .idea/artifacts/HealingPill_war_exploded.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"ArtifactManager\">\r\n  <artifact type=\"exploded-war\" name=\"HealingPill:war exploded\">\r\n    <output-path>$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded</output-path>\r\n    <root id=\"root\">\r\n      <element id=\"directory\" name=\"WEB-INF\">\r\n        <element id=\"directory\" name=\"classes\">\r\n          <element id=\"module-output\" name=\"HealingPill\" />\r\n        </element>\r\n        <element id=\"directory\" name=\"lib\">\r\n          <element id=\"library\" level=\"project\" name=\"Spring-5.2.3.RELEASE\" />\r\n          <element id=\"library\" level=\"project\" name=\"Spring MVC-5.2.3.RELEASE\" />\r\n          <element id=\"library\" level=\"project\" name=\"ojdbc8\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: log4j:log4j:1.2.17\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.mybatis:mybatis:3.5.3\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.mybatis:mybatis-spring:2.0.3\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.springframework:spring-tx:5.3.20\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.springframework:spring-beans:5.3.20\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.springframework:spring-core:5.3.20\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.springframework:spring-jcl:5.3.20\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.springframework:spring-jdbc:5.3.20\" />\r\n          <element id=\"library\" level=\"project\" name=\"Maven: org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16\" />\r\n        </element>\r\n      </element>\r\n      <element id=\"javaee-facet-resources\" facet=\"HealingPill/web/웹\" />\r\n    </root>\r\n  </artifact>\r\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/artifacts/HealingPill_war_exploded.xml b/.idea/artifacts/HealingPill_war_exploded.xml
+--- a/.idea/artifacts/HealingPill_war_exploded.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/.idea/artifacts/HealingPill_war_exploded.xml	(date 1653619777212)
+@@ -19,9 +19,12 @@
+           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.20" />
+           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.3.20" />
+           <element id="library" level="project" name="Maven: org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16" />
++          <element id="library" level="project" name="Java EE 6-Java EE 6" />
++          <element id="library" level="project" name="projectlombok.lombok" />
+         </element>
+       </element>
+       <element id="javaee-facet-resources" facet="HealingPill/web/웹" />
++      <element id="javaee-facet-resources" facet="HealingPill/web/Web" />
+     </root>
+   </artifact>
+ </component>
+\ No newline at end of file
+Index: out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<web-app xmlns=\"http://xmlns.jcp.org/xml/ns/javaee\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd\"\r\n         version=\"4.0\">\r\n\r\n    <context-param>\r\n        <param-name>contextConfigLocation</param-name>\r\n        <param-value>WEB-INF/applicationContext.xml</param-value>\r\n    </context-param>\r\n    <listener>\r\n        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>\r\n    </listener>\r\n    <servlet>\r\n        <servlet-name>dispatcher</servlet-name>\r\n        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>\r\n        <init-param>\r\n            <param-name>contextConfigLocation</param-name>\r\n            <param-value>WEB-INF/dispatcher-servlet.xml</param-value>\r\n        </init-param>\r\n        <load-on-startup>1</load-on-startup>\r\n    </servlet>\r\n    <servlet-mapping>\r\n        <servlet-name>dispatcher</servlet-name>\r\n        <url-pattern>/</url-pattern>\r\n    </servlet-mapping>\r\n</web-app>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml b/out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml
+--- a/out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/WEB-INF/web.xml	(date 1653616650624)
+@@ -24,4 +24,23 @@
+         <servlet-name>dispatcher</servlet-name>
+         <url-pattern>/</url-pattern>
+     </servlet-mapping>
++
++    <!-- encoding filter -->
++    <filter>
++        <filter-name>encodingFilter</filter-name>
++        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
++        <init-param>
++            <param-name>encoding</param-name>
++            <param-value>UTF-8</param-value>
++        </init-param>
++        <init-param>
++            <param-name>forceEncoding</param-name>
++            <param-value>true</param-value>
++        </init-param>
++    </filter>
++
++    <filter-mapping>
++        <filter-name>encodingFilter</filter-name>
++        <url-pattern>/*</url-pattern>
++    </filter-mapping>
+ </web-app>
+\ No newline at end of file
+Index: out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<beans xmlns=\"http://www.springframework.org/schema/beans\"\r\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n       xmlns:mybatis-spring=\"http://www.springframework.org/schema/context\"\r\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd\">\r\n\r\n    <mybatis-spring:component-scan base-package=\"com.healingpill.mapper\"/>\r\n\r\n    <!-- Oracle dataSource -->\r\n    <bean class=\"org.springframework.jdbc.datasource.DriverManagerDataSource\" id=\"dataSource\">\r\n        <property value=\"oracle.jdbc.driver.OracleDriver\" name=\"driverClassName\" />\r\n        <property value=\"jdbc:oracle:thin:@localhost:1521:xe\" name=\"url\" />\r\n        <!-- 오라클 사용자 이름 -->\r\n        <property value=\"healingpill\" name=\"username\" />\r\n        <!-- 오라클 사용자 비밀번호 -->\r\n        <property value=\"123456\" name=\"password\" />\r\n    </bean>\r\n\r\n    <bean id=\"sqlSession\" class=\"org.mybatis.spring.SqlSessionFactoryBean\">\r\n        <property name=\"dataSource\" ref=\"dataSource\" />\r\n        <property name=\"configLocation\" value=\"classpath:/com.healingpill.mapper/config.xml\"/>\r\n    </bean>\r\n\r\n\r\n    <bean id=\"sqlSessionTemplate\" class=\"org.mybatis.spring.SqlSessionTemplate\">\r\n        <constructor-arg index=\"0\" ref=\"sqlSession\"/>\r\n    </bean>\r\n\r\n</beans>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml b/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml
+--- a/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/out/artifacts/HealingPill_war_exploded/WEB-INF/applicationContext.xml	(date 1653619368617)
+@@ -9,11 +9,11 @@
+     <!-- Oracle dataSource -->
+     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+         <property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
+-        <property value="jdbc:oracle:thin:@localhost:1521:xe" name="url" />
++        <property value="jdbc:oracle:thin:@localhost:1521:orcl" name="url" />
+         <!-- 오라클 사용자 이름 -->
+         <property value="healingpill" name="username" />
+         <!-- 오라클 사용자 비밀번호 -->
+-        <property value="123456" name="password" />
++        <property value="healingpill" name="password" />
+     </bean>
+ 
+     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+Index: .idea/webContexts.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"WebContextManager\">\r\n    <option name=\"state\">\r\n      <map>\r\n        <entry key=\"file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazineDetail.jsp\" value=\"file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views\" />\r\n        <entry key=\"file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin2.jsp\" value=\"file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/webContexts.xml b/.idea/webContexts.xml
+--- a/.idea/webContexts.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/.idea/webContexts.xml	(date 1653619368642)
+@@ -4,6 +4,7 @@
+     <option name="state">
+       <map>
+         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazineDetail.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
++        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoin.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin2.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+       </map>
+     </option>
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\r\n    <data-source source=\"LOCAL\" name=\"@localhost\" uuid=\"28c37643-7b0f-4567-98d4-5369c6247701\">\r\n      <driver-ref>oracle.19</driver-ref>\r\n      <synchronize>true</synchronize>\r\n      <auto-commit>false</auto-commit>\r\n      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>\r\n      <jdbc-url>jdbc:oracle:thin:@localhost:1521:XE</jdbc-url>\r\n      <working-dir>$ProjectFileDir$</working-dir>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/.idea/dataSources.xml	(date 1653619368667)
+@@ -1,12 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="@localhost" uuid="28c37643-7b0f-4567-98d4-5369c6247701">
++    <data-source source="LOCAL" name="@localhost" uuid="0c388e87-8b8e-4dc7-80a7-70e12026d51a">
+       <driver-ref>oracle.19</driver-ref>
+       <synchronize>true</synchronize>
+       <auto-commit>false</auto-commit>
+-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+-      <jdbc-url>jdbc:oracle:thin:@localhost:1521:XE</jdbc-url>
++      <jdbc-driver>oracle.jdbc.driver.OracleDriver</jdbc-driver>
++      <jdbc-url>jdbc:oracle:thin:@localhost:1521:orcl</jdbc-url>
+       <working-dir>$ProjectFileDir$</working-dir>
+     </data-source>
+   </component>
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"IU-213.7172.25\">\r\n    <data-source name=\"@localhost\" uuid=\"28c37643-7b0f-4567-98d4-5369c6247701\">\r\n      <database-info product=\"Oracle\" version=\"Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production\" jdbc-version=\"4.2\" driver-name=\"Oracle JDBC driver\" driver-version=\"21.1.0.0.0\" dbms=\"ORACLE\" exact-version=\"11.2.0.2.0\" exact-driver-version=\"21.1\">\r\n        <extra-name-characters>$#</extra-name-characters>\r\n        <identifier-quote-string>&quot;</identifier-quote-string>\r\n      </database-info>\r\n      <case-sensitivity plain-identifiers=\"upper\" quoted-identifiers=\"exact\" />\r\n      <secret-storage>master_key</secret-storage>\r\n      <user-name>healingpill</user-name>\r\n      <schema-mapping>\r\n        <introspection-scope>\r\n          <node kind=\"schema\">\r\n            <name qname=\"@\" />\r\n            <name qname=\"PUBLIC\" />\r\n          </node>\r\n        </introspection-scope>\r\n      </schema-mapping>\r\n      <introspection-level>3</introspection-level>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	(revision 8544ebc72f7cb49542a7cd55c0eedcf722a6ec3c)
++++ b/.idea/dataSources.local.xml	(date 1653619368690)
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="dataSourceStorageLocal" created-in="IU-213.7172.25">
+-    <data-source name="@localhost" uuid="28c37643-7b0f-4567-98d4-5369c6247701">
+-      <database-info product="Oracle" version="Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="21.1.0.0.0" dbms="ORACLE" exact-version="11.2.0.2.0" exact-driver-version="21.1">
++  <component name="dataSourceStorageLocal" created-in="IU-221.5080.210">
++    <data-source name="@localhost" uuid="0c388e87-8b8e-4dc7-80a7-70e12026d51a">
++      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="21.1.0.0.0" dbms="ORACLE" exact-version="11.2.0.1.0" exact-driver-version="21.1">
+         <extra-name-characters>$#</extra-name-characters>
+         <identifier-quote-string>&quot;</identifier-quote-string>
+       </database-info>
+@@ -18,6 +18,7 @@
+         </introspection-scope>
+       </schema-mapping>
+       <introspection-level>3</introspection-level>
++      <load-sources>user_and_system_sources</load-sources>
+     </data-source>
+   </component>
+ </project>
+\ No newline at end of file

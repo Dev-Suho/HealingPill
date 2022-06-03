@@ -1,0 +1,283 @@
+Index: .idea/dataSources.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DataSourceManagerImpl\" format=\"xml\" multifile-model=\"true\">\r\n    <data-source source=\"LOCAL\" name=\"@localhost\" uuid=\"28c37643-7b0f-4567-98d4-5369c6247701\">\r\n      <driver-ref>oracle.19</driver-ref>\r\n      <synchronize>true</synchronize>\r\n      <auto-commit>false</auto-commit>\r\n      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>\r\n      <jdbc-url>jdbc:oracle:thin:@localhost:1521:XE</jdbc-url>\r\n      <working-dir>$ProjectFileDir$</working-dir>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+--- a/.idea/dataSources.xml	
++++ b/.idea/dataSources.xml	
+@@ -1,12 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="@localhost" uuid="28c37643-7b0f-4567-98d4-5369c6247701">
++    <data-source source="LOCAL" name="@localhost" uuid="857a0fc3-cc00-478b-8557-d6741edce592">
+       <driver-ref>oracle.19</driver-ref>
+       <synchronize>true</synchronize>
+       <auto-commit>false</auto-commit>
+-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+-      <jdbc-url>jdbc:oracle:thin:@localhost:1521:XE</jdbc-url>
++      <jdbc-driver>oracle.jdbc.driver.OracleDriver</jdbc-driver>
++      <jdbc-url>jdbc:oracle:thin:@localhost:1521:orcl</jdbc-url>
+       <working-dir>$ProjectFileDir$</working-dir>
+     </data-source>
+   </component>
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"IU-213.7172.25\">\r\n    <data-source name=\"@localhost\" uuid=\"28c37643-7b0f-4567-98d4-5369c6247701\">\r\n      <database-info product=\"Oracle\" version=\"Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production\" jdbc-version=\"4.2\" driver-name=\"Oracle JDBC driver\" driver-version=\"21.1.0.0.0\" dbms=\"ORACLE\" exact-version=\"11.2.0.2.0\" exact-driver-version=\"21.1\">\r\n        <extra-name-characters>$#</extra-name-characters>\r\n        <identifier-quote-string>&quot;</identifier-quote-string>\r\n      </database-info>\r\n      <case-sensitivity plain-identifiers=\"upper\" quoted-identifiers=\"exact\" />\r\n      <secret-storage>master_key</secret-storage>\r\n      <user-name>healingpill</user-name>\r\n      <schema-mapping>\r\n        <introspection-scope>\r\n          <node kind=\"schema\">\r\n            <name qname=\"@\" />\r\n            <name qname=\"PUBLIC\" />\r\n          </node>\r\n        </introspection-scope>\r\n      </schema-mapping>\r\n      <introspection-level>3</introspection-level>\r\n    </data-source>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	
++++ b/.idea/dataSources.local.xml	
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="dataSourceStorageLocal" created-in="IU-213.7172.25">
+-    <data-source name="@localhost" uuid="28c37643-7b0f-4567-98d4-5369c6247701">
+-      <database-info product="Oracle" version="Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="21.1.0.0.0" dbms="ORACLE" exact-version="11.2.0.2.0" exact-driver-version="21.1">
++  <component name="dataSourceStorageLocal" created-in="IU-221.5080.210">
++    <data-source name="@localhost" uuid="857a0fc3-cc00-478b-8557-d6741edce592">
++      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="21.1.0.0.0" dbms="ORACLE" exact-version="11.2.0.1.0" exact-driver-version="21.1">
+         <extra-name-characters>$#</extra-name-characters>
+         <identifier-quote-string>&quot;</identifier-quote-string>
+       </database-info>
+@@ -18,6 +18,7 @@
+         </introspection-scope>
+       </schema-mapping>
+       <introspection-level>3</introspection-level>
++      <load-sources>user_and_system_sources</load-sources>
+     </data-source>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"HealingPill:war exploded\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/jpa-buddy.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"CSS File\" />\r\n        <option value=\"Jsp File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\r\n      <list>\r\n        <option value=\"lsh17831048 &lt;ars8129@naver.com&gt;\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"sumin_branch\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"295S89URQvd8gO5kJwPZmBob2E8\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml\" />\r\n    <property name=\"project.structure.last.edited\" value=\"아티팩트\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\\css_login\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\\css\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\\layout\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Tomcat 9.0.43\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 9.0.43\" ALTERNATIVE_JRE_ENABLED=\"false\" nameIsGenerated=\"true\">\r\n      <option name=\"COMMON_VM_ARGUMENTS\" value=\"-Dfile.encoding=UTF-8\" />\r\n      <option name=\"UPDATING_POLICY\" value=\"restart-server\" />\r\n      <deployment>\r\n        <artifact name=\"HealingPill:war exploded\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"5f79389c-9b5f-4c8a-ae7a-f03d68f9fd39\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"58693\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"HealingPill:war exploded\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"\" />\r\n      <created>1652401293967</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1652401293967</updated>\r\n      <workItem from=\"1652401298461\" duration=\"358000\" />\r\n      <workItem from=\"1652401681304\" duration=\"1224000\" />\r\n      <workItem from=\"1652402941140\" duration=\"290000\" />\r\n      <workItem from=\"1652403259528\" duration=\"134000\" />\r\n      <workItem from=\"1652403423182\" duration=\"1698000\" />\r\n      <workItem from=\"1652405420665\" duration=\"613000\" />\r\n      <workItem from=\"1652407992456\" duration=\"143000\" />\r\n      <workItem from=\"1652408157683\" duration=\"583000\" />\r\n      <workItem from=\"1652888422128\" duration=\"2868000\" />\r\n      <workItem from=\"1652969042751\" duration=\"6702000\" />\r\n      <workItem from=\"1653130018506\" duration=\"8822000\" />\r\n      <workItem from=\"1653139746867\" duration=\"18467000\" />\r\n      <workItem from=\"1653162630245\" duration=\"5778000\" />\r\n      <workItem from=\"1653217758222\" duration=\"8451000\" />\r\n      <workItem from=\"1653229691814\" duration=\"431000\" />\r\n      <workItem from=\"1653290409805\" duration=\"3148000\" />\r\n      <workItem from=\"1653295597643\" duration=\"67000\" />\r\n      <workItem from=\"1653368556229\" duration=\"2944000\" />\r\n      <workItem from=\"1653373830138\" duration=\"4171000\" />\r\n      <workItem from=\"1653394945825\" duration=\"8612000\" />\r\n      <workItem from=\"1653437680842\" duration=\"7924000\" />\r\n      <workItem from=\"1653610985110\" duration=\"3083000\" />\r\n      <workItem from=\"1653614192032\" duration=\"241000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\">\r\n      <created>1652891332188</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652891332188</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"회원가입, 로그인 폼 추가\">\r\n      <created>1653290510042</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1653290510042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"회원가입, 로그인 폼 JSP 파일 추가\">\r\n      <created>1653368705464</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1653368705464</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\" />\r\n    <MESSAGE value=\"회원가입, 로그인 폼 추가\" />\r\n    <MESSAGE value=\"회원가입, 로그인 폼 JSP 파일 추가\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"회원가입, 로그인 폼 JSP 파일 추가\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -9,23 +9,32 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
++    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="Add 'jusoPopup' JSP File">
+       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_23_________Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20_오전_10_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_05_________Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_30_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_30_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_37_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_37_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_1.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_42_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_42_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_33_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_33_________Changes_.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/config/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/config/DB.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/ojdbc8.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/WEB-INF/lib/ojdbc8.jar" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MemberLoginController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberLoginDAOImpl.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/MemberLoginMapper.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/config.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberLogin.jsp" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -57,13 +66,11 @@
+   <component name="JpbToolWindowState">
+     <option name="myId2FirstActivated">
+       <map>
+-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+       </map>
+     </option>
+     <option name="myId2Visible">
+       <map>
+-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+       </map>
+     </option>
+@@ -89,20 +96,38 @@
+     <option name="selectedTabId" value="CurrentFile" />
+   </component>
+   <component name="ProjectId" id="295S89URQvd8gO5kJwPZmBob2E8" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+-    <ConfirmationsSetting value="2" id="Add" />
+-  </component>
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">
+-    <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+-    <property name="project.structure.last.edited" value="아티팩트" />
+-    <property name="project.structure.proportion" value="0.15" />
+-    <property name="project.structure.side.proportion" value="0.2" />
+-  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/pc/intellij-workspace/HealingPill/src/main/webapp/resources/assets/css_login&quot;,
++    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
++    &quot;spring.configuration.checksum&quot;: &quot;1a1d9ae8b535a29c6271ac731fda4f2b&quot;
++  },
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;oracle&quot;
++    ]
++  }
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css_login" />
+@@ -127,8 +152,11 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.43" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
++    <configuration name="Tomcat 9.0.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.38" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
++      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
++      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
++      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+       <option name="UPDATING_POLICY" value="restart-server" />
+       <deployment>
+         <artifact name="HealingPill:war exploded">
+@@ -138,7 +166,8 @@
+         </artifact>
+       </deployment>
+       <server-settings>
+-        <option name="BASE_DIRECTORY_NAME" value="5f79389c-9b5f-4c8a-ae7a-f03d68f9fd39" />
++        <option name="BASE_DIRECTORY_NAME" value="81608cb2-df9e-4bbd-81e4-91df91e800fe" />
++        <option name="JNDI_PORT" value="8686" />
+       </server-settings>
+       <predefined_log_file enabled="true" id="Tomcat" />
+       <predefined_log_file enabled="true" id="Tomcat Catalina" />
+@@ -146,7 +175,7 @@
+       <predefined_log_file id="Tomcat Host Manager" />
+       <predefined_log_file id="Tomcat Localhost Access" />
+       <RunnerSettings RunnerId="Debug">
+-        <option name="DEBUG_PORT" value="58693" />
++        <option name="DEBUG_PORT" value="51090" />
+       </RunnerSettings>
+       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+         <option name="USE_ENV_VARIABLES" value="true" />
+@@ -245,8 +274,7 @@
+       <workItem from="1653373830138" duration="4171000" />
+       <workItem from="1653394945825" duration="8612000" />
+       <workItem from="1653437680842" duration="7924000" />
+-      <workItem from="1653610985110" duration="3083000" />
+-      <workItem from="1653614192032" duration="241000" />
++      <workItem from="1653616936924" duration="632000" />
+     </task>
+     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+       <created>1652891332188</created>
+@@ -269,7 +297,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1653368705464</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Add 'jusoPopup' JSP File">
++      <created>1653617558513</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1653617558513</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -290,7 +325,8 @@
+     <MESSAGE value="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경" />
+     <MESSAGE value="회원가입, 로그인 폼 추가" />
+     <MESSAGE value="회원가입, 로그인 폼 JSP 파일 추가" />
+-    <option name="LAST_COMMIT_MESSAGE" value="회원가입, 로그인 폼 JSP 파일 추가" />
++    <MESSAGE value="Add 'jusoPopup' JSP File" />
++    <option name="LAST_COMMIT_MESSAGE" value="Add 'jusoPopup' JSP File" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
+Index: src/main/webapp/WEB-INF/applicationContext.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<beans xmlns=\"http://www.springframework.org/schema/beans\"\r\n       xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n       xmlns:mybatis-spring=\"http://www.springframework.org/schema/context\"\r\n       xsi:schemaLocation=\"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd\">\r\n\r\n    <mybatis-spring:component-scan base-package=\"com.healingpill.mapper\"/>\r\n\r\n    <!-- Oracle dataSource -->\r\n    <bean class=\"org.springframework.jdbc.datasource.DriverManagerDataSource\" id=\"dataSource\">\r\n        <property value=\"oracle.jdbc.driver.OracleDriver\" name=\"driverClassName\" />\r\n        <property value=\"jdbc:oracle:thin:@localhost:1521:xe\" name=\"url\" />\r\n        <!-- 오라클 사용자 이름 -->\r\n        <property value=\"healingpill\" name=\"username\" />\r\n        <!-- 오라클 사용자 비밀번호 -->\r\n        <property value=\"123456\" name=\"password\" />\r\n    </bean>\r\n\r\n    <bean id=\"sqlSession\" class=\"org.mybatis.spring.SqlSessionFactoryBean\">\r\n        <property name=\"dataSource\" ref=\"dataSource\" />\r\n        <property name=\"configLocation\" value=\"classpath:/com.healingpill.mapper/config.xml\"/>\r\n    </bean>\r\n\r\n\r\n    <bean id=\"sqlSessionTemplate\" class=\"org.mybatis.spring.SqlSessionTemplate\">\r\n        <constructor-arg index=\"0\" ref=\"sqlSession\"/>\r\n    </bean>\r\n\r\n</beans>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/webapp/WEB-INF/applicationContext.xml b/src/main/webapp/WEB-INF/applicationContext.xml
+--- a/src/main/webapp/WEB-INF/applicationContext.xml	
++++ b/src/main/webapp/WEB-INF/applicationContext.xml	
+@@ -9,11 +9,11 @@
+     <!-- Oracle dataSource -->
+     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
+         <property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
+-        <property value="jdbc:oracle:thin:@localhost:1521:xe" name="url" />
++        <property value="jdbc:oracle:thin:@localhost:1521:orcl" name="url" />
+         <!-- 오라클 사용자 이름 -->
+         <property value="healingpill" name="username" />
+         <!-- 오라클 사용자 비밀번호 -->
+-        <property value="123456" name="password" />
++        <property value="healingpill" name="password" />
+     </bean>
+ 
+     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+Index: out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Manifest-Version: 1.0\r\nCreated-By: IntelliJ IDEA\r\nBuilt-By: ars81\r\nBuild-Jdk: Oracle OpenJDK version 1.8.0_281\r\n\r\n
+===================================================================
+diff --git a/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF b/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF
+--- a/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF	
++++ b/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF	
+@@ -1,5 +1,5 @@
+ Manifest-Version: 1.0
+ Created-By: IntelliJ IDEA
+-Built-By: ars81
+-Build-Jdk: Oracle OpenJDK version 1.8.0_281
++Built-By: pc
++Build-Jdk: 1.8.0_241
+ 

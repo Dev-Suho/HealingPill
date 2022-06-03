@@ -67,4 +67,20 @@ public class HomeController {
 
         return "jusoPopup";
     }
+
+    // allProducts 페이지 이동
+    @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
+    public String allProductsGET() {
+        logger.debug("allProducts 페이지 이동");
+
+        return "allProducts";
+    }
+
+    // allProductsDetail 페이지 이동
+    @RequestMapping(value = "/allProductsDetail", method = RequestMethod.GET)
+    public String allProductsDetailGET() {
+        logger.debug("allProductsDetail 페이지 이동");
+
+        return "allProductsDetail";
+    }
 }

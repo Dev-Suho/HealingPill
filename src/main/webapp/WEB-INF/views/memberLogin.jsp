@@ -44,6 +44,7 @@
                             <input
                                     type="text"
                                     placeholder="아이디"
+                                    id = "mem_id"
                                     name = "mem_id"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             >
@@ -52,6 +53,7 @@
                             <input
                                     type="password"
                                     placeholder="비밀번호"
+                                    id = "mem_password"
                                     name = "mem_password"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             >
@@ -126,13 +128,13 @@
                         </li>
                     </ul>
                     <a
-                            href="javascript:void(0)"
+                            href="/findId"
                             class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
                     >
                         아이디 찾기
                     </a> &nbsp;&nbsp; | &nbsp;&nbsp;
                     <a
-                            href="javascript:void(0)"
+                            href="/findPwd"
                             class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
                     >
                         비밀번호 찾기
@@ -368,6 +370,5 @@
     </div>
 </section>
 <!-- ====== Forms Section End -->
-
 
 <%@ include file="layout/footer.jsp" %>
