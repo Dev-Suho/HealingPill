@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1653619370281" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/config/DB.class" />
+    <option name="AFTER_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/config/DB.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/DB.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/lib/ojdbc8.jar" />
+    <option name="AFTER_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/lib/ojdbc8.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/ojdbc8.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" />
+    <option name="AFTER_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MenuController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/MenuController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberController.class" />
+    <option name="AFTER_PATH" value="out/artifacts/HealingPill_war_exploded/WEB-INF/classes/com/healingpill/controller/MemberController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/MemberController.class" />
+  </binary>
+</changelist>

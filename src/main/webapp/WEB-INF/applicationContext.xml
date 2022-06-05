@@ -10,11 +10,11 @@
     <!-- Oracle dataSource -->
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSource">
         <property value="oracle.jdbc.driver.OracleDriver" name="driverClassName" />
-        <property value="jdbc:oracle:thin:@localhost:1521:xe" name="url" />
+        <property value="jdbc:oracle:thin:@localhost:1521:orcl" name="url" />
         <!-- 오라클 사용자 이름 -->
         <property value="healingpill" name="username" />
         <!-- 오라클 사용자 비밀번호 -->
-        <property value="123456" name="password" />
+        <property value="healingpill" name="password" />
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
