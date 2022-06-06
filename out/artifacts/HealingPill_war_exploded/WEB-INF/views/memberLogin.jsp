@@ -44,6 +44,7 @@
                             <input
                                     type="text"
                                     placeholder="아이디"
+                                    id = "mem_id"
                                     name = "mem_id"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             >
@@ -52,6 +53,7 @@
                             <input
                                     type="password"
                                     placeholder="비밀번호"
+                                    id = "mem_password"
                                     name = "mem_password"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             >
@@ -69,7 +71,7 @@
                     <ul class="-mx-2 mb-12 flex justify-between">
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://ko-kr.facebook.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -88,7 +90,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://twitter.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -107,7 +109,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://www.google.co.kr/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -126,15 +128,21 @@
                         </li>
                     </ul>
                     <a
-                            href="javascript:void(0)"
+                            href="/findId"
                             class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
                     >
-                        Forget Password?
+                        아이디 찾기
+                    </a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                    <a
+                            href="/findPwd"
+                            class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
+                    >
+                        비밀번호 찾기
                     </a>
                     <p class="text-base text-[#adadad]">
-                        Not a member yet?
-                        <a href="/memberJoin" class="text-primary hover:underline">
-                            Sign Up
+                        아직 힐링필 회원이 아니신가요?
+                        <a href="Join" class="text-primary hover:underline">
+                            &nbsp;회원가입
                         </a>
                     </p>
 
@@ -362,6 +370,5 @@
     </div>
 </section>
 <!-- ====== Forms Section End -->
-
 
 <%@ include file="layout/footer.jsp" %>
