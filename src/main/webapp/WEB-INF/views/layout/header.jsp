@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+    request.setCharacterEncoding("UTF-8");
+    String sessionId = (String)session.getAttribute("sessionId");
+%>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -90,10 +95,21 @@
                                 </li>
                             </ul>
                         </div> <!-- navbar collapse -->
-                        <div class="button">
-                            <a href="/cart" class="btn"><i class="bi bi-cart4"></i></a>
-                            <a href="/Login" class="btn">로그인하기</a>
-                        </div>
+                        <c:choose>
+                            <c:when test="${res != null}">
+                                <div class="button">
+                                    <span class="badge">[${res.mem_username}]님 안녕하세요 :)</span>
+                                    <a href="/cart" class="btn"><i class="bi bi-cart4"></i></a>
+                                    <a href="/Logout" class="btn">로그아웃</a>
+                                </div>
+                            </c:when>
+                            <c:otherwise>
+                                <div class="button">
+                                    <a href="/cart" class="btn"><i class="bi bi-cart4"></i></a>
+                                    <a href="/Login" class="btn">로그인하기</a>
+                                </div>
+                            </c:otherwise>
+                        </c:choose>
                     </nav>
                     <!-- End Navbar -->
                 </div>

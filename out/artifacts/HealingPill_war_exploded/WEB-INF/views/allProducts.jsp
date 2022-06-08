@@ -51,7 +51,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
                 <!-- End Single Feature -->
@@ -65,7 +65,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
 
                 </div>
@@ -80,7 +80,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
                 <!-- End Single Feature -->
@@ -94,7 +94,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
                 <!-- End Single Feature -->
@@ -108,7 +108,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
                 <!-- End Single Feature -->
@@ -122,7 +122,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
                 <!-- End Single Feature -->
@@ -136,7 +136,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
                 <!-- End Single Feature -->
@@ -150,7 +150,7 @@
                         page at its layout.</p>
                     <br>
                     <div class="button">
-                        <a href="product-details.html"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
                     </div>
                 </div>
                 <!-- End Single Feature -->
