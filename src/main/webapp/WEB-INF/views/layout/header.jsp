@@ -68,9 +68,7 @@
                                     <a href="/" class="active" aria-label="Toggle navigation">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                                       data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
-                                       aria-expanded="false" aria-label="Toggle navigation">전 제품 보기</a>
+                                    <a href="/allProducts" class="active" aria-label="Toggle navigation">전 제품 보기</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -84,13 +82,13 @@
                                     <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a href="/faq">FAQ</a></li>
                                         <li class="nav-item"><a href="/magazine">매거진</a></li>
-                                        <li class="nav-item"><a href="javascript:void(0)">이벤트 정보 안내</a></li>
+                                        <li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div> <!-- navbar collapse -->
                         <div class="button add-list-button">
-                            <a href="/memberLogin" class="btn">로그인하기</a>
+                            <a href="/Login" class="btn">로그인하기</a>
                         </div>
                     </nav>
                     <!-- End Navbar -->

@@ -20,6 +20,7 @@
 </div>
 <!-- End Breadcrumbs -->
 
+
 <!-- ====== Forms Section Start -->
 <section class="bg-[#F4F7FF] py-14 lg:py-20">
     <div class="container">
@@ -37,34 +38,38 @@
                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
                         </a>
                     </div>
-                    <form>
+                    <form action = "memberLogin" method="post">
+                        <input type="hidden" value="login">
                         <div class="mb-6">
                             <input
                                     type="text"
                                     placeholder="아이디"
+                                    name = "mem_id"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
-                            />
+                            >
                         </div>
                         <div class="mb-6">
                             <input
                                     type="password"
                                     placeholder="비밀번호"
+                                    name = "mem_password"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
-                            />
+                            >
                         </div>
                         <div class="mb-10">
                             <input
                                     type="submit"
                                     value="로그인"
+                                    id = "loginButton"
                                     class="bordder-secondary w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
-                            />
+                            >
                         </div>
                     </form>
                     <p class="mb-6 text-base text-[#adadad]">Connect With</p>
                     <ul class="-mx-2 mb-12 flex justify-between">
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://ko-kr.facebook.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -83,7 +88,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://twitter.com/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -102,7 +107,7 @@
                         </li>
                         <li class="w-full px-2">
                             <a
-                                    href="javascript:void(0)"
+                                    href="https://www.google.co.kr/"
                                     class="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-opacity-90"
                             >
                                 <svg
@@ -124,12 +129,18 @@
                             href="javascript:void(0)"
                             class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
                     >
-                        Forget Password?
+                        아이디 찾기
+                    </a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                    <a
+                            href="javascript:void(0)"
+                            class="mb-2 inline-block text-base text-[#adadad] hover:text-primary"
+                    >
+                        비밀번호 찾기
                     </a>
                     <p class="text-base text-[#adadad]">
-                        Not a member yet?
-                        <a href="/memberJoin" class="text-primary hover:underline">
-                            Sign Up
+                        아직 힐링필 회원이 아니신가요?
+                        <a href="Join" class="text-primary hover:underline">
+                            &nbsp;회원가입
                         </a>
                     </p>
 
