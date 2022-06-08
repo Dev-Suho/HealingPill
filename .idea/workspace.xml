@@ -9,7 +9,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="Rename Package Name, Class Name" />
+    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="2022-06-03">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MagazineController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MagazineDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MagazineDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MagazineDDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MagazineVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dto/MagazineDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MagazineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/MagazineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/bbs0603.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1defd616-97fc-4fdd-ac64-2cf10d218e40.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1defd616-97fc-4fdd-ac64-2cf10d218e40/storage_v2/_src_/schema/SYS.rUIBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1defd616-97fc-4fdd-ac64-2cf10d218e40/storage_v2/_src_/schema/SYSTEM.L2avkg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/APEX_040000.wQEqxw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/APEX_040000.wQEqxw.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/CTXSYS.Rqsddw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/CTXSYS.Rqsddw.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/MDSYS.tj1dBA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/MDSYS.tj1dBA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/SYS.rUIBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/SYS.rUIBAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/SYSTEM.L2avkg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/SYSTEM.L2avkg.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/XDB.1lIBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5981ba80-e6b7-4674-bb3c-33c4a86e7d35/storage_v2/_src_/schema/XDB.1lIBAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-13__12_48_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-20__10_15_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__4_38_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-23__5_41_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2022-05-25__12_20_________Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-06-03__9_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-06-03__9_28__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022-06-03__9_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022-06-03__9_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-06-03__9_29__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-06-03__9_29__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-06-03__9_29__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-06-03__9_29__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/HealingPill_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberJoinDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/MemberJoinDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dto/MemberDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dto/MemberDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +64,7 @@
       <list>
         <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -70,7 +115,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="295S89URQvd8gO5kJwPZmBob2E8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -86,12 +133,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "import_schema_mapping": "<schema-mapping><databases><list><schema-mapping-item><source-data-source-id>1defd616-97fc-4fdd-ac64-2cf10d218e40</source-data-source-id><source-path>schema/\"ROOT\"</source-path><target-data-source-id>1defd616-97fc-4fdd-ac64-2cf10d218e40</target-data-source-id><target-path>schema/\"ROOT\"</target-path></schema-mapping-item></list></databases></schema-mapping>",
-    "last_opened_file_path": "C:/Users/pc/intellij-workspace/HealingPill/src/main/webapp/resources/assets/css_login",
+    "last_opened_file_path": "C:/Users/FROG/eclipse-workspace/HealingPill/src/main/webapp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "아티팩트",
+    "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
@@ -259,6 +306,7 @@
       <workItem from="1653611267983" duration="5435000" />
       <workItem from="1653617324695" duration="1831000" />
       <workItem from="1654215726045" duration="1008000" />
+      <workItem from="1654658628372" duration="13045000" />
     </task>
     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
       <created>1652891332188</created>

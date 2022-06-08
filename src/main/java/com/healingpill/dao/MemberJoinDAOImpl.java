@@ -2,14 +2,13 @@ package com.healingpill.dao;
 
 import com.healingpill.dto.MemberDTO;
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import javax.inject.Inject;
 
 @Repository
 public class MemberJoinDAOImpl implements MemberJoinDAO {
 
-    @Inject
+    @Autowired
     private SqlSession sqlSession;
 
     @Override

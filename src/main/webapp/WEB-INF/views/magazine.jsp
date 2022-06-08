@@ -1,6 +1,35 @@
+        <%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.healingpill.dao.MagazineVO" %>
+<%@ page import="com.healingpill.dao.MagazineDDAO" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
+
+
+<%
+    request.setCharacterEncoding("utf-8");
+    String num = "1";
+    //String num = request.getParameter("mg_no");
+    MagazineVO magazineVO = new MagazineVO();
+    magazineVO.setMg_no(num);
+    MagazineDDAO ddao = new MagazineDDAO();
+    List magazineList = ddao.listmembers(magazineVO);
+
+    String mg_title = null;
+    String mg_datetime = null;
+    for (int i = 0; i < magazineList.size(); i++) {
+        MagazineVO vo = (MagazineVO) magazineList.get(i);
+        String mg_no = vo.getMg_no();
+        String mg_image = vo.getMg_image();
+        mg_title = vo.getMg_title();
+        String mg_content = vo.getMg_content();
+        mg_datetime = vo.getMg_datetime();
+    }
+%>
 
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
@@ -44,14 +73,18 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  Dec 22, 2023
+
+                  <%//Dec 22, 2023%>
+                <%=mg_datetime%>
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                Meet AutoManage, the best AI management tools
+                                <%=mg_title%>
+                                <%//Meet AutoManage, the best AI management tools%>
+
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
