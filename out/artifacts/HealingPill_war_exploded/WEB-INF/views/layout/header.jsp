@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -10,10 +11,13 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="resources/assets/image/x-icon" href="resources/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="resources/assets/css/LineIcons.2.0.css" />
+    <link rel="stylesheet" href="resources/assets/css/LineIcons.3.0.css" />
     <link rel="stylesheet" href="resources/assets/css/animate.css" />
     <link rel="stylesheet" href="resources/assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="resources/assets/css/glightbox.min.css" />
@@ -87,7 +91,8 @@
                                 </li>
                             </ul>
                         </div> <!-- navbar collapse -->
-                        <div class="button add-list-button">
+                        <div class="button">
+                            <a href="/cart" class="btn"><i class="bi bi-cart4"></i></a>
                             <a href="/Login" class="btn">로그인하기</a>
                         </div>
                     </nav>
