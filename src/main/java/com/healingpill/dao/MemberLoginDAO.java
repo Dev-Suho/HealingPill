@@ -1,6 +1,6 @@
 package com.healingpill.dao;
 
-import com.healingpill.model.MemberDTO;
+import com.healingpill.dto.MemberDTO;
 
 public interface MemberLoginDAO {
     String NAMESPACE = "member.";

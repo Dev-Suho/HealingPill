@@ -1,0 +1,165 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"HealingPill:war exploded\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"Rename Package Name, Class Name\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-01.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-02.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-03.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-04.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/author-01.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/bannder-ad.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-01.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-02.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-03.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-details-01.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/dotted-shape.svg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/quote-bg.svg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources.local.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/webContexts.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/webContexts.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MenuController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/healingpill/controller/MenuController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/footer.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/footer.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoin.jsp\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoin.jsp\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoinSuccess.jsp\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/css_login/tailwind.css\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/images/logo/logo.svg\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/js/main.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/webapp/resources/assets/js/main.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"CSS File\" />\r\n        <option value=\"Jsp File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\r\n      <list>\r\n        <option value=\"lsh17831048 &lt;ars8129@naver.com&gt;\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"sumin_branch\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"LogFilters\">\r\n    <option name=\"FILTER_ERRORS\" value=\"false\" />\r\n    <option name=\"FILTER_WARNINGS\" value=\"false\" />\r\n    <option name=\"FILTER_INFO\" value=\"true\" />\r\n    <option name=\"FILTER_DEBUG\" value=\"true\" />\r\n    <option name=\"CUSTOM_FILTER\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"295S89URQvd8gO5kJwPZmBob2E8\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Users/pc/intellij-workspace/HealingPill/src/main/webapp/resources/assets/css_login\",\r\n    \"list.type.of.created.stylesheet\": \"CSS\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"project.structure.last.edited\": \"Artifacts\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.projectsettings.compiler.annotationProcessors\",\r\n    \"spring.configuration.checksum\": \"1a1d9ae8b535a29c6271ac731fda4f2b\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"oracle\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\\css_login\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\\css\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\resources\\assets\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\" />\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\\layout\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\pc\\intellij-workspace\\HealingPill\\src\\main\\webapp\\WEB-INF\\views\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Tomcat 9.0.38\" type=\"#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory\" factoryName=\"Local\" APPLICATION_SERVER_NAME=\"Tomcat 9.0.38\" ALTERNATIVE_JRE_ENABLED=\"true\" ALTERNATIVE_JRE_PATH=\"1.8\">\r\n      <option name=\"BROWSER_ID\" value=\"98ca6316-2f89-46d9-a9e5-fa9e2b0625b3\" />\r\n      <option name=\"COMMON_VM_ARGUMENTS\" value=\"-Dfile.encoding=UTF-8\" />\r\n      <option name=\"UPDATE_ON_FRAME_DEACTIVATION\" value=\"true\" />\r\n      <option name=\"UPDATE_CLASSES_ON_FRAME_DEACTIVATION\" value=\"true\" />\r\n      <option name=\"UPDATING_POLICY\" value=\"restart-server\" />\r\n      <deployment>\r\n        <artifact name=\"HealingPill:war exploded\">\r\n          <settings>\r\n            <option name=\"CONTEXT_PATH\" value=\"/\" />\r\n          </settings>\r\n        </artifact>\r\n      </deployment>\r\n      <server-settings>\r\n        <option name=\"BASE_DIRECTORY_NAME\" value=\"81608cb2-df9e-4bbd-81e4-91df91e800fe\" />\r\n        <option name=\"JNDI_PORT\" value=\"8686\" />\r\n      </server-settings>\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat\" />\r\n      <predefined_log_file enabled=\"true\" id=\"Tomcat Catalina\" />\r\n      <predefined_log_file id=\"Tomcat Manager\" />\r\n      <predefined_log_file id=\"Tomcat Host Manager\" />\r\n      <predefined_log_file id=\"Tomcat Localhost Access\" />\r\n      <RunnerSettings RunnerId=\"Debug\">\r\n        <option name=\"DEBUG_PORT\" value=\"51090\" />\r\n      </RunnerSettings>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Cover\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Debug\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Profile\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <ConfigurationWrapper VM_VAR=\"JAVA_OPTS\" RunnerId=\"Run\">\r\n        <option name=\"USE_ENV_VARIABLES\" value=\"true\" />\r\n        <STARTUP>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </STARTUP>\r\n        <SHUTDOWN>\r\n          <option name=\"USE_DEFAULT\" value=\"true\" />\r\n          <option name=\"SCRIPT\" value=\"\" />\r\n          <option name=\"VM_PARAMETERS\" value=\"\" />\r\n          <option name=\"PROGRAM_PARAMETERS\" value=\"\" />\r\n        </SHUTDOWN>\r\n      </ConfigurationWrapper>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n        <option name=\"BuildArtifacts\" enabled=\"true\">\r\n          <artifact name=\"HealingPill:war exploded\" />\r\n        </option>\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"bf58e0e8-3f57-469a-89e3-34d95fafed87\" name=\"Changes\" comment=\"\" />\r\n      <created>1652401293967</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1652401293967</updated>\r\n      <workItem from=\"1652401298461\" duration=\"358000\" />\r\n      <workItem from=\"1652401681304\" duration=\"1224000\" />\r\n      <workItem from=\"1652402941140\" duration=\"290000\" />\r\n      <workItem from=\"1652403259528\" duration=\"134000\" />\r\n      <workItem from=\"1652403423182\" duration=\"1698000\" />\r\n      <workItem from=\"1652405420665\" duration=\"613000\" />\r\n      <workItem from=\"1652407992456\" duration=\"143000\" />\r\n      <workItem from=\"1652408157683\" duration=\"583000\" />\r\n      <workItem from=\"1652888422128\" duration=\"2868000\" />\r\n      <workItem from=\"1652969042751\" duration=\"6702000\" />\r\n      <workItem from=\"1653130018506\" duration=\"8822000\" />\r\n      <workItem from=\"1653139746867\" duration=\"18467000\" />\r\n      <workItem from=\"1653162630245\" duration=\"5778000\" />\r\n      <workItem from=\"1653217758222\" duration=\"8451000\" />\r\n      <workItem from=\"1653229691814\" duration=\"431000\" />\r\n      <workItem from=\"1653290409805\" duration=\"3148000\" />\r\n      <workItem from=\"1653295597643\" duration=\"67000\" />\r\n      <workItem from=\"1653368556229\" duration=\"2944000\" />\r\n      <workItem from=\"1653373830138\" duration=\"4171000\" />\r\n      <workItem from=\"1653394945825\" duration=\"8612000\" />\r\n      <workItem from=\"1653437680842\" duration=\"7924000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\">\r\n      <created>1652891332188</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652891332188</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"회원가입, 로그인 폼 추가\">\r\n      <created>1653290510042</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1653290510042</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"회원가입, 로그인 폼 JSP 파일 추가\">\r\n      <created>1653368705464</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1653368705464</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경\" />\r\n    <MESSAGE value=\"회원가입, 로그인 폼 추가\" />\r\n    <MESSAGE value=\"회원가입, 로그인 폼 JSP 파일 추가\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"회원가입, 로그인 폼 JSP 파일 추가\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3a85328adc7fc936e7a6b046b270333303b4e125)
++++ b/.idea/workspace.xml	(date 1653615283811)
+@@ -9,32 +9,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="Rename Package Name, Class Name">
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-01.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-02.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-03.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/article-author-04.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/author-01.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/bannder-ad.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-01.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-02.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-03.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/blog-details-01.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/dotted-shape.svg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/blog/quote-bg.svg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4b015f91-a2f1-4cd6-9b3d-cc2cc942e88f.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
++    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="Add Address API">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/MenuController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/footer.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoin.jsp" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/memberJoinSuccess.jsp" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/assets/css_login/tailwind.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/assets/images/logo/logo.svg" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/main.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -46,6 +22,7 @@
+       <list>
+         <option value="Class" />
+         <option value="CSS File" />
++        <option value="JavaScript File" />
+         <option value="Jsp File" />
+       </list>
+     </option>
+@@ -58,7 +35,7 @@
+     </option>
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="sumin_branch" />
++        <entry key="$PROJECT_DIR$" value="master" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -101,40 +78,40 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "last_opened_file_path": "C:/Users/pc/intellij-workspace/HealingPill/src/main/webapp/resources/assets/css_login",
+-    "list.type.of.created.stylesheet": "CSS",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "project.structure.last.edited": "Artifacts",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+-    "spring.configuration.checksum": "1a1d9ae8b535a29c6271ac731fda4f2b"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/pc/intellij-workspace/HealingPill/src/main/webapp/WEB-INF/views/layout&quot;,
++    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
++    &quot;spring.configuration.checksum&quot;: &quot;1a1d9ae8b535a29c6271ac731fda4f2b&quot;
+   },
+-  "keyToStringList": {
+-    "DatabaseDriversLRU": [
+-      "oracle"
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;oracle&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views\layout" />
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css_login" />
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css" />
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets" />
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
+-      <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views\layout" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
+@@ -274,6 +251,10 @@
+       <workItem from="1653373830138" duration="4171000" />
+       <workItem from="1653394945825" duration="8612000" />
+       <workItem from="1653437680842" duration="7924000" />
++      <workItem from="1653458309421" duration="5341000" />
++      <workItem from="1653464807926" duration="2029000" />
++      <workItem from="1653578929701" duration="5965000" />
++      <workItem from="1653611747381" duration="3454000" />
+     </task>
+     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
+       <created>1652891332188</created>
+@@ -296,7 +277,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1653368705464</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Add Address API">
++      <created>1653612648848</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1653612648848</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -317,7 +305,9 @@
+     <MESSAGE value="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경" />
+     <MESSAGE value="회원가입, 로그인 폼 추가" />
+     <MESSAGE value="회원가입, 로그인 폼 JSP 파일 추가" />
+-    <option name="LAST_COMMIT_MESSAGE" value="회원가입, 로그인 폼 JSP 파일 추가" />
++    <MESSAGE value="Add Community Menu" />
++    <MESSAGE value="Add Address API" />
++    <option name="LAST_COMMIT_MESSAGE" value="Add Address API" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
