@@ -125,4 +125,11 @@ public class HomeController {
     //매거진 추가
     @RequestMapping(value = "/admin/cm_magazine")
     public String adminmagazine() { return "/admin/cm_magazine";}
+
+
+    //
+    @RequestMapping(value = "cart")
+    public String cartView() {
+        return "cart";
+    }
 }
