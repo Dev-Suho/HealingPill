@@ -76,4 +76,6 @@ public class MemberJoinController {
 
         return result;
     }
+
+
 }

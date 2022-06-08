@@ -52,6 +52,12 @@ public class MemberLoginController {
         }
     }
 
+    @RequestMapping(value = "/Logout", method = RequestMethod.GET)
+    public String memberLogout(HttpSession session) throws Exception {
+        session.invalidate();
+        return "MainPage";
+    }
+
     @RequestMapping(value = "/findId")
     public String findId() {
         logger.debug("아이디 찾기 페이지 이동");
