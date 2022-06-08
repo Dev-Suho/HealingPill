@@ -20,7 +20,7 @@ public class MemberJoinController {
     @Autowired
     MemberJoinServiceImpl memberJoinServiceImpl;
 
-    @RequestMapping(value = "Join")
+    @RequestMapping(value = "/Join")
     public String memberJoin() {
         return "memberJoin";
     }
