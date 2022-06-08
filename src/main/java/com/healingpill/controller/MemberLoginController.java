@@ -67,8 +67,8 @@ public class MemberLoginController {
 
     @RequestMapping(value = "/findIdSuccess")
     public String findIdSuccess() {
-        logger.debug("아이디 찾기 페이지 이동");
-        System.out.println("아이디 찾기 페이지 이동");
+        logger.debug("아이디 찾기 성공 페이지 이동");
+        System.out.println("아이디 찾기 성공 페이지 이동");
         return "findIdSuccess";
     }
 
