@@ -15,7 +15,7 @@
                         Look for nutritional supplements!</p>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/memberLogin" class="btn">Get Started</a>
-                        <a href="/about-us" class="btn btn-alt">Know More</a>
+                        <a href="/survey" class="btn btn-alt">맞춤영양제 하러가기</a>
                     </div>
                 </div>
             </div>
