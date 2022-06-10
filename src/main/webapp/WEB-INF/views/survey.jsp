@@ -22,25 +22,19 @@
 <section>
     <main>
         <section id="FormContent_MainContent_SECTION_SURVEY" class="intro_section">
-            <div class="section_wrap" style="min-height: 618px;">
-                <div class="top_btn_area">
-                    <button type="button" onclick="location.href='/';">EXIT</button>
-                </div>
-
+            <div class="section_wrap" >
                 <div class="survey-form survey-intro survey-enable" id="step1">
                     <!-- div.top_btn_area -->
-                    <div class="contents_wrap intro_start" style="min-height: calc(452px);">
-                        <div class="icon_area">
-                            <span></span>
-                        </div>
-                        <strong class="intro_pillgram_text">개인맞춤 영양제 추천, 힐링필</strong>
-                        <p class="intro_text">
-                            나의 건강상태에 맞는<br>
-                            영양제를 추천받아볼까요?
-                        </p>
-                    </div>
                     <!-- div.contents_wrap.left -->
                     <div class="bot_btn_area type01">
+                        <div class="contents_wrap intro_start">
+                            <strong class="intro_pillgram_text">개인맞춤 영양제 추천, 힐링필</strong>
+                            <p class="intro_text">
+                                나의 건강상태에 맞는<br>
+                                영양제를 추천받아볼까요?
+                            </p><br>
+                            <img src="resources\assets\images\tonic.jpg">
+                        </div>
                         <p class="btn_intro_text">
                             <em id="FormContent_MainContent_acount">현재 37,569개!</em>
                             <br>
