@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/HealingPill_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +27,7 @@
         <option value="Class" />
         <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -37,7 +39,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sumin_branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -242,6 +244,8 @@
       <workItem from="1653437680842" duration="7924000" />
       <workItem from="1653610985110" duration="3083000" />
       <workItem from="1653614192032" duration="241000" />
+      <workItem from="1654733514453" duration="1364000" />
+      <workItem from="1654820261780" duration="3102000" />
     </task>
     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
       <created>1652891332188</created>

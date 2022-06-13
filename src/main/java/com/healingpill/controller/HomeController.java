@@ -28,6 +28,11 @@ public class HomeController {
         return "about-us";
     }
 
+    @RequestMapping(value = "/cart")
+    public String cartView() {
+        return "cart";
+    }
+
     // magazine 페이지 이동
     @RequestMapping(value = "/magazine", method = RequestMethod.GET)
     public String magazineGET() {

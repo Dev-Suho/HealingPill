@@ -86,9 +86,7 @@
                                     <a href="/allProducts" class="active" aria-label="Toggle navigation">전 제품 보기</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="/survey" data-bs-toggle="collapse"
-                                       data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
-                                       aria-expanded="false" aria-label="Toggle navigation">나만의 영양제 찾기</a>
+                                    <a href="survey" class="active" aria-label="Toggle navigation">나만의 영양제 찾기</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -106,8 +104,8 @@
                             <c:when test="${res != null}">
                                 <div class="button">
                                     <span class="badge">[${res.mem_username}]님 안녕하세요 :)</span>
-                                    <a href="/cart" class="btn"><i class="bi bi-cart4"></i></a>
-                                    <a href="/Logout" class="btn">로그아웃</a>
+                                    <a href="cart" class="btn"><i class="bi bi-cart4"></i></a>
+                                    <a href="Logout" class="btn">로그아웃</a>
                                 </div>
                             </c:when>
                             <c:otherwise>
