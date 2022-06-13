@@ -36,6 +36,9 @@
                             <option value="">카테고리</option>
                             <option value="비타민">비타민</option>
                             <option value="오메가">오메가</option>
+                            <option value="유산균">유산균</option>
+                            <option value="칼슘">칼슘</option>
+                            <option value="마그네슘">마그네슘</option>
                         </select> <br><br/>
 
                     </div>

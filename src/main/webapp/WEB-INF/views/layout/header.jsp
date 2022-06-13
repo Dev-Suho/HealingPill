@@ -27,6 +27,13 @@
     <link rel="stylesheet" href="resources/assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="resources/assets/css/main.css" />
 
+    <!--survey css 추가-->
+    <link rel="stylesheet" href="resources/assets/css/common.css" />
+    <link rel="stylesheet" href="resources/assets/css/sub.css" />
+    <link rel="stylesheet" href="resources/assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="resources/assets/css/viewer.css" />
+    <link rel="stylesheet" href="resources/assets/css/styles.css" />
+
     <!-- 추가 -->
     <link rel="stylesheet" href="resources/assets/css_login/animate.css" />
     <link rel="stylesheet" href="resources/assets/css_login/tailwind.css" />
@@ -79,7 +86,7 @@
                                     <a href="/allProducts" class="active" aria-label="Toggle navigation">전 제품 보기</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                                    <a class="dd-menu collapsed" href="/survey" data-bs-toggle="collapse"
                                        data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
                                        aria-expanded="false" aria-label="Toggle navigation">나만의 영양제 찾기</a>
                                 </li>
