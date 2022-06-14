@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
@@ -20,7 +21,6 @@
 </div>
 <!-- End Breadcrumbs -->
 
-
 <!-- ====== Forms Section Start -->
 <section class="bg-[#F4F7FF] py-14 lg:py-20">
     <div class="container">
@@ -38,7 +38,7 @@
                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
                         </a>
                     </div>
-                    <form action = "" method="post">
+                    <form action = "/findId" method="post" name="findform">
                         <input type="hidden" value="login">
                         <div class="mb-6">
                             <input
@@ -67,6 +67,7 @@
                             >
                         </div>
                     </form>
+                 </div>
             </div>
         </div>
     </div>

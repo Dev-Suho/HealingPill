@@ -20,6 +20,30 @@
 </div>
 <!-- End Breadcrumbs -->
 
+<!-- ajax -->
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<script>
+    $("#idCheck").click(function (){
+        var query = {mem_id : $("#mem_id").val()};
+
+        $.ajax({
+            url : "idCheck",
+            type : "post",
+            data : query,
+            success : function (data) {
+                if(data == 1) {
+                    $(".result .msg").text("사용 불가");
+                    $(".result .msg").attr("style", "color:#f00")
+                } else {
+                    $(".result .msg").text("사용 가능");
+                    $(".result .msg").attr("style", "color:#00f")
+                }
+            }
+        });
+    });
+</script>
+
+
 <!-- ====== Forms Section Start -->
 <section class="bg-[#F4F7FF] py-14 lg:py-20">
     <div class="container">
@@ -48,8 +72,11 @@
                             />
                         </div>
                         <div class="mb-6">
-                            <button type="button" class="btn btn-outline-info" onclick="goPopup();">아이디 중복 체크</button>
+                            <button type="button" id = "idCheck" class="btn btn-outline-info">아이디 중복 체크</button>
                         </div>
+                        <p class="result">
+                            <span class="msg">아이디를 확인해주세요</span>
+                        </p>
                         <div class="mb-6">
                             <input
                                     name = "mem_password"

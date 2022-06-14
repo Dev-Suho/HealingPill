@@ -1,0 +1,11 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+
+    <select id="category" resultType="com.healingpill.dto.ProductCategoryVO">
+        select CTG_LEVEL, CTG_NAME, CTG_CODE, CTG_CODEREF from PRODUCT_CATEGORY
+        start with CTG_CODEREF is null connect by prior CTG_CODE = CTG_CODEREF
+    </select>
+</mapper>

@@ -98,6 +98,9 @@
                                         <li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>
                                     </ul>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="index" class="active" aria-label="Toggle navigation">관리자</a>
+                                </li>
                             </ul>
                         </div> <!-- navbar collapse -->
                         <c:choose>

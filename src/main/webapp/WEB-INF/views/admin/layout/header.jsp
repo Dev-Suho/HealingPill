@@ -24,7 +24,7 @@
       <div class="sb-sidenav-menu">
         <div class="nav">
           <div class="sb-sidenav-menu-heading">회원관리
-            <span style="color:black; font-size:15pt">
+            <span style="color:black; font-size:15pt"/>
           </div>
           <a class="nav-link" href="/admin/index">
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -40,7 +40,7 @@
             주문취소조회
           </a>
           <div class="sb-sidenav-menu-heading">제품관리</div>
-          <a class="nav-link" href="/admin/product_add">
+          <a class="nav-link" href="admin/product_add">
             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
             상품추가
           </a>
