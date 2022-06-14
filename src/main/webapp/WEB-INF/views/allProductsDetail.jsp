@@ -45,40 +45,10 @@
                             tempor incididunt
                             ut labore et dolore magna aliqua.</p>
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-12">
-                                <div class="form-group color-option">
-                                    <label class="title-label" for="size">Choose color</label>
-                                    <div class="single-checkbox checkbox-style-1">
-                                        <input type="checkbox" id="checkbox-1" checked>
-                                        <label for="checkbox-1"><span></span></label>
-                                    </div>
-                                    <div class="single-checkbox checkbox-style-2">
-                                        <input type="checkbox" id="checkbox-2">
-                                        <label for="checkbox-2"><span></span></label>
-                                    </div>
-                                    <div class="single-checkbox checkbox-style-3">
-                                        <input type="checkbox" id="checkbox-3">
-                                        <label for="checkbox-3"><span></span></label>
-                                    </div>
-                                    <div class="single-checkbox checkbox-style-4">
-                                        <input type="checkbox" id="checkbox-4">
-                                        <label for="checkbox-4"><span></span></label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-12">
-                                <div class="form-group">
-                                    <label for="color">Battery capacity</label>
-                                    <select class="form-control" id="color">
-                                        <option>5100 mAh</option>
-                                        <option>6200 mAh</option>
-                                        <option>8000 mAh</option>
-                                    </select>
-                                </div>
-                            </div>
+
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group quantity">
-                                    <label for="color">Quantity</label>
+                                    <label for="color">구매 수량</label>
                                     <select class="form-control">
                                         <option>1</option>
                                         <option>2</option>
@@ -91,19 +61,14 @@
                         </div>
                         <div class="bottom-content">
                             <div class="row align-items-end">
-                                <div class="col-lg-4 col-md-4 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <div class="button cart-button">
-                                        <button class="btn" style="width: 100%;">Add to Cart</button>
+                                        <button class="btn" style="width: 100%;" onclick="location.href='/cart'"><i class="bi bi-bag-plus"></i> 장바구니</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <div class="wish-button">
-                                        <button class="btn"><i class="lni lni-reload"></i> Compare</button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="wish-button">
-                                        <button class="btn"><i class="lni lni-heart"></i> To Wishlist</button>
+                                        <button class="btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -278,7 +243,5 @@
     </div>
 </section>
 <!-- End Item Details -->
-
-
 
 <%@ include file="layout/footer.jsp" %>

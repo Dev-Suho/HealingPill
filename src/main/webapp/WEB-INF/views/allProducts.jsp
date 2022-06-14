@@ -45,10 +45,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Simple Queues</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>
@@ -59,10 +59,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Simple Queues</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>
@@ -74,10 +74,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Advanced Security</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>
@@ -88,10 +88,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Powerful API</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>
@@ -102,10 +102,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Database Backups</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>
@@ -116,10 +116,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Database Backups</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>
@@ -130,10 +130,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Database Backups</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>
@@ -144,10 +144,10 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"></a>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
                     <h3>Database Backups</h3>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                        page at its layout.</p></a>
                     <br>
                     <div class="button">
                         <a href="/cart"><i class="bi bi-cart-plus"></i></a>

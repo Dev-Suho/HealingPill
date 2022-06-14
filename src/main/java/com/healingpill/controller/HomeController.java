@@ -110,6 +110,14 @@ public class HomeController {
         return "jusoPopup";
     }
 
+    // cart 페이지 이동
+    @RequestMapping(value = "/cart", method = RequestMethod.GET)
+    public String cartGET() {
+        logger.debug("cart 페이지 이동");
+
+        return "cart";
+    }
+
     // allProducts 페이지 이동
     @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
     public String allProductsGET() {
@@ -125,4 +133,21 @@ public class HomeController {
 
         return "allProductsDetail";
     }
+
+    // checkout 페이지 이동
+    @RequestMapping(value = "/checkout", method = RequestMethod.GET)
+    public String checkoutGET() {
+        logger.debug("checkout 페이지 이동");
+
+        return "checkout";
+    }
+
+    // checkoutComplete 페이지 이동
+    @RequestMapping(value = "/checkoutComplete", method = RequestMethod.GET)
+    public String checkoutCompleteGET() {
+        logger.debug("checkoutComplete 페이지 이동");
+
+        return "checkoutComplete";
+    }
+
 }

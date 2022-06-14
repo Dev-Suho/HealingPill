@@ -30,7 +30,7 @@
     <div class="container">
         <div class="inner-content">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12" onclick="location.href='allProducts';">
                     <!-- Start Single Feature -->
                     <div class="single-feature">
                         <i class="lni lni-investment"></i>
@@ -40,7 +40,7 @@
                     </div>
                     <!-- End Single Feature -->
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12" onclick="location.href='survey';">
                     <!-- Start Single Feature -->
                     <div class="single-feature">
                         <i class="lni lni-pie-chart"></i>
@@ -50,7 +50,7 @@
                     </div>
                     <!-- End Single Feature -->
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12" onclick="location.href='faq';">
                     <!-- Start Single Feature -->
                     <div class="single-feature">
                         <i class="lni lni-handshake"></i>
