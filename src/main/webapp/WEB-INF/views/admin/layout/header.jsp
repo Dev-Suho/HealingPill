@@ -44,7 +44,7 @@
             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
             상품추가
           </a>
-          <a class="nav-link" href="product_index">
+          <a class="nav-link" href="/admin/product_list">
             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
             상품관리
           </a>

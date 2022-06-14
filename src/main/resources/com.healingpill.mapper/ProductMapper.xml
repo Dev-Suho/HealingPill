@@ -16,4 +16,14 @@
         values (PRODUCT_SEQ.nextval, #{pd_name, jdbcType = VARCHAR}, #{ctg_code, jdbcType = VARCHAR},
                 #{pd_price, jdbcType = NUMERIC}, #{pd_stock, jdbcType = NUMERIC}, #{pd_content, jdbcType = VARCHAR})
     </insert>
+
+    <!-- 상품 리스트 -->
+    <select id="productList" resultType="com.healingpill.dto.ProductVO">
+        select * from PRODUCT order by PD_NUM desc
+    </select>
+
+    <!-- 상품 조회 -->
+    <select id="productView" resultType="com.healingpill.dto.ProductVO">
+        select * from PRODUCT where PD_NUM = #{pd_num, jdbcType = NUMERIC}
+    </select>
 </mapper>

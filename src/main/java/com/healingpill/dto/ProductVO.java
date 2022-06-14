@@ -1,6 +1,9 @@
 package com.healingpill.dto;
 
+import java.util.Date;
+
 public class ProductVO {
+    private int pd_num;
     private String pd_name;
     private String ctg_code;
     private int pd_price;
@@ -8,6 +11,23 @@ public class ProductVO {
     private String pd_content;
     private String pd_mainImage;
     private String pd_subImage;
+    private Date pd_register_datetime;
+
+    public int getPd_num() {
+        return pd_num;
+    }
+
+    public void setPd_num(int pd_num) {
+        this.pd_num = pd_num;
+    }
+
+    public Date getPd_register_datetime() {
+        return pd_register_datetime;
+    }
+
+    public void setPd_register_datetime(Date pd_register_datetime) {
+        this.pd_register_datetime = pd_register_datetime;
+    }
 
     public String getPd_name() {
         return pd_name;
