@@ -17,7 +17,6 @@
     <link rel="shortcut icon" type="resources/assets/image/x-icon" href="resources/assets/images/favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
-
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="resources/assets/css/LineIcons.2.0.css" />
@@ -86,9 +85,7 @@
                                     <a href="/allProducts" class="active" aria-label="Toggle navigation">전 제품 보기</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="/survey" data-bs-toggle="collapse"
-                                       data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
-                                       aria-expanded="false" aria-label="Toggle navigation">나만의 영양제 찾기</a>
+                                    <a href="/survey" class="active" aria-label="Toggle navigation">나만의 영양제 찾기</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"

@@ -8,7 +8,7 @@
         <div class="row align-items-center">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
                 <div class="breadcrumbs-content">
-                    <h1 class="page-title">맞춤영양제</h1>
+                    <h1 class="page-title">나만의 영양제 찾기</h1>
                 </div>
                 <ul class="breadcrumb-nav">
                     <li>몇 가지 질문에 답하고 나에게 필요한 영양성분을 알아보세요.</li>
