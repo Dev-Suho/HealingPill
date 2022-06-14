@@ -1,7 +1,9 @@
 package com.healingpill.controller;
 
 import com.healingpill.dto.ProductCategoryVO;
+import com.healingpill.dto.ProductVO;
 import com.healingpill.service.ProductCategoryService;
+import com.healingpill.service.ProductRegisterService;
 import net.sf.json.JSONArray;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,9 @@ public class ProductController {
     @Inject
     ProductCategoryService productCategoryService;
 
+    @Inject
+    ProductRegisterService productRegisterService;
+
     //관리자 페이지
     //상품추가
     /*
@@ -29,6 +34,7 @@ public class ProductController {
     @RequestMapping(value = "/cm_magazine")
     public String adminmagazine() { return "/admin/cm_magazine";}
 
+    // 카테고리 등록
     @RequestMapping(value = "/product_add", method = RequestMethod.GET)
     public String getProductRegister(Model model) throws Exception {
         List<ProductCategoryVO> category = null;
@@ -41,5 +47,14 @@ public class ProductController {
         model.addAttribute("category", JSONArray.fromObject(category));
 
         return "/admin/product_add";
+    }
+
+    // 상품 등록
+
+    @RequestMapping(value = "/product_add", method = RequestMethod.POST)
+    public String postProductRegister(ProductVO productVO) throws Exception {
+        productRegisterService.register(productVO);
+
+        return "redirect:/admin/index";
     }
 }

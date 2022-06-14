@@ -8,7 +8,7 @@
 <div id="layoutSidenav_content">
     <main>
         <br>
-        <form role="form" id="pdaddForm" name="pdaddForm" method="post" autocomplete="off">
+        <form role="form" method="post" autocomplete="off">
             <div class="container">
                 <h3>상품 등록</h3><br/>
                 <div class="row">
@@ -28,26 +28,30 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="pd_simplecontent" name="pd_simplecontent" placeholder="한줄 설명">
+                            <input type="text" class="form-control" id="pd_content" name="pd_content" placeholder="한줄 설명">
                         </div>
 
                         <div class="form-group">
                             <input type="text" class="form-control" id="pd_price" name="pd_price" placeholder="가격">
                         </div>
 
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="pd_stock" name="pd_stock" placeholder="수량">
+                        </div>
+
                         <select class="category1">
                             <option value="">전체</option>
                         </select> <br><br/>
 
-                        <select class="category2">
+                        <select class="category2" name="ctg_code">
                             <option value="">전체</option>
                         </select> <br><br/>
                     </div>
                 </div>
                 <hr><br/>
                 <div style="float:left">
-                    <button type="button" style="border-color:#e6e6fa; background-color:#e6e6fa; color:black;" class="btn btn-success modBtn" onclick="jebal();" >추가</button>
-                    <button type="button" style="border-color:black; background-color:black; color:white;" class="btn btn-secondary" >취소</button></div>
+                    <button type="submit" style="border-color:#e6e6fa; background-color:#e6e6fa; color:black;" class="btn btn-success modBtn" id = "register_Btn" >추가</button>
+                    <button type="reset" style="border-color:black; background-color:black; color:white;" class="btn btn-secondary" >취소</button></div>
             </div>
         </form>
     </main>
@@ -103,7 +107,7 @@
         $("option:selected", this).each(function () {
             // 현재 선택된(:selected) 1차 분류값($(this).val();)을 저장한다
             var selectVal = $(this).val();
-            cate2Select.append("<option value = ''>전체</option>");
+            cate2Select.append("<option value = '" + selectVal + "'>전체</option>");
 
             for (var i = 0; i < cate2Arr.length; i++) {
                 // selectVal과 ctg_CodeRef를 비교해서 동일할 경우에 실행

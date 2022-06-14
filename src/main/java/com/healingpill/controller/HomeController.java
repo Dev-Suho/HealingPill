@@ -120,7 +120,11 @@ public class HomeController {
         return "surveyresult";
     }
 
+    /*
     //관리자 첫 페이지
     @RequestMapping(value = "/index")
     public String adminindex() { return "/admin/index";}
+    */
+    @RequestMapping(value = "/admin/index")
+    public String postAdminIndex() { return "/admin/index"; }
 }

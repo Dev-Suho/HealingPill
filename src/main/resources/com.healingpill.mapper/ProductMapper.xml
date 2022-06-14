@@ -4,8 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="product">
 
+    <!-- 카테고리 호출 -->
     <select id="category" resultType="com.healingpill.dto.ProductCategoryVO">
         select CTG_LEVEL, CTG_NAME, CTG_CODE, CTG_CODEREF from PRODUCT_CATEGORY
         start with CTG_CODEREF is null connect by prior CTG_CODE = CTG_CODEREF
     </select>
+
+    <!-- 상품 등록 -->
+    <insert id="register">
+        insert into PRODUCT (pd_num, pd_name, ctg_code, pd_price, pd_stock, pd_content)
+        values (PRODUCT_SEQ.nextval, #{pd_name, jdbcType = VARCHAR}, #{ctg_code, jdbcType = VARCHAR},
+                #{pd_price, jdbcType = NUMERIC}, #{pd_stock, jdbcType = NUMERIC}, #{pd_content, jdbcType = VARCHAR})
+    </insert>
 </mapper>

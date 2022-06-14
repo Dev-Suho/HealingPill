@@ -40,7 +40,7 @@
             주문취소조회
           </a>
           <div class="sb-sidenav-menu-heading">제품관리</div>
-          <a class="nav-link" href="admin/product_add">
+          <a class="nav-link" href="/admin/product_add">
             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
             상품추가
           </a>
