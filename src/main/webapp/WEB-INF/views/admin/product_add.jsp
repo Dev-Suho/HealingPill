@@ -16,11 +16,23 @@
                     <div class="col-lg-6">
                         <!-- 상품 이미지 -->
                         <div class="inputArea">
-                            <label for="gdsImg">상품 이미지</label>
-                            <input type="file" id="gdsImg" name="file"/>
+                            <label for="pd_mainImage">상품 이미지</label>
+                            <input type="file" id="pd_mainImage" name="file"/>
                             <div class="select_img"><img src="" /></div>
                         </div>
 
+                        <script>
+                            $("#pd_mainImage").change(function (){
+                                if(this.files && this.files[0]) {
+                                    var reader = new FileReader;
+                                    reader.onload = function (data) {
+                                        $(".select_img img").attr("src", data.target.result).width(500);
+                                    }
+                                    reader.readAsDataURL(this.files[0]);
+                                }
+                            });
+                        </script>
+                        <%= request.getSession().getServletContext().getRealPath("/")%>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
@@ -46,13 +58,14 @@
                         <select class="category2" name="ctg_code">
                             <option value="">전체</option>
                         </select> <br><br/>
+                        <div style="float:left">
+                            <button type="submit" style="border-color:#e6e6fa; background-color:#e6e6fa; color:black;" class="btn btn-success modBtn" id = "register_Btn" >추가</button>
+                            <button type="reset" style="border-color:black; background-color:black; color:white;" class="btn btn-secondary" >취소</button></div>
+                    </div>
                     </div>
                 </div>
                 <hr><br/>
-                <div style="float:left">
-                    <button type="submit" style="border-color:#e6e6fa; background-color:#e6e6fa; color:black;" class="btn btn-success modBtn" id = "register_Btn" >추가</button>
-                    <button type="reset" style="border-color:black; background-color:black; color:white;" class="btn btn-secondary" >취소</button></div>
-            </div>
+
         </form>
     </main>
 </div>

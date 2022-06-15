@@ -2,6 +2,7 @@ package com.healingpill.service;
 
 import com.healingpill.dao.ProductListDAO;
 import com.healingpill.dto.ProductVO;
+import com.healingpill.dto.ProductViewVO;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -19,7 +20,7 @@ public class ProductListServiceImpl implements ProductListService {
     }
 
     @Override
-    public ProductVO productView(int pd_num) throws Exception {
+    public ProductViewVO productView(int pd_num) throws Exception {
         return productListDAO.productView(pd_num);
     }
 }

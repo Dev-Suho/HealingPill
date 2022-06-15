@@ -2,8 +2,10 @@ package com.healingpill.controller;
 
 import com.healingpill.dto.ProductCategoryVO;
 import com.healingpill.dto.ProductVO;
+import com.healingpill.dto.ProductViewVO;
 import com.healingpill.service.ProductCategoryService;
 import com.healingpill.service.ProductListService;
+import com.healingpill.service.ProductModifyService;
 import com.healingpill.service.ProductRegisterService;
 import net.sf.json.JSONArray;
 import org.springframework.stereotype.Controller;
@@ -25,6 +27,8 @@ public class ProductController {
     ProductRegisterService productRegisterService;
     @Inject
     ProductListService productListService;
+    @Inject
+    ProductModifyService productModifyService;
     // 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)
     public String productListView(Model model) throws Exception {
@@ -41,7 +45,7 @@ public class ProductController {
     @RequestMapping(value = "productView", method = RequestMethod.GET)
     public void ProductView(@RequestParam("n") int pd_num, Model model) throws Exception{
 
-        ProductVO productVO = productListService.productView(pd_num);
+        ProductViewVO productVO = productListService.productView(pd_num);
         model.addAttribute("products", productVO);
     }
 
@@ -69,6 +73,37 @@ public class ProductController {
     public String postProductRegister(ProductVO productVO) throws Exception {
         productRegisterService.register(productVO);
 
-        return "redirect:/admin/index";
+        return "redirect:/admin/product_list";
+    }
+
+
+    // 상품 수정 페이지
+    @RequestMapping(value = "/product/modify", method = RequestMethod.GET)
+    public String getProductModify(@RequestParam("num") int pd_num, Model model) throws Exception{
+        ProductViewVO productVO = productListService.productView(pd_num);
+        model.addAttribute("products", productVO);
+
+        List<ProductCategoryVO> category = null;
+        category = productCategoryService.category();
+        model.addAttribute("category", JSONArray.fromObject(category));
+
+        return "/admin/productModify";
+    }
+
+    // 상품 수정
+    @RequestMapping(value = "/product/modify", method = RequestMethod.POST)
+    public String postProductModify(ProductVO productVO) throws Exception {
+        productModifyService.productModify(productVO);
+
+        return "redirect:/admin/product_list";
+    }
+
+    // 상품 삭제
+
+    @RequestMapping(value = "/product/delete", method = RequestMethod.POST)
+    public String postProductDelete(@RequestParam("num") int pd_num) throws Exception {
+        productModifyService.productDelete(pd_num);
+
+        return "redirect:/admin/product_list";
     }
 }

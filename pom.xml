@@ -21,6 +21,19 @@
 
   <dependencies>
 
+    <!-- 썸네일과 파일업로드 라이브러리 -->
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.3.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.coobird</groupId>
+      <artifactId>thumbnailator</artifactId>
+      <version>0.4.8</version>
+    </dependency>
+
     <!-- java to json -->
     <dependency>
       <groupId>net.sf.json-lib</groupId>

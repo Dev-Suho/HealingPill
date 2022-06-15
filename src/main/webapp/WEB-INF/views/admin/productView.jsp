@@ -11,6 +11,8 @@
     <main>
         <br>
         <form role="form" method="post" autocomplete="off">
+
+            <input type="hidden" name="num" value="${products.pd_num}"/>
             <div class="container">
                 <h3>상품 등록</h3><br/>
                 <div class="row">
@@ -50,10 +52,30 @@
                             <label><h3>카테고리 코드</h3></label>
                             <div><span class="category">${products.ctg_code}</span></div>
                         </div>
+                        <br/>
+                        <div style="float:left">
+                            <button type="button" style="border-color:#e6e6fa; background-color:#e6e6fa; color:black;" class="btn btn-success modBtn" id = "modify_btn">수정</button>
+                            <button type="button" style="border-color:black; background-color:black; color:white;" class="btn btn-secondary" id = "delete_btn">삭제</button></div>
+
+                            <script>
+                                var formObj = $("form[role='form']");
+
+                                $("#modify_btn").click(function (){
+                                    formObj.attr("action", "/admin/product/modify");
+                                    formObj.attr("method", "get");
+                                    formObj.submit();
+                                });
+
+                                $("#delete_btn").click(function (){
+                                    formObj.attr("action", "/admin/product/delete");
+                                    formObj.submit();
+                                });
+                            </script>
+                        </div>
                     </div>
+
                 </div>
                 <hr><br/>
-            </div>
         </form>
     </main>
 </div>

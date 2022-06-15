@@ -1,6 +1,7 @@
 package com.healingpill.dao;
 
 import com.healingpill.dto.ProductVO;
+import com.healingpill.dto.ProductViewVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
@@ -19,7 +20,7 @@ public class ProductListDAOImpl implements ProductListDAO{
     }
 
     @Override
-    public ProductVO productView(int pd_num) throws Exception {
+    public ProductViewVO productView(int pd_num) throws Exception {
         return sqlSession.selectOne(NAMESPACE + "productView", pd_num);
     }
 }
