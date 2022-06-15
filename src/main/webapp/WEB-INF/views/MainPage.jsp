@@ -14,8 +14,7 @@
                     <p class="wow fadeInUp" data-wow-delay=".6s">On the HealingPill site, <br> it's a perfect match for me
                         Look for nutritional supplements!</p>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
-                        <a href="/memberLogin" class="btn">Get Started</a>
-                        <a href="/about-us" class="btn btn-alt">Know More</a>
+                        <a href="/survey" class="btn">맞춤 영양제 찾기</a>
                     </div>
                 </div>
             </div>

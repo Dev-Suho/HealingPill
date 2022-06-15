@@ -40,36 +40,51 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
+                        제품을 교환/반품하고 싶어요.
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                        <strong>수령한 제품에 문제가 있는 경우</strong><br>
+                        제품이 표시 및 광고된 내용과 다르거나 제품 자체에 하자가 있는 경우에는 재배송 또는 환불 처리를 해드려요.<br>
+                        제품을 받으시고 제품의 문제를 확인 가능한 사진을 첨부해서 카카오톡 힐링필 상담원에게 전송 부탁드려요.<br>
+                        제품에 문제가 있는 것으로 확인될 경우 모든 배송비는 힐링필이 부담해요.<br><br>
+
+                        <strong>고객님의 변심 또는 주문 오류가 있는 경우</strong>
+                        제품의 상태에 문제가 없는 경우에는 제품을 받으신 날부터 7일 이내에 교환 및 반품 신청이 가능해요.<br>
+                        단순 변심에 의한 교환 및 반품을 요청하신 경우 제품 발송을 위한 배송비와 반품을 위한 배송비가 부담돼요.<br>
+                        제품에 따라 도서/산간지역의 경우 배송비가 추가될 수 있어요.<br><br>
+
+                        <strong>교환 및 반품 불가 안내</strong>
+                        아래와 같은 사항에는 교환 및 반품이 어려울 수 있으니 양해 부탁드려요.<br>
+                        - 고객님의 책임으로 제품이 훼손된 경우 (제품 박스의 스티커를 제거한 경우 포함)<br>
+                        - 고객님의 사용으로 제품의 가치가 현저하게 감소한 경우<br><br>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
+                        힐링필 제품을 전부 한번에 먹어도 되나요?
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        힐링필 제품은 겹치는 성분 없이 개발되었고 그렇기 때문에 중복 섭취의 우려가 없어 안심하고 한번에 드셔도 돼요.<br>
+                        다만 한꺼번에 섭취하기 힘들다면 시간차를 두고 드셔도 돼요.<br><br>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
+                        건강설문 받은 제품만 구매할 수 있나요?
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        건강 설문 추천 제품 외에 제품 추가나 제거를 통해 변경하실 수 있어요.<br>
                     </div>
                 </div>
             </div>
