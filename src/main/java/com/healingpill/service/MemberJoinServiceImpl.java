@@ -17,4 +17,9 @@ public class MemberJoinServiceImpl implements MemberJoinService{
         memberJoinDAO.memberJoin(memberDTO);
         System.out.println("회원가입 서비스 시작");
     }
+
+    @Override
+    public MemberDTO idCheck(String mem_id) throws Exception {
+        return memberJoinDAO.idCheck(mem_id);
+    }
 }

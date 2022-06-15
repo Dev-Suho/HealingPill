@@ -8,11 +8,11 @@
         <div class="row align-items-center">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
                 <div class="breadcrumbs-content">
-                    <h1 class="page-title">비밀번호 찾기</h1>
+                    <h1 class="page-title">장바구니</h1>
                 </div>
                 <ul class="breadcrumb-nav">
                     <li><a href="/">Home</a></li>
-                    <li>비밀번호 찾기</li>
+                    <li>장바구니</li>
                 </ul>
             </div>
         </div>
@@ -31,19 +31,19 @@
 
                     </div>
                     <div class="col-lg-4 col-md-3 col-12">
-                        <p>Product Name</p>
+                        <p>상품명</p>
                     </div>
                     <div class="col-lg-2 col-md-2 col-12">
-                        <p>Quantity</p>
+                        <p>수량</p>
                     </div>
                     <div class="col-lg-2 col-md-2 col-12">
-                        <p>Subtotal</p>
+                        <p>가격</p>
                     </div>
                     <div class="col-lg-2 col-md-2 col-12">
-                        <p>Discount</p>
+                        <p>할인</p>
                     </div>
                     <div class="col-lg-1 col-md-2 col-12">
-                        <p>Remove</p>
+                        <p>삭제</p>
                     </div>
                 </div>
             </div>
@@ -172,14 +172,13 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="right">
                                 <ul>
-                                    <li>Cart Subtotal<span>$2560.00</span></li>
-                                    <li>Shipping<span>Free</span></li>
-                                    <li>You Save<span>$29.00</span></li>
-                                    <li class="last">You Pay<span>$2531.00</span></li>
+                                    <li>장바구니 총 금액<span>$2560.00</span></li>
+                                    <li>배송료<span>무료</span></li>
+                                    <li class="last">결제 금액<span>$2531.00</span></li>
                                 </ul>
                                 <div class="button">
-                                    <a href="checkout.html" class="btn">Checkout</a>
-                                    <a href="product-grids.html" class="btn btn-alt">Continue shopping</a>
+                                    <a href="/checkout" class="btn">결제하기</a>
+                                    <a href="/allProducts" class="btn btn-alt">계속 쇼핑하기</a>
                                 </div>
                             </div>
                         </div>
@@ -191,6 +190,5 @@
     </div>
 </div>
 <!--/ End Shopping Cart -->
-
 
 <%@ include file="layout/footer.jsp" %>

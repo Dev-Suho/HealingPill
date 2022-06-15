@@ -8,15 +8,13 @@
         <div class="row align-items-center">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
                 <div class="hero-content">
-                    <h5 class="wow fadeInUp" data-wow-delay=".2s">${res.mem_username}님 안녕하세요</h5>
                     <h5 class="wow fadeInUp" data-wow-delay=".2s">Expert People, Quality Solutions</h5>
                     <h1 class="wow fadeInUp" data-wow-delay=".4s">힐링필에서 나에게 맞는<span>영양제를 찾아보세요!</span>
                     </h1>
                     <p class="wow fadeInUp" data-wow-delay=".6s">On the HealingPill site, <br> it's a perfect match for me
                         Look for nutritional supplements!</p>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
-                        <a href="/memberLogin" class="btn">Get Started</a>
-                        <a href="/about-us" class="btn btn-alt">Know More</a>
+                        <a href="/survey" class="btn">맞춤 영양제 찾기</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +29,7 @@
     <div class="container">
         <div class="inner-content">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12" onclick="location.href='allProducts';">
                     <!-- Start Single Feature -->
                     <div class="single-feature">
                         <i class="lni lni-investment"></i>
@@ -41,7 +39,7 @@
                     </div>
                     <!-- End Single Feature -->
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12" onclick="location.href='survey';">
                     <!-- Start Single Feature -->
                     <div class="single-feature">
                         <i class="lni lni-pie-chart"></i>
@@ -51,7 +49,7 @@
                     </div>
                     <!-- End Single Feature -->
                 </div>
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12" onclick="location.href='faq';">
                     <!-- Start Single Feature -->
                     <div class="single-feature">
                         <i class="lni lni-handshake"></i>
