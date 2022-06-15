@@ -19,13 +19,15 @@
 
                     <div class="col-lg-6">
 
-                        <!-- 상품 이미지
+                        <!-- 상품 이미지 -->
                         <div class="inputArea">
-                            <label for="gdsImg">상품 이미지</label>
-                            <input type="file" id="gdsImg" name="file"/>
-                            <div class="select_img"><img src="" /></div>
+                            <label><h3>상품 이미지</h3></label>
+                            <p>원본 이미지</p>
+                            <img src = "${products.pd_mainImage}" style="width: 500px; height: auto;"/>
+
+                            <p>썸네일</p>
+                            <img src = "${products.pd_subImage}"/>
                         </div>
-                        -->
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
@@ -69,13 +71,13 @@
     </main>
 </div>
 <script>
-    $("#back_btn").click(function (){
-        var con = confirm("정말로 삭제하시겠습니까?");
+    var formObj = $("form[role='form']");
 
-        if(con) {
-            formObj.attr("action", "/admin/product/delete");
-            formObj.submit();
-        }
+    $("#back_btn").click(function (){
+
+        formObj.attr("action", "/admin/product_list");
+        formObj.attr("method", "get");
+        formObj.submit();
     });
 </script>
 <script>

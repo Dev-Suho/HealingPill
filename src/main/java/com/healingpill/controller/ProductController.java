@@ -7,14 +7,18 @@ import com.healingpill.service.ProductCategoryService;
 import com.healingpill.service.ProductListService;
 import com.healingpill.service.ProductModifyService;
 import com.healingpill.service.ProductRegisterService;
+import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import javax.inject.Inject;
+import java.io.File;
 import java.util.List;
 
 @Controller
@@ -29,6 +33,10 @@ public class ProductController {
     ProductListService productListService;
     @Inject
     ProductModifyService productModifyService;
+    
+    // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
+    @Resource(name = "uploadPath")
+    private String uploadPath;
     // 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)
     public String productListView(Model model) throws Exception {
@@ -70,7 +78,22 @@ public class ProductController {
 
     // 상품 등록
     @RequestMapping(value = "/product_add", method = RequestMethod.POST)
-    public String postProductRegister(ProductVO productVO) throws Exception {
+    public String postProductRegister(ProductVO productVO, MultipartFile file) throws Exception {
+        String imgUploadPath = uploadPath + File.separator + "imgUpload";
+        String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
+        String fileName = null;
+
+        // UploadFileUtils 클래스를 사용해 폴더를 생성한 후 원본 파일과 썸네일을 저장
+        if(file != null) {
+            fileName = UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(), ymdPath);
+        } else {
+            fileName = uploadPath + File.separator + "images" + File.separator + "none.png";
+        }
+
+        // 파일의 정보, 원본 파일과 썸네일 저장 경로를 DB에 저장하기 위해 SET
+        productVO.setPd_mainImage(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
+        productVO.setPd_subImage(File.separator + "imgUpload" + ymdPath + File.separator + "s" + File.separator + "s_" + fileName);
+
         productRegisterService.register(productVO);
 
         return "redirect:/admin/product_list";

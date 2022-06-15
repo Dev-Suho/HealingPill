@@ -12,9 +12,10 @@
 
     <!-- 상품 등록 -->
     <insert id="register">
-        insert into PRODUCT (pd_num, pd_name, ctg_code, pd_price, pd_stock, pd_content)
+        insert into PRODUCT (PD_NUM, PD_NAME, CTG_CODE, PD_PRICE, PD_STOCK, PD_CONTENT, PD_MAINIMAGE, PD_SUBIMAGE)
         values (PRODUCT_SEQ.nextval, #{pd_name, jdbcType = VARCHAR}, #{ctg_code, jdbcType = VARCHAR},
-                #{pd_price, jdbcType = NUMERIC}, #{pd_stock, jdbcType = NUMERIC}, #{pd_content, jdbcType = VARCHAR})
+                #{pd_price, jdbcType = NUMERIC}, #{pd_stock, jdbcType = NUMERIC}, #{pd_content, jdbcType = VARCHAR},
+                #{pd_mainImage, jdbcType = VARCHAR}, #{pd_subImage, jdbcType = VARCHAR})
     </insert>
 
     <!-- 상품 리스트 -->
@@ -29,7 +30,8 @@
 
     <!-- 상품 조회 + 카테고리 조인 -->
     <select id="productView" resultType="com.healingpill.dto.ProductViewVO">
-        select p.PD_NUM, p.PD_NAME, p.CTG_CODE, pc.CTG_CODEREF, pc.CTG_NAME, PD_PRICE, PD_STOCK, PD_CONTENT, PD_MAINIMAGE, PD_SUBIMAGE, PD_REGISTER_DATETIME
+        select p.PD_NUM, p.PD_NAME, p.CTG_CODE, pc.CTG_CODEREF, pc.CTG_NAME, PD_PRICE, PD_STOCK,
+               PD_CONTENT, PD_MAINIMAGE, PD_SUBIMAGE, PD_REGISTER_DATETIME, p.PD_MAINIMAGE, p.PD_SUBIMAGE
         from PRODUCT p
             inner join PRODUCT_CATEGORY pc on p.CTG_CODE = PC.CTG_CODE
                  where p.PD_NUM = #{pd_num, jdbcType = NUMERIC}

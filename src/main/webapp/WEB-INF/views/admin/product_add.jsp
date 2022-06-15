@@ -8,7 +8,7 @@
 <div id="layoutSidenav_content">
     <main>
         <br>
-        <form role="form" method="post" autocomplete="off">
+        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data">
             <div class="container">
                 <h3>상품 등록</h3><br/>
                 <div class="row">
@@ -25,7 +25,7 @@
                             $("#pd_mainImage").change(function (){
                                 if(this.files && this.files[0]) {
                                     var reader = new FileReader;
-                                    reader.onload = function (data) {
+                                    reader.onload = function(data) {
                                         $(".select_img img").attr("src", data.target.result).width(500);
                                     }
                                     reader.readAsDataURL(this.files[0]);

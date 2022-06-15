@@ -14,18 +14,21 @@
 
             <input type="hidden" name="num" value="${products.pd_num}"/>
             <div class="container">
-                <h3>상품 등록</h3><br/>
+                <h3>상품 조회</h3><br/>
                 <div class="row">
 
                     <div class="col-lg-6">
 
-                        <!-- 상품 이미지
+                        <!-- 상품 이미지 -->
                         <div class="inputArea">
-                            <label for="gdsImg">상품 이미지</label>
-                            <input type="file" id="gdsImg" name="file"/>
-                            <div class="select_img"><img src="" /></div>
+                            <label><h3>상품 이미지</h3></label>
+                            <h5>원본 이미지</h5>
+                            <img src = "${products.pd_mainImage}" style="width: 500px; height: auto;"/>
+
+                            <h5>썸네일</h5>
+                            <img src = "${products.pd_subImage}"/>
                         </div>
-                        -->
+
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
