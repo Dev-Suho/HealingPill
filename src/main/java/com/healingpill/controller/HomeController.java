@@ -47,6 +47,9 @@ public class HomeController {
         return "surveyresult";
     }
 
+    @RequestMapping(value = "/cart")
+    public String cart() { return "cart"; }
+
     //관리자 페이지
     //상품추가
     @RequestMapping(value = "/admin/product_add")
