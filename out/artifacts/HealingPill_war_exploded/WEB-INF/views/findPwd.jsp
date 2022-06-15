@@ -37,7 +37,7 @@
                             <img src="resources/assets/images/logo/healingpill_logo2.png" alt="logo" />
                         </a>
                     </div>
-                    <form action = "" method="post">
+                    <form action = "findPassword" method="post">
                         <input type="hidden" value="login">
                         <div class="mb-6">
                             <input
@@ -69,6 +69,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <!-- ====== Forms Section End -->
 
