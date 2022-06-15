@@ -17,11 +17,9 @@
     <link rel="shortcut icon" type="resources/assets/image/x-icon" href="resources/assets/images/favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
-
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="resources/assets/css/LineIcons.2.0.css" />
-    <link rel="stylesheet" href="resources/assets/css/LineIcons.3.0.css" />
     <link rel="stylesheet" href="resources/assets/css/animate.css" />
     <link rel="stylesheet" href="resources/assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="resources/assets/css/glightbox.min.css" />
@@ -37,6 +35,9 @@
     <!-- 추가 -->
     <link rel="stylesheet" href="resources/assets/css_login/animate.css" />
     <link rel="stylesheet" href="resources/assets/css_login/tailwind.css" />
+
+    <!-- 추가 -->
+    <link rel="stylesheet" href="resources/shops/css/main.css" />
 
     <!-- ==== WOW JS ==== -->
     <script src="resources/assets/js_login/wow.min.js"></script>

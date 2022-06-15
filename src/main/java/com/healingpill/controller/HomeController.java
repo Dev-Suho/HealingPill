@@ -52,11 +52,6 @@ public class HomeController {
         return "surveyresult";
     }
 
-    @RequestMapping(value = "/cart")
-    public String cart() {
-        return "cart";
-    }
-
     //관리자 페이지
     //상품추가
     @RequestMapping(value = "/admin/product_add")
@@ -128,6 +123,14 @@ public class HomeController {
         return "jusoPopup";
     }
 
+    // cart 페이지 이동
+    @RequestMapping(value = "/cart", method = RequestMethod.GET)
+    public String cartGET() {
+        logger.debug("cart 페이지 이동");
+
+        return "cart";
+    }
+
     // allProducts 페이지 이동
     @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
     public String allProductsGET() {
@@ -142,6 +145,23 @@ public class HomeController {
         logger.debug("allProductsDetail 페이지 이동");
 
         return "allProductsDetail";
+    }
+
+
+    // checkout 페이지 이동
+    @RequestMapping(value = "/checkout", method = RequestMethod.GET)
+    public String checkoutGET() {
+        logger.debug("checkout 페이지 이동");
+
+        return "checkout";
+    }
+
+    // checkoutComplete 페이지 이동
+    @RequestMapping(value = "/checkoutComplete", method = RequestMethod.GET)
+    public String checkoutCompleteGET() {
+        logger.debug("checkoutComplete 페이지 이동");
+
+        return "checkoutComplete";
     }
 
 }
