@@ -57,10 +57,6 @@ public class ProductController {
         model.addAttribute("products", productVO);
     }
 
-    //매거진 추가
-    @RequestMapping(value = "/cm_magazine")
-    public String adminmagazine() { return "/admin/cm_magazine";}
-
     // 카테고리 등록
     @RequestMapping(value = "/product_add", method = RequestMethod.GET)
     public String getProductRegister(Model model) throws Exception {
