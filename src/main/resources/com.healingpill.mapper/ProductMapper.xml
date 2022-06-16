@@ -23,11 +23,6 @@
         select * from PRODUCT order by PD_NUM desc
     </select>
 
-    <!-- 상품 조회
-    <select id="productView" resultType="com.healingpill.dto.ProductVO">
-        select * from PRODUCT where PD_NUM = #{pd_num, jdbcType = NUMERIC}
-    </select> -->
-
     <!-- 상품 조회 + 카테고리 조인 -->
     <select id="productView" resultType="com.healingpill.dto.ProductViewVO">
         select p.PD_NUM, p.PD_NAME, p.CTG_CODE, pc.CTG_CODEREF, pc.CTG_NAME, PD_PRICE, PD_STOCK,
