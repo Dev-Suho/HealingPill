@@ -15,8 +15,8 @@
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
-    String uid = "healingpill";
-    String pwd = "123456";
+    String uid = "root";
+    String pwd = "root";
     String url = "jdbc:oracle:thin:@localhost:1521:XE";
     String sql = "select * from magazine";
     String [][] MList = new String[9][5];
@@ -137,7 +137,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202205/06//gallery_26_0_1651801280.jpg"
+                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/25//e88ee7f2b3cfa51ffbba7c3d47d174ed.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -170,7 +170,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202205/17//gallery_26_0_1652775763.jpg"
+                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/30//c708b282169b75335881dd29d3280f6e.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -202,7 +202,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202204/27//503d8532552b645e93268b896763991e.jpg"
+                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/26//6da2da3f5400f712c61e96e3a1747cae.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -234,7 +234,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202204/21//gallery_26_0_1650504952.jpg"
+                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202205/06//gallery_26_0_1651801280.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -266,7 +266,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/30//3595683e2f92175d63adea974e6565ee.jpg"
+                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202205/17//gallery_26_0_1652775763.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -298,7 +298,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/26//6da2da3f5400f712c61e96e3a1747cae.jpg"
+                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202204/21//gallery_26_0_1650504952.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -330,7 +330,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/30//c708b282169b75335881dd29d3280f6e.jpg"
+                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/30//3595683e2f92175d63adea974e6565ee.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
