@@ -159,3 +159,4 @@ public class MemberDTO {
         this.mem_is_admin = mem_is_admin;
     }
 }
+

@@ -1,43 +1,10 @@
-        <%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.DriverManager" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="com.healingpill.dao.MagazineVO" %>
-<%@ page import="com.healingpill.dao.MagazineDDAO" %>
-<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
+<%@ page import="com.healingpill.Community.Magazine" %>
+<%@ page import="com.healingpill.Community.MagazineDAO" %>
+<%@ page import="java.util.ArrayList" %>
 
-
-<%!
-    // 변수선언
-    Connection conn = null;
-    Statement stmt = null;
-    ResultSet rs = null;
-    String uid = "healingpill";
-    String pwd = "123456";
-    String url = "jdbc:oracle:thin:@localhost:1521:XE";
-    String sql = "select * from magazine";
-    String [][] MList = new String[9][5];
-    int i = 0;
-%>
-        <%
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection(url,uid,pwd);
-            stmt = conn.createStatement();
-            rs = stmt.executeQuery(sql);
-
-            while(rs.next()) {
-                MList[i][0] = rs.getString("mg_no");
-                MList[i][1] = rs.getString("mg_image");
-                MList[i][2] = rs.getString("mg_title");
-                MList[i][3] = rs.getString("mg_content");
-                MList[i][4] = rs.getString("mg_datetime");
-                i = i + 1;
-                if(i == 9) { i = 0 ;}
-            }
-        %>
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -55,7 +22,20 @@
     </div>
 </div>
 <!-- End Breadcrumbs -->
-
+<%
+    int pageNumber = 1; //기본은 1 페이지를 할당
+    // 만약 파라미터로 넘어온 오브젝트 타입 'pageNumber'가 존재한다면
+    // 'int'타입으로 캐스팅을 해주고 그 값을 'pageNumber'변수에 저장한다
+    if(request.getParameter("pageNumber") != null){
+        pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+    }
+%>
+<%
+    //인스턴스 생성
+    MagazineDAO magazineDAO = new MagazineDAO();
+    ArrayList<Magazine> list = MagazineDAO.getlist(pageNumber);
+    //int i = 0;
+%>
 <!-- ====== Blog Section Start -->
 <section class="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
     <div class="section-title">
@@ -70,7 +50,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202206/03//8b392f651948c62710aaee1b814f87a7.jpg"
+                                    src="resources/assets/images/blog/blog-01.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -80,22 +60,18 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-
-                <%=MList[0][4]%>
+                    <% list.get(i).getMg_no(); %>
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                <%=MList[0][2]%>
-
-
+                                <% list.get(i).getMg_title(); %>
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
-                            작약추출물등복합물(HT074)
-                            작약추출물등복합물은 위 점막을 보호합니다.
+                            <% list.get(i).getMg_content(); %>
                         </p>
                     </div>
                 </div>
@@ -105,7 +81,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202206/10//bef257211453ea07424fedc7f19d8feb.jpg"
+                                    src="resources/assets/images/blog/blog-02.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -115,111 +91,14 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  <%=MList[1][4]%>
+                  Mar 15, 2023
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                <%=MList[1][2]%>
-                            </a>
-                        </h3>
-                        <p class="text-base text-body-color">
-                            식물성 단백질
-                            식물성 단백질도 단백질입니다
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                <div class="wow fadeInUp group mb-10" data-wow-delay=".2s">
-                    <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail" class="block">
-                            <img
-                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202205/06//gallery_26_0_1651801280.jpg"
-                                    alt="image"
-                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                            />
-                        </a>
-                    </div>
-                    <div>
-                <span
-                        class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-                >
-                  <%=MList[2][4]%>
-
-                </span>
-                        <h3>
-                            <a
-                                    href="/magazineDetail"
-                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                            >
-                                <%=MList[2][2]%>
-                            </a>
-                        </h3>
-                        <p class="text-base text-body-color">
-                            비오틴, 모발에 좋은 거 확실한가요?
-                            해당 내용은 특정 제품과 직접적으로 관련된 내용이 아닌 성분에 대한 건강정보입니다.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                <div class="wow fadeInUp group mb-10" data-wow-delay=".1s">
-                    <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail" class="block">
-                            <img
-                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202205/17//gallery_26_0_1652775763.jpg"
-                                    alt="image"
-                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                            />
-                        </a>
-                    </div>
-                    <div>
-                <span
-                        class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-                >
-                  <%=MList[3][4]%>
-                </span>
-                        <h3>
-                            <a
-                                    href="/magazineDetail"
-                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                            >
-                                <%=MList[3][2]%>
-                            </a>
-                        </h3>
-                        <p class="text-base text-body-color">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                <div class="wow fadeInUp group mb-10" data-wow-delay=".15s">
-                    <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail" class="block">
-                            <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202204/27//503d8532552b645e93268b896763991e.jpg"
-                                    alt="image"
-                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                            />
-                        </a>
-                    </div>
-                    <div>
-                <span
-                        class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-                >
-                  <%=MList[4][4]%>
-                </span>
-                        <h3>
-                            <a
-                                    href="/magazineDetail"
-                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                            >
-                                <%=MList[4][2]%>
+                                How to earn more money as a wellness coach
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
@@ -234,7 +113,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board/_data/gallery_26/202204/21//gallery_26_0_1650504952.jpg"
+                                    src="resources/assets/images/blog/blog-03.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -244,14 +123,15 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  <%=MList[5][4]%>
+                  Jan 05, 2023
+
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                <%=MList[5][2]%>
+                                The no-fuss guide to upselling and cross selling
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
@@ -266,7 +146,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/30//3595683e2f92175d63adea974e6565ee.jpg"
+                                    src="resources/assets/images/blog/blog-02.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -276,14 +156,14 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  <%=MList[6][4]%>
+                  Mar 15, 2023
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                <%=MList[6][2]%>
+                                How to earn more money as a wellness coach
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
@@ -298,7 +178,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/26//6da2da3f5400f712c61e96e3a1747cae.jpg"
+                                    src="resources/assets/images/blog/blog-03.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -308,14 +188,14 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  <%=MList[7][4]%>
+                  Jan 05, 2023
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                <%=MList[7][2]%>
+                                The no-fuss guide to upselling and cross selling
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
@@ -330,7 +210,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202205/30//c708b282169b75335881dd29d3280f6e.jpg"
+                                    src="resources/assets/images/blog/blog-01.jpg"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -340,14 +220,110 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  <%=MList[8][4]%>
+                  Dec 22, 2023
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                <%=MList[8][2]%>
+                                Meet AutoManage, the best AI management tools
+                            </a>
+                        </h3>
+                        <p class="text-base text-body-color">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                <div class="wow fadeInUp group mb-10" data-wow-delay=".1s">
+                    <div class="mb-8 overflow-hidden rounded">
+                        <a href="/magazineDetail" class="block">
+                            <img
+                                    src="resources/assets/images/blog/blog-01.jpg"
+                                    alt="image"
+                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                            />
+                        </a>
+                    </div>
+                    <div>
+                <span
+                        class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
+                >
+                  Dec 22, 2023
+                </span>
+                        <h3>
+                            <a
+                                    href="/magazineDetail"
+                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+                            >
+                                Meet AutoManage, the best AI management tools
+                            </a>
+                        </h3>
+                        <p class="text-base text-body-color">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                <div class="wow fadeInUp group mb-10" data-wow-delay=".15s">
+                    <div class="mb-8 overflow-hidden rounded">
+                        <a href="/magazineDetail" class="block">
+                            <img
+                                    src="resources/assets/images/blog/blog-02.jpg"
+                                    alt="image"
+                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                            />
+                        </a>
+                    </div>
+                    <div>
+                <span
+                        class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
+                >
+                  Mar 15, 2023
+                </span>
+                        <h3>
+                            <a
+                                    href="/magazineDetail"
+                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+                            >
+                                How to earn more money as a wellness coach
+                            </a>
+                        </h3>
+                        <p class="text-base text-body-color">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                <div class="wow fadeInUp group mb-10" data-wow-delay=".2s">
+                    <div class="mb-8 overflow-hidden rounded">
+                        <a href="/magazineDetail" class="block">
+                            <img
+                                    src="resources/assets/images/blog/blog-03.jpg"
+                                    alt="image"
+                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+                            />
+                        </a>
+                    </div>
+                    <div>
+                <span
+                        class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
+                >
+                  Jan 05, 2023
+                </span>
+                        <h3>
+                            <a
+                                    href="/magazineDetail"
+                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+                            >
+                                The no-fuss guide to upselling and cross selling
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
