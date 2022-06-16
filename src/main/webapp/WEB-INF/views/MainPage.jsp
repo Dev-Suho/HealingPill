@@ -14,8 +14,8 @@
                     <p class="wow fadeInUp" data-wow-delay=".6s">On the HealingPill site, <br> it's a perfect match for me
                         Look for nutritional supplements!</p>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
-                        <a href="/memberLogin" class="btn">Get Started</a>
-                        <a href="/about-us" class="btn btn-alt">Know More</a>
+                        <a href="/allProducts" class="btn">제품 둘러보기</a>
+                        <a href="/Login" class="btn btn-alt">로그인하기</a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                     <div class="single-feature">
                         <i class="lni lni-pie-chart"></i>
                         <h2>나만의 영양제 찾기
-                            <span>간단한 설문을 통해 영양제를 추천해드립니다</span>
+                            <span>간단한 설문을 통해 영양제를 추천드립니다</span>
                         </h2>
                     </div>
                     <!-- End Single Feature -->

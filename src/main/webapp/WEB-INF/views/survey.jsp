@@ -64,4 +64,5 @@
         class="relative z-20 overflow-hidden bg-white pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
 >
 
+
 <%@ include file="layout/footer.jsp" %>
