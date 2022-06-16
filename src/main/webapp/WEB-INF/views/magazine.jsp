@@ -35,6 +35,7 @@
                 MList[i][3] = rs.getString("mg_content");
                 MList[i][4] = rs.getString("mg_datetime");
                 i = i + 1;
+                if(i == 9) { i = 0 ;}
             }
         %>
 <!-- Start Breadcrumbs -->
