@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="resources/assets/css/main.css" />
 
     <!--survey css 추가-->
-    <!--<link rel="stylesheet" href="resources/assets/css/common.css" />-->
+    <link rel="stylesheet" href="resources/assets/css/common.css" />
     <link rel="stylesheet" href="resources/assets/css/sub.css" />
     <link rel="stylesheet" href="resources/assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="resources/assets/css/viewer.css" />
@@ -87,7 +87,7 @@
                                     <a href="/allProducts" class="active" aria-label="Toggle navigation">전 제품 보기</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/survey" class="active" aria-label="Toggle navigation">나만의 영양제 찾기</a>
+                                    <a href="survey" class="active" aria-label="Toggle navigation">나만의 영양제 찾기</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -99,6 +99,9 @@
                                         <li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>
                                     </ul>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="admin/index" class="active" aria-label="Toggle navigation">관리자</a>
+                                </li>
                             </ul>
                         </div> <!-- navbar collapse -->
                         <c:choose>
@@ -106,7 +109,7 @@
                                 <div class="button">
                                     <span class="badge">[${res.mem_username}]님 안녕하세요 :)</span>
                                     <a href="cart" class="btn"><i class="bi bi-cart4"></i></a>
-                                    <a href="/Logout" class="btn">로그아웃</a>
+                                    <a href="Logout" class="btn">로그아웃</a>
                                 </div>
                             </c:when>
                             <c:otherwise>

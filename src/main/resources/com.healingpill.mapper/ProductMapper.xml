@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="product">
+
+    <!-- 카테고리 호출 -->
+    <select id="category" resultType="com.healingpill.dto.ProductCategoryVO">
+        select CTG_LEVEL, CTG_NAME, CTG_CODE, CTG_CODEREF from PRODUCT_CATEGORY
+        start with CTG_CODEREF is null connect by prior CTG_CODE = CTG_CODEREF
+    </select>
+
+    <!-- 상품 등록 -->
+    <insert id="register">
+        insert into PRODUCT (PD_NUM, PD_NAME, CTG_CODE, PD_PRICE, PD_STOCK, PD_CONTENT, PD_MAINIMAGE, PD_SUBIMAGE)
+        values (PRODUCT_SEQ.nextval, #{pd_name, jdbcType = VARCHAR}, #{ctg_code, jdbcType = VARCHAR},
+                #{pd_price, jdbcType = NUMERIC}, #{pd_stock, jdbcType = NUMERIC}, #{pd_content, jdbcType = VARCHAR},
+                #{pd_mainImage, jdbcType = VARCHAR}, #{pd_subImage, jdbcType = VARCHAR})
+    </insert>
+
+    <!-- 상품 리스트 -->
+    <select id="productList" resultType="com.healingpill.dto.ProductVO">
+        select * from PRODUCT order by PD_NUM desc
+    </select>
+
+    <!-- 상품 조회
+    <select id="productView" resultType="com.healingpill.dto.ProductVO">
+        select * from PRODUCT where PD_NUM = #{pd_num, jdbcType = NUMERIC}
+    </select> -->
+
+    <!-- 상품 조회 + 카테고리 조인 -->
+    <select id="productView" resultType="com.healingpill.dto.ProductViewVO">
+        select p.PD_NUM, p.PD_NAME, p.CTG_CODE, pc.CTG_CODEREF, pc.CTG_NAME, PD_PRICE, PD_STOCK,
+               PD_CONTENT, PD_MAINIMAGE, PD_SUBIMAGE, PD_REGISTER_DATETIME, p.PD_MAINIMAGE, p.PD_SUBIMAGE
+        from PRODUCT p
+            inner join PRODUCT_CATEGORY pc on p.CTG_CODE = PC.CTG_CODE
+                 where p.PD_NUM = #{pd_num, jdbcType = NUMERIC}
+    </select>
+
+    <!-- 상품 수정 -->
+    <update id="productModify">
+        update PRODUCT set PD_NAME = #{pd_name, jdbcType = VARCHAR }, CTG_CODE = #{ctg_code, jdbcType = VARCHAR},
+                           PD_PRICE = #{pd_price, jdbcType = NUMERIC}, PD_STOCK = #{pd_stock, jdbcType = NUMERIC},
+                           PD_CONTENT = #{pd_content, jdbcType = VARCHAR}
+        where PD_NUM = ${pd_num}
+    </update>
+
+    <!-- 상품 삭제 -->
+    <delete id="productDelete">
+        delete PRODUCT where PD_NUM = #{pd_num, jdbcType = NUMERIC}
+    </delete>
+</mapper>

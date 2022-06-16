@@ -5,14 +5,14 @@
 
 <mapper namespace="member">
 
-    <select id="loginCheck" parameterType="memberDto" resultType="memberDto">
+    <select id="loginCheck" parameterType="memberDto" resultType="memberDTO">
         SELECT *
         FROM MEMBER
         WHERE MEM_ID = #{mem_id, jdbcType = VARCHAR}
         AND MEM_PASSWORD = #{mem_password, jdbcType = VARCHAR}
     </select>
 
-    <insert id = "join" parameterType="memberDto">
+    <insert id = "join" parameterType="memberDTO">
         <selectKey keyProperty="mem_num" resultType="int" order="BEFORE">
             select TMP_SEQ.nextval from DUAL
         </selectKey>
@@ -24,4 +24,29 @@
                #{mem_sex, jdbcType = VARCHAR}, #{mem_address, jdbcType = VARCHAR},
                #{mem_email, jdbcType = VARCHAR}, sysdate, #{mem_is_admin, jdbcType = VARCHAR})
     </insert>
+
+    <select id="idCheck" resultType="com.healingpill.dto.MemberDTO">
+        select MEM_ID from MEMBER
+        where MEM_ID = #{mem_id, jdbcType = VARCHAR}
+    </select>
+
+    <select id="findId" resultType="com.healingpill.dto.MemberDTO">
+        select * from MEMBER
+        where MEM_PHONE = #{mem_phone, jdbcType = VARCHAR}
+        and MEM_USERNAME = #{mem_username, jdbcType = VARCHAR}
+    </select>
+
+    <select id="findIdCheck" resultType="int">
+        select count(*) from MEMBER where MEM_PHONE = #{mem_phone, jdbcType = VARCHAR}
+    </select>
+
+    <select id="findPassword" resultType="com.healingpill.dto.MemberDTO">
+        select * from MEMBER
+        where MEM_ID = #{mem_id, jdbcType = VARCHAR}
+        and MEM_PHONE = #{mem_phone, jdbcType = VARCHAR}
+    </select>
+
+    <select id="findPasswordCheck" resultType="int">
+        select count(*) from MEMBER where MEM_PHONE = #{mem_phone, jdbcType = VARCHAR}
+    </select>
 </mapper>

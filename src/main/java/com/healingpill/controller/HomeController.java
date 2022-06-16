@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
-    
+
     @RequestMapping(value = "/")
     public String main() {
         return "MainPage";
@@ -21,22 +21,27 @@ public class HomeController {
     public String survey() {
         return "survey";
     }
+
     @RequestMapping(value = "/survey_1")
     public String survey_1() {
         return "survey_1";
     }
+
     @RequestMapping(value = "/survey_2")
     public String survey_2() {
         return "survey_2";
     }
+
     @RequestMapping(value = "/survey_3")
     public String survey_3() {
         return "survey_3";
     }
+
     @RequestMapping(value = "/survey_4")
     public String survey_4() {
         return "survey_4";
     }
+
     @RequestMapping(value = "/survey_5")
     public String survey_5() {
         return "survey_5";
@@ -50,15 +55,23 @@ public class HomeController {
     //관리자 페이지
     //상품추가
     @RequestMapping(value = "/admin/product_add")
-    public String pdadd() { return "/admin/product_add";}
+    public String pdadd() {
+        return "/admin/product_add";
+    }
+
     //관리자 첫 페이지
     @RequestMapping(value = "/admin/index")
-    public String adminindex() { return "/admin/index";}
+    public String adminindex() {
+        return "/admin/index";
+    }
+
     //매거진 추가
     @RequestMapping(value = "/admin/cm_magazine")
-    public String adminmagazine() { return "/admin/cm_magazine";}
+    public String adminmagazine() {
+        return "/admin/cm_magazine";
+    }
 
-    @RequestMapping(value = "/Main")
+    @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
         return "MainPage";
     }
@@ -133,6 +146,7 @@ public class HomeController {
 
         return "allProductsDetail";
     }
+
 
     // checkout 페이지 이동
     @RequestMapping(value = "/checkout", method = RequestMethod.GET)

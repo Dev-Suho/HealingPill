@@ -16,6 +16,7 @@
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/allProducts" class="btn">제품 둘러보기</a>
                         <a href="/Login" class="btn btn-alt">로그인하기</a>
+                        <a href="/survey" class="btn">맞춤 영양제 찾기</a>
                     </div>
                 </div>
             </div>
