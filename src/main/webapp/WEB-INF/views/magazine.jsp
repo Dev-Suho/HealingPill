@@ -74,7 +74,7 @@
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
 
-                  <%//Dec 22, 2023%>
+                    <% System.out.println(mg_datetime); %>
                 <%=mg_datetime%>
                 </span>
                         <h3>
@@ -82,14 +82,14 @@
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                <%=mg_title%>
-                                <%//Meet AutoManage, the best AI management tools%>
+                                <%//=mg_title%>
+                                [작약추출물등복합물(HT074) 효능] 작약추출물등복합물은 위 점막을 보호합니다.
 
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.
+                            작약추출물등복합물(HT074)
+                            작약추출물등복합물은 위 점막을 보호합니다.
                         </p>
                     </div>
                 </div>
@@ -109,19 +109,19 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  Mar 15, 2023
+                  2022-06-07
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                How to earn more money as a wellness coach
+                                [식물성 단백질 효능] 식물성 단백질에 대한 오해를 풀어드립니다
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.
+                            식물성 단백질
+                            식물성 단백질도 단백질입니다
                         </p>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                 <span
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
-                  Jan 05, 2023
+                  2022-06-01
 
                 </span>
                         <h3>
@@ -149,12 +149,12 @@
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                The no-fuss guide to upselling and cross selling
+                                [비오틴 효능] 비오틴, 정말 모발과 피부 건강에 좋은가요?
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.
+                            비오틴, 모발에 좋은 거 확실한가요?
+                            해당 내용은 특정 제품과 직접적으로 관련된 내용이 아닌 성분에 대한 건강정보입니다.
                         </p>
                     </div>
                 </div>
