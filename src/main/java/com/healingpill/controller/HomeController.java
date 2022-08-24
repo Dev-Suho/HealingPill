@@ -2,16 +2,26 @@ package com.healingpill.controller;
 
 //import com.sun.org.slf4j.internal.Logger;
 //import com.sun.org.slf4j.internal.LoggerFactory;
+import com.healingpill.dto.ProductVO;
+import com.healingpill.service.ProductListService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.inject.Inject;
+import java.util.List;
 
 @Controller
 public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
+
+    @Inject
+    ProductListService productListService;
 
     @RequestMapping(value = "/")
     public String main() {
@@ -134,8 +144,16 @@ public class HomeController {
     }
 
 
+    @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
+    public String mainProductView(Model model) throws Exception {
 
+        List<ProductVO> productList = productListService.mainProductView();
+        model.addAttribute("products", productList);
 
+        return "allProducts";
+    }
+
+    /*
     // allProducts 페이지 이동
     @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
     public String allProductsGET() {
@@ -143,6 +161,8 @@ public class HomeController {
 
         return "allProducts";
     }
+*/
+
 
 
 

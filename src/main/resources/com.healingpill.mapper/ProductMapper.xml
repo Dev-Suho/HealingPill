@@ -44,4 +44,9 @@
     <delete id="productDelete">
         delete PRODUCT where PD_NUM = #{pd_num, jdbcType = NUMERIC}
     </delete>
+
+    <!-- 메인 상품 리스트 -->
+    <select id="mainProductList" resultType="com.healingpill.dto.ProductVO">
+        select * from PRODUCT
+    </select>
 </mapper>

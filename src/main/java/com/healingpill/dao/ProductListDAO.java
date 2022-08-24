@@ -9,9 +9,11 @@ public interface ProductListDAO {
 
     String NAMESPACE = "product.";
 
-    // 상품 목록
+    // 관리자 페이지 상품 목록
     public List<ProductVO> productList() throws Exception;
 
-    // 상품 조회
+    // 관리자 페이지 상품 조회
     public ProductViewVO productView(int pd_num) throws Exception;
+
+    public List<ProductVO> mainProductView() throws Exception;
 }

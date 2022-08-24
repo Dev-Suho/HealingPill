@@ -23,4 +23,9 @@ public class ProductListDAOImpl implements ProductListDAO{
     public ProductViewVO productView(int pd_num) throws Exception {
         return sqlSession.selectOne(NAMESPACE + "productView", pd_num);
     }
+
+    @Override
+    public List<ProductVO> mainProductView() throws Exception {
+        return sqlSession.selectList(NAMESPACE + "mainProductList");
+    }
 }
