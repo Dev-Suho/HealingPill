@@ -20,8 +20,6 @@ public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
 
-    @Inject
-    ProductListService productListService;
 
     @RequestMapping(value = "/")
     public String main() {
@@ -141,37 +139,6 @@ public class HomeController {
         logger.debug("cart 페이지 이동");
 
         return "cart";
-    }
-
-
-    @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
-    public String mainProductView(Model model) throws Exception {
-
-        List<ProductVO> productList = productListService.mainProductView();
-        model.addAttribute("products", productList);
-
-        return "allProducts";
-    }
-
-    /*
-    // allProducts 페이지 이동
-    @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
-    public String allProductsGET() {
-        logger.debug("allProducts 페이지 이동");
-
-        return "allProducts";
-    }
-*/
-
-
-
-
-    // allProductsDetail 페이지 이동
-    @RequestMapping(value = "/allProductsDetail", method = RequestMethod.GET)
-    public String allProductsDetailGET() {
-        logger.debug("allProductsDetail 페이지 이동");
-
-        return "allProductsDetail";
     }
 
 

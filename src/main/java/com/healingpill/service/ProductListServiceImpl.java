@@ -30,4 +30,9 @@ public class ProductListServiceImpl implements ProductListService {
     public List<ProductVO> mainProductView() throws Exception {
         return productListDAO.mainProductView();
     }
+
+    @Override
+    public ProductViewVO detailPageView(int pd_num) throws Exception {
+        return productListDAO.detailPageView(pd_num);
+    }
 }

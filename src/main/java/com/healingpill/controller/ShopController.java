@@ -1,6 +1,8 @@
 package com.healingpill.controller;
 
+import com.healingpill.dto.ProductVO;
 import com.healingpill.dto.ProductViewVO;
+import com.healingpill.service.ProductListService;
 import com.healingpill.service.ShopService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,16 +17,26 @@ import java.util.List;
 public class ShopController {
 
     @Inject
-    ShopService shopService;
+    ProductListService productListService;
 
-    // 상품 리스트
-    @RequestMapping(value = "/allProducts/list", method = RequestMethod.GET)
-    public String getList(@RequestParam("c") int ctg_code, @RequestParam("l") int level, Model model) throws Exception {
-        List<ProductViewVO> list = null;
-        list = shopService.list(ctg_code);
+    // 전 제품 보기 페이지
+    @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
+    public String mainProductView(Model model) throws Exception {
 
-        model.addAttribute("list", list);
+        List<ProductVO> productList = productListService.mainProductView();
+        model.addAttribute("products", productList);
 
         return "allProducts";
     }
+
+    // 제품 상세 페이지 이동
+    @RequestMapping(value = "/allProductsDetail", method = RequestMethod.GET)
+    public String allProductsDetailGET(@RequestParam("itemId") int pd_num, Model model) throws Exception{
+
+        ProductViewVO productViewVO = productListService.detailPageView(pd_num);
+        model.addAttribute("products", productViewVO);
+
+        return "allProductsDetail";
+    }
+
 }

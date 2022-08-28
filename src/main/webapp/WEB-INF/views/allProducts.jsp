@@ -51,7 +51,7 @@
                     <!-- Start Single Feature -->
                     <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
 
-                        <a href="/allProductsDetail" class="block"><img class="card-img-top" src="${products.pd_subImage}" alt="Card image cap">
+                        <a href="/allProductsDetail?itemId=${products.pd_num}" class="block"><img class="card-img-top" src="${products.pd_subImage}" alt="Card image cap">
                             <h3>${products.pd_name}</h3>
                             <p>${products.pd_content}</p></a>
                         <br>
