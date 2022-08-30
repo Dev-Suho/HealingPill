@@ -23,6 +23,9 @@
 
 <!-- Start Item Details -->
 <section class="item-details section">
+    <form>
+        <input type="hidden" name="pd_num" value="${products.pd_num}"/>
+    </form>
     <div class="container">
         <div class="top-area">
             <div class="row align-items-center">
@@ -47,13 +50,7 @@
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group quantity">
                                     <label for="color">구매 수량</label>
-                                    <select class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
+                                    <input type="number" class="numBox" min="1" max="${products.pd_stock}" value="1">
                                 </div>
                             </div>
                         </div>
@@ -61,7 +58,12 @@
                             <div class="row align-items-end">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="button cart-button">
-                                        <button class="btn" style="width: 100%;" onclick="location.href='/cart'"><i class="bi bi-bag-plus"></i> 장바구니</button>
+                                        <button class="addCart_btn" style="width: 100%;" onclick="location.href='/cart'"><i class="bi bi-bag-plus"></i> 장바구니</button>
+                                        <script>
+                                            $(".addCart_btn").click(function (){
+                                                var pd_num = $("#pd_num")
+                                            })
+                                        </script>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -73,6 +75,9 @@
                         </div>
                     </div>
                 </div>
+                <script>
+
+                </script>
             </div>
         </div>
         <div class="product-details-info">

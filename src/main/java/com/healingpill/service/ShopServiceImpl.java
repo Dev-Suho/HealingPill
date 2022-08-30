@@ -1,6 +1,7 @@
 package com.healingpill.service;
 
 import com.healingpill.dao.ShopDAO;
+import com.healingpill.dto.CartVO;
 import com.healingpill.dto.ProductViewVO;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +17,10 @@ public class ShopServiceImpl implements ShopService {
     @Override
     public List<ProductViewVO> list(int ctg_code) throws Exception {
         return shopDAO.list(ctg_code);
+    }
+
+    @Override
+    public void addCart(CartVO cartVO) throws Exception {
+        shopDAO.addCart(cartVO);
     }
 }

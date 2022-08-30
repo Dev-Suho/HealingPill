@@ -1,5 +1,6 @@
 package com.healingpill.dao;
 
+import com.healingpill.dto.CartVO;
 import com.healingpill.dto.ProductViewVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
@@ -16,5 +17,10 @@ public class ShopDAOImpl implements ShopDAO {
     @Override
     public List<ProductViewVO> list(int ctg_code) throws Exception {
         return sqlSession.selectList(NAMESPACE + "list", ctg_code);
+    }
+
+    @Override
+    public void addCart(CartVO cartVO) throws Exception {
+        sqlSession.insert(NAMESPACE + "addCart", cartVO);
     }
 }

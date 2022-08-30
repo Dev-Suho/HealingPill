@@ -133,6 +133,7 @@ public class HomeController {
         return "jusoPopup";
     }
 
+    /*
     // cart 페이지 이동
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
     public String cartGET() {
@@ -140,6 +141,8 @@ public class HomeController {
 
         return "cart";
     }
+
+     */
 
 
     // checkout 페이지 이동
