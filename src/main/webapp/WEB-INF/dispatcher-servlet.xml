@@ -23,6 +23,7 @@
     <context:component-scan base-package="com.healingpill.dto"/>
     <context:component-scan base-package="com.healingpill.service"/>
     <context:component-scan base-package="com.healingpill.utils"/>
+    <context:component-scan base-package="com.healingpill.Interceptor"/>
 
     <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"></property>
@@ -41,4 +42,11 @@
     <beans:bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
         <beans:property name="maxUploadSize" value="10485760"/>
     </beans:bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/cart/**"/>
+            <beans:bean id="CartIntercepter" class="com.healingpill.Interceptor.CartInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

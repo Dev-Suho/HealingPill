@@ -20,7 +20,27 @@ public class ShopDAOImpl implements ShopDAO {
     }
 
     @Override
-    public void addCart(CartVO cartVO) throws Exception {
-        sqlSession.insert(NAMESPACE + "addCart", cartVO);
+    public int addCart(CartVO cartVO) throws Exception {
+        return 0;
+    }
+
+    @Override
+    public int deleteCart(int cartId) throws Exception {
+        return 0;
+    }
+
+    @Override
+    public int modifyCount(CartVO cartVO) throws Exception {
+        return 0;
+    }
+
+    @Override
+    public List<CartVO> getCart(String mem_id) throws Exception {
+        return null;
+    }
+
+    @Override
+    public CartVO checkCart(CartVO cartVO) throws Exception {
+        return null;
     }
 }

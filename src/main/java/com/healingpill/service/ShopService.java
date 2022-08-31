@@ -11,5 +11,17 @@ public interface ShopService {
     public List<ProductViewVO> list(int ctg_code) throws Exception;
 
     // 장바구니 담기
-    public void addCart(CartVO cartVO) throws Exception;
+    public int addCart(CartVO cartVO) throws Exception;
+    
+    // 장바구니 삭제
+    public int deleteCart(int cartId) throws Exception;
+    
+    // 카트 수량 수정
+    public int modifyCount(CartVO cartVO) throws Exception;
+    
+    // 카트 목록
+    public List<CartVO> getCart(String mem_id) throws Exception;
+    
+    // 카트 확인
+    public CartVO checkCart(CartVO cartVO) throws Exception;
 }

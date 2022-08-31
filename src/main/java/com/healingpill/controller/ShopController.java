@@ -46,12 +46,8 @@ public class ShopController {
         return "allProductsDetail";
     }
 
-    @ResponseBody
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public void addCart(CartVO cartVO, HttpSession session) throws Exception {
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
-        cartVO.setMem_num(memberDTO.getMem_num());
-
-        shopService.addCart(cartVO);
+    public String addCart(CartVO cartVO, HttpSession session) {
+        return "cart";
     }
 }
