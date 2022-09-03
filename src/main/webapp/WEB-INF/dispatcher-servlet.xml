@@ -46,6 +46,8 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/cart/**"/>
+            <!-- 예외 url -->
+            <mvc:exclude-mapping path="/cart/add/"/>
             <beans:bean id="CartIntercepter" class="com.healingpill.Interceptor.CartInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

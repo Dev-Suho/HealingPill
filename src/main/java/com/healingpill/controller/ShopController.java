@@ -8,12 +8,10 @@ import com.healingpill.service.ProductListService;
 import com.healingpill.service.ShopService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -46,8 +44,26 @@ public class ShopController {
         return "allProductsDetail";
     }
 
+    /*
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
     public String addCart(CartVO cartVO, HttpSession session) {
         return "cart";
+    }
+     */
+
+    @ResponseBody
+    @RequestMapping(value = "/card/add", method = RequestMethod.POST)
+    public String addCartPOST(CartVO cartVO, HttpServletRequest request) throws Exception {
+        HttpSession session = request.getSession();
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("res");
+
+        if(memberDTO == null) {
+            // 로그인이 안 되어 있을 때 5 반환
+            return "5";
+        }
+
+        int result = shopService.addCart(cartVO);
+
+        return result + "";
     }
 }

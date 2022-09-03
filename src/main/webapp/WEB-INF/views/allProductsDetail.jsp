@@ -58,12 +58,7 @@
                             <div class="row align-items-end">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="button cart-button">
-                                        <button class="addCart_btn" style="width: 100%;" onclick="location.href='/cart'"><i class="bi bi-bag-plus"></i> 장바구니</button>
-                                        <script>
-                                            $(".addCart_btn").click(function (){
-                                                var pd_num = $("#pd_num")
-                                            })
-                                        </script>
+                                        <button class="addCart_btn" style="width: 100%;" onclick="location.href='/cart'"><i class="bi bi-bag-plus"></i>장바구니</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">

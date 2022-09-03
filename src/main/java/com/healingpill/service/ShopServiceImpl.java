@@ -21,7 +21,19 @@ public class ShopServiceImpl implements ShopService {
 
     @Override
     public int addCart(CartVO cartVO) throws Exception {
-        return 0;
+        CartVO addCart = shopDAO.checkCart(cartVO);
+
+        if(addCart != null) {
+            // 중복 데이터 존재
+            return 2;
+        }
+        try {
+            // 등록 성공 1 반환
+            return shopDAO.addCart(cartVO);
+        } catch (Exception e) {
+            // 등록 실패
+            return 0;
+        }
     }
 
     @Override

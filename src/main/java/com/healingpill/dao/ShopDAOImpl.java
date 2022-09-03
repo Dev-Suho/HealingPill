@@ -21,7 +21,7 @@ public class ShopDAOImpl implements ShopDAO {
 
     @Override
     public int addCart(CartVO cartVO) throws Exception {
-        return 0;
+        return 1;
     }
 
     @Override
