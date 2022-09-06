@@ -3,6 +3,8 @@
 <%@ include file="layout/header.jsp" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -50,7 +52,11 @@
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group quantity">
                                     <label for="color">구매 수량</label>
-                                    <input type="number" class="numBox" min="1" max="${products.pd_stock}" value="1">
+                                    <input type="text" class="quantity_input" value="1">
+                                    <span>
+                                        <button class="plus_btn">+</button>
+                                        <button class="minus_btn">-</button>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +69,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="wish-button">
-                                        <button class="btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
+                                        <button class="buy_btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +77,49 @@
                     </div>
                 </div>
                 <script>
+                    let quantity = $(".quantity_input").val();
 
+                    $(".plus_btn").on("click", function (){
+                        $(".quantity_input").val(++quantity);
+                    });
+
+                    $(".minus_btn").on("click", function (){
+                        if(quantity > 1) {
+                            $(".quantity_input").val(--quantity);
+                        }
+                    });
+
+                    // 서버로 전송할 데이터
+                    const form = {
+                        mem_id : '${member.mem_id}',
+                        pd_num : '${products.pd_num}',
+                        cart_stock : ''
+                    }
+
+                    // 장바구니 추가 버튼
+                    $(".addCart_btn").on("click", function (e){
+                        form.cart_stock = $(".quantity_input").val();
+                        $.ajax({
+                            url : '/cart/add',
+                            type : 'POST',
+                            data : form,
+                            success : function (result){
+                                cartAlert(result);
+                            }
+                        })
+                    });
+
+                    function cartAlert(result) {
+                        if(result == '0'){
+                            alert("장바구니에 추가하지 못했습니다.");
+                        } else if(result == '1') {
+                            alert("장바구니에 추가되었습니다.");
+                        } else if(result == '2') {
+                            alert("장바구니에 이미 추가되어 있습니다.");
+                        } else if(result == '5') {
+                            alert("로그인이 필요합니다.");
+                        }
+                    }
                 </script>
             </div>
         </div>

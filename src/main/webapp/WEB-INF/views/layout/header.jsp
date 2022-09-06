@@ -105,9 +105,9 @@
                             </ul>
                         </div> <!-- navbar collapse -->
                         <c:choose>
-                            <c:when test="${res != null}">
+                            <c:when test="${member != null}">
                                 <div class="button">
-                                    <span class="badge">[${res.mem_username}]님 안녕하세요 :)</span>
+                                    <span class="badge">[${member.mem_username}]님 안녕하세요 :)</span>
                                     <a href="cart" class="btn"><i class="bi bi-cart4"></i></a>
                                     <a href="Logout" class="btn">로그아웃</a>
                                 </div>

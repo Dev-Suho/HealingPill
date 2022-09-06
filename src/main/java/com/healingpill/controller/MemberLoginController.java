@@ -44,7 +44,7 @@ public class MemberLoginController {
         MemberDTO res = memberLoginService.login(memberDTO);
 
         if (res!= null) {
-            session.setAttribute("res", res);
+            session.setAttribute("member", res);
             System.out.println("로그인성공");
 
             return "MainPage";

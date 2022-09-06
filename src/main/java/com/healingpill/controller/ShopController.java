@@ -41,6 +41,8 @@ public class ShopController {
         ProductViewVO productViewVO = productListService.detailPageView(pd_num);
         model.addAttribute("products", productViewVO);
 
+
+
         return "allProductsDetail";
     }
 
@@ -52,10 +54,10 @@ public class ShopController {
      */
 
     @ResponseBody
-    @RequestMapping(value = "/card/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/cart/add", method = RequestMethod.POST)
     public String addCartPOST(CartVO cartVO, HttpServletRequest request) throws Exception {
         HttpSession session = request.getSession();
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("res");
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
 
         if(memberDTO == null) {
             // 로그인이 안 되어 있을 때 5 반환

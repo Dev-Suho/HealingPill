@@ -9,11 +9,12 @@ import javax.servlet.http.HttpSession;
 
 public class CartInterceptor implements HandlerInterceptor {
 
+    /*
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
 
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("res");
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
 
         if(memberDTO == null) {
             response.sendRedirect("/");
@@ -22,5 +23,5 @@ public class CartInterceptor implements HandlerInterceptor {
             return true;
         }
     }
-
+*/
 }
