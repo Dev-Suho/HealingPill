@@ -15,15 +15,14 @@
 
     <!-- 장바구니 추가 -->
     <insert id="addCart">
-        insert into CART(MEM_ID, PD_NUM, CART_STOCK)
-        values (#{mem_id, jdbcType = VARCHAR}, #{pd_num, jdbcType = NUMERIC}, #{cart_stock, jdbcType = NUMERIC})
+        insert into CART(CART_ID, MEM_ID, PD_NUM, CART_STOCK)
+        values (CART_SEQ.nextval, #{mem_id, jdbcType = VARCHAR}, #{pd_num, jdbcType = NUMERIC}, #{cart_stock, jdbcType = NUMERIC})
     </insert>
 
     <!-- 장바구니 삭제 -->
     <delete id="deleteCart">
-        delete
-        from CART
-        where CART_ID = #{cart_id, jdbcType = NUMERIC};
+        delete CART
+        where CART_ID = #{cart_id, jdbcType = NUMERIC} and MEM_ID = #{mem_id, jdbcType = VARCHAR}
     </delete>
 
     <!-- 장바구니 수량 수정 -->
@@ -32,10 +31,13 @@
     </update>
 
     <!-- 장바구니 목록 불러오기 -->
-    <select id="getCart" resultType="com.healingpill.dto.CartVO">
-        select c.cart_id, c.mem_id, c.pd_num, c.cart_stock, p.pd_name, p.pd_price
-        from CART c left outer join PRODUCT p on c.PD_NUM = p.PD_NUM
-        where MEM_ID = #{mem_id, jdbcType = VARCHAR}
+    <select id="getCartList" resultType="com.healingpill.dto.CartListVO">
+        select row_number() over (order by c.CART_ID desc) as num, c.CART_ID, c.MEM_ID, c.PD_NUM, c.CART_STOCK, c.CART_REGISTER_DATETIME,
+               p.PD_NAME, p.PD_PRICE, p.PD_SUBIMAGE, p.CTG_CODE, pc.CTG_NAME
+        from CART c
+                 inner join PRODUCT p on c.PD_NUM = p.PD_NUM
+                 inner join PRODUCT_CATEGORY pc on p.CTG_CODE = pc.CTG_CODE
+        where c.MEM_ID = #{mem_id, jdbcType = VARCHAR}
     </select>
 
 

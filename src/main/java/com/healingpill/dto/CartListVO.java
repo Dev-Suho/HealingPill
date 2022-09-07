@@ -2,32 +2,27 @@ package com.healingpill.dto;
 
 import java.util.Date;
 
-public class CartVO {
-    /*
-        cart_id number primary key ,
-    mem_id varchar2(50),
-    pd_num number,
-    cart_stock number,
-    foreign key (mem_id) references MEMBER(MEM_ID),
-    foreign key (pd_num) references PRODUCT(PD_NUM)
-     */
-
+public class CartListVO {
     private int cart_id;
     private String mem_id;
     private int pd_num;
     private int cart_stock;
-    private String pd_name;
-    private int pd_price;
-
     private Date cart_register_datetime;
 
-    public Date getCart_register_datetime() {
-        return cart_register_datetime;
+    private int num;
+    private String pd_name;
+    private int pd_price;
+    private String pd_subImage;
+
+    public String getCtg_name() {
+        return ctg_name;
     }
 
-    public void setCart_register_datetime(Date cart_register_datetime) {
-        this.cart_register_datetime = cart_register_datetime;
+    public void setCtg_name(String ctg_name) {
+        this.ctg_name = ctg_name;
     }
+
+    private String ctg_name;
 
     public int getCart_id() {
         return cart_id;
@@ -61,6 +56,22 @@ public class CartVO {
         this.cart_stock = cart_stock;
     }
 
+    public Date getCart_register_datetime() {
+        return cart_register_datetime;
+    }
+
+    public void setCart_register_datetime(Date cart_register_datetime) {
+        this.cart_register_datetime = cart_register_datetime;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
     public String getPd_name() {
         return pd_name;
     }
@@ -77,17 +88,11 @@ public class CartVO {
         this.pd_price = pd_price;
     }
 
+    public String getPd_subImage() {
+        return pd_subImage;
+    }
 
-    @Override
-    public String toString() {
-        return "CartVO{" +
-                "cart_id=" + cart_id +
-                ", mem_id='" + mem_id + '\'' +
-                ", pd_num=" + pd_num +
-                ", cart_stock=" + cart_stock +
-                ", pd_name='" + pd_name + '\'' +
-                ", pd_price=" + pd_price +
-                ", totalPrice=" +
-                '}';
+    public void setPd_subImage(String pd_subImage) {
+        this.pd_subImage = pd_subImage;
     }
 }

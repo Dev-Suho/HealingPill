@@ -1,5 +1,6 @@
 package com.healingpill.dao;
 
+import com.healingpill.dto.CartListVO;
 import com.healingpill.dto.CartVO;
 import com.healingpill.dto.ProductViewVO;
 import org.apache.ibatis.session.SqlSession;
@@ -21,12 +22,14 @@ public class ShopDAOImpl implements ShopDAO {
 
     @Override
     public int addCart(CartVO cartVO) throws Exception {
+        sqlSession.insert(NAMESPACE + "addCart", cartVO);
+
         return 1;
     }
 
     @Override
-    public int deleteCart(int cartId) throws Exception {
-        return 0;
+    public void deleteCart(CartVO cartVO) throws Exception {
+        sqlSession.delete(NAMESPACE + "deleteCart", cartVO);
     }
 
     @Override
@@ -35,8 +38,8 @@ public class ShopDAOImpl implements ShopDAO {
     }
 
     @Override
-    public List<CartVO> getCart(String mem_id) throws Exception {
-        return null;
+    public List<CartListVO> getCartList(String mem_id) throws Exception {
+        return sqlSession.selectList(NAMESPACE + "getCartList", mem_id);
     }
 
     @Override

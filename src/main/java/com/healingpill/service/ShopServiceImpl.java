@@ -1,6 +1,7 @@
 package com.healingpill.service;
 
 import com.healingpill.dao.ShopDAO;
+import com.healingpill.dto.CartListVO;
 import com.healingpill.dto.CartVO;
 import com.healingpill.dto.ProductViewVO;
 import org.springframework.stereotype.Service;
@@ -19,14 +20,10 @@ public class ShopServiceImpl implements ShopService {
         return shopDAO.list(ctg_code);
     }
 
+    // 장바구니 추가
     @Override
     public int addCart(CartVO cartVO) throws Exception {
-        CartVO checkCart = shopDAO.checkCart(cartVO);
 
-        if(checkCart != null) {
-            // 중복 데이터 존재
-            return 2;
-        }
         try {
             // 등록 성공 1 반환
             return shopDAO.addCart(cartVO);
@@ -36,9 +33,10 @@ public class ShopServiceImpl implements ShopService {
         }
     }
 
+    // 장바구니 삭제
     @Override
-    public int deleteCart(int cartId) throws Exception {
-        return 0;
+    public void deleteCart(CartVO cartVO) throws Exception {
+        shopDAO.deleteCart(cartVO);
     }
 
     @Override
@@ -47,8 +45,8 @@ public class ShopServiceImpl implements ShopService {
     }
 
     @Override
-    public List<CartVO> getCart(String mem_id) throws Exception {
-        return null;
+    public List<CartListVO> getCartList(String mem_id) throws Exception {
+        return shopDAO.getCartList(mem_id);
     }
 
     @Override

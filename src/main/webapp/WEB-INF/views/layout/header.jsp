@@ -114,8 +114,8 @@
                             </c:when>
                             <c:otherwise>
                                 <div class="button">
-                                    <a href="/cart" class="btn"><i class="bi bi-cart4"></i></a>
-                                    <a href="/Login" class="btn">로그인하기</a>
+                                    <a href="cart" class="btn"><i class="bi bi-cart4"></i></a>
+                                    <a href="login" class="btn">로그인하기</a>
                                 </div>
                             </c:otherwise>
                         </c:choose>

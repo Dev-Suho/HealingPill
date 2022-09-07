@@ -25,9 +25,6 @@
 
 <!-- Start Item Details -->
 <section class="item-details section">
-    <form>
-        <input type="hidden" name="pd_num" value="${products.pd_num}"/>
-    </form>
     <div class="container">
         <div class="top-area">
             <div class="row align-items-center">
@@ -43,6 +40,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="product-info">
+                        <input type="hidden" class = "pd_num" value="${products.pd_num}"/>
                         <h2 class="title">${products.pd_name}</h2>
                         <p class="category"><i class="lni lni-tag"></i> ${products.ctg_Name}</p>
                         <h3 class="price"><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###"/></h3>
@@ -64,7 +62,7 @@
                             <div class="row align-items-end">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="button cart-button">
-                                        <button class="addCart_btn" style="width: 100%;" onclick="location.href='/cart'"><i class="bi bi-bag-plus"></i>장바구니</button>
+                                        <button class="addCart_btn" style="width: 100%;"><i class="bi bi-bag-plus"></i>장바구니</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -89,37 +87,42 @@
                         }
                     });
 
-                    // 서버로 전송할 데이터
-                    const form = {
-                        mem_id : '${member.mem_id}',
-                        pd_num : '${products.pd_num}',
-                        cart_stock : ''
-                    }
 
                     // 장바구니 추가 버튼
-                    $(".addCart_btn").on("click", function (e){
-                        form.cart_stock = $(".quantity_input").val();
+                    $(".addCart_btn").click(function() {
+                        const pd_num = $(".pd_num").val();
+                        const cart_stock = $(".quantity_input").val();
+
+                        const data = {
+                            pd_num : pd_num,
+                            cart_stock : cart_stock
+                        };
+
                         $.ajax({
                             url : '/cart/add',
-                            type : 'POST',
-                            data : form,
-                            success : function (result){
-                                cartAlert(result);
+                            type : 'post',
+                            data : data,
+                            success : function(result){
+                                if(result == 0){
+                                    alert("장바구니에 같은 상품이 있습니다.");
+                                    $(".quantity_input").val("1");
+                                    location.href = 'cart';
+                                } else if(result == 1) {
+                                    alert("장바구니에 추가되었습니다.");
+                                    $(".quantity_input").val("1");
+                                } else if(result == 2) {
+                                    alert("장바구니에 이미 추가되어 있습니다.");
+                                    $(".quantity_input").val("1");
+                                } else if(result == 3) {
+                                    alert("로그인이 필요합니다.");
+                                    location.href = 'login';
+                                }
+                            },
+                            error : function() {
+                                alert("장바구니 담기 실패");
                             }
-                        })
+                        });
                     });
-
-                    function cartAlert(result) {
-                        if(result == '0'){
-                            alert("장바구니에 추가하지 못했습니다.");
-                        } else if(result == '1') {
-                            alert("장바구니에 추가되었습니다.");
-                        } else if(result == '2') {
-                            alert("장바구니에 이미 추가되어 있습니다.");
-                        } else if(result == '5') {
-                            alert("로그인이 필요합니다.");
-                        }
-                    }
                 </script>
             </div>
         </div>

@@ -22,10 +22,9 @@ public class MemberLoginController {
     @Autowired
     private MemberLoginService memberLoginService;
 
-    @RequestMapping(value = "/Login")
+    @RequestMapping(value = "/login")
     public String login() {
         logger.debug("로그인 페이지 이동");
-        System.out.println("로그인 페이지 이동");
         return "memberLogin";
     }
 

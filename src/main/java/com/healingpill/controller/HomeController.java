@@ -134,16 +134,6 @@ public class HomeController {
     }
 
 
-    // cart 페이지 이동
-    @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public String cartGET() {
-        logger.debug("cart 페이지 이동");
-
-        return "cart";
-    }
-
-
-
     // checkout 페이지 이동
     @RequestMapping(value = "/checkout", method = RequestMethod.GET)
     public String checkoutGET() {

@@ -1,9 +1,6 @@
 package com.healingpill.controller;
 
-import com.healingpill.dto.CartVO;
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.ProductVO;
-import com.healingpill.dto.ProductViewVO;
+import com.healingpill.dto.*;
 import com.healingpill.service.ProductListService;
 import com.healingpill.service.ShopService;
 import org.springframework.stereotype.Controller;
@@ -46,26 +43,64 @@ public class ShopController {
         return "allProductsDetail";
     }
 
-    /*
+/*
     @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public String addCart(CartVO cartVO, HttpSession session) {
+    public String showCart() {
         return "cart";
     }
-     */
+
+ */
+
 
     @ResponseBody
     @RequestMapping(value = "/cart/add", method = RequestMethod.POST)
-    public String addCartPOST(CartVO cartVO, HttpServletRequest request) throws Exception {
-        HttpSession session = request.getSession();
+    public int addCartPOST(CartVO cartVO, HttpSession session) throws Exception {
         MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+
+        int result = 0;
 
         if(memberDTO == null) {
             // 로그인이 안 되어 있을 때 5 반환
-            return "5";
+            return 3;
         }
 
-        int result = shopService.addCart(cartVO);
+        cartVO.setMem_id(memberDTO.getMem_id());
+        result = shopService.addCart(cartVO);
 
-        return result + "";
+        return result;
+    }
+
+    @RequestMapping(value = "/cart", method = RequestMethod.GET)
+    public String getCartList(HttpSession session, Model model) throws Exception{
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+
+        if(memberDTO != null) {
+            String mem_id = memberDTO.getMem_id();
+            List<CartListVO> cartList = shopService.getCartList(mem_id);
+            model.addAttribute("cartList", cartList);
+        }
+        return "cart";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/deleteCart", method = RequestMethod.POST)
+    public int deleteCart(HttpSession session, @RequestParam(value = "chbox[]") List<String> chArr, CartVO cartVO) throws Exception{
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+        String mem_id = memberDTO.getMem_id();
+
+        int result = 0;
+        int cart_id = 0;
+
+        if(memberDTO != null) {
+            cartVO.setMem_id(mem_id);
+
+            for(String i : chArr) {
+                cart_id = Integer.parseInt(i);
+                cartVO.setCart_id(cart_id);
+                shopService.deleteCart(cartVO);
+            }
+            result = 1;
+        }
+        return result;
     }
 }

@@ -1,5 +1,6 @@
 package com.healingpill.service;
 
+import com.healingpill.dto.CartListVO;
 import com.healingpill.dto.CartVO;
 import com.healingpill.dto.ProductViewVO;
 
@@ -14,13 +15,13 @@ public interface ShopService {
     public int addCart(CartVO cartVO) throws Exception;
     
     // 장바구니 삭제
-    public int deleteCart(int cartId) throws Exception;
+    public void deleteCart(CartVO cartVO) throws Exception;
     
     // 카트 수량 수정
     public int modifyCount(CartVO cartVO) throws Exception;
     
     // 카트 목록
-    public List<CartVO> getCart(String mem_id) throws Exception;
+    public List<CartListVO> getCartList(String mem_id) throws Exception;
     
     // 카트 확인
     public CartVO checkCart(CartVO cartVO) throws Exception;
