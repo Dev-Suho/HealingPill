@@ -1,9 +1,7 @@
 package com.healingpill.service;
 
 import com.healingpill.dao.ShopDAO;
-import com.healingpill.dto.CartListVO;
-import com.healingpill.dto.CartVO;
-import com.healingpill.dto.ProductViewVO;
+import com.healingpill.dto.*;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -52,6 +50,18 @@ public class ShopServiceImpl implements ShopService {
     @Override
     public CartVO checkCart(CartVO cartVO) throws Exception {
         return null;
+    }
+
+    // 주문 정보
+    @Override
+    public void orderInfo(OrderVO orderVO) throws Exception {
+        shopDAO.orderInfo(orderVO);
+    }
+
+    // 주문 상세 정보
+    @Override
+    public void orderInfo_Details(OrderDetailVO orderDetailVO) throws Exception {
+        shopDAO.orderInfo_Details(orderDetailVO);
     }
 
 }

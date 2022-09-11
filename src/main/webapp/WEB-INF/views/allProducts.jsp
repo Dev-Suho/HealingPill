@@ -56,7 +56,7 @@
                             <p>${products.pd_content}</p></a>
                         <br>
                         <div class="button">
-                            <a href="cart"><i class="bi bi-cart-plus"></i></a>
+                            <p><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###원"/></p>
                         </div>
                     </div>
                     <!-- End Single Feature -->

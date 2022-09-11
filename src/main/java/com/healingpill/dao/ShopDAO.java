@@ -1,9 +1,6 @@
 package com.healingpill.dao;
 
-import com.healingpill.dto.CartListVO;
-import com.healingpill.dto.CartVO;
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.ProductViewVO;
+import com.healingpill.dto.*;
 
 import java.util.List;
 
@@ -28,4 +25,10 @@ public interface ShopDAO {
 
     // 장바구니 확인
     public CartVO checkCart(CartVO cartVO) throws Exception;
+
+    // 주문 정보
+    public void orderInfo(OrderVO orderVO) throws Exception;
+
+    // 주문 상세 정보
+    public void orderInfo_Details(OrderDetailVO orderDetailVO) throws Exception;
 }

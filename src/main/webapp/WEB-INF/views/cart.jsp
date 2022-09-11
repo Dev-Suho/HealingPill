@@ -83,6 +83,8 @@
             </div>
             <!-- End Cart List Title -->
             <!-- Cart Single List list -->
+            <c:set var = "sum" value="0" />
+
             <c:forEach items="${cartList}" var="cartList">
                 <div class="cart-single-list">
                     <div class="row align-items-center">
@@ -156,6 +158,7 @@
                         </div>
                     </div>
                 </div>
+                <c:set var = "sum" value="${sum + (cartList.pd_price * cartList.cart_stock)}"/>
             </c:forEach>
 
         </div>
@@ -172,13 +175,13 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="right">
                                 <ul>
-                                    <li>장바구니 총 금액<span>$2560.00</span></li>
+                                    <li>장바구니 총 금액<span><fmt:formatNumber pattern="###,###,###원" value="${sum}"/></span></li>
                                     <li>배송료<span>무료</span></li>
-                                    <li class="last">결제 금액<span>$2531.00</span></li>
+                                    <li class="last">결제 금액<span><fmt:formatNumber pattern="###,###,###원" value="${sum}"/></span></li>
                                 </ul>
                                 <div class="button">
-                                    <a href="/checkout" class="btn">결제하기</a>
-                                    <a href="/allProducts" class="btn btn-alt">계속 쇼핑하기</a>
+                                    <a href="checkout" class="btn">결제하기</a>
+                                    <a href="allProducts" class="btn btn-alt">계속 쇼핑하기</a>
                                 </div>
                             </div>
                         </div>
