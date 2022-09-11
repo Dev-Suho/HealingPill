@@ -59,11 +59,27 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+                                        <div class="single-form form-default">
+                                            <label>우편번호</label>
+                                            <div class="form-input form">
+                                                <input type="text" placeholder="우편번호">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="single-form form-default">
                                             <label>주소</label>
                                             <div class="form-input form">
                                                 <input type="text" placeholder="주소">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="single-form form-default">
+                                            <label>상세주소</label>
+                                            <div class="form-input form">
+                                                <input type="text" placeholder="상세주소">
                                             </div>
                                         </div>
                                     </div>

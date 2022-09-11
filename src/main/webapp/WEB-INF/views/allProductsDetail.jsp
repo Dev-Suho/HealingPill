@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
@@ -29,7 +32,7 @@
                     <div class="product-images">
                         <main id="gallery">
                             <div class="main-img">
-                                <img src="https://via.placeholder.com/1000x670" id="current" alt="#">
+                                <img src="${products.pd_mainImage}" id="current" alt="#">
                             </div>
 
                         </main>
@@ -37,25 +40,21 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="product-info">
-                        <h2 class="title">GoPro Karma Camera Drone</h2>
-                        <p class="category"><i class="lni lni-tag"></i> Drones:<a href="javascript:void(0)">Action
-                            cameras</a></p>
-                        <h3 class="price">$850<span>$945</span></h3>
-                        <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
+                        <input type="hidden" class = "pd_num" value="${products.pd_num}"/>
+                        <h2 class="title">${products.pd_name}</h2>
+                        <p class="category"><i class="lni lni-tag"></i> ${products.ctg_Name}</p>
+                        <h3 class="price"><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###"/></h3>
+                        <p class="info-text">${products.pd_content}</p>
                         <div class="row">
 
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group quantity">
                                     <label for="color">구매 수량</label>
-                                    <select class="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
+                                    <input type="text" class="quantity_input" value="1">
+                                    <span>
+                                        <button class="plus_btn">+</button>
+                                        <button class="minus_btn">-</button>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -63,18 +62,68 @@
                             <div class="row align-items-end">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="button cart-button">
-                                        <button class="btn" style="width: 100%;" onclick="location.href='/cart'"><i class="bi bi-bag-plus"></i> 장바구니</button>
+                                        <button class="addCart_btn" style="width: 100%;"><i class="bi bi-bag-plus"></i>장바구니</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="wish-button">
-                                        <button class="btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
+                                        <button class="buy_btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script>
+                    let quantity = $(".quantity_input").val();
+
+                    $(".plus_btn").on("click", function (){
+                        $(".quantity_input").val(++quantity);
+                    });
+
+                    $(".minus_btn").on("click", function (){
+                        if(quantity > 1) {
+                            $(".quantity_input").val(--quantity);
+                        }
+                    });
+
+
+                    // 장바구니 추가 버튼
+                    $(".addCart_btn").click(function() {
+                        const pd_num = $(".pd_num").val();
+                        const cart_stock = $(".quantity_input").val();
+
+                        const data = {
+                            pd_num : pd_num,
+                            cart_stock : cart_stock
+                        };
+
+                        $.ajax({
+                            url : '/cart/add',
+                            type : 'post',
+                            data : data,
+                            success : function(result){
+                                if(result == 0){
+                                    alert("장바구니에 같은 상품이 있습니다.");
+                                    $(".quantity_input").val("1");
+                                    location.href = 'cart';
+                                } else if(result == 1) {
+                                    alert("장바구니에 추가되었습니다.");
+                                    $(".quantity_input").val("1");
+                                } else if(result == 2) {
+                                    alert("장바구니에 이미 추가되어 있습니다.");
+                                    $(".quantity_input").val("1");
+                                } else if(result == 3) {
+                                    alert("로그인이 필요합니다.");
+                                    location.href = 'login';
+                                }
+                            },
+                            error : function() {
+                                alert("장바구니 담기 실패");
+                            }
+                        });
+                    });
+                </script>
             </div>
         </div>
         <div class="product-details-info">
