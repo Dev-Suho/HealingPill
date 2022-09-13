@@ -1,3 +1,4 @@
+<%@ page import="java.util.Vector" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
@@ -45,121 +46,22 @@
         </div>
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+            <c:forEach items="${products}" var="products">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Feature -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
 
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Simple Queues</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                        <a href="/allProductsDetail?itemId=${products.pd_num}" class="block"><img class="card-img-top" src="${products.pd_subImage}" alt="Card image cap">
+                            <h3>${products.pd_name}</h3>
+                            <p>${products.pd_content}</p></a>
+                        <br>
+                        <div class="button">
+                            <p><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###원"/></p>
+                        </div>
                     </div>
+                    <!-- End Single Feature -->
                 </div>
-                <!-- End Single Feature -->
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Simple Queues</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
-                    </div>
-
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Advanced Security</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
-                    </div>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Powerful API</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
-                    </div>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Database Backups</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
-                    </div>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Database Backups</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
-                    </div>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Database Backups</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
-                    </div>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap">
-                    <h3>Database Backups</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p></a>
-                    <br>
-                    <div class="button">
-                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
-                    </div>
-                </div>
-                <!-- End Single Feature -->
-            </div>
+            </c:forEach>
 
         </div>
     </div>
