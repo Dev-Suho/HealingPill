@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop">
+
+    <!-- 상품 리스트 -->
+    <select id="list" resultType="com.healingpill.dto.ProductViewVO">
+        select p.PD_NUM, p.PD_NAME, p.CTG_CODE, pc.CTG_CODEREF, pc.CTG_NAME,
+               PD_PRICE, PD_STOCK, PD_CONTENT, PD_MAINIMAGE, PD_REGISTER_DATETIME, p.PD_MAINIMAGE, p.PD_SUBIMAGE
+            from PRODUCT p
+                inner join PRODUCT_CATEGORY PC on p.CTG_CODE = PC.CTG_CODE
+                where p.CTG_CODE = #{ctg_code, jdbcType = VARCHAR}
+    </select>
+</mapper>

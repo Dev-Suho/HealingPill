@@ -133,6 +133,9 @@ public class HomeController {
         return "cart";
     }
 
+
+
+
     // allProducts 페이지 이동
     @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
     public String allProductsGET() {
@@ -140,6 +143,8 @@ public class HomeController {
 
         return "allProducts";
     }
+
+
 
     // allProductsDetail 페이지 이동
     @RequestMapping(value = "/allProductsDetail", method = RequestMethod.GET)
