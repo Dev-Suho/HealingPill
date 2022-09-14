@@ -11,6 +11,8 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.lang.reflect.Member;
+import java.text.DecimalFormat;
+import java.util.Calendar;
 import java.util.List;
 
 @Controller
@@ -98,12 +100,30 @@ public class ShopController {
     }
 
     // 주문
-    @RequestMapping(value = "/cartList", method = RequestMethod.POST)
-    public void order(HttpSession session, OrderVO orderVO, OrderDetailVO orderDetailVO) throws Exception {
+    @RequestMapping(value = "/orderRequest", method = RequestMethod.POST)
+    public String order(HttpSession session, OrderVO orderVO, OrderDetailVO orderDetailVO) throws Exception {
         MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
         String mem_id = memberDTO.getMem_id();
 
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        String ym = year + new DecimalFormat("00").format(cal.get(Calendar.MONTH) + 1 );
+        String ymd = ym + new DecimalFormat("00").format(cal.get(Calendar.DATE));
+        String subNum = "";
+
+        for(int i = 1; i <= 6; i++) {
+            subNum += (int)(Math.random() * 10);
+        }
+        String order_id = ymd + "_" + subNum;
+
+        orderVO.setOrder_id(order_id);
+        orderVO.setMem_id(mem_id);
+
         shopService.orderInfo(orderVO);
+
+        orderDetailVO.setOrder_id(order_id);
         shopService.orderInfo_Details(orderDetailVO);
+
+        return "redirect:checkoutComplete";
     }
 }
