@@ -2,24 +2,24 @@ package com.healingpill.dto;
 
 public class OrderDetailVO {
     /*
-    order_details_num number not null ,
+    orderDetails_num number primary key not null ,
     order_id varchar2(50) not null ,
     pd_num number not null ,
-    cart_stock number not null ,
-    primary key (order_details_num)
+    cart_stock number not null,
+    foreign key (order_id) references order_request (order_id)
      */
 
-    private int order_details_num;
+    private int orderDetails_num;
     private String order_id;
     private int pd_num;
     private int cart_stock;
 
-    public int getOrder_details_num() {
-        return order_details_num;
+    public int getOrderDetails_num() {
+        return orderDetails_num;
     }
 
-    public void setOrder_details_num(int order_details_num) {
-        this.order_details_num = order_details_num;
+    public void setOrderDetails_num(int orderDetails_num) {
+        this.orderDetails_num = orderDetails_num;
     }
 
     public String getOrder_id() {

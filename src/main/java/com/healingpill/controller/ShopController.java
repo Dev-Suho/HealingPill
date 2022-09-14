@@ -44,14 +44,6 @@ public class ShopController {
         return "allProductsDetail";
     }
 
-/*
-    @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public String showCart() {
-        return "cart";
-    }
-
- */
-
 
     @ResponseBody
     @RequestMapping(value = "/cart/add", method = RequestMethod.POST)

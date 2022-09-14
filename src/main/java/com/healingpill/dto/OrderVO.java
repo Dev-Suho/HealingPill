@@ -4,16 +4,16 @@ import java.util.Date;
 
 public class OrderVO {
     /*
-     order_id varchar2(50) not null ,
+    order_id varchar2(50) primary key not null ,
     mem_id varchar2(50) not null ,
     order_rec varchar2(50) not null ,
-    mem_address1 varchar2(50) not null , (우편번호)
-    mem_address2 varchar2(50) not null , (주소)
-    mem_address3 varchar2(50) not null , (상세주소)
+    mem_address1 varchar2(50) not null ,
+    mem_address2 varchar2(50) not null ,
+    mem_address3 varchar2(50) not null ,
     order_phone varchar2(30) not null ,
-    order_price number not null ,
-    order_register_datetime date default sysdate,
-    primary key (order_id)
+    totalPrice number not null ,
+    order_register_datetime DATE default sysdate,
+    foreign key (mem_id) references MEMBER(MEM_ID)
      */
 
     private String order_id;
@@ -23,7 +23,7 @@ public class OrderVO {
     private String mem_address2;
     private String mem_address3;
     private String order_phone;
-    private int order_price;
+    private int totalPrice;
     private Date order_register_datetime;
 
     public String getOrder_id() {
@@ -78,16 +78,16 @@ public class OrderVO {
         return order_phone;
     }
 
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
     public void setOrder_phone(String order_phone) {
         this.order_phone = order_phone;
-    }
-
-    public int getOrder_price() {
-        return order_price;
-    }
-
-    public void setOrder_price(int order_price) {
-        this.order_price = order_price;
     }
 
     public Date getOrder_register_datetime() {
