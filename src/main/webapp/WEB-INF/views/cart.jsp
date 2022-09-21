@@ -4,6 +4,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<form>
+    <input type="hidden" class="individual_pd_num_input" value="${cartList.pd_num}">
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -193,5 +195,5 @@
     </div>
 </div>
 <!--/ End Shopping Cart -->
-
+</form>
 <%@ include file="layout/footer.jsp" %>

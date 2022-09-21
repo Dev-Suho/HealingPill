@@ -23,6 +23,9 @@
 </div>
 <!-- End Breadcrumbs -->
 
+<form action="order" method="get" class="order_form">
+    <input type="hidden" name="orders[0].pd_num" value="${products.pd_num}"/>
+    <input type="hidden" name="orders[0].order_stock" value=""/>
 <!-- Start Item Details -->
 <section class="item-details section">
     <div class="container">
@@ -110,10 +113,7 @@
                                 } else if(result == 1) {
                                     alert("장바구니에 추가되었습니다.");
                                     $(".quantity_input").val("1");
-                                } else if(result == 2) {
-                                    alert("장바구니에 이미 추가되어 있습니다.");
-                                    $(".quantity_input").val("1");
-                                } else if(result == 3) {
+                                }  else if(result == 3) {
                                     alert("로그인이 필요합니다.");
                                     location.href = 'login';
                                 }
@@ -122,6 +122,13 @@
                                 alert("장바구니 담기 실패");
                             }
                         });
+                    });
+                </script>
+                <script>
+                    $(".buy_btn").on("click", function (){
+                        let order_stock = $(".quantity_input").val();
+                        $(".order_form").find("input[name = 'orders[0].order_stock']").val(order_stock);
+                        $(".order_form").submit;
                     });
                 </script>
             </div>
@@ -291,6 +298,7 @@
         </div>
     </div>
 </section>
+</form>
 <!-- End Item Details -->
 
 <%@ include file="layout/footer.jsp" %>
