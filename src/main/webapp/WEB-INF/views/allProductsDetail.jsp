@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="wish-button">
-                                        <button class="buy_btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
+                                        <button class="buy_btn" onclick="location.href='/order'"><i class="bi bi-cash-coin"></i> 구매하기</button>
                                     </div>
                                 </div>
                             </div>

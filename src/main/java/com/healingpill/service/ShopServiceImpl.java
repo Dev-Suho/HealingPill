@@ -52,16 +52,5 @@ public class ShopServiceImpl implements ShopService {
         return null;
     }
 
-    // 주문 정보
-    @Override
-    public void orderInfo(OrderVO orderVO) throws Exception {
-        shopDAO.orderInfo(orderVO);
-    }
-
-    // 주문 상세 정보
-    @Override
-    public void orderInfo_Details(OrderDetailVO orderDetailVO) throws Exception {
-        shopDAO.orderInfo_Details(orderDetailVO);
-    }
 
 }

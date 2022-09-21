@@ -45,13 +45,4 @@ public class ShopDAOImpl implements ShopDAO {
         return null;
     }
 
-    @Override
-    public void orderInfo(OrderVO orderVO) throws Exception {
-        sqlSession.insert(NAMESPACE + "orderInfo", orderVO);
-    }
-
-    @Override
-    public void orderInfo_Details(OrderDetailVO orderDetailVO) throws Exception {
-        sqlSession.insert(NAMESPACE + "orderInfoDetails", orderDetailVO);
-    }
 }

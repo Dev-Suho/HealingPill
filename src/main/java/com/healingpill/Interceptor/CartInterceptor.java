@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 public class CartInterceptor implements HandlerInterceptor {
 
 
+    /*
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
@@ -23,5 +24,5 @@ public class CartInterceptor implements HandlerInterceptor {
             return true;
         }
     }
-
+*/
 }

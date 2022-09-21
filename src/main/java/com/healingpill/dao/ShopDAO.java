@@ -25,10 +25,4 @@ public interface ShopDAO {
 
     // 장바구니 확인
     public CartVO checkCart(CartVO cartVO) throws Exception;
-
-    // 주문 정보
-    public void orderInfo(OrderVO orderVO) throws Exception;
-
-    // 주문 상세 정보
-    public void orderInfo_Details(OrderDetailVO orderDetailVO) throws Exception;
 }
