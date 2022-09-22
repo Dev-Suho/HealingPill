@@ -1,16 +1,18 @@
 package com.healingpill.controller;
 
 import com.healingpill.dto.MemberDTO;
+import com.healingpill.service.MemberJoinService;
 import com.healingpill.service.MemberJoinServiceImpl;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+//import com.sun.org.slf4j.internal.Logger;
+//import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class MemberJoinController {

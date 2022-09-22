@@ -35,7 +35,7 @@
                             <div class="single-footer f-link">
                                 <h3>제품 안내</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">전 제품보기</a></li>
+                                    <li><a href="/allProducts">전 제품보기</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -45,7 +45,7 @@
                             <div class="single-footer f-link">
                                 <h3>1:1 맞춤 영양제</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">나만의 영양제 찾기</a></li>
+                                    <li><a href="/survey">나만의 영양제 찾기</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->

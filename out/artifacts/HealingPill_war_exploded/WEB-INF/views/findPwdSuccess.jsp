@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
@@ -20,11 +21,6 @@
 </div>
 <!-- End Breadcrumbs -->
 
-<%
-    String mem_password = (String) request.getAttribute("mem_password");
-    String mem_username = (String) request.getAttribute("mem_username");
-%>
-
 <!-- ====== memberJoinSuccess Section Start -->
 <section class="bg-white py-14 lg:py-20">
     <div class="container">
@@ -40,7 +36,20 @@
                         비밀번호 찾기가 완료되었습니다!
                     </h2>
                     <h3 class="mb-8 text-xl font-normal text-dark-700 md:text-2xl">
-                        <%= mem_username %>님의 비밀번호는 '<%= mem_password %>'입니다 :)
+                        <ul>
+                            <c:if test="${check == 1}">
+                                <script>
+                                    opener.document.mem_username = "";
+                                    opener.document.mem_phone = "";
+                                </script>
+                                <label>일치하는 정보가 존재하지 않습니다.</label>
+                            </c:if>
+
+                            <c:if test = "${check == 0}">
+                                <label>찾으시는 아이디는 ${mem_password} 입니다</label>
+                            </c:if>
+
+                        </ul>
                     </h3>
                     <ul class="flex flex-wrap justify-center">
                         <li>
@@ -53,7 +62,7 @@
                         </li>
                         <li>
                             <a
-                                    href="/Login"
+                                    href="Login"
                                     class="mx-2 my-1 inline-block rounded-md bg-[#f5f8ff] py-3 px-6 text-base font-medium text-dark hover:bg-primary hover:text-white"
                             >
                                 로그인 하러가기

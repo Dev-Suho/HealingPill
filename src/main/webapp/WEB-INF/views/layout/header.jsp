@@ -17,11 +17,9 @@
     <link rel="shortcut icon" type="resources/assets/image/x-icon" href="resources/assets/images/favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
-
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="resources/assets/css/LineIcons.2.0.css" />
-    <link rel="stylesheet" href="resources/assets/css/LineIcons.3.0.css" />
     <link rel="stylesheet" href="resources/assets/css/animate.css" />
     <link rel="stylesheet" href="resources/assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="resources/assets/css/glightbox.min.css" />
@@ -37,6 +35,9 @@
     <!-- 추가 -->
     <link rel="stylesheet" href="resources/assets/css_login/animate.css" />
     <link rel="stylesheet" href="resources/assets/css_login/tailwind.css" />
+
+    <!-- 추가 -->
+    <link rel="stylesheet" href="resources/shops/css/main.css" />
 
     <!-- ==== WOW JS ==== -->
     <script src="resources/assets/js_login/wow.min.js"></script>
@@ -86,9 +87,7 @@
                                     <a href="/allProducts" class="active" aria-label="Toggle navigation">전 제품 보기</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="/survey" data-bs-toggle="collapse"
-                                       data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
-                                       aria-expanded="false" aria-label="Toggle navigation">나만의 영양제 찾기</a>
+                                    <a href="survey" class="active" aria-label="Toggle navigation">나만의 영양제 찾기</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -100,20 +99,23 @@
                                         <li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>
                                     </ul>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="admin/index" class="active" aria-label="Toggle navigation">관리자</a>
+                                </li>
                             </ul>
                         </div> <!-- navbar collapse -->
                         <c:choose>
-                            <c:when test="${res != null}">
+                            <c:when test="${member != null}">
                                 <div class="button">
-                                    <span class="badge">[${res.mem_username}]님 안녕하세요 :)</span>
+                                    <span class="badge">[${member.mem_username}]님 안녕하세요 :)</span>
                                     <a href="cart" class="btn"><i class="bi bi-cart4"></i></a>
-                                    <a href="/Logout" class="btn">로그아웃</a>
+                                    <a href="Logout" class="btn">로그아웃</a>
                                 </div>
                             </c:when>
                             <c:otherwise>
                                 <div class="button">
-                                    <a href="/cart" class="btn"><i class="bi bi-cart4"></i></a>
-                                    <a href="/Login" class="btn">로그인하기</a>
+                                    <a href="cart" class="btn"><i class="bi bi-cart4"></i></a>
+                                    <a href="login" class="btn">로그인하기</a>
                                 </div>
                             </c:otherwise>
                         </c:choose>
