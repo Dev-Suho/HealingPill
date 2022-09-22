@@ -39,7 +39,7 @@
               <span
                       class="mb-5 inline-block rounded-full border border-secondary bg-secondary py-2 px-6 text-base font-semibold uppercase text-white"
               >
-                질문 5
+                질문6
               </span>
                     <div class="survey-form survey-intro survey-enable" id="3">
 
@@ -56,28 +56,42 @@
                                         <li>
                                             <label class="label-radio label-question">
                                                 <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
-                                                <span></span> 스트레스가 매우 많아요.
+                                                <span></span> 혈압이 높아요. (140/90 이상)
                                             </label>
                                         </li>
                                         <br>
                                         <li>
                                             <label class="label-radio label-question">
                                                 <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
-                                                <span></span> 아토피 또는 비염 등 알레르기 질환이 있어요.
+                                                <span></span> 평소 더위를 타고, 땀을 많이 흘려요.
                                             </label>
                                         </li>
                                         <br>
                                         <li>
                                             <label class="label-radio label-question">
                                                 <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
-                                                <span></span> 감기와 같은 감염성 질환에 자주 걸려요.
+                                                <span></span> 혈액 항응고제(와파린 등), 항혈전제(아스피린 등)를 복용하고 있습니다.
                                             </label>
                                         </li>
                                         <br>
                                         <li>
                                             <label class="label-radio label-question">
                                                 <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
-                                                <span></span> 선택할 것이 없지만 면역이 걱정돼요.
+                                                <span></span> 꿀 또는 프로폴리스에 알레르기가 있어요.
+                                            </label>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <label class="label-radio label-question">
+                                                <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
+                                                <span></span> 혈압이 낮아요. (수축기 90 또는 이완기 60 이하)
+                                            </label>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <label class="label-radio label-question">
+                                                <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
+                                                <span></span> 선택할 것이 없어요.
                                             </label>
                                         </li>
                                     </ul>
@@ -87,8 +101,8 @@
                         <!-- div.contents_wrap -->
 
                         <div class="bot_btn_area type01" style="text-align: center">
-                            <button type="button" onclick="location.href='survey_6'">다음</button><br><br>
-                            <button type="button" onclick="location.href='survey_4'">이전으로</button>
+                            <button type="button" onclick="location.href='survey_7'">다음</button><br><br>
+                            <button type="button" onclick="location.href='survey_5'">이전으로</button>
                         </div>
                     </div>
                 </div>

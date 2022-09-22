@@ -36,7 +36,7 @@
               <span
                       class="mb-5 inline-block rounded-full border border-secondary bg-secondary py-2 px-6 text-base font-semibold uppercase text-white"
               >
-                질문 3
+                질문 7
               </span>
                     <div class="survey-form survey-intro survey-enable" id="3">
 
@@ -44,14 +44,14 @@
                             <div class="service_guide_area">
                                 <!--개인정보 section-->
                                 <h2 id="" maxallowed="1">
-                                    <p style="font-size: 20px"> <strong> @@님은 몇살이신가요? </strong></p><br>
-                                    <p style="font-size: 15px"> <strong> 나이에 따라 필요한 영양성분이 달라질 수 있어요. </strong></p><br><br>
+                                    <p style="font-size: 20px"> <strong> @@님의 키를 적어주세요. </strong> </p><br><br>
+                                    <p style="font-size: 15px"> <strong> 영양성분 추천에 체질량지수(BMI)를 활용합니다. </strong></p><br><br>
                                 </h2>
                                 <ul class="question-answer-wrap">
                                     <div class="mb-6">
                                         <input
                                                 type="text"
-                                                placeholder="나이"
+                                                placeholder="키"
                                                 class="bordder-[#E9EDF4] rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                                         />
                                     </div>
@@ -61,12 +61,13 @@
                         <!-- div.contents_wrap -->
 
                         <div class="bot_btn_area type01" style="text-align: center">
-                            <button type="button" onclick="location.href='survey_4'">다음</button><br><br>
-                            <button type="button" onclick="location.href='survey_2'">이전으로</button>
+                            <button type="button" onclick="location.href='survey_8'">다음</button><br><br>
+                            <button type="button" onclick="location.href='survey_6'">이전으로</button>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>

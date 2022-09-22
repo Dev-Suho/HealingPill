@@ -70,7 +70,8 @@
                         <!-- div.contents_wrap -->
 
                         <div class="bot_btn_area type01" style="text-align: center">
-                            <button type="button" onclick="location.href='survey_3'">다음</button>
+                            <button type="button" onclick="location.href='survey_3'">다음</button><br><br>
+                            <button type="button" onclick="location.href='survey_1'">이전으로</button>
                         </div>
                     </div>
                 </div>

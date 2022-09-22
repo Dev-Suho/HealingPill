@@ -70,7 +70,10 @@
                                     placeholder="아이디"
                                     class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
+                            <input type = "text" name = "id" class = "input_id">
+                            <font id = "checkId" size = "2"></font>
                         </div>
+                        <div class="check_font" id="id_check"></div>
                         <div class="mb-6">
                             <button type="button" id = "idCheck" class="btn btn-outline-info">아이디 중복 체크</button>
                         </div>
@@ -147,7 +150,7 @@
                             />
                         </div>
                         <div class="mb-6 form-check form-check-inline">
-                            남성 <input
+                            남성<input
                                     name = "mem_sex"
                                     type="radio"
                                     value="Male" checked
@@ -155,7 +158,7 @@
                             />
                         </div>
                         <div class="mb-6 form-check form-check-inline">
-                            여성 <input
+                            여성<input
                                 name = "mem_sex"
                                 type="radio"
                                 value="Female"
@@ -479,6 +482,33 @@
         roadAddress.value = roadFullAddr;
 
     }
+</script>
+
+
+
+<script src = “js/jquery-3.6.0.min.js"></script>
+<script>
+    $('.input_id').focusout(function() {
+        let userId = $('.input_id').val(); // input_id
+        $.ajax({
+            url: "IdcheckService",
+            type: "post",
+            data: {userId: userId},
+            datatype: 'json',
+            success: function (result) {
+                if (result == 0) {
+                    $("#checkId").html('사용할 수 없는 아이디입니다.');
+                    $("#checkId").attr('color', 'red');
+                } else {
+                    $("#checkId").html('사용가능한 아이디입니다.');
+                    $("#checkId").attr('color', 'green');
+                }
+            },
+            error: function () {
+                alert("서버 요청 실패");
+            }
+        })
+    })
 </script>
 
 <%@ include file="layout/footer.jsp" %>
