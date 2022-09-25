@@ -9,7 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="allProduct" />
+    <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="allProduct">
+      <change afterPath="$PROJECT_DIR$/console.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/VO/BoardVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/config/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +31,8 @@
       <list>
         <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Tag Library Descriptor" />
         <option value="Class" />
       </list>
@@ -80,31 +93,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;6d2ce8528a3d0ba52d438f50b1830c5f&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/FROG/eclipse-workspace/HealingPill",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "6d2ce8528a3d0ba52d438f50b1830c5f"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;oracle&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\FROG\eclipse-workspace\HealingPill" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css_login" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
-      <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views\layout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
@@ -251,7 +266,11 @@
       <workItem from="1655410312689" duration="1155000" />
       <workItem from="1662610685546" duration="693000" />
       <workItem from="1663035200123" duration="292000" />
-      <workItem from="1663036866762" duration="658000" />
+      <workItem from="1663036866762" duration="718000" />
+      <workItem from="1663038208816" duration="290000" />
+      <workItem from="1663215732670" duration="638000" />
+      <workItem from="1663806245395" duration="6022000" />
+      <workItem from="1664101257748" duration="9700000" />
     </task>
     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
       <created>1652891332188</created>
@@ -323,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663037237277</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="allProduct">
+      <created>1663037558495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663037558495</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

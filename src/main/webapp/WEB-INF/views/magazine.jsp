@@ -15,8 +15,8 @@
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
-    String uid = "root";
-    String pwd = "root";
+    String uid = "healingpill";
+    String pwd = "healingpill";
     String url = "jdbc:oracle:thin:@localhost:1521:XE";
     String sql = "select * from magazine";
     String [][] MList = new String[9][5];
