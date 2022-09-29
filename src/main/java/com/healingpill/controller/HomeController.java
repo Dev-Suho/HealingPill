@@ -74,7 +74,9 @@ public class HomeController {
     public String adminindex() {
         return "/admin/index";
     }
-
+    //관리자 주문 조회
+    @RequestMapping(value = "/admin/order")
+    public String adminorder() { return "/admin/order"; }
     //매거진 추가
     @RequestMapping(value = "/admin/cm_magazine")
     public String adminmagazine() {
