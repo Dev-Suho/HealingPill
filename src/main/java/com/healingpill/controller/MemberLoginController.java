@@ -1,8 +1,10 @@
 package com.healingpill.controller;
 
 import com.healingpill.dto.MemberDTO;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+//import com.sun.org.slf4j.internal.Logger;
+//import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,10 +22,9 @@ public class MemberLoginController {
     @Autowired
     private MemberLoginService memberLoginService;
 
-    @RequestMapping(value = "/Login")
+    @RequestMapping(value = "/login")
     public String login() {
         logger.debug("로그인 페이지 이동");
-        System.out.println("로그인 페이지 이동");
         return "memberLogin";
     }
 
@@ -42,7 +43,7 @@ public class MemberLoginController {
         MemberDTO res = memberLoginService.login(memberDTO);
 
         if (res!= null) {
-            session.setAttribute("res", res);
+            session.setAttribute("member", res);
             System.out.println("로그인성공");
 
             return "MainPage";

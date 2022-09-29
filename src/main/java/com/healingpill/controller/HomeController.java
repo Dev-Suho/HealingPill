@@ -1,15 +1,25 @@
 package com.healingpill.controller;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+//import com.sun.org.slf4j.internal.Logger;
+//import com.sun.org.slf4j.internal.LoggerFactory;
+import com.healingpill.dto.ProductVO;
+import com.healingpill.service.ProductListService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.inject.Inject;
+import java.util.List;
 
 @Controller
 public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
+
 
     @RequestMapping(value = "/")
     public String main() {
@@ -146,30 +156,6 @@ public class HomeController {
         logger.debug("jusoPopup 페이지 이동");
 
         return "jusoPopup";
-    }
-
-    // cart 페이지 이동
-    @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public String cartGET() {
-        logger.debug("cart 페이지 이동");
-
-        return "cart";
-    }
-
-    // allProducts 페이지 이동
-    @RequestMapping(value = "/allProducts", method = RequestMethod.GET)
-    public String allProductsGET() {
-        logger.debug("allProducts 페이지 이동");
-
-        return "allProducts";
-    }
-
-    // allProductsDetail 페이지 이동
-    @RequestMapping(value = "/allProductsDetail", method = RequestMethod.GET)
-    public String allProductsDetailGET() {
-        logger.debug("allProductsDetail 페이지 이동");
-
-        return "allProductsDetail";
     }
 
 
