@@ -23,7 +23,6 @@
 
 <!-- Start Features Area -->
 <section class="features section">
-    <img class="shape" src="assets/images/shapes/shape.png" alt="#">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -35,6 +34,10 @@
             </div>
         </div>
         <div class="row">
+            <div>
+                <img class="shape" src="https://esther.wisacdn.com/_data/banner/8a8273c216629a183ad2f6f5eb47e0f2.jpg" alt="#"><br>
+            </div>
+            <img class="shape" src="resources\assets\images\banner02.jpg"><br>
             <div class="col-lg-6 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
