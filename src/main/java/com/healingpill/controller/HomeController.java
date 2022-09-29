@@ -111,6 +111,10 @@ public class HomeController {
         return "faq";
     }
 
+    // FAQ 관리자 페이지
+
+    @RequestMapping(value = "")
+
     // 이벤트 페이지 이동
     @RequestMapping(value = "/event", method = RequestMethod.GET)
     public String eventGET() {
