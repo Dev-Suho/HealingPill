@@ -1,28 +1,20 @@
 package com.healingpill.dao;
 
 
-import com.healingpill.dto.MagazineDTO;
 //import com.sun.org.apache.xml.internal.utils.NameSpace;
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public class MagazineDAOImpl implements MagazineDAO{
+import javax.inject.Inject;
+import java.util.List;
 
-    @Autowired
-    private SqlSessionTemplate sqlSession;
+@Repository
+public class MagazineDAOImpl implements MagazineDAO {
+    @Inject
+    private SqlSession sqlSession;
 
     @Override
-    public MagazineDTO view(MagazineDTO magazineDTO) {
-        MagazineDTO res = null;
-
-        try {
-            res = sqlSession.selectOne(NAMESPACE + "viewCheck", magazineDTO);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return  res;
+    public List<MagazineVO> magzineView() throws Exception {
+        return sqlSession.selectList(NAMESPACE + "magazine");
     }
-
 }

@@ -1,10 +1,11 @@
 package com.healingpill.dao;
 
-import com.healingpill.dto.MagazineDTO;
+import java.util.List;
 
 public interface MagazineDAO {
 
     String NAMESPACE = "magazine.";
 
-    public MagazineDTO view(MagazineDTO magazineDTO);
+    // 매거진 페이지 글 조회
+    public List<MagazineVO> magzineView() throws Exception;
 }

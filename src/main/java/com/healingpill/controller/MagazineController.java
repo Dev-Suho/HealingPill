@@ -1,6 +1,5 @@
 package com.healingpill.controller;
 
-import com.healingpill.dto.MagazineDTO;
 import com.healingpill.service.MagazineService;
 //import com.sun.org.slf4j.internal.Logger;
 //import com.sun.org.slf4j.internal.LoggerFactory;
