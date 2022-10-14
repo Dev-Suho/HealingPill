@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import com.healingpill.dto.BoardVO;
 import com.healingpill.service.BoardService;
+import com.healingpill.service.BoardServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -26,7 +27,6 @@ public class BoardController {
         logger.info("cm_magazine");
     }
     */
-
     //게시판 글 작성
     @RequestMapping(value = "/write", method = RequestMethod.POST)
     public String write(BoardVO boardVO) throws Exception {
