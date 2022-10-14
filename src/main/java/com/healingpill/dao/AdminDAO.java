@@ -11,4 +11,6 @@ public interface AdminDAO {
     // 관리자 : index.jsp 회원 리스트 불러오기
     public List<AdminDTO> memberList() throws Exception;
 
+    // memberList 에 member 누르면 뜨는 회원 상세정보
+    public AdminDTO member_detail(AdminDTO dto) throws Exception;
 }

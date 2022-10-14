@@ -18,4 +18,8 @@ public class AdminDAOImpl implements AdminDAO {
         return sqlSession.selectList( NAMESPACE + "memberList");
     }
 
+    @Override
+    public AdminDTO member_detail(AdminDTO dto) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + "member_detail", dto);
+    }
 }

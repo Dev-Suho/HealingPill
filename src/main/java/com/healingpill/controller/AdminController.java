@@ -28,5 +28,16 @@ public class AdminController {
         return "/admin/index";
     }
 
+    @RequestMapping(value = "admin/member_detail", method = RequestMethod.GET)
+    public String member_detail(Model model, AdminDTO dto) throws Exception {
+
+        AdminDTO member_detail = adminService.member_detail(dto);
+
+        model.addAttribute(" member_detail",  member_detail);
+
+        return "admin/member_detail";
+    }
+
+
 
 }
