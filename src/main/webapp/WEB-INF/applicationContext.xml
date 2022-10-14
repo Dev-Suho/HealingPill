@@ -28,4 +28,8 @@
         <constructor-arg index="0" ref="sqlSession"/>
     </bean>
 
+    <!-- scan -->
+    <context:component-scan base-package="com.healingpill.service"></context:component-scan>
+    <context:component-scan base-package="com.healingpill.dao"></context:component-scan>
+    <context:component-scan base-package="com.healingpill.dto"></context:component-scan>
 </beans>

@@ -33,11 +33,11 @@
     <schema id="10" parent="1" name="HEALINGPILL">
       <CreatedTimestamp>2022-09-13.20:26:15</CreatedTimestamp>
       <Current>1</Current>
-      <IntrospectionL1Timestamp>2022-09-26.05:49:25</IntrospectionL1Timestamp>
-      <IntrospectionL2Timestamp>2022-09-26.05:49:25</IntrospectionL2Timestamp>
-      <IntrospectionL3Timestamp>2022-09-26.05:49:25</IntrospectionL3Timestamp>
+      <IntrospectionL1Timestamp>2022-10-15.08:09:55</IntrospectionL1Timestamp>
+      <IntrospectionL2Timestamp>2022-10-15.08:09:55</IntrospectionL2Timestamp>
+      <IntrospectionL3Timestamp>2022-10-15.08:09:55</IntrospectionL3Timestamp>
       <IntrospectionVersion>200820</IntrospectionVersion>
-      <ModifiedTimestamp>2022-09-26.05:47:00</ModifiedTimestamp>
+      <ModifiedTimestamp>2022-10-14.01:34:19</ModifiedTimestamp>
       <ObjectId>49</ObjectId>
     </schema>
     <schema id="11" parent="1" name="HR">
@@ -53,6 +53,9 @@
       <ObjectId>9</ObjectId>
     </schema>
     <schema id="15" parent="1" name="PUBLIC">
+      <CreatedTimestamp>2014-05-29.22:10:42</CreatedTimestamp>
+      <IntrospectionVersion>200820</IntrospectionVersion>
+      <ModifiedTimestamp>2014-05-29.22:31:03</ModifiedTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="16" parent="1" name="ROOT">
@@ -163,17 +166,17 @@
     <user id="43" parent="1" name="XS$NULL">
       <ObjectId>2147483638</ObjectId>
     </user>
-    <table id="44" parent="10" name="FAQ">
-      <CreatedTimestamp>2022-09-26.05:47:00</CreatedTimestamp>
-      <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2022-09-26.05:47:00</ModifiedTimestamp>
-      <ObjectId>20554</ObjectId>
-      <TemporaryPreserve>1</TemporaryPreserve>
-    </table>
+    <sequence id="44" parent="10" name="MG_NO_SEQ">
+      <CreatedTimestamp>2022-10-14.01:33:22</CreatedTimestamp>
+      <DetailsLevel>2</DetailsLevel>
+      <ModifiedTimestamp>2022-10-14.01:33:22</ModifiedTimestamp>
+      <ObjectId>20648</ObjectId>
+      <SequenceIdentity>1(1)</SequenceIdentity>
+    </sequence>
     <table id="45" parent="10" name="MAGAZINE">
       <CreatedTimestamp>2022-09-22.19:20:35</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2022-09-22.19:20:35</ModifiedTimestamp>
+      <ModifiedTimestamp>2022-10-14.01:34:19</ModifiedTimestamp>
       <ObjectId>20546</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
@@ -198,112 +201,98 @@
       <ObjectId>20462</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <column id="49" parent="44" name="FA_TITLE">
-      <DataType>VARCHAR2(255 byte)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="50" parent="44" name="FA_CONTENT">
-      <DataType>VARCHAR2(255 byte)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="51" parent="45" name="MG_NO">
+    <column id="49" parent="45" name="MG_NO">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="52" parent="45" name="MG_IMAGE">
+    <column id="50" parent="45" name="MG_IMAGE">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="53" parent="45" name="MG_TITLE">
+    <column id="51" parent="45" name="MG_TITLE">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="54" parent="45" name="MG_CONTENT">
+    <column id="52" parent="45" name="MG_CONTENT">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="55" parent="45" name="MG_DATETIME">
+    <column id="53" parent="45" name="MG_DATETIME">
       <DataType>DATE|0s</DataType>
       <DefaultExpression>SYSDATE</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="56" parent="45" name="MG_VIEWS">
-      <DataType>NUMBER(*)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="57" parent="46" name="MEM_NUM">
+    <column id="54" parent="46" name="MEM_NUM">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="58" parent="46" name="MEM_ID">
+    <column id="55" parent="46" name="MEM_ID">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="59" parent="46" name="MEM_PASSWORD">
+    <column id="56" parent="46" name="MEM_PASSWORD">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="60" parent="46" name="MEM_USERNAME">
+    <column id="57" parent="46" name="MEM_USERNAME">
       <DataType>VARCHAR2(10 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="61" parent="46" name="MEM_PHONE">
+    <column id="58" parent="46" name="MEM_PHONE">
       <DataType>VARCHAR2(50 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="62" parent="46" name="MEM_BIRTH_YEAR">
+    <column id="59" parent="46" name="MEM_BIRTH_YEAR">
       <DataType>VARCHAR2(10 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="63" parent="46" name="MEM_BIRTH_MONTH">
+    <column id="60" parent="46" name="MEM_BIRTH_MONTH">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="64" parent="46" name="MEM_BIRTH_DAY">
+    <column id="61" parent="46" name="MEM_BIRTH_DAY">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="65" parent="46" name="MEM_SEX">
+    <column id="62" parent="46" name="MEM_SEX">
       <DataType>VARCHAR2(10 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="66" parent="46" name="MEM_ADDRESS">
+    <column id="63" parent="46" name="MEM_ADDRESS">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="67" parent="46" name="MEM_EMAIL">
+    <column id="64" parent="46" name="MEM_EMAIL">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="68" parent="46" name="MEM_REGISTER_DATETIME">
+    <column id="65" parent="46" name="MEM_REGISTER_DATETIME">
       <DataType>DATE|0s</DataType>
       <DefaultExpression>SYSDATE</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="69" parent="46" name="MEM_IS_ADMIN">
+    <column id="66" parent="46" name="MEM_IS_ADMIN">
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
-    <index id="70" parent="46" name="SYS_C007084">
+    <index id="67" parent="46" name="SYS_C007084">
       <ColNames>MEM_NUM</ColNames>
       <CreatedTimestamp>2022-09-13.20:26:15</CreatedTimestamp>
       <ModifiedTimestamp>2022-09-13.20:26:15</ModifiedTimestamp>
@@ -312,7 +301,7 @@
       <Unique>1</Unique>
       <TablespaceName>SYSTEM</TablespaceName>
     </index>
-    <key id="71" parent="46" name="SYS_C007084">
+    <key id="68" parent="46" name="SYS_C007084">
       <ColNames>MEM_NUM</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <ModifiedTimestamp>2022-09-13.20:26:15</ModifiedTimestamp>
@@ -320,48 +309,48 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>SYS_C007084</UnderlyingIndexName>
     </key>
-    <column id="72" parent="47" name="PD_NUM">
+    <column id="69" parent="47" name="PD_NUM">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="73" parent="47" name="PD_NAME">
+    <column id="70" parent="47" name="PD_NAME">
       <DataType>VARCHAR2(100 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="74" parent="47" name="CTG_CODE">
+    <column id="71" parent="47" name="CTG_CODE">
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="75" parent="47" name="PD_PRICE">
+    <column id="72" parent="47" name="PD_PRICE">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="76" parent="47" name="PD_STOCK">
+    <column id="73" parent="47" name="PD_STOCK">
       <DataType>NUMBER(*)|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="77" parent="47" name="PD_CONTENT">
+    <column id="74" parent="47" name="PD_CONTENT">
       <DataType>VARCHAR2(255 byte)|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="78" parent="47" name="PD_MAINIMAGE">
+    <column id="75" parent="47" name="PD_MAINIMAGE">
       <DataType>VARCHAR2(500 byte)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="79" parent="47" name="PD_SUBIMAGE">
+    <column id="76" parent="47" name="PD_SUBIMAGE">
       <DataType>VARCHAR2(200 byte)|0s</DataType>
       <Position>8</Position>
     </column>
-    <column id="80" parent="47" name="PD_REGISTER_DATETIME">
+    <column id="77" parent="47" name="PD_REGISTER_DATETIME">
       <DataType>DATE|0s</DataType>
       <DefaultExpression>sysdate</DefaultExpression>
       <Position>9</Position>
     </column>
-    <index id="81" parent="47" name="SYS_C007089">
+    <index id="78" parent="47" name="SYS_C007089">
       <ColNames>PD_NUM</ColNames>
       <CreatedTimestamp>2022-09-13.20:26:45</CreatedTimestamp>
       <ModifiedTimestamp>2022-09-13.20:26:45</ModifiedTimestamp>
@@ -370,7 +359,7 @@
       <Unique>1</Unique>
       <TablespaceName>SYSTEM</TablespaceName>
     </index>
-    <key id="82" parent="47" name="SYS_C007089">
+    <key id="79" parent="47" name="SYS_C007089">
       <ColNames>PD_NUM</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <ModifiedTimestamp>2022-09-13.20:26:45</ModifiedTimestamp>
@@ -378,26 +367,26 @@
       <Primary>1</Primary>
       <UnderlyingIndexName>SYS_C007089</UnderlyingIndexName>
     </key>
-    <column id="83" parent="48" name="CTG_LEVEL">
+    <column id="80" parent="48" name="CTG_LEVEL">
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="84" parent="48" name="CTG_NAME">
+    <column id="81" parent="48" name="CTG_NAME">
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="85" parent="48" name="CTG_CODE">
+    <column id="82" parent="48" name="CTG_CODE">
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="86" parent="48" name="CTG_CODEREF">
+    <column id="83" parent="48" name="CTG_CODEREF">
       <DataType>VARCHAR2(30 byte)|0s</DataType>
       <Position>4</Position>
     </column>
-    <foreign-key id="87" parent="48" name="SYS_C007094">
+    <foreign-key id="84" parent="48" name="SYS_C007094">
       <ColNames>CTG_CODEREF</ColNames>
       <ModifiedTimestamp>2022-09-13.20:27:04</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
@@ -405,7 +394,7 @@
       <RefKeyName>SYS_C007093</RefKeyName>
       <RefTableName>PRODUCT_CATEGORY</RefTableName>
     </foreign-key>
-    <index id="88" parent="48" name="SYS_C007093">
+    <index id="85" parent="48" name="SYS_C007093">
       <ColNames>CTG_CODE</ColNames>
       <CreatedTimestamp>2022-09-13.20:27:04</CreatedTimestamp>
       <ModifiedTimestamp>2022-09-13.20:27:04</ModifiedTimestamp>
@@ -414,7 +403,7 @@
       <Unique>1</Unique>
       <TablespaceName>SYSTEM</TablespaceName>
     </index>
-    <key id="89" parent="48" name="SYS_C007093">
+    <key id="86" parent="48" name="SYS_C007093">
       <ColNames>CTG_CODE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <ModifiedTimestamp>2022-09-13.20:27:04</ModifiedTimestamp>
