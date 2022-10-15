@@ -71,8 +71,8 @@ public class BoardController {
     @RequestMapping(value = "/magazine2", method = RequestMethod.GET)
     public String mainProductView(Model model) throws Exception {
 
-        List<BoardVO> boardList = service.magazineView();
-        model.addAttribute("magazine2", boardList);
+        List<BoardVO> magazineList = service.magazineView();
+        model.addAttribute("magazine", magazineList);
 
         return "magazine2";
     }
