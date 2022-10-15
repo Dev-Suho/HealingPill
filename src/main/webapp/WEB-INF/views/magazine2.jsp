@@ -36,17 +36,17 @@
         <p class="wow fadeInUp" data-wow-delay=".6s">5분만 투자하세요, <br> 언젠가 쓸모가 생긴답니다.</p>
     </div>
     <div class="container">
-        <c:forEach items="${products}" var="products">
+        <c:forEach items="${magzine2}" var="magzine2">
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
 
-                    <a href="/allProductsDetail?itemId=${products.pd_num}" class="block"><img class="card-img-top" src="${products.pd_subImage}" alt="Card image cap">
-                        <h3>${products.pd_name}</h3>
-                        <p>${products.pd_content}</p></a>
+
+                        <h3>${magzine2.mg_title}</h3>
+                        <p>${magzine2.mg_content}</p>
                     <br>
                     <div class="button">
-                        <p><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###원"/></p>
+                        <p><fmt:formatNumber value="${magzine2.mg_datetime}"/></p>
                     </div>
                 </div>
                 <!-- End Single Feature -->

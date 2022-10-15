@@ -11,7 +11,6 @@ import java.util.List;
 public class BoardDAOImpl implements BoardDAO {
     @Inject
     private SqlSession sqlSession;
-    private static String namespace = "BoardMapper";
 
     //게시글 작성
     @Override
@@ -22,6 +21,6 @@ public class BoardDAOImpl implements BoardDAO {
     //게시글 목록
     @Override
     public List<BoardVO> magazineView() throws Exception {
-        return sqlSession.selectList(NAMESPACE + "magazinetList");
+        return sqlSession.selectList(NAMESPACE + "magazineList");
     }
 }

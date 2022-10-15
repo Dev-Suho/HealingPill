@@ -10,20 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="admin-cm_magazine">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dto/MagazineViewVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/mapper/BoardMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dto/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dto/BoardVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/BoardMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/BoardController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/BoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/BoardVO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine2.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +127,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.healingpill" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\FROG\eclipse-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\FROG\eclipse-workspace\HealingPill" />
@@ -280,7 +289,7 @@
       <workItem from="1663806245395" duration="6022000" />
       <workItem from="1664101257748" duration="22367000" />
       <workItem from="1665747508788" duration="8517000" />
-      <workItem from="1665756331260" duration="23753000" />
+      <workItem from="1665756331260" duration="44058000" />
     </task>
     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
       <created>1652891332188</created>
@@ -380,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665773041562</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="admin-cm_magazine">
+      <created>1665821547486</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665821547486</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

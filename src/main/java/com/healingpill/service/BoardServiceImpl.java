@@ -2,6 +2,8 @@ package com.healingpill.service;
 
 import com.healingpill.dao.BoardDAO;
 import com.healingpill.dto.BoardVO;
+import com.healingpill.mapper.BoardMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -9,6 +11,7 @@ import java.util.List;
 
 @Service
 public class BoardServiceImpl implements BoardService {
+
 
     @Inject
     private BoardDAO dao;

@@ -3,11 +3,15 @@ package com.healingpill.controller;
 //import com.sun.org.slf4j.internal.Logger;
 //import com.sun.org.slf4j.internal.LoggerFactory;
 
+import com.healingpill.dto.BoardVO;
+import com.healingpill.service.BoardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -95,13 +99,6 @@ public class HomeController {
         logger.debug("magazine 페이지 이동");
 
         return "magazine";
-    }
-
-    @RequestMapping(value = "/magazine2", method = RequestMethod.GET)
-    public String magazineGET2() {
-        logger.debug("magazine 페이지 이동");
-
-        return "magazine2";
     }
 
     // magazineDetail 페이지 이동

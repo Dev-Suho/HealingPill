@@ -9,9 +9,11 @@
                     VALUES (MG_NO_SEQ.nextval, #{mg_title}, #{mg_content}, SYSDATE)
     </insert>
     <!-- 게시판 글 조회 -->
-    <select id="getList" resultType="com.healingpill.dto.BoardVO">
-        SELECT MG_NO,MG_IMAGE, MG_TITLE, MG_CONTENT, MG_DATETIME
-        FROM MAGAZINE
-        ORDER BY MG_NO DESC
+    <select id="getMagazineList" resultType="com.healingpill.dto.BoardVO">
+        SELECT * FROM MAGAZINE
+    </select>
+
+    <select id="magazineList" resultType="com.healingpill.dto.MagazineViewVO">
+        select * from MAGAZINE
     </select>
 </mapper>
