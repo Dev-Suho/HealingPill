@@ -97,6 +97,13 @@ public class HomeController {
         return "magazine";
     }
 
+    @RequestMapping(value = "/magazine2", method = RequestMethod.GET)
+    public String magazineGET2() {
+        logger.debug("magazine 페이지 이동");
+
+        return "magazine2";
+    }
+
     // magazineDetail 페이지 이동
     @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
     public String magazineDetailGET() {

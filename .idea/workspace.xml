@@ -10,108 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf58e0e8-3f57-469a-89e3-34d95fafed87" name="Changes" comment="admin-cm_magazine">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/BoardMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/MemberMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/ProductMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/ShopMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/Interceptor/CartInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/Merge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/config/DB.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/BoardController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/MemberFindController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/MemberJoinController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/MemberLoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/ProductController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/ShopController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/MemberFindDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/MemberFindDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/MemberJoinDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/MemberJoinDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/MemberLoginDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/MemberLoginDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductCategoryDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductCategoryDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductListDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductListDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductModifyDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductModifyDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductRegisterDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ProductRegisterDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ShopDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/ShopDAOImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/BoardVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/CartListVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/CartVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/MemberDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/OrderDetailVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/OrderVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/ProductCategoryVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/ProductVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dto/ProductViewVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/MemberFindService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/MemberFindServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/MemberJoinService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/MemberJoinServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/MemberLoginService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/MemberLoginServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductCategoryService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductCategoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductListService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductListServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductModifyService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductModifyServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductRegisterService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ProductRegisterServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ShopService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/ShopServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/utils/UploadFileUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/commons-beanutils-1.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/commons-collections-3.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/commons-fileupload-1.3.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/commons-io-2.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/commons-lang-2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/ezmorph-1.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-annotations-2.10.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-core-2.10.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-databind-2.10.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/javax.inject-1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/log4jdbc-log4j2-jdbc4.1-1.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mybatis-3.5.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mybatis-spring-2.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/slf4j-api-1.7.25.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/slf4j-simple-1.7.21.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-aop-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-beans-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-context-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-core-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-expression-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-jcl-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-jdbc-5.3.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-tx-5.3.20.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-web-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/spring-webmvc-5.2.3.RELEASE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/standard-1.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/thumbnailator-0.4.8.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/df38d798-5cb4-44af-9cbf-482a1b7192b4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/df38d798-5cb4-44af-9cbf-482a1b7192b4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/magazine2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/dao/BoardDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/healingpill/service/BoardServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com.healingpill.mapper/BoardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/cm_magazine.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/cm_magazine.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com.healingpill.mapper/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/dao/BoardDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/com/healingpill/service/BoardServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +105,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/FROG/Downloads/오라클/sqldeveloper-17.4.0.355.2349-x64/sqldeveloper/jdbc/lib/ojdbc8.jar",
+    "last_opened_file_path": "C:/Users/FROG/eclipse-workspace/HealingPill/src/main/webapp/WEB-INF/views",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "아티팩트",
@@ -210,11 +122,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\FROG\eclipse-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Users\FROG\eclipse-workspace\HealingPill" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css_login" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets\css" />
       <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\resources\assets" />
-      <recent name="C:\Users\pc\intellij-workspace\HealingPill\src\main\webapp\WEB-INF\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\FROG\eclipse-workspace\HealingPill\src\main\webapp\WEB-INF\views\admin" />
@@ -368,7 +280,7 @@
       <workItem from="1663806245395" duration="6022000" />
       <workItem from="1664101257748" duration="22367000" />
       <workItem from="1665747508788" duration="8517000" />
-      <workItem from="1665756331260" duration="16399000" />
+      <workItem from="1665756331260" duration="23753000" />
     </task>
     <task id="LOCAL-00001" summary="dependency 추가 (mybatis, log4j, servlet)&#10;Mapper xml 변경">
       <created>1652891332188</created>
@@ -461,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665757568878</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="admin-cm_magazine">
+      <created>1665773041562</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665773041562</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
