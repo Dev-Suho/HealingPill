@@ -21,6 +21,7 @@
 <!-- End Breadcrumbs -->
 
 <!--====== Checkout Form Steps Part Start ======-->
+<form action="orderRequest" method="post">
 <section class="checkout-wrapper section">
     <div class="container">
         <div class="row justify-content-center">
@@ -255,7 +256,7 @@
                             </div>
                         </div>
                         <div class="price-table-btn button">
-                            <a href="/checkoutComplete" class="btn btn-alt">결제하기</a>
+                            <button type="submit" class="btn btn-alt">결제하기</button>
                         </div>
                     </div>
                 </div>
@@ -263,6 +264,7 @@
         </div>
     </div>
 </section>
+</form>
 <!--====== Checkout Form Steps Part Ends ======-->
 
 <%@ include file="layout/footer.jsp" %>

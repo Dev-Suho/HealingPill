@@ -47,19 +47,4 @@
         where MEM_ID = #{mem_id, jdbcType = VARCHAR} and PD_NUM = #{pd_num, jdbcType = NUMERIC}
     </select>
 
-    <!-- 주문 정보 -->
-    <select id="orderInfo">
-        insert into ORDER_REQUEST(order_id, mem_id, order_rec, mem_address1, mem_address2, mem_address3, order_phone, order_price)
-        values (#{order_id, jdbcType = VARCHAR}, #{mem_id, jdbcType = VARCHAR}, #{order_rec, jdbcType = VARCHAR},
-                #{mem_address1, jdbcType = VARCHAR}, #{mem_address2, jdbcType = VARCHAR}, #{mem_address3, jdbcType = VARCHAR},
-                #{order_phone, jdbcType = VARCHAR}, #{order_price, jdbcType = NUMERIC})
-    </select>
-
-    <!-- 주문 상세 정보 -->
-    <!-- insert select문 / select에 있는 다수의 데이터를 입력할 수 있다 -->
-    <insert id="orderInfoDetails">
-        insert into ORDER_REQUEST_DETAILS(order_details_num, order_id, pd_num, cart_stock)
-        select ORDER_REQUEST_DETAILS_SEQ.nextval, #{order_id, jdbcType = VARCHAR}, PD_NUM, CART_STOCK
-            from CART
-    </insert>
 </mapper>
