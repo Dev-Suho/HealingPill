@@ -57,7 +57,6 @@
                                 <ul>
                                     <li><a href="/faq">FAQ</a></li>
                                     <li><a href="/magazine">매거진</a></li>
-                                    <li><a href="/event">이벤트 정보 안내</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -86,8 +85,11 @@
 <script src="resources/assets/js/imagesloaded.min.js"></script>
 <script src="resources/assets/js/isotope.min.js"></script>
 <script src="resources/assets/js/main.js"></script>
-<script type="text/javascript">
 
+<%--<script src="resources/assets/js/isotope.pkgd.js"></script>
+<script src="resources/assets/js/isotope.pkgd.min.js"></script>--%>
+
+<script type="text/javascript">
     //====== counter up
     var cu = new counterUp({
         start: 0,

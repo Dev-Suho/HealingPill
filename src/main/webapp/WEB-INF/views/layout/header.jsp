@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="resources/assets/css/main.css" />
 
     <!--survey css 추가-->
-    <link rel="stylesheet" href="resources/assets/css/common.css" />
+    <!--<link rel="stylesheet" href="resources/assets/css/common.css" />-->
     <link rel="stylesheet" href="resources/assets/css/sub.css" />
     <link rel="stylesheet" href="resources/assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="resources/assets/css/viewer.css" />
@@ -44,7 +44,6 @@
     <script>
         new WOW().init();
     </script>
-
 </head>
 
 <body>
@@ -95,8 +94,8 @@
                                        aria-expanded="false" aria-label="Toggle navigation">커뮤니티</a>
                                     <ul class="sub-menu collapse" id="submenu-1-3">
                                         <li class="nav-item"><a href="/faq">FAQ</a></li>
-                                        <li class="nav-item"><a href="/magazine2">매거진</a></li>
-                                        <li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>
+                                        <li class="nav-item"><a href="/magazine">매거진</a></li>
+                                        <%--<li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>--%>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
