@@ -94,8 +94,7 @@
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
-                            작약추출물등복합물(HT074)
-                            작약추출물등복합물은 위 점막을 보호합니다.
+                            <%=MList[0][3]%>
                         </p>
                     </div>
                 </div>
