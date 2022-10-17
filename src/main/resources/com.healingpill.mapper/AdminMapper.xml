@@ -14,7 +14,7 @@
     <!-- index.jsp -> 회원 누르면 회원 상세정보 -->
     <select id="member_detail" resultType="com.healingpill.dto.AdminDTO">
         SELECT * FROM MEMBER
-        WHERE MEM_ID=#{mem_id , jdbcType = VARCHAR}
+        WHERE MEM_NUM=#{mem_num , jdbcType = NUMERIC}
     </select>
 
 </mapper>
