@@ -32,54 +32,9 @@ public class HomeController {
         return "survey";
     }
 
-    @RequestMapping(value = "/survey_1")
-    public String survey_1() {
-        return "survey_1";
-    }
-
-    @RequestMapping(value = "/survey_2")
-    public String survey_2() {
-        return "survey_2";
-    }
-
-    @RequestMapping(value = "/survey_3")
-    public String survey_3() {
-        return "survey_3";
-    }
-
-    @RequestMapping(value = "/survey_4")
-    public String survey_4() {
-        return "survey_4";
-    }
-
-    @RequestMapping(value = "/survey_5")
-    public String survey_5() {
-        return "survey_5";
-    }
-
-    @RequestMapping(value = "/survey_6")
-    public String survey_6() {
-        return "survey_6";
-    }
-
-    @RequestMapping(value = "/survey_7")
-    public String survey_7() {
-        return "survey_7";
-    }
-
-    @RequestMapping(value = "/survey_8")
-    public String survey_8() {
-        return "survey_8";
-    }
-
-    @RequestMapping(value = "/survey_9")
-    public String survey_9() {
-        return "survey_9";
-    }
-
-    @RequestMapping(value = "/survey_10")
-    public String survey_10() {
-        return "survey_10";
+    @RequestMapping(value = "/surveyquestion")
+    public String surveyquestion() {
+        return "surveyquestion";
     }
 
     @RequestMapping(value = "/surveyresult")

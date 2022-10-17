@@ -86,8 +86,8 @@
 <script src="resources/assets/js/isotope.min.js"></script>
 <script src="resources/assets/js/main.js"></script>
 
-<script src="resources/assets/js/isotope.pkgd.js"></script>
-<script src="resources/assets/js/isotope.pkgd.min.js"></script>
+<%--<script src="resources/assets/js/isotope.pkgd.js"></script>
+<script src="resources/assets/js/isotope.pkgd.min.js"></script>--%>
 
 <script type="text/javascript">
     //====== counter up

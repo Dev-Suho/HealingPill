@@ -51,7 +51,7 @@
                                 <br>
                                 맞춤 영양제를 추천해 드렸어요.
                             </p>
-                            <button type="button" onclick="location.href='survey_1'">시작하기</button>
+                            <button type="button" onclick="location.href='surveyquestion'">시작하기</button>
                             <!--<input type="button" value="페이지 이동" nonclick="survey1Page('/survey1')">-->
                         </div>
                         <!-- div.bot_btn_area -->
