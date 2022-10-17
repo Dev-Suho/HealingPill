@@ -2,18 +2,16 @@ package com.healingpill.controller;
 
 //import com.sun.org.slf4j.internal.Logger;
 //import com.sun.org.slf4j.internal.LoggerFactory;
-import com.healingpill.dto.ProductVO;
-import com.healingpill.service.ProductListService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
+
+import com.healingpill.dto.BoardVO;
+import com.healingpill.service.BoardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.inject.Inject;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -83,6 +81,8 @@ public class HomeController {
         return "/admin/cm_magazine";
     }
 
+
+
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
         return "MainPage";
@@ -118,6 +118,10 @@ public class HomeController {
 
         return "faq";
     }
+
+    // FAQ 관리자 페이지
+
+
 
     // 이벤트 페이지 이동
     @RequestMapping(value = "/event", method = RequestMethod.GET)

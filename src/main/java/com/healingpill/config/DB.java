@@ -15,7 +15,7 @@ public class DB {
             System.out.println("Jdbc Driver 로딩 성공");
 
             //DBMS에 id와 pw를 인증받고 DB를 핸들링 할 수 있는 Connection 객체를 생성
-            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "healingpill", "healingpill");
+            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "healingpill", "healingpill");
             System.out.println("Oracle Database 연결 성공");
 
             return conn;
