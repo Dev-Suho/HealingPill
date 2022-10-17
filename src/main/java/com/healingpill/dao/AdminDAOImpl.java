@@ -19,7 +19,7 @@ public class AdminDAOImpl implements AdminDAO {
     }
 
     @Override
-    public AdminDTO member_detail(AdminDTO dto) throws Exception {
-        return sqlSession.selectOne(NAMESPACE + "member_detail", dto);
+    public AdminDTO member_detail(int mem_num) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + "member_detail", mem_num);
     }
 }

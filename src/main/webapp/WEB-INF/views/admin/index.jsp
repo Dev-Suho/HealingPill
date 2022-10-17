@@ -43,7 +43,7 @@
                         <c:forEach items="${memberList}" var="memberList" >
                             <tr>
                                 <td>${memberList.mem_id}</td>
-                                <td><a href="/admin/member_detail?mem_id=${memberList.mem_username}">${memberList.mem_username}</a></td>
+                                <td><a href="/admin/member_detail?mem=${memberList.mem_num}">${memberList.mem_username}</a></td>
                                 <td>${memberList.mem_birth_year}.${memberList.mem_birth_month}.${memberList.mem_birth_day}</td>
                                 <td>${memberList.mem_phone}</td>
                                 <td>-</td>
@@ -73,5 +73,8 @@
     </footer>
 </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
