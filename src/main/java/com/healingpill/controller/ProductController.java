@@ -8,7 +8,6 @@ import com.healingpill.service.ProductListService;
 import com.healingpill.service.ProductModifyService;
 import com.healingpill.service.ProductRegisterService;
 import com.healingpill.utils.UploadFileUtils;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.sf.json.JSONArray;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

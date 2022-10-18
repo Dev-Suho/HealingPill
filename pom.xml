@@ -48,11 +48,6 @@
     <!-- JSTL -->
 
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
-    <dependency>
       <groupId>taglibs</groupId>
       <artifactId>standard</artifactId>
       <version>1.1.2</version>
@@ -91,7 +86,7 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>1.7.5</version>
+      <version>1.7.21</version>
     </dependency>
     <!-- log4j -->
     <dependency>

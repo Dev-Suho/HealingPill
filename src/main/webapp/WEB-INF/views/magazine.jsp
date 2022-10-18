@@ -15,8 +15,8 @@
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
-    String uid = "root";
-    String pwd = "root";
+    String uid = "healingpill";
+    String pwd = "healingpill";
     String url = "jdbc:oracle:thin:@localhost:1521:XE";
     String sql = "select * from magazine";
     String [][] MList = new String[9][5];
@@ -94,8 +94,7 @@
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
-                            작약추출물등복합물(HT074)
-                            작약추출물등복합물은 위 점막을 보호합니다.
+                            <%=MList[0][3]%>
                         </p>
                     </div>
                 </div>

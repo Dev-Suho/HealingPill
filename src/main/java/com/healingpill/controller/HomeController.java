@@ -2,18 +2,16 @@ package com.healingpill.controller;
 
 //import com.sun.org.slf4j.internal.Logger;
 //import com.sun.org.slf4j.internal.LoggerFactory;
-import com.healingpill.dto.ProductVO;
-import com.healingpill.service.ProductListService;
-import com.sun.org.apache.xpath.internal.operations.Mod;
+
+import com.healingpill.dto.BoardVO;
+import com.healingpill.service.BoardService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.inject.Inject;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -32,29 +30,9 @@ public class HomeController {
         return "survey";
     }
 
-    @RequestMapping(value = "/survey_1")
-    public String survey_1() {
-        return "survey_1";
-    }
-
-    @RequestMapping(value = "/survey_2")
-    public String survey_2() {
-        return "survey_2";
-    }
-
-    @RequestMapping(value = "/survey_3")
-    public String survey_3() {
-        return "survey_3";
-    }
-
-    @RequestMapping(value = "/survey_4")
-    public String survey_4() {
-        return "survey_4";
-    }
-
-    @RequestMapping(value = "/survey_5")
-    public String survey_5() {
-        return "survey_5";
+    @RequestMapping(value = "/surveyquestion")
+    public String surveyquestion() {
+        return "surveyquestion";
     }
 
     @RequestMapping(value = "/surveyresult")
@@ -82,6 +60,8 @@ public class HomeController {
     public String adminmagazine() {
         return "/admin/cm_magazine";
     }
+
+
 
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
@@ -118,6 +98,10 @@ public class HomeController {
 
         return "faq";
     }
+
+    // FAQ 관리자 페이지
+
+
 
     // 이벤트 페이지 이동
     @RequestMapping(value = "/event", method = RequestMethod.GET)

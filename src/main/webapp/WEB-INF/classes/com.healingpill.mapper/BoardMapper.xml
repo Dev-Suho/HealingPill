@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardMapper">
+    <!-- 게시판 글 작성 -->
+    <insert id="insert">
+        INSERT INTO MAGAZINE(MG_NO,MG_TITLE, MG_CONTENT, MG_DATETIME)
+                    VALUES (MG_NO_SEQ.nextval, #{mg_title}, #{mg_content}, SYSDATE)
+    </insert>
+    <!-- 게시판 글 조회 -->
+    <select id="getMagazineList" resultType="com.healingpill.dto.BoardVO">
+        SELECT * FROM MAGAZINE
+    </select>
+
+    <select id="magazineList" resultType="com.healingpill.dto.MagazineViewVO">
+        select * from MAGAZINE
+    </select>
+</mapper>

@@ -11,6 +11,8 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.lang.reflect.Member;
+import java.text.DecimalFormat;
+import java.util.Calendar;
 import java.util.List;
 
 @Controller
@@ -43,14 +45,6 @@ public class ShopController {
 
         return "allProductsDetail";
     }
-
-/*
-    @RequestMapping(value = "/cart", method = RequestMethod.GET)
-    public String showCart() {
-        return "cart";
-    }
-
- */
 
 
     @ResponseBody
@@ -103,15 +97,5 @@ public class ShopController {
             result = 1;
         }
         return result;
-    }
-
-    // 주문
-    @RequestMapping(value = "/cartList", method = RequestMethod.POST)
-    public void order(HttpSession session, OrderVO orderVO, OrderDetailVO orderDetailVO) throws Exception {
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
-        String mem_id = memberDTO.getMem_id();
-
-        shopService.orderInfo(orderVO);
-        shopService.orderInfo_Details(orderDetailVO);
     }
 }

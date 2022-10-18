@@ -19,6 +19,7 @@
 </div>
 <!-- End Breadcrumbs -->
 
+
 <!-- ====== Question Section Start -->
 <section
         id="pricing"
@@ -45,69 +46,49 @@
                         <div class="container" style="min-height: calc(452px);">
                             <div class="service_guide_area">
                                 <!--개인정보 section-->
-                                <h2 id="" maxallowed="1">
-                                    <p style="font-size: 20px"> <strong> @@님의 식습관을 모두 선택하세요. </strong> </p><br><br>
+                                <h2 id="qTitle" maxallowed="1">
+                                    <p style="font-size: 20px"> <strong> @@님에게 해당하는 것을 모두 선택하세요. </strong> </p><br>
                                 </h2>
                                 <section
                                         class="relative z-20 overflow-hidden bg-white pt-5 pb-5 lg:pt-[120px] lg:pb-[90px]"
                                 >
-                                <ul class="question-answer-wrap" align="left" style="margin-left:30px;">
-                                    <li>
-                                        <label class="label-radio label-question">
-                                            <input type="checkbox" class="input-radio input-answer" name="answer" value="354" data-only="null">
-                                            <span>하루 12시간 이상의 업무 또는 학업을 일주일에 3일 이상해요.</span>
-                                        </label>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <label class="label-radio label-question">
-                                            <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
-                                            <span>하루에 6시간 이상 핸드폰 또는 모니터 화면을 집중해서 봐요.</span>
-                                        </label>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <label class="label-radio label-question">
-                                            <input type="checkbox" class="input-radio input-answer" name="answer" value="352" data-only="null">
-                                            <span>목이 자주 건조해지거나 칼칼함이 느껴져요.</span>
-                                        </label>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <label class="label-radio label-question">
-                                            <input type="checkbox" class="input-radio input-answer" name="answer" value="352" data-only="null">
-                                            <span>시험을 준비하거나 승진 등으로 집중력이 필요한 시기예요.</span>
-                                        </label>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <label class="label-radio label-question">
-                                            <input type="checkbox" class="input-radio input-answer" name="answer" value="352" data-only="null">
-                                            <span>식사량을 줄이는 다이어트를 하고 있어요.</span>
-                                        </label>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <label class="label-radio label-question">
-                                            <input type="checkbox" class="input-radio input-answer" name="answer" value="352" data-only="null">
-                                            <span>입에 구내염이 자주 생겨요.</span>
-                                        </label>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <label class="label-radio label-question">
-                                            <input type="checkbox" class="input-radio input-answer" name="answer" value="352" data-only="null">
-                                            <span>선택할 것이 없어요.</span>
-                                        </label>
-                                    </li>
-                                </ul>
+                                    <ul class="question-answer-wrap" align="left" style="margin-left: 190px;">
+                                        <li>
+                                            <label class="label-radio label-question">
+                                                <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
+                                                <span></span> 스트레스가 매우 많아요.
+                                            </label>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <label class="label-radio label-question">
+                                                <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
+                                                <span></span> 아토피 또는 비염 등 알레르기 질환이 있어요.
+                                            </label>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <label class="label-radio label-question">
+                                                <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
+                                                <span></span> 감기와 같은 감염성 질환에 자주 걸려요.
+                                            </label>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <label class="label-radio label-question">
+                                                <input type="checkbox" class="input-radio input-answer" name="answer" value="353" data-only="null">
+                                                <span></span> 선택할 것이 없지만 면역이 걱정돼요.
+                                            </label>
+                                        </li>
+                                    </ul>
                                 </section><br><br>
                             </div>
                         </div>
                         <!-- div.contents_wrap -->
 
                         <div class="bot_btn_area type01" style="text-align: center">
-                            <button type="button" onclick="location.href='surveyresult'">결과 보러가기</button>
+                            <button type="button" onclick="location.href='survey_6'">다음</button><br><br>
+                            <button type="button" onclick="location.href='survey_4'">이전으로</button>
                         </div>
                     </div>
                 </div>

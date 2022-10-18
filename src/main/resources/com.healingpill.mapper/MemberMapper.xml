@@ -49,4 +49,5 @@
     <select id="findPasswordCheck" resultType="int">
         select count(*) from MEMBER where MEM_PHONE = #{mem_phone, jdbcType = VARCHAR}
     </select>
+
 </mapper>

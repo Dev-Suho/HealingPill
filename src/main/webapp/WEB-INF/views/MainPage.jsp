@@ -15,13 +15,12 @@
                         Look for nutritional supplements!</p>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/allProducts" class="btn">제품 둘러보기</a>
-                        <a href="/Login" class="btn btn-alt">로그인하기</a>
+                        <a href="/survey" class="btn btn-alt">나만의 영양제 찾기</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 <!-- End Hero Area -->
 
@@ -66,288 +65,462 @@
 </section>
 <!-- End Small Features Area -->
 
-<!-- Start Features Area -->
+<!-- Start Banner Area -->
+<div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                        <img class="img-fluid" src="resources/assets/images/banner/banner1.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 mb-0 d-flex align-items-center">
+                        <div class="text-align-left align-self-center">
+                            <h1 class="h1"><b>HealingPill</b> sale</h1><br>
+                            <h4 class="h4">가을 맞이 더블 세일</h4><br>
+                            <p>
+                                Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1).
+                                This template is 100% free provided by <a rel="sponsored" class="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a> website.
+                                Image credits go to <a rel="sponsored" class="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
+                                <a rel="sponsored" class="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a> and
+                                <a rel="sponsored" class="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                        <img class="img-fluid" src="resources/assets/images/banner/banner2.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 mb-0 d-flex align-items-center">
+                        <div class="text-align-left">
+                            <h1 class="h1">Proident occaecat</h1>
+                            <h3 class="h2">Aliquip ex ea commodo consequat</h3>
+                            <p>
+                                You are permitted to use this Zay CSS template for your commercial websites.
+                                You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                        <img class="img-fluid" src="resources\assets\images\banner\chicago.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6 mb-0 d-flex align-items-center">
+                        <div class="text-align-left">
+                            <h1 class="h1">Repr in voluptate</h1>
+                            <h3 class="h2">Ullamco laboris nisi ut </h3>
+                            <p>
+                                We bring you 100% free CSS templates for your websites.
+                                If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+        <i class="fas fa-chevron-left"></i>
+    </a>
+    <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+        <i class="fas fa-chevron-right"></i>
+    </a>
+</div>
+<!-- End Banner Area -->
+
+<%--<!-- Start Banner Area -->
+<section class="py-5">
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="resources\assets\images\banner\ny.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="resources\assets\images\banner\chicago.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="resources\assets\images\banner\la.jpg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+</div>
+</section>
+<!-- End Banner Area -->--%>
+
+<!-- Start Best Category Area -->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">BEST</h3><br>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">베스트 제품</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">판매량이 증명하는 힐링필 몰 간판 제품들을 만나보세요.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <!-- Product price-->
+                            $40.00 - $80.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Special Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$20.00</span>
+                            $18.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Sale Item</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$50.00</span>
+                            $25.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Popular Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            $40.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Sale Item</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$50.00</span>
+                            $25.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <!-- Product price-->
+                            $120.00 - $280.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Special Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">$20.00</span>
+                            $18.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Popular Item</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
+                            $40.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/allProductsDetail">View products</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Best Category Area -->
+
+<%--
+<!-- Start Best Category Area -->
 <section class="features section">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h3 class="wow zoomIn" data-wow-delay=".2s">Features</h3>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">We Are Creative
-                        Dreamers and Innovators</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                        Ipsum available, but the majority have suffered alteration in some form.</p>
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">BEST</h3><br>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">베스트 제품</h2>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">판매량이 증명하는 힐링필 몰 간판 제품들을 만나보세요.</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-                    <i class="lni lni-cloud-upload"></i>
-                    <h3>Push to Deploy</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-                    <i class="lni lni-lock"></i>
-                    <h3>SSL Certificates</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <i class="lni lni-reload"></i>
-                    <h3>Simple Queues</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Simple Queues</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
                 </div>
                 <!-- End Single Feature -->
             </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
-                    <i class="lni lni-shield"></i>
-                    <h3>Advanced Security</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Feature -->
-                <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
-                    <i class="lni lni-cog"></i>
-                    <h3>Powerful API</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
-                </div>
-                <!-- End Single Feature -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Feature -->
                 <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
-                    <i class="lni lni-layers"></i>
-                    <h3>Database Backups</h3>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a
-                        page at its layout.</p>
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Simple Queues</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
+
+                </div>
+                <!-- End Single Feature -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Feature -->
+                <div class="single-feature wow fadeInUp" data-wow-delay=".2s">
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Advanced Security</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
+                </div>
+                <!-- End Single Feature -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Feature -->
+                <div class="single-feature wow fadeInUp" data-wow-delay=".4s">
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Powerful API</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
+                </div>
+                <!-- End Single Feature -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Feature -->
+                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Database Backups</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
+                </div>
+                <!-- End Single Feature -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Feature -->
+                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Database Backups</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
+                </div>
+                <!-- End Single Feature -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Feature -->
+                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Database Backups</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
+                </div>
+                <!-- End Single Feature -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Feature -->
+                <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                    <a href="/allProductsDetail" class="block"><img class="card-img-top" src="https://via.placeholder.com/335x335" alt="Card image cap"><br>
+                        <h3>Database Backups</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page at its layout.</p></a>
+                    <br>
+                    <div class="button">
+                        <a href="/cart"><i class="bi bi-cart-plus"></i></a>
+                    </div>
                 </div>
                 <!-- End Single Feature -->
             </div>
         </div>
     </div>
 </section>
-<!-- End Features Area -->
-
-<!-- Start Achievement Area -->
-<section class="our-achievement section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
-                <div class="title">
-                    <h2>Trusted by developers from over 80 planets</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
-                            <h3 class="counter"><span id="secondo1" class="countup" cup-end="100">100</span>%</h3>
-                            <p>satisfaction</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
-                            <h3 class="counter"><span id="secondo2" class="countup" cup-end="250">250</span>K</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
-                            <h3 class="counter"><span id="secondo3" class="countup" cup-end="95">95</span>k+</h3>
-                            <p>Projects Complete</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Achievement Area -->
-
-<!-- Start Pricing Table Area -->
-<section class="pricing-table section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-title">
-                    <h3 class="wow zoomIn" data-wow-delay=".2s">pricing</h3>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Pricing Plan</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
-                        Ipsum available, but the majority have suffered alteration in some form.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Single Table -->
-                <div class="single-table wow fadeInUp" data-wow-delay=".2s">
-                    <!-- Table Head -->
-                    <div class="table-head">
-                        <h4 class="title">Hobby</h4>
-                        <p>All the basics for starting a new business</p>
-                        <div class="price">
-                            <h2 class="amount">$12<span class="duration">/mo</span></h2>
-                        </div>
-                        <div class="button">
-                            <a href="javascript:void(0)" class="btn">Buy Hobby</a>
-                        </div>
-                    </div>
-                    <!-- End Table Head -->
-                    <!-- Start Table Content -->
-                    <div class="table-content">
-                        <h4 class="middle-title">What's Included</h4>
-                        <!-- Table List -->
-                        <ul class="table-list">
-                            <li><i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Potenti felis, in cras ligula.</li>
-                        </ul>
-                        <!-- End Table List -->
-                    </div>
-                    <!-- End Table Content -->
-                </div>
-                <!-- End Single Table-->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Single Table -->
-                <div class="single-table wow fadeInUp" data-wow-delay=".4s">
-                    <!-- Table Head -->
-                    <div class="table-head">
-                        <h4 class="title">Freelancer</h4>
-                        <p>All the basics for starting a new business</p>
-                        <div class="price">
-                            <h2 class="amount">$24<span class="duration">/mo</span></h2>
-                        </div>
-                        <div class="button">
-                            <a href="javascript:void(0)" class="btn">Buy Freelancer</a>
-                        </div>
-                    </div>
-                    <!-- End Table Head -->
-                    <!-- Start Table Content -->
-                    <div class="table-content">
-                        <h4 class="middle-title">What's Included</h4>
-                        <!-- Table List -->
-                        <ul class="table-list">
-                            <li><i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Potenti felis, in cras ligula.</li>
-                        </ul>
-                        <!-- End Table List -->
-                    </div>
-                    <!-- End Table Content -->
-                </div>
-                <!-- End Single Table-->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Single Table -->
-                <div class="single-table wow fadeInUp" data-wow-delay=".6s">
-                    <!-- Table Head -->
-                    <div class="table-head">
-                        <h4 class="title">Startup</h4>
-                        <p>All the basics for starting a new business</p>
-                        <div class="price">
-                            <h2 class="amount">$32<span class="duration">/mo</span></h2>
-                        </div>
-                        <div class="button">
-                            <a href="javascript:void(0)" class="btn">Buy Startup</a>
-                        </div>
-                    </div>
-                    <!-- End Table Head -->
-                    <!-- Start Table Content -->
-                    <div class="table-content">
-                        <h4 class="middle-title">What's Included</h4>
-                        <!-- Table List -->
-                        <ul class="table-list">
-                            <li><i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Potenti felis, in cras ligula.</li>
-                        </ul>
-                        <!-- End Table List -->
-                    </div>
-                    <!-- End Table Content -->
-                </div>
-                <!-- End Single Table-->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Single Table -->
-                <div class="single-table wow fadeInUp" data-wow-delay=".8s">
-                    <!-- Table Head -->
-                    <div class="table-head">
-                        <h4 class="title">Enterprise</h4>
-                        <p>All the basics for starting a new business</p>
-                        <div class="price">
-                            <h2 class="amount">$48<span class="duration">/mo</span></h2>
-                        </div>
-                        <div class="button">
-                            <a href="javascript:void(0)" class="btn">Buy Enterprise</a>
-                        </div>
-                    </div>
-                    <!-- End Table Head -->
-                    <!-- Start Table Content -->
-                    <div class="table-content">
-                        <h4 class="middle-title">What's Included</h4>
-                        <!-- Table List -->
-                        <ul class="table-list">
-                            <li><i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Morbi leo risus.</li>
-                            <li><i class="lni lni-checkmark-circle"></i> Potenti felis, in cras ligula.</li>
-                        </ul>
-                        <!-- End Table List -->
-                    </div>
-                    <!-- End Table Content -->
-                </div>
-                <!-- End Single Table-->
-            </div>
-        </div>
-    </div>
-</section>
-<!--/ End Pricing Table Area -->
-
-<!-- Start Call Action Area -->
-<section class="call-action">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-12">
-                <div class="text">
-                    <h2 style="line-height: 42px;">You are using free Lite<span>Version of Agencio</span>
-                    </h2>
-                    <p style="margin-top: 15px;">Please, purchase full version of the template to get all pages,
-                        features and commercial license.</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div class="button">
-                    <a href="#" class="btn">Purchase Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Call Action Area -->
+<!-- End Best Category Area -->
+--%>
 
 <%@ include file="layout/footer.jsp" %>
