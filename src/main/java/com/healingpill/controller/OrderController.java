@@ -13,11 +13,13 @@ import javax.servlet.http.HttpSession;
 public class OrderController {
 
     @RequestMapping(value = "/order", method = RequestMethod.GET)
-    public void orderPageGET(HttpSession session, OrderPageDTO orderPageDTO, Model model) {
+    public String orderPageGET(HttpSession session, OrderPageDTO orderPageDTO, Model model) {
         MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
         String mem_id = memberDTO.getMem_id();
 
         System.out.println("mem_id : " + mem_id);
         System.out.println("orders : " + orderPageDTO.getOrders());
+
+        return "checkout";
     }
 }
