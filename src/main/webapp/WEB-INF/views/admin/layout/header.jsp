@@ -51,6 +51,11 @@
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             상품 관리
           </a>
+          <div class="sb-sidenav-menu-heading">커뮤니티관리</div>
+          <a class="nav-link" href="/admin/cm_magazine" style="color:white; font-size:12pt" >
+            <div class="sb-nav-link-icon" ><i class="fas fa-tachometer-alt"></i></div>
+            매거진 등록
+          </a>
           <div class="sb-sidenav-menu-heading">관리</div>
           <a class="nav-link" href="charts.html" style="color:white; font-size:12pt">
             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
