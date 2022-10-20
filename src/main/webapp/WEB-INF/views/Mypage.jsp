@@ -36,34 +36,34 @@
                         <table class="table" >
                                 <tr>
                                     <td style="background-color:#c7a8ff" ><b>ID</b></td>
-                                    <td>${member_detail.mem_id}</td>
+                                    <td>${ member.mem_id }"</td>
                                 <tr>
                                 <tr>
                                     <td style="background-color:#c7a8ff" ><b>비밀번호</b></td>
-                                    <td>${member_detail.mem_password}</td>
+                                    <td>${ member.mem_password }"</td>
                                 <tr>
                                 <tr>
                                     <td style="background-color:#c7a8ff" ><b>이름</b></td>
-                                    <td>이름</td>
+                                    <td>${ member.mem_username }"</td>
                                     <td style="background-color:#c7a8ff" ><b>성별</b></td>
-                                    <td>성별</td>
+                                    <td>${ member.mem_sex }"</td>
                                     <td style="background-color:#c7a8ff"><b>등급 </b></td>
                                     <td> 등급란</td>
                                 <tr>
                                     <td style="background-color:#c7a8ff"><b>이메일</b></td>
-                                    <td>${member_detail.mem_email}</td>
+                                    <td>${member.mem_email}</td>
                                 <tr>
                                 <tr>
                                     <td style="background-color:#c7a8ff"><b>생년월일</b></td>
-                                    <td></td>
+                                    <td>${member.mem_birth_year}.${member.mem_birth_month}.${member.mem_birth_day}</td>
                                 <tr>
                                 <tr>
                                     <td style="background-color:#c7a8ff"><b>전화번호</b></td>
-                                    <td>${member_detail.mem_phone}</td>
+                                    <td>${member.mem_phone}</td>
                                 <tr>
                                 <tr>
                                     <td style="background-color:#c7a8ff"><b>주소</b></td>
-                                    <td>${member_detail.mem_address}</td>
+                                    <td>${member.mem_address}</td>
                                 <tr>
                                 <tr>
                                     <td style="background-color:#c7a8ff"><b>누적 주문 횟수 </b></td>
@@ -71,7 +71,7 @@
                                 <tr>
                                 <tr>
                                     <td style="background-color:#c7a8ff"><b>가입일</b></td>
-                                    <td>${member_detail.mem_register_datetime}</td>
+                                    <td>${member.mem_register_datetime}</td>
                                 <tr>
                         </table>
                         <br>
