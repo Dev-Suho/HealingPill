@@ -101,6 +101,9 @@
                                 <li class="nav-item">
                                     <a href="admin/index" class="active" aria-label="Toggle navigation">관리자</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="/Mypage" class="active" aria-label="Toggle navigation">MYPAGE</a>
+                                </li>
                             </ul>
                         </div> <!-- navbar collapse -->
                         <c:choose>

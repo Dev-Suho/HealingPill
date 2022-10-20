@@ -68,11 +68,18 @@ public class HomeController {
     @RequestMapping(value = "/admin/magazineView")
     public String adminmagazineView() { return "/admin/magazineView"; }
 
-
+    //메인 페이지
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
         return "MainPage";
     }
+
+    @RequestMapping(value = "/Mypage" , method = RequestMethod.GET)
+    public String Mypage() { return "/Mypage"; }
+
+    @RequestMapping(value = "/Mypage_order" , method = RequestMethod.GET)
+    public String Mypage_order() { return "/Mypage_order"; }
+
 
     @RequestMapping(value = "/about-us", method = RequestMethod.POST)
     public String aboutusPOST() {
