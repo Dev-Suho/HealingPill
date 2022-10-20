@@ -61,7 +61,9 @@ public class HomeController {
         return "/admin/cm_magazine";
     }
 
-
+    //매거진 관리
+    @RequestMapping(value = "/admin/magazine_list")
+    public String adminmagazine_list() { return "/admin/magazine_list";}
 
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {

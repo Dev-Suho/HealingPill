@@ -15,8 +15,16 @@
         <td>${member_detail.mem_id}</td>
     <tr>
     <tr>
+        <td><b>비밀번호</b></td>
+        <td>${member_detail.mem_password}</td>
+    <tr>
+    <tr>
         <td><b>이름</b></td>
         <td>${member_detail.mem_username}</td>
+    <tr>
+    <tr>
+        <td><b>등급 </b></td>
+        <td> 등급란</td>
     <tr>
         <td><b>이메일</b></td>
         <td>${member_detail.mem_email}</td>
@@ -77,7 +85,9 @@
 <h2>총 구매 금액</h2>
 <h4>구매 금액 영역 </h4>
 <br>
-<h2>메모</h2>
+<h2>나만의 영양제 찾기 설문 결과</h2>
+<h4> 설문에 체크한 태그 , 추천 영양제 결과 보관 ( 견적 냈던 기록 ) </h4>
+<h2>상담 문의 내역</h2>
     <textarea rows="5" cols="50" id="memo" name="memo"></textarea>
 <br>
 </form>
