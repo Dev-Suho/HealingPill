@@ -5,13 +5,13 @@ import java.util.Date;
 public class BoardVO {
 
     private int mg_no;
-    private int mg_image;
+    private String mg_image;
 
-    public int getMg_image() {
+    public String getMg_image() {
         return mg_image;
     }
 
-    public void setMg_image(int mg_image) {
+    public void setMg_image(String mg_image) {
         this.mg_image = mg_image;
     }
 

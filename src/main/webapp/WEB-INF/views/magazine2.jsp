@@ -8,7 +8,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
-
+<%! String summary = "";%>
 
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
@@ -43,7 +43,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail" class="block">
                             <img
-                                    src="https://esther.wisacdn.com/board//_data/gallery_26/202206/03//8b392f651948c62710aaee1b814f87a7.jpg"
+                                    src="resources/assets/images/magazine/${magazine.mg_image}"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />
@@ -62,12 +62,10 @@
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
                                     ${magazine.mg_title}
-
-
                             </a>
                         </h3>
-                        <p class="text-base text-body-color">
-                                ${magazine.mg_content}
+                        <p class="text-base text-body-color" style="font-size: 10px">
+                                ${magazine.mg_content.substring(0,2)}
                         </p>
                     </div>
                 </div>

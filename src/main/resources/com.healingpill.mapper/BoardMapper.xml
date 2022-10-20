@@ -5,8 +5,8 @@
 <mapper namespace="BoardMapper">
     <!-- 게시판 글 작성 -->
     <insert id="insert">
-        INSERT INTO MAGAZINE(MG_NO,MG_TITLE, MG_CONTENT, MG_DATETIME)
-                    VALUES (MG_NO_SEQ.nextval, #{mg_title}, #{mg_content}, SYSDATE)
+        INSERT INTO MAGAZINE(MG_NO,MG_IMAGE,MG_TITLE, MG_CONTENT, MG_DATETIME)
+                    VALUES (MG_NO_SEQ.nextval,#{mg_image}, #{mg_title}, #{mg_content}, SYSDATE)
     </insert>
     <!-- 게시판 글 조회 -->
     <select id="getMagazineList" resultType="com.healingpill.dto.BoardVO">
