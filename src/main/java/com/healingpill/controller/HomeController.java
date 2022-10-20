@@ -65,6 +65,10 @@ public class HomeController {
     @RequestMapping(value = "/admin/magazine_list")
     public String adminmagazine_list() { return "/admin/magazine_list";}
 
+    @RequestMapping(value = "/admin/magazineView")
+    public String adminmagazineView() { return "/admin/magazineView"; }
+
+
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
         return "MainPage";
