@@ -15,7 +15,7 @@
 
                     <div class="col-lg-6">
                         <div class="form_group">
-                            <label for = "mg_image">사진</label><input type="file" class="form-control" id="mg_image" name="mg_image" placeholder="매거진 사진" value="">
+                            <label for = "mg_image">사진 추가</label><input type="file" class="form-control" id="mg_image" name="mg_image" placeholder="매거진 사진" value="">
 
                         </div>
                         <div class="form-group">
