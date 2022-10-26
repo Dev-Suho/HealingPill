@@ -27,13 +27,13 @@ public class OrderController {
         return "checkout";
     }
 
-    /*
+
     @RequestMapping(value = "/orderComplete", method = RequestMethod.GET)
     public String viewOrderComplete(){
         return "checkoutComplete";
     }
 
-     */
+
 
     @RequestMapping("/order/{mem_id}")
     public String orderPageGet(@PathVariable("mem_id") String mem_id, OrderPageDTO orderPageDTO, Model model){
