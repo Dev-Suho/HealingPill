@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class OrderController {
 
-    @RequestMapping(value = "/order", method = RequestMethod.GET)
-    public String orderPageGET(HttpSession session, OrderPageDTO orderPageDTO, Model model) {
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
-        String mem_id = memberDTO.getMem_id();
-
-        System.out.println("mem_id : " + mem_id);
-        System.out.println("orders : " + orderPageDTO.getOrders());
-
+    @RequestMapping(value = "/checkout", method = RequestMethod.GET)
+    public String viewCheckout(){
         return "checkout";
     }
+
+    @RequestMapping(value = "/orderComplete", method = RequestMethod.GET)
+    public String viewOrderComplete(){
+        return "checkoutComplete";
+    }
+
 }

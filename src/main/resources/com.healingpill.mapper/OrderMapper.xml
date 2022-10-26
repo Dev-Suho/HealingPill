@@ -4,17 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="order">
 
-    <!-- 주문 상품 정보 -->
+    <!-- 주문자 정보 -->
     <insert id="orderRequest" parameterType="com.healingpill.dto.OrderPageDTO">
         insert into ORDER_REQUEST values (ORDER_SEQ.nextval, #{order_name, jdbcType = VARCHAR}, #{mem_id, jdbcType = VARCHAR}, #{mem_address1, jdbcType = VARCHAR},
                                           #{mem_address2, jdbcType = VARCHAR}, #{mem_address3, jdbcType = VARCHAR}, #{order_state, jdbcType = VARCHAR}, #{deliveryCost, jdbcType = NUMERIC},
                                           #{usePoint, jdbcType = NUMERIC}, sysdate)
     </insert>
-
-    <!-- 주문자 정보 -->
-    <select id="getCustomerInfo" resultType="com.healingpill.dto.OrderPageDTO">
-        select MEM_ID, MEM_ADDRESS1, MEM_ADDRESS2, MEM_ADDRESS3, USEPOINT
-        FROM ORDER_REQUEST
-        WHERE MEM_ID = #{mem_id, jdbcType = VARCHAR}
-    </select>
+    
+    <!-- 단일 상품 주문 정보 -->
+    <insert id="singleProductOrder" parameterType="com.healingpill.dto.OrderPageItemDTO">
+        insert into ORDER_ITEM values (ORDER_PRODUCT_SEQ.nextval, #{order_id, jdbcType = NUMERIC}, #{pd_num, jdbcType = NUMERIC},
+                                       #{order_stock, jdbcType = NUMERIC}, #{order_price, jdbcType = NUMERIC}, #{order_discount, jdbcType = NUMERIC}, #{savepoint, jdbcType = NUMERIC})
+    </insert>
 </mapper>

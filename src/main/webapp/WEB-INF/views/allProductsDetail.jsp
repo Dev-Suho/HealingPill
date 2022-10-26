@@ -22,8 +22,6 @@
     </div>
 </div>
 <!-- End Breadcrumbs -->
-
-<form action="order" method="get" class="order_form">
     <input type="hidden" name="orders[0].pd_num" value="${products.pd_num}"/>
     <input type="hidden" name="orders[0].order_stock" value=""/>
 <!-- Start Item Details -->
@@ -70,7 +68,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="wish-button">
-                                        <button class="buy_btn" onclick="location.href='/order'"><i class="bi bi-cash-coin"></i> 구매하기</button>
+                                        <button class="buy_btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +126,6 @@
                     $(".buy_btn").on("click", function (){
                         let order_stock = $(".quantity_input").val();
                         $(".order_form").find("input[name = 'orders[0].order_stock']").val(order_stock);
-                        $(".order_form").submit;
                     });
                 </script>
             </div>
@@ -298,7 +295,6 @@
         </div>
     </div>
 </section>
-</form>
 <!-- End Item Details -->
 
 <%@ include file="layout/footer.jsp" %>
