@@ -10,4 +10,8 @@ public interface OrderDAO {
 
     // 상품 정보 가져오기
     public void orderRequest(OrderPageDTO orderPageDTO);
+
+    public OrderPageItemDTO getProductsInfo(int pd_num);
+
+    public MemberDTO getMemberInfo(String mem_id);
 }

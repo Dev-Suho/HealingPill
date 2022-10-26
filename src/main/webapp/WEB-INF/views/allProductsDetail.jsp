@@ -22,8 +22,10 @@
     </div>
 </div>
 <!-- End Breadcrumbs -->
+<form action="/order/${member.mem_id}" method="get" class="order_form">
     <input type="hidden" name="orders[0].pd_num" value="${products.pd_num}"/>
     <input type="hidden" name="orders[0].order_stock" value=""/>
+</form>
 <!-- Start Item Details -->
 <section class="item-details section">
     <div class="container">
@@ -126,6 +128,7 @@
                     $(".buy_btn").on("click", function (){
                         let order_stock = $(".quantity_input").val();
                         $(".order_form").find("input[name = 'orders[0].order_stock']").val(order_stock);
+                        $(".order_form").submit();
                     });
                 </script>
             </div>

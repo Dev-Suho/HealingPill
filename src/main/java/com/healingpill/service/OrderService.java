@@ -15,4 +15,5 @@ public interface OrderService {
     public List<OrderPageItemDTO> getProductsInfo(List<OrderPageItemDTO> orders);
 
 
+    public MemberDTO getMemberInfo(String mem_id);
 }

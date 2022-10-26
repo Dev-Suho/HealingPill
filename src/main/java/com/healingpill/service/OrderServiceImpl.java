@@ -1,6 +1,7 @@
 package com.healingpill.service;
 
 import com.healingpill.dao.OrderDAO;
+import com.healingpill.dto.MemberDTO;
 import com.healingpill.dto.OrderPageDTO;
 import com.healingpill.dto.OrderPageItemDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,13 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Autowired
+
     private OrderDAO orderDAO;
+
+    @Autowired
+    public OrderServiceImpl(OrderDAO orderDAO) {
+        this.orderDAO = orderDAO;
+    }
 
 
     @Override
@@ -23,6 +29,22 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderPageItemDTO> getProductsInfo(List<OrderPageItemDTO> orders) {
-        return null;
+
+        List<OrderPageItemDTO> result = new ArrayList<OrderPageItemDTO>();
+
+        for(OrderPageItemDTO orderPageItemDTO : orders) {
+            OrderPageItemDTO productInfo = orderDAO.getProductsInfo(orderPageItemDTO.getPd_num());
+            productInfo.setOrder_stock(orderPageItemDTO.getOrder_stock());
+            productInfo.initSaleTotal();
+
+            result.add(productInfo);
+        }
+
+        return result;
+    }
+
+    @Override
+    public MemberDTO getMemberInfo(String mem_id) {
+        return orderDAO.getMemberInfo(mem_id);
     }
 }
