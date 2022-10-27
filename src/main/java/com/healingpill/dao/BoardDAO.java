@@ -13,4 +13,7 @@ public interface BoardDAO {
 
     //게시글 목록
     public List<BoardVO> magazineView() throws Exception;
+
+    //게시글 디테일
+    public BoardVO read(int mg_no) throws Exception;
 }

@@ -41,7 +41,7 @@
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div class="wow fadeInUp group mb-10" data-wow-delay=".1s">
                     <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail" class="block">
+                        <a href="/magazineDetail?mg_no=${magazine.mg_no}" class="block">
                             <img
                                     src="resources/assets/images/magazine/${magazine.mg_image}"
                                     alt="image"

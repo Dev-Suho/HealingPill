@@ -16,4 +16,8 @@
     <select id="magazineList" resultType="com.healingpill.dto.MagazineViewVO">
         select * from MAGAZINE
     </select>
+
+    <select id="read" parameterType="int" resultType="com.healingpill.dto.BoardVO">
+        SELECT MG_NO,MG_IMAGE,MG_TITLE,MG_DATETIME,MG_CONTENT FROM MAGAZINE WHERE MG_NO = #{mg_no}
+    </select>
 </mapper>

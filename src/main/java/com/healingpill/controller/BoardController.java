@@ -76,4 +76,12 @@ public class BoardController {
 
         return "magazine2";
     }
+
+    //게시글 디테일
+    @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
+    public String  read(BoardVO boardVO,Model model) throws Exception {
+        logger.info("read");
+        model.addAttribute("read",service.read(boardVO.getMg_no()));
+        return "magazineDetail";
+    }
 }

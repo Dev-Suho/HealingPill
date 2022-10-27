@@ -13,4 +13,7 @@ public interface BoardService {
     //게시글 목록 조회
     public  List<BoardVO> magazineView() throws Exception;
 
+    //게시글 디테일
+    public BoardVO read(int mg_no) throws Exception;
+
 }

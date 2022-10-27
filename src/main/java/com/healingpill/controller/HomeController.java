@@ -83,6 +83,7 @@ public class HomeController {
         return "magazine";
     }
 
+    /*
     // magazineDetail 페이지 이동
     @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
     public String magazineDetailGET() {
@@ -90,6 +91,8 @@ public class HomeController {
 
         return "magazineDetail";
     }
+
+     */
 
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)

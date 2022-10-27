@@ -27,4 +27,11 @@ public class BoardServiceImpl implements BoardService {
     public List<BoardVO> magazineView() throws Exception {
         return dao.magazineView();
     }
+
+
+    //게시글 디테일
+    @Override
+    public BoardVO read(int mg_no) throws Exception {
+        return dao.read(mg_no);
+    }
 }

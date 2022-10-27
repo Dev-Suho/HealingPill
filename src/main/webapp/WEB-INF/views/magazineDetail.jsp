@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
@@ -97,7 +98,7 @@
                           />
                         </svg>
                       </span>
-                                    2022-06-15
+                                    <fmt:formatDate value="${read.mg_datetime}" pattern="yyyy-mm-dd"/>
                                 </p>
 
                                 <p
