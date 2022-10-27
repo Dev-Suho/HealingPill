@@ -1,7 +1,9 @@
 package com.healingpill.controller;
 
 import com.healingpill.dto.MemberDTO;
+import com.healingpill.dto.OrderItemDTO;
 import com.healingpill.dto.OrderPageDTO;
+import com.healingpill.dto.OrderPageItemDTO;
 import com.healingpill.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,6 +45,14 @@ public class OrderController {
         model.addAttribute("orderList", orderService.getProductsInfo(orderPageDTO.getOrders()));
         model.addAttribute("memberInfo", orderService.getMemberInfo(mem_id));
 
-        return "checkoutComplete";
+        return "checkout";
+    }
+
+    public void orderRequest(HttpSession session, OrderPageItemDTO orderPageItemDTO, Model model) {
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+
+        if(memberDTO != null) {
+            String mem_id = memberDTO.getMem_id();
+        }
     }
 }

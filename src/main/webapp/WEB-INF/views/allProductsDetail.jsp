@@ -72,6 +72,39 @@
                                     <div class="wish-button">
                                         <button class="buy_btn" onclick="location.href='/checkout'"><i class="bi bi-cash-coin"></i> 구매하기</button>
                                     </div>
+                                    <script>
+                                        $(".buy_btn").on("click", function (){
+                                            const pd_num = $(".pd_num").val();
+                                            const cart_stock = $(".quantity_input").val();
+
+                                            const data = {
+                                                pd_num : pd_num,
+                                                cart_stock : cart_stock
+                                            };
+
+                                            $.ajax({
+                                                url : '/order/',
+                                                type : 'post',
+                                                data : data,
+                                                success : function(result){
+                                                    if(result == 0){
+                                                        alert("장바구니에 같은 상품이 있습니다.");
+                                                        $(".quantity_input").val("1");
+                                                        location.href = 'cart';
+                                                    } else if(result == 1) {
+                                                        alert("장바구니에 추가되었습니다.");
+                                                        $(".quantity_input").val("1");
+                                                    }  else if(result == 3) {
+                                                        alert("로그인이 필요합니다.");
+                                                        location.href = 'login';
+                                                    }
+                                                },
+                                                error : function() {
+                                                    alert("장바구니 담기 실패");
+                                                }
+                                            });
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
