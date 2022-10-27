@@ -6,23 +6,23 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
-    <!-- Start Breadcrumbs -->
-    <div class="breadcrumbs">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                    <div class="breadcrumbs-content">
-                        <h1 class="page-title">마이페이지</h1><br>
-                        <div class="button wow fadeInUp" data-wow-delay=".8s">
-                            <a href="/Mypage" class="btn">회원 정보 수정</a>
-                            <a href="/Mypage_order" class="btn">주문 내역</a>
-                        </div>
+<!-- Start Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+                <div class="breadcrumbs-content">
+                    <h1 class="page-title">마이페이지</h1><br>
+                    <div class="button wow fadeInUp" data-wow-delay=".8s">
+                        <a href="/Mypage" class="btn">회원 정보 수정</a>
+                        <a href="/Mypage_order" class="btn">주문 내역</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Breadcrumbs -->
+</div>
+<!-- End Breadcrumbs -->
 <section class="features section">
     <div class="container">
         <div class="row">
@@ -31,61 +31,59 @@
                     <h3 class="wow zoomIn" data-wow-delay=".2s">MYPAGE</h3><br>
                 </div>
                 <div class="section-title">
-                    <form id="mypage_information" name="mypage_information"  method="post" action="mypage_information">
+                    <form role="form" method="post" autocomplete="off">
 
                         <table class="table" >
-                                <tr>
-                                    <td style="background-color:#c7a8ff" ><b>ID</b></td>
-                                    <td>${ member.mem_id }"</td>
-                                <tr>
-                                <tr>
-                                    <td style="background-color:#c7a8ff" ><b>비밀번호</b></td>
-                                    <td>${ member.mem_password }"</td>
-                                <tr>
-                                <tr>
-                                    <td style="background-color:#c7a8ff" ><b>이름</b></td>
-                                    <td>${ member.mem_username }"</td>
-                                    <td style="background-color:#c7a8ff" ><b>성별</b></td>
-                                    <td>${ member.mem_sex }"</td>
-                                    <td style="background-color:#c7a8ff"><b>등급 </b></td>
-                                    <td> 등급란</td>
-                                <tr>
-                                    <td style="background-color:#c7a8ff"><b>이메일</b></td>
-                                    <td>${member.mem_email}</td>
-                                <tr>
-                                <tr>
-                                    <td style="background-color:#c7a8ff"><b>생년월일</b></td>
-                                    <td>${member.mem_birth_year}.${member.mem_birth_month}.${member.mem_birth_day}</td>
-                                <tr>
-                                <tr>
-                                    <td style="background-color:#c7a8ff"><b>전화번호</b></td>
-                                    <td>${member.mem_phone}</td>
-                                <tr>
-                                <tr>
-                                    <td style="background-color:#c7a8ff"><b>주소</b></td>
-                                    <td>${member.mem_address}</td>
-                                <tr>
-                                <tr>
-                                    <td style="background-color:#c7a8ff"><b>누적 주문 횟수 </b></td>
-                                    <td> </td>
-                                <tr>
-                                <tr>
-                                    <td style="background-color:#c7a8ff"><b>가입일</b></td>
-                                    <td>${member.mem_register_datetime}</td>
-                                <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff" ><b>ID</b></td>
+                                <td>${member.mem_id}</td>
+                            <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff" ><b>비밀번호</b></td>
+                                <td>${member.mem_password}</td>
+                            <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff" ><b>이름</b></td>
+                                <td>${member.mem_username}</td>
+                                <td style="background-color:#c7a8ff" ><b>성별</b></td>
+                                <td>${member.mem_sex}</td>
+                                <td style="background-color:#c7a8ff"><b>등급 </b></td>
+                                <td> 등급란</td>
+                            <tr>
+                                <td style="background-color:#c7a8ff"><b>이메일</b></td>
+                                <td>${member.mem_email}</td>
+                            <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff"><b>생년월일</b></td>
+                                <td></td>
+                            <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff"><b>전화번호</b></td>
+                                <td>${member.mem_phone}</td>
+                            <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff"><b>주소</b></td>
+                                <td>${member.mem_address}</td>
+                            <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff"><b>누적 주문 횟수 </b></td>
+                                <td> </td>
+                            <tr>
+                            <tr>
+                                <td style="background-color:#c7a8ff"><b>가입일</b></td>
+                                <td>${member.mem_register_datetime}</td>
+                            <tr>
                         </table>
                         <br>
-                            <div>
-                                <button
-                                        style="border-color: #c7a8ff; background-color: #c7a8ff; color: black; WIDTH: 100pt; HEIGHT: 30pt"
-                                        type="button" class="btn" id="information_update_Btn"
-                                        onclick="information_update();">회원정보 수정</button>
-                                <button
-                                        style="border-color: white; background-color: black; color: white; WIDTH: 80pt; HEIGHT: 30pt"
-                                        type="button" class="btn center"
-                                        onclick="location.href='joinout_check'">회원 탈퇴</button>
-                            </div>
-                            <br />
+                        <div>
+                            <button
+                                    style="border-color: #c7a8ff; background-color: #c7a8ff; color: black; WIDTH: 100pt; HEIGHT: 30pt"
+                                    type="button" class="btn" id = "modify_btn" >회원정보 수정</button>
+                            <button
+                                    style="border-color: white; background-color: black; color: white; WIDTH: 80pt; HEIGHT: 30pt"
+                                    type="button" class="btn center"  id = "delete_btn" >회원 탈퇴</button>
+                        </div>
+                        <br />
                     </form>
                 </div>
             </div>
@@ -96,5 +94,20 @@
         </div>
     </div>
 </section>
+
+<script>
+    var formObj = $("form[role='form']");
+
+    $("#modify_btn").click(function (){
+        formObj.attr("action", "/MypageModify");
+        formObj.attr("method", "get");
+        formObj.submit();
+    });
+
+    $("#delete_btn").click(function (){
+        formObj.attr("action", "");
+        formObj.submit();
+    });
+</script>
 <!--/ End Shopping Cart -->
 <%@ include file="layout/footer.jsp" %>
