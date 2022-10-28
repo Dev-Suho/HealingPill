@@ -21,7 +21,7 @@ public class AdminServiceImpl implements AdminService {
     }
     //회원 상세정보 불러오기
     @Override
-    public AdminDTO member_detail(AdminDTO dto) throws Exception {
-        return AdminDAO.member_detail(dto);
+    public AdminDTO member_detail(int mem_num) throws Exception {
+        return AdminDAO.member_detail(mem_num);
     }
 }

@@ -12,6 +12,6 @@ public interface AdminService {
     public List<AdminDTO> memberList() throws Exception;
     
     // 회원 상세정보 불러오기
-    public AdminDTO member_detail(AdminDTO dto) throws Exception;
+    public AdminDTO member_detail(int mem_num) throws Exception;
 }
 
