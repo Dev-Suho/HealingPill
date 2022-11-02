@@ -1,24 +1,23 @@
 package com.healingpill.dao;
 
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.OrderPageDTO;
-import com.healingpill.dto.OrderPageItemDTO;
+import com.healingpill.dto.*;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class OrderDAOImpl implements OrderDAO{
+
+    @Autowired
+    private SqlSession sqlSession;
+
     @Override
-    public OrderPageItemDTO getProductsInfo(int pd_num) {
-        return null;
+    public void orderInfo(OrderDTO orderDTO) throws Exception {
+        sqlSession.insert(NAMESPACE + "orderRequest", orderDTO);
     }
 
     @Override
-    public void orderRequest(OrderPageDTO orderPageDTO) {
-
-    }
-
-    @Override
-    public MemberDTO getMemberInfo(String mem_id) {
-        return null;
+    public void orderInfo_Details(OrderDetailDTO orderDetailDTO) throws Exception {
+        sqlSession.insert(NAMESPACE + "orderRequestDetails", orderDetailDTO);
     }
 }

@@ -1,17 +1,13 @@
 package com.healingpill.dao;
 
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.OrderPageDTO;
-import com.healingpill.dto.OrderPageItemDTO;
+import com.healingpill.dto.*;
 
 public interface OrderDAO {
 
     String NAMESPACE = "order.";
 
     // 상품 정보 가져오기
-    public void orderRequest(OrderPageDTO orderPageDTO);
+    public void orderInfo(OrderDTO orderDTO) throws Exception;
 
-    public OrderPageItemDTO getProductsInfo(int pd_num);
-
-    public MemberDTO getMemberInfo(String mem_id);
+    public void orderInfo_Details(OrderDetailDTO orderDetailDTO) throws Exception;
 }

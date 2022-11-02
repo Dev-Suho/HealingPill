@@ -11,7 +11,7 @@ public class OrderDTO {
     private String mem_address2;
     private String mem_address3;
     private String orderState;
-    private List<OrderItemDTO> orders;
+    private List<OrderDetailDTO> orders;
     private int deliveryCost;
     private int usePoint;
     private Date orderDate;
@@ -76,11 +76,11 @@ public class OrderDTO {
         this.orderState = orderState;
     }
 
-    public List<OrderItemDTO> getOrders() {
+    public List<OrderDetailDTO> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<OrderItemDTO> orders) {
+    public void setOrders(List<OrderDetailDTO> orders) {
         this.orders = orders;
     }
 
@@ -153,7 +153,7 @@ public class OrderDTO {
     }
 
     public void getOrderPriceInfo() {
-        for(OrderItemDTO order : orders) {
+        for(OrderDetailDTO order : orders) {
             orderSalePrice += order.getTotalPrice();
             orderSavePoint += order.getTotalSavePoint();
         }

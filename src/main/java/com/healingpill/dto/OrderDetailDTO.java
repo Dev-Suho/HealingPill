@@ -1,6 +1,6 @@
 package com.healingpill.dto;
 
-public class OrderItemDTO {
+public class OrderDetailDTO {
     private String order_id;
     private int pd_num;
     private int order_stock;

@@ -1,19 +1,16 @@
 package com.healingpill.service;
 
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.OrderPageDTO;
-import com.healingpill.dto.OrderPageItemDTO;
+import com.healingpill.dao.OrderDAO;
+import com.healingpill.dto.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 public interface OrderService {
 
-    // 단일 주문
-    public void orderRequest(OrderPageDTO orderPageDTO);
-
     // 주문 정보
-    public List<OrderPageItemDTO> getProductsInfo(List<OrderPageItemDTO> orders);
+    public void orderInfo(OrderDTO orderDTO) throws Exception;
 
-
-    public MemberDTO getMemberInfo(String mem_id);
+    // 주문 상세 정보
+    public void orderInfo_Details(OrderDetailDTO orderDetailDTO) throws Exception;
 }

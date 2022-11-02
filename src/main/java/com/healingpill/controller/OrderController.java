@@ -1,14 +1,9 @@
 package com.healingpill.controller;
 
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.OrderItemDTO;
-import com.healingpill.dto.OrderPageDTO;
-import com.healingpill.dto.OrderPageItemDTO;
+import com.healingpill.dto.*;
 import com.healingpill.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,24 +30,13 @@ public class OrderController {
         return "checkoutComplete";
     }
 
+    @RequestMapping(value = "/cartList", method = RequestMethod.POST)
+    public void order(HttpSession session, OrderDTO orderDTO, OrderDetailDTO orderDetailDTO) throws Exception {
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("memeber");
+        String mem_id = memberDTO.getMem_id();
 
-
-    @RequestMapping("/order/{mem_id}")
-    public String orderPageGet(@PathVariable("mem_id") String mem_id, OrderPageDTO orderPageDTO, Model model){
-        System.out.println("mem_id : " + mem_id);
-        System.out.println("orders : " + orderPageDTO.getOrders());
-
-        model.addAttribute("orderList", orderService.getProductsInfo(orderPageDTO.getOrders()));
-        model.addAttribute("memberInfo", orderService.getMemberInfo(mem_id));
-
-        return "checkout";
+        orderService.orderInfo(orderDTO);
+        orderService.orderInfo_Details(orderDetailDTO);
     }
 
-    public void orderRequest(HttpSession session, OrderPageItemDTO orderPageItemDTO, Model model) {
-        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
-
-        if(memberDTO != null) {
-            String mem_id = memberDTO.getMem_id();
-        }
-    }
 }

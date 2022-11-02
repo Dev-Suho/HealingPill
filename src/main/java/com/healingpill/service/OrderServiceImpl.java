@@ -1,9 +1,7 @@
 package com.healingpill.service;
 
 import com.healingpill.dao.OrderDAO;
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.OrderPageDTO;
-import com.healingpill.dto.OrderPageItemDTO;
+import com.healingpill.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,35 +14,13 @@ public class OrderServiceImpl implements OrderService {
 
     private OrderDAO orderDAO;
 
-    @Autowired
-    public OrderServiceImpl(OrderDAO orderDAO) {
-        this.orderDAO = orderDAO;
-    }
-
-
     @Override
-    public void orderRequest(OrderPageDTO orderPageDTO) {
-        orderDAO.orderRequest(orderPageDTO);
+    public void orderInfo(OrderDTO orderDTO) throws Exception {
+        orderDAO.orderInfo(orderDTO);
     }
 
     @Override
-    public List<OrderPageItemDTO> getProductsInfo(List<OrderPageItemDTO> orders) {
-
-        List<OrderPageItemDTO> result = new ArrayList<OrderPageItemDTO>();
-
-        for(OrderPageItemDTO orderPageItemDTO : orders) {
-            OrderPageItemDTO productInfo = orderDAO.getProductsInfo(orderPageItemDTO.getPd_num());
-            productInfo.setOrder_stock(orderPageItemDTO.getOrder_stock());
-            productInfo.initSaleTotal();
-
-            result.add(productInfo);
-        }
-
-        return result;
-    }
-
-    @Override
-    public MemberDTO getMemberInfo(String mem_id) {
-        return orderDAO.getMemberInfo(mem_id);
+    public void orderInfo_Details(OrderDetailDTO orderDetailDTO) throws Exception {
+        orderDAO.orderInfo_Details(orderDetailDTO);
     }
 }
