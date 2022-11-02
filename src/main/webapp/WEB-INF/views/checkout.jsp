@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -21,7 +23,6 @@
 <!-- End Breadcrumbs -->
 
 <!--====== Checkout Form Steps Part Start ======-->
-<form action="orderRequest" method="post">
 <section class="checkout-wrapper section">
     <div class="container">
         <div class="row justify-content-center">
@@ -39,7 +40,7 @@
                                             <label>이름</label>
                                             <div class="row">
                                                 <div class="col-md-6 form-input form">
-                                                    <input type="text" placeholder="이름">
+                                                    <input type="text" placeholder="이름" value="${member.mem_username}">
                                                 </div>
                                             </div>
                                         </div>
@@ -48,7 +49,7 @@
                                         <div class="single-form form-default">
                                             <label>전화번호</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="전화번호">
+                                                <input type="text" placeholder="전화번호" value="${member.mem_phone}">
                                             </div>
                                         </div>
                                     </div>
@@ -56,7 +57,7 @@
                                         <div class="single-form form-default">
                                             <label>이메일</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="이메일">
+                                                <input type="text" placeholder="이메일" value="${member.mem_email}" >
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +65,7 @@
                                         <div class="single-form form-default">
                                             <label>우편번호</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="우편번호">
+                                                <input type="text" placeholder="우편번호" >
                                             </div>
                                         </div>
                                     </div>
@@ -120,98 +121,49 @@
                                                     </div>
                                                 </div>
                                                 <!-- End Cart List Title -->
+
                                                 <!-- Cart Single List list -->
                                                 <div class="cart-single-list">
                                                     <div class="row align-items-center">
                                                         <div class="col-lg-1 col-md-1 col-12">
-                                                            <a href="product-details.html"><img src="https://via.placeholder.com/220x200" alt="#"></a>
+                                                            <a href="orderComplete"><img src="${products.pd_subImage}"></a>
                                                         </div>
                                                         <div class="col-lg-4 col-md-3 col-12">
-                                                            <h5 class="product-name"><a href="product-details.html">
-                                                                Canon EOS M50 Mirrorless Camera</a></h5>
+                                                            <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
+                                                                    ${products.pd_name}</a></h5>
                                                             <p class="product-des">
-                                                                <span><em>Type:</em> Mirrorless</span>
-                                                                <span><em>Color:</em> Black</span>
+                                                                <span>${products.ctg_Name}</span>
                                                             </p>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-12">
                                                             <div class="count-input">
-                                                                <select class="form-control">
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>3</option>
-                                                                    <option>4</option>
-                                                                    <option>5</option>
-                                                                </select>
+                                                                <input type="text" class="quantity_input" value="1">
+                                                                    <span>
+                                                                        <button class="plus_btn">+</button>
+                                                                        <button class="minus_btn">-</button>
+                                                                    </span>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4 col-md-4 col-12">
-                                                            <p>$910.00</p>
+                                                            <p><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###원"/></p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- End Single List list -->
-                                                <!-- Cart Single List list -->
-                                                <div class="cart-single-list">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-1 col-md-1 col-12">
-                                                            <a href="product-details.html"><img src="https://via.placeholder.com/220x200" alt="#"></a>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-3 col-12">
-                                                            <h5 class="product-name"><a href="product-details.html">
-                                                                Apple iPhone X 256 GB Space Gray</a></h5>
-                                                            <p class="product-des">
-                                                                <span><em>Memory:</em> 256 GB</span>
-                                                                <span><em>Color:</em> Space Gray</span>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-lg-2 col-md-2 col-12">
-                                                            <div class="count-input">
-                                                                <select class="form-control">
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>3</option>
-                                                                    <option>4</option>
-                                                                    <option>5</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-12">
-                                                            <p>$1100.00</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List list -->
-                                                <!-- Cart Single List list -->
-                                                <div class="cart-single-list">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-lg-1 col-md-1 col-12">
-                                                            <a href="product-details.html"><img src="https://via.placeholder.com/220x200" alt="#"></a>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-3 col-12">
-                                                            <h5 class="product-name"><a href="product-details.html">HP LaserJet Pro Laser Printer</a></h5>
-                                                            <p class="product-des">
-                                                                <span><em>Type:</em> Laser</span>
-                                                                <span><em>Color:</em> White</span>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-lg-2 col-md-2 col-12">
-                                                            <div class="count-input">
-                                                                <select class="form-control">
-                                                                    <option>1</option>
-                                                                    <option>2</option>
-                                                                    <option>3</option>
-                                                                    <option>4</option>
-                                                                    <option>5</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4 col-md-4 col-12">
-                                                            <p>$550.00</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List list -->
+                                                <script>
+                                                    let quantity = $(".quantity_input").val();
+
+                                                    $(".plus_btn").on("click", function (){
+                                                        $(".quantity_input").val(++quantity);
+                                                    });
+
+                                                    $(".minus_btn").on("click", function (){
+                                                        if(quantity > 1) {
+                                                            $(".quantity_input").val(--quantity);
+                                                        }
+                                                    });
+                                                </script>
+
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
@@ -250,6 +202,7 @@
                                                         <label>포인트 사용</label>
                                                         <div class="form-input form">
                                                             <input type="text" placeholder="사용할 포인트를 입력해주세요">
+                                                            <p>현재 보유하신 포인트 : <fmt:formatNumber value="${member.mem_point}" pattern="###,###,###원"/></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -297,7 +250,6 @@
         </div>
     </div>
 </section>
-</form>
 <!--====== Checkout Form Steps Part Ends ======-->
 
 <script language="javascript">
