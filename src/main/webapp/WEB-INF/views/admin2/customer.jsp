@@ -27,12 +27,12 @@
                   <table class="table">
                     <thead>
                       <tr>
-                        <th>ID</th>
-                        <th>이름</th>
-                        <th>생년월일</th>
-                        <th>번호</th>
-                        <th>주문횟수</th>
-                        <th>등급</th>
+                        <th><h5>ID</h5></th>
+                        <th><h5><b>이름</b></h5></th>
+                        <th><h5><b>생년월일</b></h5></th>
+                        <th><h5><b>번호</b></h5></th>
+                        <th><h5><b>주문횟수</b></h5></th>
+                        <th><h5><b>등급</b></h5></th>
                       </tr>
                     </thead>
                     <tbody>

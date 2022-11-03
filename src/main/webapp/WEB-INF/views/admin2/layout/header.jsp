@@ -226,7 +226,7 @@
                     </a>
                     <div class="collapse" id="ui-basic2">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/admin2/customer">주문 조회</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin2/order">주문 조회</a></li>
                         </ul>
                     </div>
                 </li>
@@ -239,8 +239,8 @@
                     </a>
                     <div class="collapse" id="ui-basic3">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/admin2/customer">상품 등록</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="/admin2/customer">상품 관리</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin2/product_add">상품 등록</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin2/product_list">상품 조회</a></li>
                         </ul>
                     </div>
                 </li>
