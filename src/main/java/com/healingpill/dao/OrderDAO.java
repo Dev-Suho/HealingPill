@@ -10,4 +10,7 @@ public interface OrderDAO {
     public void orderInfo(OrderDTO orderDTO) throws Exception;
 
     public void orderInfo_Details(OrderDetailDTO orderDetailDTO) throws Exception;
+
+    // 주문수량 체크
+    public void orderCount(OrderDetailDTO orderDetailDTO) throws Exception;
 }

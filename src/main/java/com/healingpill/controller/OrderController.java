@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 import java.lang.reflect.Member;
+import java.text.DecimalFormat;
+import java.util.Calendar;
 import java.util.List;
 
 @Controller
@@ -77,13 +79,38 @@ public class OrderController {
     }
 
 
-    @RequestMapping(value = "/cartList", method = RequestMethod.POST)
-    public void order(HttpSession session, OrderDTO orderDTO, OrderDetailDTO orderDetailDTO) throws Exception {
+    @RequestMapping(value = "/orderRequest", method = RequestMethod.POST)
+    public String order(HttpSession session, OrderDTO orderDTO, OrderDetailDTO orderDetailDTO) throws Exception {
         MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
         String mem_id = memberDTO.getMem_id();
 
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        String ym = year + new DecimalFormat("00").format(cal.get(Calendar.MONTH) + 1);
+        String ymd = ym + new DecimalFormat("00").format(cal.get(Calendar.DATE));
+        String subNum = "";
+
+        for(int i = 1; i <= 6; i++){
+            subNum += (int)(Math.random() * 10);
+        }
+
+        String order_id = ymd + "_" + subNum;
+
+        orderDTO.setOrder_id(order_id);
+        orderDTO.setMem_id(mem_id);
         orderService.orderInfo(orderDTO);
+
+        // 포인트 적립
+        int totalPrice = orderDetailDTO.getTotalPrice();
+        int savePoint = (int)(totalPrice * 0.05);
+
+        orderDetailDTO.setSavePoint(savePoint);
+        orderDetailDTO.setOrder_id(order_id);
         orderService.orderInfo_Details(orderDetailDTO);
+
+        //orderService.orderCount(orderDetailDTO);
+
+        return "checkoutComplete";
     }
 
 }

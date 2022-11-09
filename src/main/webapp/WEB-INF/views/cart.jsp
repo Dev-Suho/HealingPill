@@ -20,9 +20,6 @@
         </tr>
     </c:forEach>
 </tbody>
-    <form action="/order/${member.mem_id}" method="get" class="order_form">
-
-    </form>
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">

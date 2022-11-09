@@ -5,16 +5,17 @@
 <mapper namespace="order">
 
     <!-- 주문 정보 -->
-    <insert id="orderRequest" parameterType="com.healingpill.dto.OrderPageDTO">
-        insert into ORDER_REQUEST values (ORDER_SEQ.nextval, #{order_name, jdbcType = VARCHAR}, #{mem_id, jdbcType = VARCHAR}, #{mem_address1, jdbcType = VARCHAR},
-                                          #{mem_address2, jdbcType = VARCHAR}, #{mem_address3, jdbcType = VARCHAR}, #{order_state, jdbcType = VARCHAR}, #{deliveryCost, jdbcType = NUMERIC},
-                                          #{usePoint, jdbcType = NUMERIC}, sysdate)
+    <insert id="orderRequest" parameterType="com.healingpill.dto.OrderDTO">
+        insert into ORDER_REQUEST(order_id, order_name, mem_id, mem_address1, mem_address2, mem_address3, deliverycost, usepoint, order_phone)
+        values (#{order_id, jdbcType = VARCHAR}, #{order_name, jdbcType = VARCHAR}, #{mem_id, jdbcType = VARCHAR}, #{mem_address1, jdbcType = VARCHAR},
+                #{mem_address2, jdbcType = VARCHAR}, #{mem_address3, jdbcType = VARCHAR}, #{deliveryCost, jdbcType = NUMERIC},
+                #{usePoint, jdbcType = NUMERIC}, #{order_phone, jdbcType = VARCHAR})
     </insert>
     
     <!-- 주문 상세 정보 -->
     <insert id="orderRequestDetails">
-        insert into ORDER_ITEM(ORDERITEM_ID, ORDER_ID, PD_NUM, ORDER_STOCK)
-        select order_product_seq.nextval, #{order_id, jdbcType = NUMERIC}, pd_num, cart_stock
+        insert into ORDER_ITEM
+        select order_product_seq.nextval, #{order_id, jdbcType = VARCHAR}, pd_num, cart_stock, #{totalPrice, jdbcType = NUMERIC}, #{savePoint, jdbcType = NUMERIC}
         from CART
     </insert>
 
@@ -29,4 +30,9 @@
         from MEMBER
         where mem_id = #{mem_id, jdbcType = VARCHAR}
     </select>
+    
+    <update id="orderCount" parameterType="com.healingpill.dto.ProductVO">
+        update PRODUCT set pd_order_quantity = pd_order_quantity + ${order_stock, jdbcType = NUMERIC}
+                       where pd_num = ${pd_num, jdbcType = NUMERIC}
+    </update>
 </mapper>

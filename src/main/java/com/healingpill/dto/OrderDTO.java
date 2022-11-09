@@ -12,14 +12,9 @@ public class OrderDTO {
     private String mem_address3;
     private String order_phone;
     private String orderState;
-    private List<OrderDetailDTO> orders;
     private int deliveryCost;
-    private int usePoint;
+    private double usePoint;
     private Date orderDate;
-    // 테이블에 없는 데이터
-    private int orderSalePrice;
-    private int orderSavePoint;
-    private int orderFinalSalePrice;
 
     public String getOrder_id() {
         return order_id;
@@ -85,14 +80,6 @@ public class OrderDTO {
         this.orderState = orderState;
     }
 
-    public List<OrderDetailDTO> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<OrderDetailDTO> orders) {
-        this.orders = orders;
-    }
-
     public int getDeliveryCost() {
         return deliveryCost;
     }
@@ -101,11 +88,11 @@ public class OrderDTO {
         this.deliveryCost = deliveryCost;
     }
 
-    public int getUsePoint() {
+    public double getUsePoint() {
         return usePoint;
     }
 
-    public void setUsePoint(int usePoint) {
+    public void setUsePoint(double usePoint) {
         this.usePoint = usePoint;
     }
 
@@ -117,60 +104,4 @@ public class OrderDTO {
         this.orderDate = orderDate;
     }
 
-    public int getOrderSalePrice() {
-        return orderSalePrice;
-    }
-
-    public void setOrderSalePrice(int orderSalePrice) {
-        this.orderSalePrice = orderSalePrice;
-    }
-
-    public int getOrderSavePoint() {
-        return orderSavePoint;
-    }
-
-    public void setOrderSavePoint(int orderSavePoint) {
-        this.orderSavePoint = orderSavePoint;
-    }
-
-    public int getOrderFinalSalePrice() {
-        return orderFinalSalePrice;
-    }
-
-    public void setOrderFinalSalePrice(int orderFinalSalePrice) {
-        this.orderFinalSalePrice = orderFinalSalePrice;
-    }
-
-    @Override
-    public String toString() {
-        return "OrderDTO{" +
-                "order_id='" + order_id + '\'' +
-                ", order_name='" + order_name + '\'' +
-                ", mem_id='" + mem_id + '\'' +
-                ", mem_address1='" + mem_address1 + '\'' +
-                ", mem_address2='" + mem_address2 + '\'' +
-                ", mem_address3='" + mem_address3 + '\'' +
-                ", orderState='" + orderState + '\'' +
-                ", orders=" + orders +
-                ", deliveryCost=" + deliveryCost +
-                ", usePoint=" + usePoint +
-                ", orderDate=" + orderDate +
-                ", orderSalePrice=" + orderSalePrice +
-                ", orderSavePoint=" + orderSavePoint +
-                ", orderFinalSalePrice=" + orderFinalSalePrice +
-                '}';
-    }
-
-    public void getOrderPriceInfo() {
-        for(OrderDetailDTO order : orders) {
-            orderSalePrice += order.getTotalPrice();
-            orderSavePoint += order.getTotalSavePoint();
-        }
-        if(orderSalePrice >= 30000) {
-            deliveryCost = 0;
-        } else {
-            deliveryCost = 3000;
-        }
-        orderFinalSalePrice = orderSalePrice + deliveryCost - usePoint;
-    }
 }
