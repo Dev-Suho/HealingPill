@@ -102,112 +102,112 @@
                                      aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <div class="row">
                                     <!-- Shopping Cart -->
-                                    <div class="container">
-                                        <div class="cart-list-head">
-                                            <!-- Cart List Title -->
-                                            <div class="cart-list-title">
-                                                <div class="row">
-                                                    <div class="col-lg-1 col-md-1 col-12">
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-3 col-12">
-                                                        <p>상품명</p>
-                                                    </div>
-                                                    <div class="col-lg-3 col-md-2 col-12">
-                                                        <p>수량</p>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-2 col-12">
-                                                        <p>상품 금액</p>
+                                        <div class="container">
+                                            <div class="cart-list-head">
+                                                <!-- Cart List Title -->
+                                                <div class="cart-list-title">
+                                                    <div class="row">
+                                                        <div class="col-lg-1 col-md-1 col-12">
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-3 col-12">
+                                                            <p>상품명</p>
+                                                        </div>
+                                                        <div class="col-lg-3 col-md-2 col-12">
+                                                            <p>수량</p>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-2 col-12">
+                                                            <p>상품 금액</p>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <!-- End Cart List Title -->
-
-                                            <!-- Cart Single List list -->
-                                            <div class="cart-single-list">
-                                                <div class="row align-items-center">
-                                                    <div class="col-lg-1 col-md-1 col-12">
-                                                        <a href="orderComplete"><img src="${products.pd_subImage}"></a>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-3 col-12">
-                                                        <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
-                                                            ${products.pd_name}</a></h5>
-                                                        <p class="product-des">
-                                                            <span>${products.ctg_Name}</span>
-                                                        </p>
-                                                    </div>
-                                                    <div class="col-lg-2 col-md-2 col-12">
-                                                        <div class="count-input">
-                                                            <input type="text" class="quantity_input" value="1">
-                                                            <span>
-                                                                        <button class="plus_btn">+</button>
-                                                                        <button class="minus_btn">-</button>
+                                                <!-- End Cart List Title -->
+                                                <c:forEach items="${cartList}" var="products">
+                                                <!-- Cart Single List list -->
+                                                <div class="cart-single-list">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-lg-1 col-md-1 col-12">
+                                                            <a href="orderComplete"><img src="${products.pd_subImage}"></a>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-3 col-12">
+                                                            <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
+                                                                    ${products.pd_name}</a></h5>
+                                                            <p class="product-des">
+                                                                <span>${products.ctg_name}</span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2 col-12">
+                                                            <div class="count-input">
+                                                                <input type="text" class="quantity_input${products.pd_num}" value="1">
+                                                                    <span>
+                                                                        <button class="plus_btn${products.pd_num}">+</button>
+                                                                        <button class="minus_btn${products.pd_num}">-</button>
                                                                     </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-4 col-12">
-                                                        <p><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###원"/></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- End Single List list -->
-                                            <script>
-                                                let quantity = $(".quantity_input").val();
-
-                                                $(".plus_btn").on("click", function (){
-                                                    $(".quantity_input").val(++quantity);
-                                                });
-
-                                                $(".minus_btn").on("click", function (){
-                                                    if(quantity > 1) {
-                                                        $(".quantity_input").val(--quantity);
-                                                    }
-                                                });
-                                            </script>
-
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="checkout-payment-form">
-                                                    <div class="single-form form-default">
-                                                        <label>카드 번호</label>
-                                                        <div class="form-input form">
-                                                            <input id="credit-input" type="text"
-                                                                   placeholder="0000-0000-0000-0000">
-                                                        </div>
-                                                    </div>
-                                                    <div class="payment-card-info">
-                                                        <div class="single-form form-default mm-yy">
-                                                            <label>만료일</label>
-                                                            <div class="expiration d-flex">
-                                                                <div class="form-input form">
-                                                                    <input type="text" placeholder="MM">
-                                                                </div>
-                                                                <div class="form-input form">
-                                                                    <input type="text" placeholder="YYYY">
-                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-4 col-md-4 col-12">
+                                                            <p><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###원"/></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <script>
+                                                        let quantity${products.pd_num} = $(".quantity_input${products.pd_num}").val();
+
+                                                        $(".plus_btn${products.pd_num}").on("click", function (){
+                                                            $(".quantity_input${products.pd_num}").val(++quantity${products.pd_num});
+                                                        });
+
+                                                        $(".minus_btn${products.pd_num}").on("click", function (){
+                                                            if(quantity${products.pd_num} > 1) {
+                                                                $(".quantity_input${products.pd_num}").val(--quantity${products.pd_num});
+                                                            }
+                                                        });
+                                                    </script>
+                                                </c:forEach>
+                                                <!-- End Single List list -->
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="checkout-payment-form">
                                                         <div class="single-form form-default">
-                                                            <label>CVC/CVV <span><i
-                                                                    class="mdi mdi-alert-circle"></i></span></label>
+                                                            <label>카드 번호</label>
                                                             <div class="form-input form">
-                                                                <input type="text" placeholder="***">
+                                                                <input id="credit-input" type="text"
+                                                                       placeholder="0000-0000-0000-0000">
+                                                            </div>
+                                                        </div>
+                                                        <div class="payment-card-info">
+                                                            <div class="single-form form-default mm-yy">
+                                                                <label>만료일</label>
+                                                                <div class="expiration d-flex">
+                                                                    <div class="form-input form">
+                                                                        <input type="text" placeholder="MM">
+                                                                    </div>
+                                                                    <div class="form-input form">
+                                                                        <input type="text" placeholder="YYYY">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="single-form form-default">
+                                                                <label>CVC/CVV <span><i
+                                                                        class="mdi mdi-alert-circle"></i></span></label>
+                                                                <div class="form-input form">
+                                                                    <input type="text" placeholder="***">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="single-form form-default">
-                                                    <label>포인트 사용</label>
-                                                    <div class="form-input form">
-                                                        <input type="text" placeholder="사용할 포인트를 입력해주세요">
-                                                        <p>현재 보유하신 포인트 : <fmt:formatNumber value="${member.mem_point}" pattern="###,###,###원"/></p>
+                                                <div class="col-md-6">
+                                                    <div class="single-form form-default">
+                                                        <label>포인트 사용</label>
+                                                        <div class="form-input form">
+                                                            <input type="text" placeholder="사용할 포인트를 입력해주세요">
+                                                            <p>현재 보유하신 포인트 : <fmt:formatNumber value="${member.mem_point}" pattern="###,###,###원"/></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                     <!--/ End Shopping Cart -->
                                 </div>
                             </section>

@@ -199,41 +199,10 @@
                                     <li class="last">결제 금액<span><fmt:formatNumber pattern="###,###,###원" value="${sum}"/></span></li>
                                 </ul>
                                 <div class="button">
-                                    <a class="order_btn">결제하기</a>
+                                    <a class="order_btn" href="orderList">결제하기</a>
                                     <a href="allProducts" class="btn btn-alt">계속 쇼핑하기</a>
                                 </div>
-                                <script>
-                                    $(".order_btn").on("click", function (){
-                                        let form_contents = '';
-                                        let orderNumber = 0;
 
-                                        window.alert(form_contents);
-                                        window.alert(orderNumber);
-
-                                        $(".cart_info_td").each(function(index, element) {
-
-                                            // 체크여부 확인
-                                            let pd_num = $(element).find(".individual_pd_num_input").val();
-                                            let order_stock = $(element).find(".hidden_cart_stock").val();
-
-                                            window.alert(pd_num);
-                                            window.alert(order_stock);
-
-                                            let pd_num_input = "<input name = 'orders[" + orderNumber + "].pd_num' type = 'hidden' value = '" + pd_num + "'>";
-                                            form_contents += pd_num_input;
-
-                                            let order_stock_input = "<input name = 'orders[" + orderNumber + "].order_stock' type = 'hidden' value = '" + order_stock + "'>";
-                                            form_contents += order_stock_input;
-
-                                            orderNumber += 1;
-
-                                        });
-                                        window.alert(form_contents);
-
-                                        $(".order_form").html(form_contents);
-                                        $(".order_form").submit();
-                                    });
-                                </script>
                             </div>
                         </div>
                     </div>

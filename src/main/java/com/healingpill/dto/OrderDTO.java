@@ -10,6 +10,7 @@ public class OrderDTO {
     private String mem_address1;
     private String mem_address2;
     private String mem_address3;
+    private String order_phone;
     private String orderState;
     private List<OrderDetailDTO> orders;
     private int deliveryCost;
@@ -66,6 +67,14 @@ public class OrderDTO {
 
     public void setMem_address3(String mem_address3) {
         this.mem_address3 = mem_address3;
+    }
+
+    public String getOrder_phone() {
+        return order_phone;
+    }
+
+    public void setOrder_phone(String order_phone) {
+        this.order_phone = order_phone;
     }
 
     public String getOrderState() {
