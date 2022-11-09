@@ -1,6 +1,5 @@
 package com.healingpill.controller;
 
-
 import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.ProductCategoryVO;
 import com.healingpill.dto.ProductVO;
@@ -8,8 +7,6 @@ import com.healingpill.dto.ProductViewVO;
 import com.healingpill.service.*;
 import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

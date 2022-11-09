@@ -37,7 +37,7 @@
                         <p class="card-description">
                             상품 차트
                         </p>
-                        <table class="table">
+                        <table class="table" id="productList">
                             <thead>
                             <tr>
                                 <th><h5><b>상품 번호</b></h5></th>
@@ -65,6 +65,10 @@
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     </div>
+
     <!-- content-wrapper ends -->
 <%@ include file="layout/footer.jsp" %>

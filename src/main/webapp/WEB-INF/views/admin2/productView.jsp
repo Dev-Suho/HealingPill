@@ -33,6 +33,8 @@ text-align: center;
                 </ol>
             </nav>
         </div>
+        <form role="form" method="post" autocomplete="off">
+            <input type="hidden" name="num" value="${products.pd_num}"/>
         <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
                 <div class="card">
@@ -44,8 +46,8 @@ text-align: center;
                         <form class="forms-sample">
                             <div id="sform">
                                 <div class="card-body">
-                                    <blockquote class="blockquote blockquote-success">
-                                        <i class="mdi mdi-brush icon-md text-warning"></i><h3><b>상품 이미지</b></h3>
+                                    <blockquote class="blockquote blockquote-warning">
+                                        <i class="mdi mdi-brush icon-md text-primary"></i><h3><b>상품 이미지</b></h3>
                                     </blockquote>
                                 </div>
                                 <ul class="list-arrow">
@@ -107,6 +109,18 @@ text-align: center;
                                         formObj.attr("action", "/admin2/product/delete");
                                         formObj.submit();
                                     });
+
+                                    /*$(".delete_btn").on("click", function() {
+
+                                        var deleteYN = confirm("삭제하시겠습니가?");
+                                        if (deleteYN == true) {
+
+                                            formObj.attr("action", "/admin2/product/delete");
+                                            formObj.attr("method", "post");
+                                            formObj.submit();
+
+                                        }
+                                    });*/
                                 </script>
                             </div>
                         </form>
@@ -114,5 +128,6 @@ text-align: center;
                 </div>
             </div>
     </div>
+        </form>
     <!-- content-wrapper ends -->
-    <%@ include file="layout/footer.jsp" %>
+<%@ include file="layout/footer.jsp" %>
