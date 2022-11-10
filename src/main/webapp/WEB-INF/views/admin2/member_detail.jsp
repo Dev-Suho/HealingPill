@@ -161,9 +161,10 @@
                                 </p>
                                 <div class="col-md-4 d-flex align-items-center">
                                     <div class="form-group">
-                                        <textarea class="form-control" id="exampleTextarea1" cols="500" rows="10" placeholder="내용을 입력하세요."></textarea>
+                                        <textarea class="form-control" id="exampleTextarea1" cols="50" rows="10" placeholder="내용을 입력하세요."></textarea>
                                     </div>
                                 </div>
+                                <button type="submit" class="btn btn-gradient-primary btn-rounded btn-fw" style="float:right">메모 저장</button>
                             </div>
                         </div>
                     </div>
