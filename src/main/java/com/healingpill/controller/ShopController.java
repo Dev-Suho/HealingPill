@@ -41,8 +41,6 @@ public class ShopController {
         ProductViewVO productViewVO = productListService.detailPageView(pd_num);
         model.addAttribute("products", productViewVO);
 
-
-
         return "allProductsDetail";
     }
 

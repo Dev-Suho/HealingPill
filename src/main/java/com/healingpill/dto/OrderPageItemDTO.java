@@ -7,6 +7,7 @@ public class OrderPageItemDTO {
     pd_num number,
     order_stock number not null ,
     order_price number not null ,
+    order_discount number not null ,
     savePoint number not null ,
     foreign key (order_id) references order_request(order_id),
     foreign key (pd_num) references PRODUCT(PD_NUM)

@@ -132,21 +132,4 @@ public class HomeController {
         return "jusoPopup";
     }
 
-
-    // checkout 페이지 이동
-    @RequestMapping(value = "/checkout", method = RequestMethod.GET)
-    public String checkoutGET() {
-        logger.debug("checkout 페이지 이동");
-
-        return "checkout";
-    }
-
-    // checkoutComplete 페이지 이동
-    @RequestMapping(value = "/checkoutComplete", method = RequestMethod.GET)
-    public String checkoutCompleteGET() {
-        logger.debug("checkoutComplete 페이지 이동");
-
-        return "checkoutComplete";
-    }
-
 }
