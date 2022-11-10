@@ -23,7 +23,7 @@
 <!-- End Breadcrumbs -->
 
 <form role="form" method="post" action="orderRequest" autocomplete="off">
-    <input type="hidden" name="mem_id" value="${member.mem_username}">
+    <input type="hidden" name="mem_id" value="${member.mem_id}">
     <input type="hidden" name="deliveryCost" value=0>
 <!--====== Checkout Form Steps Part Start ======-->
 <section class="checkout-wrapper section">

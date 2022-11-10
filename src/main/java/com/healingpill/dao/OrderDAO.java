@@ -13,4 +13,7 @@ public interface OrderDAO {
 
     // 주문수량 체크
     public void orderCount(OrderDetailDTO orderDetailDTO) throws Exception;
+
+    // 포인트 적립
+    public void savePoint(OrderDetailDTO orderDetailDTO) throws Exception;
 }

@@ -104,9 +104,15 @@ public class OrderController {
         int totalPrice = orderDetailDTO.getTotalPrice();
         int savePoint = (int)(totalPrice * 0.05);
 
+        
         orderDetailDTO.setSavePoint(savePoint);
         orderDetailDTO.setOrder_id(order_id);
+        orderDetailDTO.setMem_id(mem_id);
         orderService.orderInfo_Details(orderDetailDTO);
+
+
+        // 포인트 적립
+        orderService.savePoint(orderDetailDTO);
 
         //orderService.orderCount(orderDetailDTO);
 

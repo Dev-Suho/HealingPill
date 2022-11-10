@@ -25,4 +25,9 @@ public class OrderDAOImpl implements OrderDAO{
     public void orderCount(OrderDetailDTO orderDetailDTO) throws Exception {
         sqlSession.update(NAMESPACE + "orderCount", orderDetailDTO);
     }
+
+    @Override
+    public void savePoint(OrderDetailDTO orderDetailDTO) throws Exception {
+        sqlSession.update(NAMESPACE + "savePoint", orderDetailDTO);
+    }
 }

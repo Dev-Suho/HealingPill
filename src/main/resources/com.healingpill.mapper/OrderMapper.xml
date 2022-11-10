@@ -35,4 +35,9 @@
         update PRODUCT set pd_order_quantity = pd_order_quantity + ${order_stock, jdbcType = NUMERIC}
                        where pd_num = ${pd_num, jdbcType = NUMERIC}
     </update>
+    
+    <update id="savePoint" parameterType="com.healingpill.dto.OrderDetailDTO">
+        update MEMBER set mem_point = mem_point + ${savePoint}
+                where mem_id = '${mem_id}'
+    </update>
 </mapper>

@@ -7,6 +7,8 @@ public class OrderDetailDTO {
     private int order_stock;
     private int totalPrice;
     private int savePoint;
+    // 테이블에 없는 값
+    private String mem_id;
 
     public int getOrderItem_id() {
         return orderItem_id;
@@ -54,5 +56,26 @@ public class OrderDetailDTO {
 
     public void setSavePoint(int savePoint) {
         this.savePoint = savePoint;
+    }
+
+    public String getMem_id() {
+        return mem_id;
+    }
+
+    public void setMem_id(String mem_id) {
+        this.mem_id = mem_id;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderDetailDTO{" +
+                "orderItem_id=" + orderItem_id +
+                ", order_id='" + order_id + '\'' +
+                ", pd_num=" + pd_num +
+                ", order_stock=" + order_stock +
+                ", totalPrice=" + totalPrice +
+                ", savePoint=" + savePoint +
+                ", mem_id='" + mem_id + '\'' +
+                '}';
     }
 }
