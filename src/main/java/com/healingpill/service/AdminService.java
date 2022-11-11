@@ -1,11 +1,11 @@
 package com.healingpill.service;
 
 import com.healingpill.dto.AdminDTO;
-import org.springframework.stereotype.Service;
+import com.healingpill.dto.OrderDTO;
 
 import java.util.List;
 
-@Service
+
 public interface AdminService {
 
     // 관리자 : index.jsp 회원 리스트 불러오기
@@ -13,5 +13,8 @@ public interface AdminService {
     
     // 회원 상세정보 불러오기
     public AdminDTO member_detail(int mem_num) throws Exception;
+
+    //order.jsp 주문 리스트 불러오기
+    public List<OrderDTO> orderList() throws Exception;
 }
 

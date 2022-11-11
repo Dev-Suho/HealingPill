@@ -1,9 +1,6 @@
 package com.healingpill.controller;
 
-import com.healingpill.dto.AdminDTO;
-import com.healingpill.dto.ProductCategoryVO;
-import com.healingpill.dto.ProductVO;
-import com.healingpill.dto.ProductViewVO;
+import com.healingpill.dto.*;
 import com.healingpill.service.*;
 import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
@@ -64,9 +61,21 @@ public class AdminController2 {
         model.addAttribute("member_detail",  adminDTO);
     }
 
-    // 3. 주문 조회
-    @RequestMapping(value = "/admin2/order")
-    public String admin2order() { return "/admin2/order"; }
+
+    //3. order.jsp : 주문 리스트 불러오기
+    @RequestMapping (value = "admin2/order", method = RequestMethod.GET)
+    public String orderList(Model model) throws Exception {
+
+        List<OrderDTO> orderList = adminService.orderList();
+        model.addAttribute("orderList", orderList) ;
+        System.out.println("나와라");
+        return "/admin2/order";
+    }
+
+
+    //  3-1. 관리자 주문 상세 페이지 창
+    @RequestMapping(value = "/order_detail")
+    public String adminorder_detail() { return "/admin2/order_detail"; }
 
     // 4. 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)

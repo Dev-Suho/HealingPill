@@ -2,6 +2,7 @@ package com.healingpill.controller;
 
 
 import com.healingpill.dto.AdminDTO;
+import com.healingpill.dto.OrderDTO;
 import com.healingpill.service.AdminService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,6 +40,18 @@ public class AdminController {
 
         model.addAttribute("member_detail",  adminDTO);
     }
+
+    //order.jsp : 주문 리스트 불러오기
+    @RequestMapping (value = "/admin2/order", method = RequestMethod.GET)
+    public String orderList(Model model) throws Exception {
+
+        List<OrderDTO> orderList = adminService.orderList();
+        model.addAttribute("orderList", orderList) ;
+
+        return "order2";
+    }
+
+
 
 
 
