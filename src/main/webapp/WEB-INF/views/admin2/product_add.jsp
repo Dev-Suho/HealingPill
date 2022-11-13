@@ -44,13 +44,13 @@
                                     <div class="select_img"><img src="" /></div><br><br>
                                     <input type="file" id="pd_mainImage" name="file" class="file-upload-default">
                                     <button class="file-upload-browse btn btn-gradient-danger btn-rounded btn-fw" type="button"><i class="mdi mdi-upload btn-icon-prepend"></i>Upload</button><br><br>
-                                    <input type="text" class="form-control file-upload-info" disabled placeholder="선택된 파일 없음">
+                                    <input type="text" class="form-control file-upload-info" style="text-align:center"; disabled placeholder="선택된 파일 없음">
                                     <script>
                                         $("#pd_mainImage").change(function (){
                                             if(this.files && this.files[0]) {
                                                 var reader = new FileReader;
                                                 reader.onload = function(data) {
-                                                    $(".select_img img").attr("src", data.target.result).width(500);
+                                                    $(".select_img img").attr("src", data.target.result).width(400);
                                                 }
                                                 reader.readAsDataURL(this.files[0]);
                                             }
@@ -93,8 +93,8 @@
                             </div>
                             <div id="sform2">
                                 <br><br>
-                                <button type="submit" class="btn btn-gradient-primary mr-2 modBtn" id = "register_Btn">추가</button>
-                                <button type="reset" class="btn btn-light">취소</button>
+                                <button type="submit" class="btn btn-gradient-primary mr-2 modBtn" id = "register_Btn">상품 추가</button>
+                                <button type="reset" class="btn btn-light">입력 취소</button>
                             </div>
                         </div>
                     </div>

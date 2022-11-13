@@ -11,14 +11,11 @@
     <main>
         <br>
         <form role="form" method="post" autocomplete="off">
-
             <input type="hidden" name="num" value="${products.pd_num}"/>
             <div class="container">
                 <h3>상품 조회</h3><br/>
                 <div class="row">
-
                     <div class="col-lg-6">
-
                         <!-- 상품 이미지 -->
                         <div class="inputArea">
                             <label><h3>상품 이미지</h3></label>
@@ -76,12 +73,10 @@
                             </script>
                         </div>
                     </div>
-
                 </div>
                 <hr><br/>
         </form>
     </main>
 </div>
-
 </body>
 </html>
