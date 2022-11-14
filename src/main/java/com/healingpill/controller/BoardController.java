@@ -105,6 +105,6 @@ public class BoardController {
     public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
         service.delete(mg_no);
 
-        return "/admin/magazine_list";
+        return "redirect:/admin/magazine_list";
     }
 }
