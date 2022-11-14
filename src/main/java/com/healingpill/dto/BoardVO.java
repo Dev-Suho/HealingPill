@@ -5,6 +5,11 @@ import java.util.Date;
 public class BoardVO {
 
     private int mg_no;
+
+    public BoardVO() {
+
+    }
+
     private String mg_image;
 
     public String getMg_image() {

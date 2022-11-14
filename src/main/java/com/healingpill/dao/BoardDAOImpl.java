@@ -18,6 +18,14 @@ public class BoardDAOImpl implements BoardDAO {
         sqlSession.insert("BoardMapper.insert", boardVO);
     }
 
+    //게시글 삭제
+    @Override
+    public void delete(int mg_no) throws Exception
+    {
+        //sqlSession.delete("BoardMapper.delete", mg_no);
+        sqlSession.delete(NAMESPACE + "delete", mg_no);
+    }
+
     //게시글 목록
     @Override
     public List<BoardVO> magazineView() throws Exception {

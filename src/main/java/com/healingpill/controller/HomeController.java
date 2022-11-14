@@ -61,8 +61,6 @@ public class HomeController {
         return "/admin/cm_magazine";
     }
 
-
-
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
         return "MainPage";

@@ -20,4 +20,8 @@
     <select id="read" parameterType="int" resultType="com.healingpill.dto.BoardVO">
         SELECT MG_NO,MG_IMAGE,MG_TITLE,MG_DATETIME,MG_CONTENT FROM MAGAZINE WHERE MG_NO = #{mg_no}
     </select>
+    <!-- 게시글 삭제 -->
+    <delete id="delete" parameterType="int">
+       DELETE  MAGAZINE WHERE MG_NO = #{mg_no, jdbcType = NUMERIC}
+    </delete>
 </mapper>
