@@ -101,27 +101,10 @@ public class BoardController {
     }
 
     //게시글 삭제
-    @WebServlet("/magazine/delete")
-    public class delete extends HttpServlet {
+    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
+    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
+        service.delete(mg_no);
 
-        BoardService service = BoardServiceImpl.getInstance();
-
-        @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            doPost(req,resp);
-        }
-        @Override
-        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            int mg_no = Integer.parseInt(req.getParameter("mg_no"));
-
-            try {
-                service.delete(mg_no);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-
-            System.out.println(mg_no);
-
-        }
+        return "/admin/magazine_list";
     }
 }
