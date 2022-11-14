@@ -12,25 +12,20 @@
                 #{usePoint, jdbcType = NUMERIC}, #{order_phone, jdbcType = VARCHAR})
     </insert>
     
-    <!-- 주문 상세 정보 -->
+    <!-- 카트 주문 상세 정보 -->
     <insert id="orderRequestDetails">
         insert into ORDER_ITEM
         select order_product_seq.nextval, #{order_id, jdbcType = VARCHAR}, pd_num, cart_stock, #{totalPrice, jdbcType = NUMERIC}, #{savePoint, jdbcType = NUMERIC}
         from CART
     </insert>
 
-    <!-- 주문 상품 정보 -->
-    <select id="getProductsInfo" resultType="com.healingpill.dto.OrderPageItemDTO">
-        select PD_NUM, PD_NAME, PD_DISCOUNT
-        from PRODUCT where PD_NUM = #{pd_num, jdbcType = NUMERIC}
-    </select>
+    <!-- 상품 주문 상세 정보 -->
+    <insert id="orderProduct" parameterType="com.healingpill.dto.OrderDetailDTO">
+        insert into ORDER_ITEM
+        VALUES (order_product_seq.nextval, #{order_id, jdbcType = VARCHAR}, #{pd_num, jdbcType = NUMERIC}, #{order_stock, jdbcType = NUMERIC},
+               #{totalPrice, jdbcType = NUMERIC}, #{savePoint, jdbcType = NUMERIC})
+    </insert>
 
-    <select id="getMemberInfo" resultType="com.healingpill.dto.MemberDTO">
-        select MEM_ID, MEM_USERNAME, MEM_EMAIL, MEM_ADDRESS, MEM_POINT
-        from MEMBER
-        where mem_id = #{mem_id, jdbcType = VARCHAR}
-    </select>
-    
     <update id="orderCount" parameterType="com.healingpill.dto.ProductVO">
         update PRODUCT set pd_order_quantity = pd_order_quantity + ${order_stock, jdbcType = NUMERIC}
                        where pd_num = ${pd_num, jdbcType = NUMERIC}

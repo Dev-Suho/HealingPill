@@ -30,4 +30,9 @@ public class OrderDAOImpl implements OrderDAO{
     public void savePoint(OrderDetailDTO orderDetailDTO) throws Exception {
         sqlSession.update(NAMESPACE + "savePoint", orderDetailDTO);
     }
+
+    @Override
+    public void orderProduct(OrderDetailDTO orderDetailDTO) throws Exception {
+        sqlSession.insert(NAMESPACE + "orderProduct", orderDetailDTO);
+    }
 }

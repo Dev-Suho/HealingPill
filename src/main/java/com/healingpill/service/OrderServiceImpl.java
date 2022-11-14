@@ -34,4 +34,9 @@ public class OrderServiceImpl implements OrderService {
     public void savePoint(OrderDetailDTO orderDetailDTO) throws Exception {
         orderDAO.savePoint(orderDetailDTO);
     }
+
+    @Override
+    public void orderProduct(OrderDetailDTO orderDetailDTO) throws Exception {
+        orderDAO.orderProduct(orderDetailDTO);
+    }
 }

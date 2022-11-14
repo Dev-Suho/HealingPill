@@ -19,4 +19,6 @@ public interface OrderService {
     
     // 포인트 적립
     public void savePoint(OrderDetailDTO orderDetailDTO) throws Exception;
+
+    public void orderProduct(OrderDetailDTO orderDetailDTO) throws Exception;
 }

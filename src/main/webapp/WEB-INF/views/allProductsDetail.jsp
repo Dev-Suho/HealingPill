@@ -53,7 +53,7 @@
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group quantity">
                                     <label for="color">구매 수량</label>
-                                    <input type="text" class="quantity_input" value="1">
+                                    <input type="text" class="quantity_input" name="order_stock" value="1">
                                     <span>
                                         <button class="plus_btn">+</button>
                                         <button class="minus_btn">-</button>
@@ -125,41 +125,6 @@
                         });
                     });
                 </script>
-                <script>
-                    /*
-                    $(".buy_btn").click(function() {
-
-                        const pd_num = $(".pd_num").val();
-                        const cart_stock = $(".quantity_input").val();
-
-                        const data = {
-                            pd_num : pd_num,
-                            cart_stock : cart_stock
-                        };
-
-
-                        $.ajax({
-                            url : '/confirm',
-                            type : 'post',
-                            success : function(result){
-                                if(result == 1){
-                                    alert("로그인이 필요합니다.");
-                                    location.href = 'login';
-                                } else {
-                                    location.href = 'orderPage?itemId=${products.pd_num}';
-                                }
-                            }
-                        });
-                    });
-
-                    $(".buy_btn").on("click", function (){
-                        let order_stock = $(".quantity_input").val();
-                        $(".order_form").find("input[name = 'orders[0].order_stock']").val(order_stock);
-                        $(".order_form").submit();
-                    });
-                     */
-                </script>
-
             </div>
         </div>
         <div class="product-details-info">
