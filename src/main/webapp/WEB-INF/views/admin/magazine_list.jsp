@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: FROG
-  Date: 2022-11-10
-  Time: 오후 12:24
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp"%>
@@ -29,22 +22,18 @@
                             <tr>
                                 <th>번호</th>
                                 <th>제목</th>
-                                <th>내용</th>
+                                <th>소제목</th>
                                 <th>등록일</th>
-                                <th>관리</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach items="${magazine}" var="magazine">
-                            <form role="form" method="post" autocomplete="off">
+                            <c:forEach items="${list}" var="list">
                                 <tr>
-                                    <td>${magazine.mg_no}</td>
-                                    <td>${magazine.mg_title}</td>
-                                    <td>${magazine.mg_content}</td>
-                                    <td>${magazine.mg_datetime}</td>
-                                    <td><a href="/magazine/delete?mg_no=${magazine.mg_no}">Info</a></td>
+                                    <td>번호</td>
+                                    <td>제목란</a> </td>
+                                    <td>소제목란</td>
+                                    <td>등록일</td>
                                 </tr>
-                            </form>
                             </c:forEach>
                             </tbody>
                         </table>

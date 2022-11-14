@@ -5,7 +5,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<form action="order" method="get" class="order_form">
 <tbody>
     <c:forEach items="${cartList}" var="cartList">
         <tr>
@@ -197,39 +196,10 @@
                                     <li class="last">결제 금액<span><fmt:formatNumber pattern="###,###,###원" value="${sum}"/></span></li>
                                 </ul>
                                 <div class="button">
-                                    <a href="order" class="order_btn">결제하기</a>
+                                    <a class="order_btn" href="orderList">결제하기</a>
                                     <a href="allProducts" class="btn btn-alt">계속 쇼핑하기</a>
                                 </div>
-                                <script>
-                                    $(".order_btn").on("click", function (){
-                                        let form_contents = '';
-                                        let orderNumber = 0;
 
-                                        window.alert(form_contents);
-                                        window.alert(orderNumber);
-
-                                        $(".cart_info_td").each(function(index, item){
-                                            // 체크여부 확인
-                                                let pd_num = $(item).find(".individual_pd_num_input").val();
-                                                let order_stock = $(item).find(".hidden_cart_stock").val();
-
-                                                window.alert(pd_num);
-                                                window.alert(order_stock);
-
-                                                let pd_num_input = "<input name = 'orders[" + orderNumber + "].pd_num' type = 'hidden' value = '" + pd_num + "'>";
-                                                form_contents += pd_num_input;
-
-                                                let order_stock_input = "<input name = 'orders[" + orderNumber + "].order_stock' type = 'hidden' value = '" + order_stock + "'>";
-                                                form_contents += order_stock_input;
-
-                                                orderNumber += 1;
-                                        });
-                                        window.alert(form_contents);
-
-                                        $(".order_form").html(form_contents);
-                                        $(".order_form").submit();
-                                    });
-                                </script>
                             </div>
                         </div>
                     </div>
@@ -239,6 +209,5 @@
         </div>
     </div>
 </div>
-</form>
 <!--/ End Shopping Cart -->
 <%@ include file="layout/footer.jsp" %>

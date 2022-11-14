@@ -43,7 +43,7 @@
                         <c:forEach items="${memberList}" var="memberList" >
                             <tr>
                                 <td>${memberList.mem_id}</td>
-                                <td><a href="/admin/member_detail?mem=${memberList.mem_num}">${memberList.mem_username}</a></td>
+                                <td onclick = "window.open('/admin/member_detail?mem=${memberList.mem_num}','member_detail','width=700, height=750');">${memberList.mem_username}</td>
                                 <td>${memberList.mem_birth_year}.${memberList.mem_birth_month}.${memberList.mem_birth_day}</td>
                                 <td>${memberList.mem_phone}</td>
                                 <td>-</td>

@@ -56,6 +56,11 @@
                             <div><span class="category">${products.ctg_code}</span></div>
                         </div>
                         <br/>
+                        <div class="form-group">
+                            <label><h3>납품처관리</h3></label>
+                            <div><span class="category">납품처 어딘지</span></div>
+                        </div>
+                        <br/>
                         <div style="float:left">
                             <button type="button" style="border-color:#e6e6fa; background-color:#e6e6fa; color:black;" class="btn btn-success modBtn" id = "modify_btn">수정</button>
                             <button type="button" style="border-color:black; background-color:black; color:white;" class="btn btn-secondary" id = "delete_btn">삭제</button></div>

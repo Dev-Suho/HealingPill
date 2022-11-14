@@ -50,4 +50,14 @@
         select count(*) from MEMBER where MEM_PHONE = #{mem_phone, jdbcType = VARCHAR}
     </select>
 
+    <!-- mypage 회원 수정 mapper -->
+    <update id="MemberModify">
+        update MEMBER set MEM_PASSWORD = #{mem_password, jdbcType = VARCHAR} ,
+                          MEM_ADDRESS = #{mem_address, jdbcType = VARCHAR } ,
+                          MEM_PHONE = #{mem_phone, jdbcType = VARCHAR},
+                          MEM_EMAIL = #{mem_email, jdbcType = VARCHAR}
+        where MEM_ID = ${mem_id}
+
+    </update>
+
 </mapper>

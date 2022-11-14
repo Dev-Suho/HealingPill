@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -21,7 +23,6 @@
 <!-- End Breadcrumbs -->
 
 <!--====== Checkout Form Steps Part Start ======-->
-<form action="orderRequest" method="post">
 <section class="checkout-wrapper section">
     <div class="container">
         <div class="row justify-content-center">
@@ -39,7 +40,7 @@
                                             <label>이름</label>
                                             <div class="row">
                                                 <div class="col-md-6 form-input form">
-                                                    <input type="text" placeholder="이름">
+                                                    <input type="text" placeholder="이름" name="order_name" value="${member.mem_username}">
                                                 </div>
                                             </div>
                                         </div>
@@ -48,7 +49,7 @@
                                         <div class="single-form form-default">
                                             <label>전화번호</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="전화번호">
+                                                <input type="text" placeholder="전화번호" name="order_phone" value="${member.mem_phone}">
                                             </div>
                                         </div>
                                     </div>
@@ -56,7 +57,7 @@
                                         <div class="single-form form-default">
                                             <label>이메일</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="이메일">
+                                                <input type="text" placeholder="이메일" name="order_email" value="${member.mem_email}" >
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +65,7 @@
                                         <div class="single-form form-default">
                                             <label>우편번호</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="우편번호">
+                                                <input type="text" name="mem_address1" placeholder="우편번호" >
                                             </div>
                                         </div>
                                     </div>
@@ -72,7 +73,7 @@
                                         <div class="single-form form-default">
                                             <label>주소</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="주소">
+                                                <input type="text" name="mem_address2" placeholder="주소">
                                             </div>
                                         </div>
                                     </div>
@@ -80,15 +81,8 @@
                                         <div class="single-form form-default">
                                             <label>상세주소</label>
                                             <div class="form-input form">
-                                                <input type="text" placeholder="상세주소">
+                                                <input type="text" name="mem_address3" placeholder="상세주소">
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="single-checkbox checkbox-style-3">
-                                            <input type="checkbox" id="checkbox-3">
-                                            <label for="checkbox-3"><span></span></label>
-                                            <p>주문자 정보와 배송 정보가 일치합니다.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -103,126 +97,118 @@
                         </li>
                         <li>
                             <h6 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                aria-expanded="false" aria-controls="collapseFour">배송 정보</h6>
+                                aria-expanded="false" aria-controls="collapseFour">상품 정보</h6>
                             <section class="checkout-steps-form-content collapse" id="collapseFour"
                                      aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="single-form form-default">
-                                            <label>이름</label>
-                                            <div class="row">
-                                                <div class="col-md-6 form-input form">
-                                                    <input type="text" placeholder="이름">
+                                    <!-- Shopping Cart -->
+                                    <div class="container">
+                                        <div class="cart-list-head">
+                                            <!-- Cart List Title -->
+                                            <div class="cart-list-title">
+                                                <div class="row">
+                                                    <div class="col-lg-1 col-md-1 col-12">
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-3 col-12">
+                                                        <p>상품명</p>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-2 col-12">
+                                                        <p>수량</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-2 col-12">
+                                                        <p>상품 금액</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-form form-default">
-                                            <label>전화번호</label>
-                                            <div class="form-input form">
-                                                <input type="text" placeholder="전화번호">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="single-form form-default">
-                                            <label>이메일</label>
-                                            <div class="form-input form">
-                                                <input type="text" placeholder="이메일">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="single-form form-default">
-                                            <label>주소</label>
-                                            <div class="form-input form">
-                                                <input type="text" placeholder="주소">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="single-form form-default">
-                                            <label>배송 메모</label>
-                                            <div class="select-items">
-                                                <select class="form-control">
-                                                    <option value="0">배송 메모를 선택해주세요</option>
-                                                    <option value="1">배송 전에 미리 연락 바랍니다.</option>
-                                                    <option value="2">집 앞에 놔주세요.</option>
-                                                    <option value="3">경비실에 맡겨주세요.</option>
-                                                    <option value="4">부재 시 핸드폰으로 연락주세요.</option>
-                                                    <option value="5">부재 시 집 앞에 놔주세요.</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="checkout-payment-option">
-                                            <h6 class="heading-6 font-weight-400 payment-title">결제 수단</h6>
-                                            <div class="payment-option-wrapper">
+                                            <!-- End Cart List Title -->
 
-                                                <div class="single-payment-option">
-                                                    <input type="radio" name="shipping" id="shipping-4">
-                                                    <label for="shipping-4">
-                                                        <img src="resources/shops/images/payment/card.png" alt="card">
-                                                        <p>카드</p>
-                                                        <p>결제</p>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="steps-form-btn button">
-                                            <button class="btn" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapseThree" aria-expanded="false"
-                                                    aria-controls="collapseThree">이전</button>
-
-                                            <button class="btn btn-alt" data-bs-toggle="collapse"
-                                                        data-bs-target="#collapsefive" aria-expanded="false"
-                                                        aria-controls="collapsefive">다음</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </li>
-                        <li>
-                            <h6 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapsefive"
-                                aria-expanded="false" aria-controls="collapsefive">결제 정보</h6>
-                            <section class="checkout-steps-form-content collapse" id="collapsefive"
-                                     aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="checkout-payment-form">
-                                            <div class="single-form form-default">
-                                                <label>카드 번호</label>
-                                                <div class="form-input form">
-                                                    <input id="credit-input" type="text"
-                                                           placeholder="0000-0000-0000-0000">
-                                                </div>
-                                            </div>
-                                            <div class="payment-card-info">
-                                                <div class="single-form form-default mm-yy">
-                                                    <label>만료일</label>
-                                                    <div class="expiration d-flex">
-                                                        <div class="form-input form">
-                                                            <input type="text" placeholder="MM">
+                                            <!-- Cart Single List list -->
+                                            <div class="cart-single-list">
+                                                <div class="row align-items-center">
+                                                    <div class="col-lg-1 col-md-1 col-12">
+                                                        <a href="orderComplete"><img src="${products.pd_subImage}"></a>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-3 col-12">
+                                                        <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
+                                                            ${products.pd_name}</a></h5>
+                                                        <p class="product-des">
+                                                            <span>${products.ctg_Name}</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-12">
+                                                        <div class="count-input">
+                                                            <input type="text" class="quantity_input" value="1">
+                                                            <span>
+                                                                        <button class="plus_btn">+</button>
+                                                                        <button class="minus_btn">-</button>
+                                                                    </span>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-12">
+                                                        <p><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###원"/></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- End Single List list -->
+                                            <script>
+                                                let quantity = $(".quantity_input").val();
+
+                                                $(".plus_btn").on("click", function (){
+                                                    $(".quantity_input").val(++quantity);
+                                                });
+
+                                                $(".minus_btn").on("click", function (){
+                                                    if(quantity > 1) {
+                                                        $(".quantity_input").val(--quantity);
+                                                    }
+                                                });
+                                            </script>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="checkout-payment-form">
+                                                    <div class="single-form form-default">
+                                                        <label>카드 번호</label>
                                                         <div class="form-input form">
-                                                            <input type="text" placeholder="YYYY">
+                                                            <input id="credit-input" type="text"
+                                                                   placeholder="0000-0000-0000-0000">
+                                                        </div>
+                                                    </div>
+                                                    <div class="payment-card-info">
+                                                        <div class="single-form form-default mm-yy">
+                                                            <label>만료일</label>
+                                                            <div class="expiration d-flex">
+                                                                <div class="form-input form">
+                                                                    <input type="text" placeholder="MM">
+                                                                </div>
+                                                                <div class="form-input form">
+                                                                    <input type="text" placeholder="YYYY">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="single-form form-default">
+                                                            <label>CVC/CVV <span><i
+                                                                    class="mdi mdi-alert-circle"></i></span></label>
+                                                            <div class="form-input form">
+                                                                <input type="text" placeholder="***">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="col-md-6">
                                                 <div class="single-form form-default">
-                                                    <label>CVC/CVV <span><i
-                                                            class="mdi mdi-alert-circle"></i></span></label>
+                                                    <label>포인트 사용</label>
                                                     <div class="form-input form">
-                                                        <input type="text" placeholder="***">
+                                                        <input type="text" placeholder="사용할 포인트를 입력해주세요">
+                                                        <p>현재 보유하신 포인트 : <fmt:formatNumber value="${member.mem_point}" pattern="###,###,###원"/></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--/ End Shopping Cart -->
                                 </div>
                             </section>
                         </li>
@@ -256,7 +242,7 @@
                             </div>
                         </div>
                         <div class="price-table-btn button">
-                            <button type="submit" class="btn btn-alt">결제하기</button>
+                            <a href="/checkoutComplete" class="btn btn-alt">결제하기</a>
                         </div>
                     </div>
                 </div>
@@ -264,7 +250,20 @@
         </div>
     </div>
 </section>
-</form>
 <!--====== Checkout Form Steps Part Ends ======-->
+
+<script language="javascript">
+    function goPopup() {
+        // 주소검색을 수행할 팝업 페이지를 호출합니다.
+        // 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
+        var pop = window.open("/juso","pop","width=570,height=420, scrollbars=yes, resizable=yes");
+    }
+
+    function jusoCallBack(roadFullAddr) {
+        var roadAddress = document.querySelector("#roadAddress");
+        roadAddress.value = roadFullAddr;
+
+    }
+</script>
 
 <%@ include file="layout/footer.jsp" %>

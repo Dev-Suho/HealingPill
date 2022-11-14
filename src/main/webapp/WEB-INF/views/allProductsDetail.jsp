@@ -22,10 +22,10 @@
     </div>
 </div>
 <!-- End Breadcrumbs -->
-
-<form action="order" method="get" class="order_form">
+<form action="/order/${member.mem_id}" method="get" class="order_form">
     <input type="hidden" name="orders[0].pd_num" value="${products.pd_num}"/>
     <input type="hidden" name="orders[0].order_stock" value=""/>
+</form>
 <!-- Start Item Details -->
 <section class="item-details section">
     <div class="container">
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="wish-button">
-                                        <button class="buy_btn" onclick="location.href='/order'"><i class="bi bi-cash-coin"></i> 구매하기</button>
+                                        <button class="buy_btn"><a href="orderPage?itemId=${products.pd_num}"><i class="bi bi-cash-coin"></i>구매하기</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -78,6 +78,7 @@
                     </div>
                 </div>
                 <script>
+                    // 수량 변경
                     let quantity = $(".quantity_input").val();
 
                     $(".plus_btn").on("click", function (){
@@ -125,12 +126,40 @@
                     });
                 </script>
                 <script>
+                    /*
+                    $(".buy_btn").click(function() {
+
+                        const pd_num = $(".pd_num").val();
+                        const cart_stock = $(".quantity_input").val();
+
+                        const data = {
+                            pd_num : pd_num,
+                            cart_stock : cart_stock
+                        };
+
+
+                        $.ajax({
+                            url : '/confirm',
+                            type : 'post',
+                            success : function(result){
+                                if(result == 1){
+                                    alert("로그인이 필요합니다.");
+                                    location.href = 'login';
+                                } else {
+                                    location.href = 'orderPage?itemId=${products.pd_num}';
+                                }
+                            }
+                        });
+                    });
+
                     $(".buy_btn").on("click", function (){
                         let order_stock = $(".quantity_input").val();
                         $(".order_form").find("input[name = 'orders[0].order_stock']").val(order_stock);
-                        $(".order_form").submit;
+                        $(".order_form").submit();
                     });
+                     */
                 </script>
+
             </div>
         </div>
         <div class="product-details-info">
@@ -298,7 +327,6 @@
         </div>
     </div>
 </section>
-</form>
 <!-- End Item Details -->
 
 <%@ include file="layout/footer.jsp" %>
