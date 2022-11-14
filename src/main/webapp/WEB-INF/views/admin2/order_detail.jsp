@@ -49,15 +49,15 @@
                             <table class="table">
                                 <tr>
                                     <th>주문번호</th>
-                                    <td class="data_td">${member_detail.mem_id}</td>
+                                    <td class="data_td">${orderDetail.order_id}</td>
                                 </tr>
                                 <tr>
                                     <th>주문일</th>
-                                    <td class="data_td">${member_detail.mem_username}</td>
+                                    <td class="data_td">${orderDetail.order_register_datetime}</td>
                                 </tr>
                                 <tr>
                                     <th>주문상태</th>
-                                    <td class="data_td">${member_detail.mem_email}</td>
+                                    <td class="data_td">${orderDetail.order_State}</td>
                                 </tr>
                             </table>
                         </div>
@@ -70,7 +70,6 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th>상품 이미지</th>
                                     <th>상품명</th>
                                     <th>수량</th>
                                     <th>판매가</th>
@@ -78,10 +77,9 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>상품 이미지</td>
-                                    <td>오메가</td>
-                                    <td>1</td>
-                                    <td>23,000</td>
+                                    <td class="data_td">${orderDetail2.pd_num}</td>
+                                    <td class="data_td">${orderDetail2.order_stock}</td>
+                                    <td class="data_td">${orderDetail2.totalPrice}</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -99,7 +97,7 @@
                                 <div class="d-flex flex-row align-items-center">
                                     <i class="mdi mdi-coin icon-lg text-warning"></i>
                                     <p class="mb-0 ml-1">
-                                    <h3>100,000</h3>
+                                    <h3>${orderDetail2.totalPrice}</h3>
                                     </p>
                                 </div>
                             </div>

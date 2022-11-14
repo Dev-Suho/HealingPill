@@ -2,7 +2,9 @@ package com.healingpill.dao;
 
 import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.OrderDTO;
+import com.healingpill.dto.OrderDetailDTO;
 import com.sun.org.apache.xpath.internal.operations.Or;
+import org.apache.commons.collections.functors.ExceptionPredicate;
 
 import java.util.List;
 
@@ -18,4 +20,12 @@ public interface AdminDAO {
     
     //order.jsp 주문 리스트 불러오기
     public List<OrderDTO> orderList() throws Exception;
+
+    // ORDER에 ORDER_ID 값으로 주문 상세정보 ( 회원 )
+    public OrderDTO orderDetail(String order_id) throws Exception;
+
+    // ORDER에 ORDER_ID 값으로 주문 상세정보 ( 제품 )
+    public OrderDetailDTO orderDetail2(String order_id) throws Exception;
+
+
 }

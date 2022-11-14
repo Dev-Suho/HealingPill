@@ -68,15 +68,30 @@ public class AdminController2 {
 
         List<OrderDTO> orderList = adminService.orderList();
         model.addAttribute("orderList", orderList) ;
-        System.out.println("나와라");
+
         return "/admin2/order";
     }
 
-
     //  3-1. 관리자 주문 상세 페이지 창
-    @RequestMapping(value = "/order_detail")
-    public String adminorder_detail() { return "/admin2/order_detail"; }
 
+    @RequestMapping(value = { "admin2/order_detail","admin2/order_detail2"}, method = RequestMethod.GET)
+    public void orderDetail(@RequestParam("order") String order_id, Model model) throws Exception {
+
+        OrderDTO orderDTO = adminService.orderDetail(order_id);
+        OrderDetailDTO orderDetailDTO = adminService.orderDetail2(order_id);
+        model.addAttribute("orderDetail", orderDTO);
+        model.addAttribute("orderDetail2", orderDetailDTO);
+
+    }
+    /*
+    @RequestMapping(value = "admin2/order_detail2", method = RequestMethod.GET)
+    public void orderDetail2(@RequestParam("order") String order_id, Model model) throws Exception {
+
+        OrderDetailDTO orderDetailDTO = adminService.orderDetail2(order_id);
+        model.addAttribute("orderDetail2", orderDetailDTO);
+
+    }
+    */
     // 4. 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)
     public String productListView(Model model) throws Exception {

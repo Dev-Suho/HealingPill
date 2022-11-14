@@ -21,4 +21,17 @@
     <select id="orderList"  resultType="com.healingpill.dto.OrderDTO">
         SELECT * FROM ORDER_REQUEST
     </select>
+
+    <!-- order.jsp -> 주문 정보 누르면 해당 주문 order_request 상세정보 -->
+    <select id="orderDetail" resultType="com.healingpill.dto.OrderDTO">
+        SELECT * FROM ORDER_REQUEST
+        WHERE ORDER_ID =#{order_id , jdbcType = VARCHAR}
+    </select>
+
+    <!-- order.jsp -> 주문정보 누르면 주문 상세정보 -->
+    <select id="orderDetail2" resultType="com.healingpill.dto.OrderDetailDTO">
+        SELECT * FROM ORDER_ITEM
+        WHERE ORDER_ID=#{order_id , jdbcType = VARCHAR}
+    </select>
+
 </mapper>

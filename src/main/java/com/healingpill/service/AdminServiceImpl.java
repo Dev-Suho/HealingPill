@@ -5,6 +5,7 @@ import com.healingpill.dao.AdminDAO;
 import com.healingpill.dao.OrderDAO;
 import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.OrderDTO;
+import com.healingpill.dto.OrderDetailDTO;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -30,5 +31,14 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public List<OrderDTO> orderList() throws Exception {
         return AdminDAO.orderList();
+    }
+
+    @Override
+    public OrderDTO orderDetail(String order_id) throws Exception {
+        return AdminDAO.orderDetail(order_id);
+    }
+    @Override
+    public OrderDetailDTO orderDetail2(String order_id) throws Exception {
+        return AdminDAO.orderDetail2(order_id);
     }
 }

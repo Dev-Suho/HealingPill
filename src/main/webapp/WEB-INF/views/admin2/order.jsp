@@ -65,7 +65,7 @@
                             </thead>
                             <tbody>
                             <c:forEach items="${orderList}" var="orderList">
-                                <tr>
+                                <tr onclick="window.open('/admin2/order_detail?order=${orderList.order_id}','order_detail','width=800, height=750')">
                                     <td>${orderList.order_register_datetime}</td>
                                     <td>${orderList.order_id}</td>
                                     <td>${orderList.order_name}</td>
