@@ -111,10 +111,10 @@
                                         <td>결제 완료</td>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td class="data_td">${member_order.order_register_datetime}</td>
+                                        <td class="data_td">${member_order.order_id}</td>
+                                        <td class="data_td">결제 금액</td>
+                                        <td class="data_td">${member_order.order_State}</td>
                                     </tr>
                                     <tr>
                                         <td></td>

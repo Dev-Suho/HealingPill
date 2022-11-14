@@ -53,12 +53,14 @@ public class AdminController2 {
 
     // 2-1. 회원 상세 페이지
     // URL 주소에서 "num" 의 값을 찾아서 int mem_num 에게 전달
-    @RequestMapping(value = "admin2/member_detail", method = RequestMethod.GET)
-    public void member_detail(@RequestParam("mem") int mem_num , Model model ) throws Exception {
+    @RequestMapping(value =  "admin2/member_detail", method = RequestMethod.GET)
+    public void member_detail(@RequestParam("mem") int mem_num, String mem_id , Model model ) throws Exception {
 
         AdminDTO adminDTO = adminService.member_detail(mem_num);
+        OrderDTO orderDTO = adminService.member_order(mem_id);
 
         model.addAttribute("member_detail",  adminDTO);
+        model.addAttribute("member_order", orderDTO);
     }
 
 
@@ -79,19 +81,12 @@ public class AdminController2 {
 
         OrderDTO orderDTO = adminService.orderDetail(order_id);
         OrderDetailDTO orderDetailDTO = adminService.orderDetail2(order_id);
+
         model.addAttribute("orderDetail", orderDTO);
         model.addAttribute("orderDetail2", orderDetailDTO);
 
     }
-    /*
-    @RequestMapping(value = "admin2/order_detail2", method = RequestMethod.GET)
-    public void orderDetail2(@RequestParam("order") String order_id, Model model) throws Exception {
 
-        OrderDetailDTO orderDetailDTO = adminService.orderDetail2(order_id);
-        model.addAttribute("orderDetail2", orderDetailDTO);
-
-    }
-    */
     // 4. 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)
     public String productListView(Model model) throws Exception {

@@ -27,6 +27,10 @@ public class AdminDAOImpl implements AdminDAO {
     }
 
     @Override
+    public OrderDTO member_order(String mem_id) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + "member_order", mem_id);
+    }
+    @Override
     public List<OrderDTO> orderList() throws Exception {
         return sqlSession.selectList( NAMESPACE + "orderList");
     }

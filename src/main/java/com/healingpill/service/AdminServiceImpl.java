@@ -27,7 +27,10 @@ public class AdminServiceImpl implements AdminService {
     public AdminDTO member_detail(int mem_num) throws Exception {
         return AdminDAO.member_detail(mem_num);
     }
-
+    // 회원 상세정보 - > 주문내역 불러오기
+    public OrderDTO member_order(String mem_id) throws Exception {
+        return AdminDAO.member_order(mem_id);
+    }
     @Override
     public List<OrderDTO> orderList() throws Exception {
         return AdminDAO.orderList();

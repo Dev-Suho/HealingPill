@@ -17,6 +17,12 @@
         WHERE MEM_NUM=#{mem_num , jdbcType = NUMERIC}
     </select>
 
+    <!-- member_detail-> 회원 누르면 주문 내역 -->
+    <select id="member_order" resultType="com.healingpill.dto.OrderDTO">
+        SELECT * FROM ORDER_REQUEST
+        WHERE MEM_ID = #{mem_id, jdbcType = VARCHAR}
+    </select>
+
     <!-- 관리자 페이지 order.jsp -> 주문 리스트 불러오기 -->
     <select id="orderList"  resultType="com.healingpill.dto.OrderDTO">
         SELECT * FROM ORDER_REQUEST
