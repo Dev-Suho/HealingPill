@@ -12,5 +12,5 @@ public interface AdminDAO {
     public List<AdminDTO> memberList() throws Exception;
 
     // memberList 에 member 누르면 뜨는 회원 상세정보
-    public AdminDTO member_detail(AdminDTO dto) throws Exception;
+    public AdminDTO member_detail(int mem_num) throws Exception;
 }
