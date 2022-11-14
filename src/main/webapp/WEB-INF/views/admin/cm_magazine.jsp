@@ -22,7 +22,7 @@
                             <label for = "mg_title">제목</label><input type="text" class="form-control" id="mg_title" name="mg_title" placeholder="매거진 제목">
                         </div>
                         <div class="form-group">
-                            <label for = "mg_content">컨텐츠</label><input type="text" class="form-control" id="mg_content" name="mg_content" placeholder="내용">
+                            <label for = "mg_content">컨텐츠 </label><input type="text" class="form-control" id="mg_content" name="mg_content" placeholder="내용">
                         </div>
                         <input type="submit" value="추가">
                     </div>
