@@ -64,14 +64,14 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach items="${memberList}" var="memberList" >
-                                <tr onclick = "window.open('/admin2/member_detail?mem=${memberList.mem_num}','member_detail','width=800, height=750');">
-                                    <td>${memberList.mem_id}</td>
-                                    <td>${memberList.mem_username}</td>
-                                    <td>${memberList.mem_birth_year}.${memberList.mem_birth_month}.${memberList.mem_birth_day}</td>
-                                    <td>${memberList.mem_phone}</td>
-                                    <td>-</td>
-                                    <td>-</td>
+                            <c:forEach items="${orderList}" var="orderList">
+                                <tr>
+                                    <td>${orderList.order_register_datetime}</td>
+                                    <td>${orderList.order_id}</td>
+                                    <td>${orderList.order_name}</td>
+                                    <td>결제금액</td>
+                                    <td>${orderList.mem_address1},${orderList.mem_address2},${orderList.mem_address3}</td>
+                                    <td>${orderList.order_phone}</td>
                                 </tr>
                             </c:forEach>
                             </tbody>

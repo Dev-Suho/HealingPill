@@ -15,7 +15,7 @@
 <body class="sb-nav-fixed">
 <nav class="sb-topnav navbar navbar-expand navbar-light" style="background-color:#6f42c1; " >
   <!-- Navbar Brand-->
-  <a class="navbar-brand ps-3" href="index.html" style="color:white; font-size:15pt">HealingPill</a>
+  <a class="navbar-brand ps-3" href="/" style="color:white; font-size:15pt">HealingPill</a>
   <!-- Sidebar Toggle-->
   <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
   <!-- Navbar Search-->
@@ -50,6 +50,15 @@
           <a class="nav-link" href="/admin/product_list" style="color:white; font-size:12pt">
             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
             상품 관리
+          </a>
+          <div class="sb-sidenav-menu-heading">커뮤니티관리</div>
+          <a class="nav-link" href="/admin/cm_magazine" style="color:white; font-size:12pt" >
+            <div class="sb-nav-link-icon" ><i class="fas fa-tachometer-alt"></i></div>
+            매거진 등록
+          </a>
+          <a class="nav-link" href="/admin/magazine_list" style="color:white; font-size:12pt" >
+            <div class="sb-nav-link-icon" ><i class="fas fa-tachometer-alt"></i></div>
+            매거진 관리
           </a>
           <div class="sb-sidenav-menu-heading">관리</div>
           <a class="nav-link" href="charts.html" style="color:white; font-size:12pt">

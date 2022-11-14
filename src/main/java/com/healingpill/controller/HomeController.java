@@ -61,12 +61,25 @@ public class HomeController {
         return "/admin/cm_magazine";
     }
 
+    //매거진 관리
+    @RequestMapping(value = "/admin/magazine_list")
+    public String adminmagazine_list() { return "/admin/magazine_list";}
 
+    @RequestMapping(value = "/admin/magazineView")
+    public String adminmagazineView() { return "/admin/magazineView"; }
 
+    //메인 페이지
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
     public String MainPage() {
         return "MainPage";
     }
+
+    @RequestMapping(value = "/Mypage" , method = RequestMethod.GET)
+    public String Mypage() { return "/Mypage"; }
+
+    @RequestMapping(value = "/Mypage_order" , method = RequestMethod.GET)
+    public String Mypage_order() { return "/Mypage_order"; }
+
 
     @RequestMapping(value = "/about-us", method = RequestMethod.POST)
     public String aboutusPOST() {
@@ -117,23 +130,6 @@ public class HomeController {
         logger.debug("jusoPopup 페이지 이동");
 
         return "jusoPopup";
-    }
-
-
-    // checkout 페이지 이동
-    @RequestMapping(value = "/checkout", method = RequestMethod.GET)
-    public String checkoutGET() {
-        logger.debug("checkout 페이지 이동");
-
-        return "checkout";
-    }
-
-    // checkoutComplete 페이지 이동
-    @RequestMapping(value = "/checkoutComplete", method = RequestMethod.GET)
-    public String checkoutCompleteGET() {
-        logger.debug("checkoutComplete 페이지 이동");
-
-        return "checkoutComplete";
     }
 
 }

@@ -12,6 +12,7 @@ public class ProductVO {
     private String pd_mainImage;
     private String pd_subImage;
     private Date pd_register_datetime;
+    private int pd_order_quantity;
 
     public int getPd_num() {
         return pd_num;
@@ -83,5 +84,13 @@ public class ProductVO {
 
     public void setPd_subImage(String pd_subImage) {
         this.pd_subImage = pd_subImage;
+    }
+
+    public int getPd_order_quantity() {
+        return pd_order_quantity;
+    }
+
+    public void setPd_order_quantity(int pd_order_quantity) {
+        this.pd_order_quantity = pd_order_quantity;
     }
 }

@@ -19,6 +19,7 @@ public class MemberDTO {
     private String mem_sex;
     private Date mem_register_datetime;
     private String mem_is_admin;
+    private int mem_point;
 
     public int getMem_num() {
         return mem_num;
@@ -122,6 +123,14 @@ public class MemberDTO {
 
     public void setMem_is_admin(String mem_is_admin) {
         this.mem_is_admin = mem_is_admin;
+    }
+
+    public int getMem_point() {
+        return mem_point;
+    }
+
+    public void setMem_point(int mem_point) {
+        this.mem_point = mem_point;
     }
 
     @Override
