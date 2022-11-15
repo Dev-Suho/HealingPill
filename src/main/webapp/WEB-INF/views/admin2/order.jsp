@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
@@ -69,7 +70,7 @@
                                     <td>${orderList.order_register_datetime}</td>
                                     <td>${orderList.order_id}</td>
                                     <td>${orderList.order_name}</td>
-                                    <td>결제금액</td>
+                                    <td><fmt:formatNumber value="${orderList.totalPrice}" pattern="###,###,###"/></td>
                                     <td>${orderList.mem_address1},${orderList.mem_address2},${orderList.mem_address3}</td>
                                     <td>${orderList.order_phone}</td>
                                 </tr>

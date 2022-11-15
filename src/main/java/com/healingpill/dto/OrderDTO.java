@@ -16,6 +16,8 @@ public class OrderDTO {
     private int deliveryCost;
     private double usePoint;
 
+    private int totalPrice;
+
     private Date order_register_datetime;
 
     public String getOrder_id() {
@@ -106,5 +108,11 @@ public class OrderDTO {
         this.usePoint = usePoint;
     }
 
+    public int getTotalPrice() {
+        return totalPrice;
+    }
 
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 }

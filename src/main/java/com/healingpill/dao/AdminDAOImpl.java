@@ -40,12 +40,8 @@ public class AdminDAOImpl implements AdminDAO {
         return sqlSession.selectOne(NAMESPACE + "orderDetail", order_id);
     }
     @Override
-    public OrderDetailDTO orderDetail2(String order_id) throws Exception {
-        return sqlSession.selectOne(NAMESPACE + "orderDetail2", order_id);
+    public List<OrderDetailDTO> orderDetail2(String order_id) throws Exception {
+        return sqlSession.selectList(NAMESPACE + "orderDetail2", order_id);
     }
 
-    //member_detail 에 주문 내역 리스트 불러오기
-    public List<OrderDTO> memorderList(OrderDTO odto) throws Exception {
-        return sqlSession.selectList(NAMESPACE + "memorderList", odto);
-    }
 }

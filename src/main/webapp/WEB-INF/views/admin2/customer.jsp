@@ -51,43 +51,8 @@
                 </div>
               </div>
             </div>
-
-
-            <%--<div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Customer Chart</h4>
-                  <p class="card-description">
-                    회원 차트
-                  </p>
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>ID</th>
-                        <th>이름</th>
-                        <th>생년월일</th>
-                        <th>번호</th>
-                        <th>주문횟수</th>
-                        <th>등급</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <c:forEach items="${memberList}" var="memberList" >
-                        <tr>
-                          <td>${memberList.mem_id}</td>
-                          <td><a href="/admin/member_detail?mem=${memberList.mem_num}">${memberList.mem_username}</a></td>
-                          <td>${memberList.mem_birth_year}.${memberList.mem_birth_month}.${memberList.mem_birth_day}</td>
-                          <td>${memberList.mem_phone}</td>
-                          <td>-</td>
-                          <td>-</td>
-                        </tr>
-                      </c:forEach>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>--%>
           </div>
         </div>
         <!-- content-wrapper ends -->
+
 <%@ include file="layout/footer.jsp" %>

@@ -1,9 +1,14 @@
 package com.healingpill.dto;
 
+
+//ORDER_ITEM DB
 public class OrderDetailDTO {
     private int orderItem_id;
     private String order_id;
     private int pd_num;
+
+    private int pd_price;
+
     private int order_stock;
     private int totalPrice;
     private int savePoint;
@@ -54,5 +59,13 @@ public class OrderDetailDTO {
 
     public void setSavePoint(int savePoint) {
         this.savePoint = savePoint;
+    }
+
+    public int getPd_price() {
+        return pd_price;
+    }
+
+    public void setPd_price(int pd_price) {
+        this.pd_price = pd_price;
     }
 }

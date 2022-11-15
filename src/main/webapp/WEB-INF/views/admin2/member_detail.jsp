@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -94,7 +95,7 @@
                                 <p class="card-description">
                                     회원 별 주문 상품
                                 </p>
-                                <table class="table table-striped">
+                                <table class="table table-striped"  id="order">
                                     <thead>
                                     <tr>
                                         <th>주문 일자</th>
@@ -104,13 +105,15 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <c:forEach items="${order}" var="order">
+                                    <c:set var="sum"  value="0" />
+                                    <c:forEach var="order" items="${order}">
                                         <tr  onclick="location.href='/admin2/order_detail?order=${order.order_id}'">
                                             <td class="data_td">${order.order_register_datetime}</td>
                                             <td class="data_td">${order.order_id}</td>
-                                            <td class="data_td">결제 금액</td>
+                                            <td><fmt:formatNumber value="${order.totalPrice}" pattern="###,###,###"/></td>
                                             <td class="data_td">${order.order_State}</td>
                                         </tr>
+                                        <c:set var="sum" value="${sum + order.totalPrice}" />
                                     </c:forEach>
                                     </tbody>
                                 </table>
@@ -128,7 +131,7 @@
                                     <div class="d-flex flex-row align-items-center">
                                         <i class="mdi mdi-coin icon-lg text-warning"></i>
                                         <p class="mb-0 ml-1">
-                                            <h3>100,000</h3>
+                                            <h3><fmt:formatNumber value="${sum}" pattern="###,###,###"/></h3>
                                         </p>
                                     </div>
                                 </div>
@@ -152,4 +155,6 @@
                         </div>
                     </div>
             <!-- content-wrapper ends -->
+
+
 <%@ include file="layout/footer.jsp" %>

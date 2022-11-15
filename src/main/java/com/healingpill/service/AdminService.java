@@ -25,6 +25,6 @@ public interface AdminService {
     public OrderDTO orderDetail(String order_id) throws Exception;
 
     // ORDER에 ORDER_ID 값으로 주문 상세정보 ( 제품 )
-    public OrderDetailDTO orderDetail2(String order_id) throws Exception;
+    public List<OrderDetailDTO> orderDetail2(String order_id) throws Exception;
 }
 

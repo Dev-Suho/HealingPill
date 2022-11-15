@@ -41,7 +41,7 @@ public class AdminServiceImpl implements AdminService {
         return AdminDAO.orderDetail(order_id);
     }
     @Override
-    public OrderDetailDTO orderDetail2(String order_id) throws Exception {
+    public List<OrderDetailDTO> orderDetail2(String order_id) throws Exception {
         return AdminDAO.orderDetail2(order_id);
     }
 
