@@ -35,9 +35,9 @@ public class BoardServiceImpl implements BoardService {
     }
 
 
-    //게시글 디테일
+    //게시글 상세 보기
     @Override
-    public BoardVO read(int mg_no) throws Exception {
-        return dao.read(mg_no);
+    public BoardVO getBoardContents(int mg_no) {
+        return dao.getBoardContents(mg_no);
     }
 }

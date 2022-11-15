@@ -34,7 +34,7 @@ public class BoardDAOImpl implements BoardDAO {
 
     //게시글 디테일
     @Override
-    public BoardVO read(int mg_no) throws Exception {
-        return  sqlSession.selectOne("BoardMapper.read", mg_no);
+    public BoardVO getBoardContents(int mg_no) {
+        return  sqlSession.selectOne("BoardMapper.getBoardContents", mg_no);
     }
 }

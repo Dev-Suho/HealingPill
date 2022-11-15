@@ -83,12 +83,25 @@ public class BoardController {
     }
 
     //게시글 디테일
+    /*
     @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
     public String  read(BoardVO boardVO,Model model) throws Exception {
         logger.info("read");
         model.addAttribute("read",service.read(boardVO.getMg_no()));
         return "magazineDetail";
     }
+
+     */
+
+    @RequestMapping(value = "magazineDetail", method = RequestMethod.GET)
+    public String read(@ModelAttribute("searchVO") BoardVO serachVO, @RequestParam("mg_no")
+                       int mg_no,Model model) {
+        BoardVO boardContents = service.getBoardContents(mg_no);
+        model.addAttribute("boardContents", boardContents);
+
+        return "/magazineDetail";
+    }
+
 
     //관리자 게시글 보기
     @RequestMapping(value = "/admin/magazine_list", method = RequestMethod.GET)

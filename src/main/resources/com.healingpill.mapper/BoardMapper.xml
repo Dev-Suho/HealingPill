@@ -24,4 +24,9 @@
     <delete id="delete" parameterType="int">
        DELETE  MAGAZINE WHERE MG_NO = #{mg_no, jdbcType = NUMERIC}
     </delete>
+
+    <!-- magazineDetail -->
+    <select id="getBoardContents" parameterType="java.lang.Integer" resultType="com.healingpill.dto.BoardVO">
+        select * FROM MAGAZINE WHERE mg_no=#{mg_no}
+    </select>
 </mapper>

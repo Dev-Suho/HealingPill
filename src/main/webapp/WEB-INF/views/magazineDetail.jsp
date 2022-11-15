@@ -43,7 +43,7 @@
                             <div class="mb-4 mr-5 flex items-center md:mr-10">
                                 <div class="mr-4 h-10 w-10 overflow-hidden rounded-full">
                                     <img
-                                            src="resources/assets/images/blog/author-01.png"
+                                            src="resources/assets/images/magazine/${boardContents.mg_image}"
                                             alt="image"
                                             class="w-full"
                                     />
@@ -98,7 +98,7 @@
                           />
                         </svg>
                       </span>
-                                    <fmt:formatDate value="${read.mg_datetime}" pattern="yyyy-mm-dd"/>
+                                    <fmt:formatDate value="${boardContents.mg_datetime}" pattern="yyyy-mm-dd"/>
                                 </p>
 
                                 <p
@@ -154,62 +154,19 @@
                                     data-wow-delay=".1s
                     "
                             >
-                                작약추출물등복합물은 위 점막을 보호합니다.
+                                <a href="/magazineDetail?mg_no=${boardContents.mg_title}">
+                                    ${boardContents.mg_title}
+                                </a>
                             </h2>
                             <p
                                     class="wow fadeInUp mb-8 text-base leading-relaxed text-body-color"
                                     data-wow-delay=".1s"
                             >
-                                1. 상복부 불쾌감·작열감 개선
-
-                                위 점막 손상은 위염과 소화성 궤양으로 발전할 수 있으며, 또 이러한 질환들은 음식물 소화불량이나 위 불편감을 야기하기 때문에 위 점막 보호는 위 건강을 지키는 데에 있어 매우 중요합니다. 하지만 이런 건강상의 이점보다도, 지겹게 느껴지는 통증에서 벗어나고 싶은 마음에 위에 좋다는 성분을 찾아보게 되기 마련이지요.
-
-
-                                증등도 이상의 상복부 속쓰림 증상을 가지고 있는 성인남녀를 대상으로 한 인체적용시험 결과, 작약추출물등복합물(HT074)의 섭취가 상복부 불쾌감과 작열감을 개선한 것이 확인되었습니다.
-
-                                2. 항(抗) 궤양
-
-                                앞서 말씀드린 바와 같이, 우리의 일상 속에는 다양한 위 점막 손상-궤양 유발 인자들이 존재하고 있습니다. 대표적으로는 아스피린이나 이부프로펜과 같은 비스테로이드성 소염진통제, 알코올 섭취, 스트레스 등이 있지요. 물론 헬리코박터균 역시 매우 중요한 궤양 유발 인자 중 하나입니다.
-
-
-                                이와 같은 궤양 유발 인자들로부터 작약추출물등복합물(HT074)이 위 건강을 보호할 수 있는지도 당연히 학계의 관심으로 떠올랐는데요, 연구보고에서 작약추출물등복합물(HT074)의 섭취가 이러한 궤양 유발 인자들로부터 위를 보호한다는 것이 확인되었습니다.
-
-                                3. 위 점액 분비량 증진
-
-                                속이 쓰리면 공복에 마를 갈아 먹으라는 이야기, 들어보셨나요? 마를 갈았을 때 미끈미끈하게 나오는 점액질의 성분이 위 점막을 보호하는 점액과 같은 ‘뮤신’이기 때문인데요, 이와 같은 민간요법이 있을 정도로 위에서 분비되는 점액은 위 점막을 보호하는 데 중요한 역할을 합니다. 실제 연구 결과를 해석할 때에도 ‘위 조직 내 점액 분비량’은 중요한 척도이지요.
-
-
-                                연구 결과에 따르면, 작약추출물등복합물(HT074)의 섭취는 위 점액 분비량을 증진시켜 위 점막 보호에 기여하는 것으로 나타났습니다.
+                                ${boardContents.mg_content}
                             </p>
-                            <p
-                                    class="wow fadeInUp mb-10 text-base leading-relaxed text-body-color"
-                                    data-wow-delay=".1s"
-                            >
-                                There's a time and place for everything… including asking
-                                for reviews. For instance: you should not asking for a
-                                review on your checkout page. The sole purpose of this page
-                                is to guide your customer to complete their purchase, and
-                                this means that the page should be as minimalist and
-                                pared-down possible. You don't want to have any unnecessary
-                                elements or Call To Actions.
-                            </p>
-                            <h3
-                                    class="wow fadeInUp mb-8 text-2xl font-bold text-dark sm:text-[26px]"
-                                    data-wow-delay=".1s"
-                            >
-                                Sea no quidam vulputate
-                            </h3>
-                            <p
-                                    class="wow fadeInUp mb-10 text-base leading-relaxed text-body-color"
-                                    data-wow-delay=".1s"
-                            >
-                                At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                                vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                                iracundia signiferumque quo. Sed virtute suavitate
-                                suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                                adversarium interpretaris eu sit, eum viris impedit ne.
-                                Erant appareat corrumpit ei vel.
-                            </p>
+
+
+
                             <div
                                     class="wow fadeInUp relative z-10 mb-10 overflow-hidden rounded bg-primary bg-opacity-5 py-8 px-6 text-center sm:p-10 md:px-[60px]"
                                     data-wow-delay=".1s
@@ -231,13 +188,7 @@
                           />
                         </svg>
                       </span>
-                                    <p
-                                            class="mb-4 text-base font-medium italic leading-[26px] text-dark"
-                                    >
-                                        A spring of truth shall flow from it: like a new star it
-                                        shall scatter the darkness of ignorance, and cause a
-                                        light heretofore unknown to shine amongst men.
-                                    </p>
+
                                     <span class="text-sm italic text-body-color">
                         “Andrio Domeco”
                       </span>
