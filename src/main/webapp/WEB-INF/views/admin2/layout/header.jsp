@@ -250,8 +250,8 @@
                     </a>
                     <div class="collapse" id="ui-basic4">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/admin2/customer">매거진 등록</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="/admin2/customer">매거진 관리</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin2/magazine_add">매거진 등록</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin2/magazine_list">매거진 관리</a></li>
                         </ul>
                     </div>
                 </li>

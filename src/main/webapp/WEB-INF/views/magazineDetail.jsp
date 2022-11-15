@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ include file="layout/header.jsp" %>
@@ -31,7 +32,7 @@
               "
                 >
                     <img
-                            src="resources/assets/images/blog/blog-details-01.jpg"
+                            src="resources/assets/images/magazine/${boardContents.mg_image}"
                             alt="image"
                             class="h-full w-full object-cover object-center"
                     />
@@ -39,24 +40,6 @@
                             class="absolute top-0 left-0 z-10 flex h-full w-full items-end bg-gradient-to-t from-dark-700 to-transparent"
                     >
                         <div class="flex flex-wrap items-center p-4 pb-4 sm:p-8">
-                            <div class="mb-4 mr-5 flex items-center md:mr-10">
-                                <div class="mr-4 h-10 w-10 overflow-hidden rounded-full">
-                                    <img
-                                            src="resources/assets/images/blog/author-01.png"
-                                            alt="image"
-                                            class="w-full"
-                                    />
-                                </div>
-                                <p class="text-base font-medium text-white">
-                                    By
-                                    <a
-                                            href="javascript:void(0)"
-                                            class="text-white hover:opacity-70"
-                                    >
-                                        Samuyl Joshi
-                                    </a>
-                                </p>
-                            </div>
                             <div class="mb-4 flex items-center">
                                 <p
                                         class="mr-5 flex items-center text-sm font-medium text-white md:mr-8"
@@ -97,7 +80,7 @@
                           />
                         </svg>
                       </span>
-                                    2022-06-15
+                                    <fmt:formatDate value="${read.mg_datetime}" pattern="yyyy-mm-dd"/>
                                 </p>
 
                                 <p
@@ -153,62 +136,19 @@
                                     data-wow-delay=".1s
                     "
                             >
-                                작약추출물등복합물은 위 점막을 보호합니다.
+                                <a href="/magazineDetail?mg_no=${magazine.mg_title}">
+                                    ${magazine.mg_title}
+                                </a>
                             </h2>
                             <p
                                     class="wow fadeInUp mb-8 text-base leading-relaxed text-body-color"
                                     data-wow-delay=".1s"
                             >
-                                1. 상복부 불쾌감·작열감 개선
-
-                                위 점막 손상은 위염과 소화성 궤양으로 발전할 수 있으며, 또 이러한 질환들은 음식물 소화불량이나 위 불편감을 야기하기 때문에 위 점막 보호는 위 건강을 지키는 데에 있어 매우 중요합니다. 하지만 이런 건강상의 이점보다도, 지겹게 느껴지는 통증에서 벗어나고 싶은 마음에 위에 좋다는 성분을 찾아보게 되기 마련이지요.
-
-
-                                증등도 이상의 상복부 속쓰림 증상을 가지고 있는 성인남녀를 대상으로 한 인체적용시험 결과, 작약추출물등복합물(HT074)의 섭취가 상복부 불쾌감과 작열감을 개선한 것이 확인되었습니다.
-
-                                2. 항(抗) 궤양
-
-                                앞서 말씀드린 바와 같이, 우리의 일상 속에는 다양한 위 점막 손상-궤양 유발 인자들이 존재하고 있습니다. 대표적으로는 아스피린이나 이부프로펜과 같은 비스테로이드성 소염진통제, 알코올 섭취, 스트레스 등이 있지요. 물론 헬리코박터균 역시 매우 중요한 궤양 유발 인자 중 하나입니다.
-
-
-                                이와 같은 궤양 유발 인자들로부터 작약추출물등복합물(HT074)이 위 건강을 보호할 수 있는지도 당연히 학계의 관심으로 떠올랐는데요, 연구보고에서 작약추출물등복합물(HT074)의 섭취가 이러한 궤양 유발 인자들로부터 위를 보호한다는 것이 확인되었습니다.
-
-                                3. 위 점액 분비량 증진
-
-                                속이 쓰리면 공복에 마를 갈아 먹으라는 이야기, 들어보셨나요? 마를 갈았을 때 미끈미끈하게 나오는 점액질의 성분이 위 점막을 보호하는 점액과 같은 ‘뮤신’이기 때문인데요, 이와 같은 민간요법이 있을 정도로 위에서 분비되는 점액은 위 점막을 보호하는 데 중요한 역할을 합니다. 실제 연구 결과를 해석할 때에도 ‘위 조직 내 점액 분비량’은 중요한 척도이지요.
-
-
-                                연구 결과에 따르면, 작약추출물등복합물(HT074)의 섭취는 위 점액 분비량을 증진시켜 위 점막 보호에 기여하는 것으로 나타났습니다.
+                                ${magazine.mg_content}
                             </p>
-                            <p
-                                    class="wow fadeInUp mb-10 text-base leading-relaxed text-body-color"
-                                    data-wow-delay=".1s"
-                            >
-                                There's a time and place for everything… including asking
-                                for reviews. For instance: you should not asking for a
-                                review on your checkout page. The sole purpose of this page
-                                is to guide your customer to complete their purchase, and
-                                this means that the page should be as minimalist and
-                                pared-down possible. You don't want to have any unnecessary
-                                elements or Call To Actions.
-                            </p>
-                            <h3
-                                    class="wow fadeInUp mb-8 text-2xl font-bold text-dark sm:text-[26px]"
-                                    data-wow-delay=".1s"
-                            >
-                                Sea no quidam vulputate
-                            </h3>
-                            <p
-                                    class="wow fadeInUp mb-10 text-base leading-relaxed text-body-color"
-                                    data-wow-delay=".1s"
-                            >
-                                At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                                vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                                iracundia signiferumque quo. Sed virtute suavitate
-                                suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                                adversarium interpretaris eu sit, eum viris impedit ne.
-                                Erant appareat corrumpit ei vel.
-                            </p>
+
+
+
                             <div
                                     class="wow fadeInUp relative z-10 mb-10 overflow-hidden rounded bg-primary bg-opacity-5 py-8 px-6 text-center sm:p-10 md:px-[60px]"
                                     data-wow-delay=".1s
@@ -412,314 +352,6 @@
                         </div>
                     </div>
                     <div class="w-full px-4 lg:w-4/12">
-                        <div>
-                            <div
-                                    class="wow fadeInUp relative mb-12 overflow-hidden rounded bg-primary py-[60px] px-11 text-center lg:px-8"
-                                    data-wow-delay=".1s
-                    "
-                            >
-                                <h3 class="mb-2 text-2xl font-semibold text-white">
-                                    Join our newsletter!
-                                </h3>
-                                <p class="mb-8 text-base text-white">
-                                    Enter your email to receive our latest newsletter.
-                                </p>
-                                <form>
-                                    <input
-                                            type="email"
-                                            placeholder="Your email address"
-                                            class="mb-4 h-[50px] w-full rounded border border-transparent bg-white bg-opacity-20 text-center text-sm font-medium text-white placeholder-white outline-none focus:border-white focus-visible:shadow-none"
-                                    />
-                                    <input
-                                            type="submit"
-                                            value="Subscribe Now"
-                                            class="mb-6 h-[50px] w-full cursor-pointer rounded bg-[#13C296] text-center text-sm font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
-                                    />
-                                </form>
-                                <p class="text-sm font-medium text-white">
-                                    Don't worry, we don't spam
-                                </p>
-
-                                <div>
-                      <span class="absolute top-0 right-0">
-                        <svg
-                                width="46"
-                                height="46"
-                                viewBox="0 0 46 46"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                                  cx="1.39737"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="1.39737"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="1.39737"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="1.39737"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                        </svg>
-                      </span>
-                                    <span class="absolute bottom-0 left-0">
-                        <svg
-                                width="46"
-                                height="46"
-                                viewBox="0 0 46 46"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                                  cx="1.39737"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="1.39737"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="44.6026"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 44.6026)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="7.9913"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 7.9913)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="1.39737"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="32.3058"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 32.3058)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="1.39737"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 1.39737 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="13.6943"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 13.6943 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="25.9911"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 25.9911 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                          <circle
-                                  cx="38.288"
-                                  cy="20.0086"
-                                  r="1.39737"
-                                  transform="rotate(-90 38.288 20.0086)"
-                                  fill="white"
-                                  fill-opacity="0.44"
-                          />
-                        </svg>
-                      </span>
-                                </div>
-                            </div>
-
                             <div class="-mx-4 mb-8 flex flex-wrap">
                                 <div class="w-full px-4">
                                     <h2
@@ -848,116 +480,7 @@
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="-mx-4 flex flex-wrap">
-            <div class="wow fadeInUp mt-14 w-full px-4" data-wow-delay=".2s">
-                <h2
-                        class="relative pb-5 text-2xl font-semibold text-dark sm:text-[28px]"
-                >
-                    Related Articles
-                </h2>
-                <span class="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
-            </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                <div class="wow fadeInUp group mb-10" data-wow-delay=".1s">
-                    <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail" class="block">
-                            <img
-                                    src="resources/assets/images/blog/blog-01.jpg"
-                                    alt="image"
-                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                            />
-                        </a>
-                    </div>
-                    <div>
-                <span
-                        class="mb-5 inline-block rounded bg-primary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-                >
-                  Dec 22, 2023
-                </span>
-                        <h3>
-                            <a
-                                    href="/magazineDetail"
-                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                            >
-                                Meet AutoManage, the best AI management tools
-                            </a>
-                        </h3>
-                        <p class="text-base text-body-color">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                <div class="wow fadeInUp group mb-10" data-wow-delay=".15s">
-                    <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail" class="block">
-                            <img
-                                    src="resources/assets/images/blog/blog-02.jpg"
-                                    alt="image"
-                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                            />
-                        </a>
-                    </div>
-                    <div>
-                <span
-                        class="mb-5 inline-block rounded bg-primary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-                >
-                  Mar 15, 2023
-                </span>
-                        <h3>
-                            <a
-                                    href="/magazineDetail"
-                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                            >
-                                How to earn more money as a wellness coach
-                            </a>
-                        </h3>
-                        <p class="text-base text-body-color">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-                <div class="wow fadeInUp group mb-10" data-wow-delay=".2s">
-                    <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail" class="block">
-                            <img
-                                    src="resources/assets/images/blog/blog-03.jpg"
-                                    alt="image"
-                                    class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                            />
-                        </a>
-                    </div>
-                    <div>
-                <span
-                        class="mb-5 inline-block rounded bg-primary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-                >
-                  Jan 05, 2023
-                </span>
-                        <h3>
-                            <a
-                                    href="/magazineDetail"
-                                    class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                            >
-                                The no-fuss guide to upselling and cross selling
-                            </a>
-                        </h3>
-                        <p class="text-base text-body-color">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -965,9 +488,5 @@
     </div>
 </section>
 <!-- ====== Blog Details Section End -->
-
-
-
-
 
 <%@ include file="layout/footer.jsp" %>
