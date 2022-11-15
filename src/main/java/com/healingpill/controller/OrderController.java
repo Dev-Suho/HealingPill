@@ -16,6 +16,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 import java.lang.reflect.Member;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -74,6 +75,7 @@ public class OrderController {
     }
 
 
+    // 주문 완료 페이지
     @RequestMapping(value = "/orderComplete", method = RequestMethod.GET)
     public String viewOrderComplete(){
         return "checkoutComplete";
@@ -99,23 +101,24 @@ public class OrderController {
 
         orderDTO.setOrder_id(order_id);
         orderDTO.setMem_id(mem_id);
-        orderService.orderInfo(orderDTO);
 
         // 포인트 적립
-        int totalPrice = orderDetailDTO.getTotalPrice();
+        int totalPrice = orderDTO.getTotalPrice();
         int savePoint = (int)(totalPrice * 0.05);
+        orderDTO.setTotalPrice(totalPrice);
+        orderDTO.setSavePoint(savePoint);
+        orderService.savePoint(orderDTO);
 
-        
-        orderDetailDTO.setSavePoint(savePoint);
+        orderService.orderInfo(orderDTO);
+
+
         orderDetailDTO.setOrder_id(order_id);
         orderDetailDTO.setMem_id(mem_id);
         orderService.orderInfo_Details(orderDetailDTO);
 
 
-        // 포인트 적립
-        orderService.savePoint(orderDetailDTO);
 
-        //orderService.orderCount(orderDetailDTO);
+        orderService.orderCount(orderDetailDTO);
 
         return "checkoutComplete";
     }
@@ -139,18 +142,20 @@ public class OrderController {
 
         orderDTO.setOrder_id(order_id);
         orderDTO.setMem_id(mem_id);
-        orderService.orderInfo(orderDTO);
 
-        int totalPrice = (orderDetailDTO.getTotalPrice() * orderDetailDTO.getOrder_stock());
+        int totalPrice = (orderDetailDTO.getPd_price() * orderDetailDTO.getOrder_stock());
         int savePoint = (int)(totalPrice * 0.05);
 
-        orderDetailDTO.setTotalPrice(totalPrice);
-        orderDetailDTO.setSavePoint(savePoint);
+        orderDTO.setTotalPrice(totalPrice);
+        orderDTO.setSavePoint(savePoint);
+        orderService.savePoint(orderDTO);
+
+        orderService.orderInfo(orderDTO);
+
+
         orderDetailDTO.setOrder_id(order_id);
         orderDetailDTO.setMem_id(mem_id);
         orderService.orderProduct(orderDetailDTO);
-
-        orderService.savePoint(orderDetailDTO);
 
         return "checkoutComplete";
     }

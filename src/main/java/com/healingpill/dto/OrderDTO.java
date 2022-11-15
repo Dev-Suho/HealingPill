@@ -15,6 +15,9 @@ public class OrderDTO {
     private int deliveryCost;
     private double usePoint;
     private Date orderDate;
+    private int totalPrice;
+    private int savePoint;
+
 
     public String getOrder_id() {
         return order_id;
@@ -104,4 +107,19 @@ public class OrderDTO {
         this.orderDate = orderDate;
     }
 
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public int getSavePoint() {
+        return savePoint;
+    }
+
+    public void setSavePoint(int savePoint) {
+        this.savePoint = savePoint;
+    }
 }

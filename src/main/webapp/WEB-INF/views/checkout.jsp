@@ -26,7 +26,7 @@
     <input type="hidden" name="mem_id" value="${member.mem_id}">
     <input type="hidden" name="deliveryCost" value=0>
     <input type="hidden" name="pd_num" value="${products.pd_num}">
-    <input type="hidden" name="totalPrice" value="${products.pd_price}">
+    <input type="hidden" name="pd_price" value="${products.pd_price}">
     <!--====== Checkout Form Steps Part Start ======-->
 <section class="checkout-wrapper section">
     <div class="container">
@@ -131,7 +131,7 @@
                                             <div class="cart-single-list">
                                                 <div class="row align-items-center">
                                                     <div class="col-lg-1 col-md-1 col-12">
-                                                        <a href="orderComplete"><img src="${products.pd_subImage}"></a>
+                                                        <a href="orderComplete"><img src="resources\ ${products.pd_subImage}"></a>
                                                     </div>
                                                     <div class="col-lg-4 col-md-3 col-12">
                                                         <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
@@ -227,23 +227,19 @@
 
                         <div class="sub-total-price">
                             <div class="total-price">
-                                <p class="value">상품 가격 1 :</p>
-                                <p class="price">$144.00</p>
+                                <p class="value">${products.pd_name} :</p>
+                                <p class="price">${products.pd_price}</p>
                             </div>
-                            <div class="total-price shipping">
-                                <p class="value">상품 가격 2 :</p>
-                                <p class="price">$10.50</p>
-                            </div>
-                            <div class="total-price discount">
-                                <p class="value">상품 가격 3 :</p>
-                                <p class="price">$10.00</p>
+                            <div class="total-price">
+                                <p class="value">배송료 : </p>
+                                <p class="price">0</p>
                             </div>
                         </div>
 
                         <div class="total-payable">
                             <div class="payable-price">
                                 <p class="value">총 결제 금액 :</p>
-                                <p class="price">$164.50</p>
+                                <p class="price"><fmt:formatNumber pattern="###,###,###" value="${products.pd_price}"/>원</p>
                             </div>
                         </div>
                         <div class="price-table-btn button">

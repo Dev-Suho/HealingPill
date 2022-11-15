@@ -123,7 +123,7 @@
                                                 <div class="cart-single-list">
                                                     <div class="row align-items-center">
                                                         <div class="col-lg-1 col-md-1 col-12">
-                                                            <a href="orderComplete"><img src="${products.pd_subImage}"></a>
+                                                            <a href="allProducts"><img src="resources\ ${products.pd_subImage}"></a>
                                                         </div>
                                                         <div class="col-lg-4 col-md-3 col-12">
                                                             <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
