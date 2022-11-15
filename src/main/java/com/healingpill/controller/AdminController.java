@@ -34,9 +34,9 @@ public class AdminController {
     //회원 상세 페이지
     // URL 주소에서 "num" 의 값을 찾아서 int mem_num 에게 전달
     @RequestMapping(value = "admin/member_detail", method = RequestMethod.GET)
-    public void member_detail(@RequestParam("mem") int mem_num , Model model ) throws Exception {
+    public void member_detail(@RequestParam("mem") String mem_id , Model model ) throws Exception {
 
-        AdminDTO adminDTO = adminService.member_detail(mem_num);
+        AdminDTO adminDTO = adminService.member_detail(mem_id);
 
         model.addAttribute("member_detail",  adminDTO);
     }
