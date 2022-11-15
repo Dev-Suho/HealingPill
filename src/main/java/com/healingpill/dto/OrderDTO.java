@@ -3,7 +3,6 @@ package com.healingpill.dto;
 import java.util.Date;
 import java.util.List;
 
-//ORDER_REQUEST DB
 public class OrderDTO {
     private String order_id;
     private String order_name;
@@ -12,13 +11,13 @@ public class OrderDTO {
     private String mem_address2;
     private String mem_address3;
     private String order_phone;
-    private String order_State;
+    private String orderState;
     private int deliveryCost;
     private double usePoint;
-
+    private Date orderDate;
     private int totalPrice;
+    private int savePoint;
 
-    private Date order_register_datetime;
 
     public String getOrder_id() {
         return order_id;
@@ -76,20 +75,12 @@ public class OrderDTO {
         this.order_phone = order_phone;
     }
 
-    public String getOrder_State() {
-        return order_State;
+    public String getOrderState() {
+        return orderState;
     }
 
-    public void setOrder_State(String order_State) {
-        this.order_State = order_State;
-    }
-
-    public Date getOrder_register_datetime() {
-        return order_register_datetime;
-    }
-
-    public void setOrder_register_datetime(Date order_register_datetime) {
-        this.order_register_datetime = order_register_datetime;
+    public void setOrderState(String orderState) {
+        this.orderState = orderState;
     }
 
     public int getDeliveryCost() {
@@ -108,11 +99,27 @@ public class OrderDTO {
         this.usePoint = usePoint;
     }
 
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
     public int getTotalPrice() {
         return totalPrice;
     }
 
     public void setTotalPrice(int totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public int getSavePoint() {
+        return savePoint;
+    }
+
+    public void setSavePoint(int savePoint) {
+        this.savePoint = savePoint;
     }
 }

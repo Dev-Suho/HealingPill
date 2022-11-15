@@ -46,7 +46,7 @@ public class MemberLoginController {
             session.setAttribute("member", res);
             System.out.println("로그인성공");
 
-            return "MainPage";
+            return "redirect:/";
         } else {
             System.out.println("로그인 실패");
             return "redirect:login";

@@ -1,17 +1,13 @@
 package com.healingpill.dto;
 
-
-//ORDER_ITEM DB
 public class OrderDetailDTO {
     private int orderItem_id;
     private String order_id;
     private int pd_num;
-
-    private int pd_price;
-
     private int order_stock;
-    private int totalPrice;
-    private int savePoint;
+    private int pd_price;
+    // 테이블에 없는 값
+    private String mem_id;
 
     public int getOrderItem_id() {
         return orderItem_id;
@@ -45,22 +41,6 @@ public class OrderDetailDTO {
         this.order_stock = order_stock;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
-    }
-
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
-    }
-
-    public int getSavePoint() {
-        return savePoint;
-    }
-
-    public void setSavePoint(int savePoint) {
-        this.savePoint = savePoint;
-    }
-
     public int getPd_price() {
         return pd_price;
     }
@@ -68,4 +48,14 @@ public class OrderDetailDTO {
     public void setPd_price(int pd_price) {
         this.pd_price = pd_price;
     }
+
+    public String getMem_id() {
+        return mem_id;
+    }
+
+    public void setMem_id(String mem_id) {
+        this.mem_id = mem_id;
+    }
+
+
 }

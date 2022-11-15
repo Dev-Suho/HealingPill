@@ -52,5 +52,8 @@ public class ShopServiceImpl implements ShopService {
         return null;
     }
 
-
+    @Override
+    public List<ProductViewVO> bestProductList() throws Exception {
+        return shopDAO.bestProductList();
+    }
 }

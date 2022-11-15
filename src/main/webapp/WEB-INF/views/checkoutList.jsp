@@ -23,7 +23,7 @@
 <!-- End Breadcrumbs -->
 
 <form role="form" method="post" action="orderRequest" autocomplete="off">
-    <input type="hidden" name="mem_id" value="${member.mem_username}">
+    <input type="hidden" name="mem_id" value="${member.mem_id}">
     <input type="hidden" name="deliveryCost" value=0>
 <!--====== Checkout Form Steps Part Start ======-->
 <section class="checkout-wrapper section">
@@ -123,7 +123,7 @@
                                                 <div class="cart-single-list">
                                                     <div class="row align-items-center">
                                                         <div class="col-lg-1 col-md-1 col-12">
-                                                            <a href="orderComplete"><img src="${products.pd_subImage}"></a>
+                                                            <a href="allProducts"><img src="resources\ ${products.pd_subImage}"></a>
                                                         </div>
                                                         <div class="col-lg-4 col-md-3 col-12">
                                                             <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">

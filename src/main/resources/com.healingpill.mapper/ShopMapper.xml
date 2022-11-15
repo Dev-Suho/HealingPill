@@ -15,8 +15,8 @@
 
     <!-- 장바구니 추가 -->
     <insert id="addCart">
-        insert into CART(CART_ID, MEM_ID, PD_NUM, CART_STOCK)
-        values (CART_SEQ.nextval, #{mem_id, jdbcType = VARCHAR}, #{pd_num, jdbcType = NUMERIC}, #{cart_stock, jdbcType = NUMERIC})
+        insert into CART(CART_ID, MEM_ID, PD_NUM, CART_STOCK, CART_REGISTER_DATETIME, PD_PRICE)
+        values (CART_SEQ.nextval, #{mem_id, jdbcType = VARCHAR}, #{pd_num, jdbcType = NUMERIC}, #{cart_stock, jdbcType = NUMERIC}, sysdate,#{pd_price, jdbcType = NUMERIC})
     </insert>
 
     <!-- 장바구니 삭제 -->
@@ -47,4 +47,9 @@
         where MEM_ID = #{mem_id, jdbcType = VARCHAR} and PD_NUM = #{pd_num, jdbcType = NUMERIC}
     </select>
 
+    <select id="bestProductList" resultType="com.healingpill.dto.ProductViewVO">
+        <![CDATA[
+            select * from product where ROWNUM <= 8 order by PD_ORDER_QUANTITY desc
+        ]]>
+    </select>
 </mapper>
