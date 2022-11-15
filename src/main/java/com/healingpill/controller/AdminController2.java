@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
 
@@ -54,13 +55,16 @@ public class AdminController2 {
     // 2-1. 회원 상세 페이지
     // URL 주소에서 "num" 의 값을 찾아서 int mem_num 에게 전달
     @RequestMapping(value =  "admin2/member_detail", method = RequestMethod.GET)
-    public void member_detail(@RequestParam("mem") int mem_num, String mem_id , Model model ) throws Exception {
+    public void member_detail(@RequestParam("mem") String mem_id , Model model) throws Exception {
 
-        AdminDTO adminDTO = adminService.member_detail(mem_num);
-        OrderDTO orderDTO = adminService.member_order(mem_id);
+        AdminDTO adminDTO = adminService.member_detail(mem_id);
+        List<OrderDTO> orderDTO = adminService.member_order(mem_id);
+
+
+        System.out.println("id : " + orderDTO.toString());
 
         model.addAttribute("member_detail",  adminDTO);
-        model.addAttribute("member_order", orderDTO);
+        model.addAttribute("order", orderDTO);
     }
 
 
@@ -77,7 +81,7 @@ public class AdminController2 {
 
     //  3-1. 관리자 주문 상세 페이지 창
 
-    @RequestMapping(value = { "admin2/order_detail","admin2/order_detail2"}, method = RequestMethod.GET)
+    @RequestMapping(value = { "admin2/order_detail","admin2/order_detail2",}, method = RequestMethod.GET)
     public void orderDetail(@RequestParam("order") String order_id, Model model) throws Exception {
 
         OrderDTO orderDTO = adminService.orderDetail(order_id);

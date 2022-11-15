@@ -24,11 +24,11 @@ public class AdminServiceImpl implements AdminService {
     }
     //회원 상세정보 불러오기
     @Override
-    public AdminDTO member_detail(int mem_num) throws Exception {
-        return AdminDAO.member_detail(mem_num);
+    public AdminDTO member_detail(String mem_id) throws Exception {
+        return AdminDAO.member_detail(mem_id);
     }
     // 회원 상세정보 - > 주문내역 불러오기
-    public OrderDTO member_order(String mem_id) throws Exception {
+    public List<OrderDTO> member_order(String mem_id) throws Exception {
         return AdminDAO.member_order(mem_id);
     }
     @Override
@@ -44,4 +44,5 @@ public class AdminServiceImpl implements AdminService {
     public OrderDetailDTO orderDetail2(String order_id) throws Exception {
         return AdminDAO.orderDetail2(order_id);
     }
+
 }

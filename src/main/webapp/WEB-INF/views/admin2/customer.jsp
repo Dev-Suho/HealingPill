@@ -37,7 +37,7 @@
                     </thead>
                     <tbody>
                       <c:forEach items="${memberList}" var="memberList" >
-                        <tr onclick = "window.open('/admin2/member_detail?mem=${memberList.mem_num}','member_detail','width=800, height=750');">
+                        <tr onclick = "window.open('/admin2/member_detail?mem=${memberList.mem_id}','member_detail','width=800, height=750');">
                           <td>${memberList.mem_id}</td>
                           <td>${memberList.mem_username}</td>
                           <td>${memberList.mem_birth_year}.${memberList.mem_birth_month}.${memberList.mem_birth_day}</td>

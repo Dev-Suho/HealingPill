@@ -110,24 +110,14 @@
                                         <td>23,000</td>
                                         <td>결제 완료</td>
                                     </tr>
-                                    <tr>
-                                        <td class="data_td">${member_order.order_register_datetime}</td>
-                                        <td class="data_td">${member_order.order_id}</td>
-                                        <td class="data_td">결제 금액</td>
-                                        <td class="data_td">${member_order.order_State}</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    <c:forEach items="${order}" var="order">
+                                        <tr>
+                                            <td class="data_td">${order.order_register_datetime}</td>
+                                            <td class="data_td">${order.order_id}</td>
+                                            <td class="data_td">결제 금액</td>
+                                            <td class="data_td">${order.order_State}</td>
+                                        </tr>
+                                    </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

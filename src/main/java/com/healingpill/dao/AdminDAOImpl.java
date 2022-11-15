@@ -22,13 +22,13 @@ public class AdminDAOImpl implements AdminDAO {
     }
 
     @Override
-    public AdminDTO member_detail(int mem_num) throws Exception {
-        return sqlSession.selectOne(NAMESPACE + "member_detail", mem_num);
+    public AdminDTO member_detail(String mem_id) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + "member_detail", mem_id);
     }
 
     @Override
-    public OrderDTO member_order(String mem_id) throws Exception {
-        return sqlSession.selectOne(NAMESPACE + "member_order", mem_id);
+    public List<OrderDTO> member_order(String mem_id) throws Exception {
+        return  sqlSession.selectList(NAMESPACE + "member_order", mem_id);
     }
     @Override
     public List<OrderDTO> orderList() throws Exception {
@@ -42,5 +42,10 @@ public class AdminDAOImpl implements AdminDAO {
     @Override
     public OrderDetailDTO orderDetail2(String order_id) throws Exception {
         return sqlSession.selectOne(NAMESPACE + "orderDetail2", order_id);
+    }
+
+    //member_detail 에 주문 내역 리스트 불러오기
+    public List<OrderDTO> memorderList(OrderDTO odto) throws Exception {
+        return sqlSession.selectList(NAMESPACE + "memorderList", odto);
     }
 }
