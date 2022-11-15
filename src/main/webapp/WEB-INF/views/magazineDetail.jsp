@@ -32,7 +32,7 @@
               "
                 >
                     <img
-                            src="resources/assets/images/blog/blog-details-01.jpg"
+                            src="resources/assets/images/magazine/${boardContents.mg_image}"
                             alt="image"
                             class="h-full w-full object-cover object-center"
                     />
