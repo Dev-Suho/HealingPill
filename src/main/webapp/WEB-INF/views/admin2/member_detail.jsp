@@ -104,14 +104,8 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>주문 내역 들어가게!!</td>
-                                        <td>20221101-00000001</td>
-                                        <td>23,000</td>
-                                        <td>결제 완료</td>
-                                    </tr>
                                     <c:forEach items="${order}" var="order">
-                                        <tr>
+                                        <tr  onclick="location.href='/admin2/order_detail?order=${order.order_id}'">
                                             <td class="data_td">${order.order_register_datetime}</td>
                                             <td class="data_td">${order.order_id}</td>
                                             <td class="data_td">결제 금액</td>
