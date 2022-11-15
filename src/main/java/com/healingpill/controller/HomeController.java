@@ -97,13 +97,14 @@ public class HomeController {
     }
 
     // magazineDetail 페이지 이동
+    /*
     @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
     public String magazineDetailGET() {
         logger.debug("magazineDetail 페이지 이동");
 
         return "magazineDetail";
     }
-
+    */
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faqGET() {

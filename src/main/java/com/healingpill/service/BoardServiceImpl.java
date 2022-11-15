@@ -11,7 +11,10 @@ import java.util.List;
 @Service
 public class BoardServiceImpl implements BoardService {
 
-
+    private static final BoardService boardService = new BoardServiceImpl();
+    public static final BoardService getInstance() {
+        return boardService;
+    }
     @Inject
     private BoardDAO dao;
 
@@ -20,10 +23,21 @@ public class BoardServiceImpl implements BoardService {
     public void write(BoardVO boardVO) throws Exception {
         dao.write(boardVO);
     }
-
+    //게시글 삭제
+    @Override
+    public void  delete(int mg_no) throws Exception {
+        dao.delete(mg_no);
+    }
     //게시글 조회
     @Override
     public List<BoardVO> magazineView() throws Exception {
         return dao.magazineView();
+    }
+
+
+    //게시글 디테일
+    @Override
+    public BoardVO read(int mg_no) throws Exception {
+        return dao.read(mg_no);
     }
 }
