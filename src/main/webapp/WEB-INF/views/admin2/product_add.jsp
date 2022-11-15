@@ -14,69 +14,57 @@
     #sform, #sform2 {
         text-align: center;
     }
-
-    .jb-th-1 {
-        width: 350px;
-    }
 </style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
-        <div class="page-header">
-            <h3 class="page-title">
-                <b>상품 등록</b>
-            </h3>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">상품 등록</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">상품 관리</li>
-                </ol>
-            </nav>
-        </div>
-        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data">
-        <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Product registration</h4>
-                        <p class="card-description">
-                            새 상품 등록
-                        </p>
-                        <form class="forms-sample">
+        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data" action="product_add">
+            <div class="page-header">
+                <h3 class="page-title">
+                    <b>상품 등록</b>
+                </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">상품 등록</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">상품 관리</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-md-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Product registration</h4>
+                            <p class="card-description">
+                                새 상품 등록
+                            </p>
                             <div id="sform">
-                                <div class="card-body">
-                                    <blockquote class="blockquote blockquote-warning">
-                                        <i class="mdi mdi-tag-multiple icon-md text-primary"></i><h3><b>상품 등록</b></h3>
-                                    </blockquote>
-                                </div>
-                                    <div class="form-group">
-                                        <label for="pd_mainImage">상품 이미지</label><br>
-                                        <input type="file" id="pd_mainImage" name="file" class="file-upload-default">
-                                        <button class="file-upload-browse btn btn-gradient-danger" type="button"><i class="mdi mdi-upload btn-icon-prepend"></i>Upload</button>
-                                        <input type="text" class="form-control file-upload-info" disabled placeholder="선택된 파일 없음">
-                                        <div class="select_img"><img src="" /></div>
-                                        <script>
-                                            $("#pd_mainImage").change(function (){
-                                                if(this.files && this.files[0]) {
-                                                    var reader = new FileReader;
-                                                    reader.onload = function(data) {
-                                                        $(".select_img img").attr("src", data.target.result).width(500);
-                                                    }
-                                                    reader.readAsDataURL(this.files[0]);
+                                <div class="form-group">
+                                    <div class="select_img"><img src="" /></div><br><br>
+                                    <input type="file" id="pd_mainImage" name="file" class="file-upload-default">
+                                    <button class="file-upload-browse btn btn-gradient-danger btn-rounded btn-fw" type="button"><i class="mdi mdi-upload btn-icon-prepend"></i>Upload</button><br><br>
+                                    <input type="text" class="form-control file-upload-info" style="text-align:center"; disabled placeholder="선택된 파일 없음">
+                                    <script>
+                                        $("#pd_mainImage").change(function (){
+                                            if(this.files && this.files[0]) {
+                                                var reader = new FileReader;
+                                                reader.onload = function(data) {
+                                                    $(".select_img img").attr("src", data.target.result).width(400);
                                                 }
-                                            });
-                                        </script>
-                                        <%= request.getSession().getServletContext().getRealPath("/")%>
-                                    </div>
+                                                reader.readAsDataURL(this.files[0]);
+                                            }
+                                        });
+                                    </script>
+                                    <br><%= request.getSession().getServletContext().getRealPath("/")%>
+                                </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <form class="forms-sample">
+                <div class="col-lg-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
                             <br><br>
                             <div class="form-group">
                                 <label>상품명</label>
@@ -96,23 +84,22 @@
                             </div>
                             <div class="form-group">
                                 <label>전체</label>
-                                <select class="form-control category1">
+                                <select class="category1 form-control">
                                     <option value="">전체</option>
                                 </select> <br>
-                                <select class="form-control category2" name="ctg_code">
+                                <select class="category2 form-control" name="ctg_code">
                                     <option value="">전체</option>
                                 </select>
                             </div>
                             <div id="sform2">
                                 <br><br>
-                                <button type="submit" class="btn btn-gradient-primary mr-2 modBtn" id = "register_Btn">추가</button>
-                                <button type="reset" class="btn btn-light">취소</button>
+                                <button type="submit" class="btn btn-gradient-primary mr-2 modBtn" id = "register_Btn">상품 추가</button>
+                                <button type="reset" class="btn btn-light">입력 취소</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </form>
 
         <!-- 컨트롤러에서 데이터 받기 -->

@@ -81,7 +81,6 @@
     });
 </script>
 <script>
-
     var select_ctg_code = '${products.ctg_code}';
     var select_ctg_codeRef = '${products.ctg_CodeRef}';
     var select_ctg_name = '${products.ctg_Name}';
@@ -101,6 +100,5 @@
         $(".category2").append("<option value= '" + select_ctg_code +  "' selected='selected'>전체</option>");
     }
 </script>
-
 </body>
 </html>

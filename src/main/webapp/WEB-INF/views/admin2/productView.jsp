@@ -19,6 +19,7 @@ text-align: center;
     width: 350px;
 }
 </style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
@@ -35,19 +36,18 @@ text-align: center;
         </div>
         <form role="form" method="post" autocomplete="off">
             <input type="hidden" name="num" value="${products.pd_num}"/>
-        <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title"><b>상품 정보</b></h4>
-                        <p class="card-description">
-                            상품 상세 정보
-                        </p>
-                        <form class="forms-sample">
+            <div class="row">
+                <div class="col-md-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>상품 정보</b></h4>
+                            <p class="card-description">
+                                상품 상세 정보
+                            </p>
                             <div id="sform">
                                 <div class="card-body">
                                     <blockquote class="blockquote blockquote-warning">
-                                        <i class="mdi mdi-brush icon-md text-primary"></i><h3><b>상품 이미지</b></h3>
+                                        <h3><b>상품 이미지</b></h3>
                                     </blockquote>
                                 </div>
                                 <ul class="list-arrow">
@@ -61,14 +61,12 @@ text-align: center;
                                     </div>
                                 </ul>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <form class="forms-sample">
+                <div class="col-lg-6 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
                             <br><br><br><br><br><br>
                             <table class="table table-striped">
                                 <tr>
@@ -94,13 +92,14 @@ text-align: center;
                             </table>
                             <div id="sform2">
                                 <br><br><br>
-                                <button type="submit" class="btn btn-gradient-primary mr-2" id = "modify_btn">수정</button>
-                                <button class="btn btn-light" id = "delete_btn">삭제</button>
+                                <button type="submit" class="btn btn-gradient-primary mr-2" id = "modify_btn">상품 수정</button>
+                                <button class="btn btn-light" id = "delete_btn">상품 삭제</button>
                                 <script>
                                     var formObj = $("form[role='form']");
 
                                     $("#modify_btn").click(function (){
                                         formObj.attr("action", "/admin2/product/modify");
+                                        /*formObj.attr("action", "/admin2/product/modify?num=${products.pd_num}");*/
                                         formObj.attr("method", "get");
                                         formObj.submit();
                                     });
@@ -109,25 +108,12 @@ text-align: center;
                                         formObj.attr("action", "/admin2/product/delete");
                                         formObj.submit();
                                     });
-
-                                    /*$(".delete_btn").on("click", function() {
-
-                                        var deleteYN = confirm("삭제하시겠습니가?");
-                                        if (deleteYN == true) {
-
-                                            formObj.attr("action", "/admin2/product/delete");
-                                            formObj.attr("method", "post");
-                                            formObj.submit();
-
-                                        }
-                                    });*/
                                 </script>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-    </div>
         </form>
     <!-- content-wrapper ends -->
 <%@ include file="layout/footer.jsp" %>
