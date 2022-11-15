@@ -54,7 +54,7 @@
                                 </tr>
                                 <tr>
                                     <th>주문일</th>
-                                    <td class="data_td">${orderDetail.order_register_datetime}</td>
+                                    <td class="data_td"><fmt:formatDate value="${orderDetail.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                 </tr>
                                 <tr>
                                     <th>주문상태</th>

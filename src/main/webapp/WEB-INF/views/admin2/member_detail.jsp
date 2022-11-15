@@ -77,12 +77,8 @@
                                         <td class="data_td">${member_detail.mem_address}</td>
                                     </tr>
                                     <tr>
-                                        <th>누적 주문 횟수</th>
-                                        <td class="data_td"> order db 생기면 주문 횟수 넣기</td>
-                                    </tr>
-                                    <tr>
                                         <th>가입일</th>
-                                        <td class="data_td">${ member_detail.mem_register_datetime}</td>
+                                        <td class="data_td"><fmt:formatDate value="${member_detail.mem_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                     </tr>
                                 </table>
                             </div>
@@ -108,7 +104,7 @@
                                     <c:set var="sum"  value="0" />
                                     <c:forEach var="order" items="${order}">
                                         <tr  onclick="location.href='/admin2/order_detail?order=${order.order_id}'">
-                                            <td class="data_td">${order.order_register_datetime}</td>
+                                            <td class="data_td"><fmt:formatDate value="${order.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                             <td class="data_td">${order.order_id}</td>
                                             <td><fmt:formatNumber value="${order.totalPrice}" pattern="###,###,###"/></td>
                                             <td class="data_td">${order.order_State}</td>
