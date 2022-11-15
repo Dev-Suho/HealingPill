@@ -74,6 +74,7 @@ public class AdminController2 {
         return "/admin2/order";
     }
 
+
     //  3-1. 관리자 주문 상세 페이지 창
 
     @RequestMapping(value = { "admin2/order_detail","admin2/order_detail2"}, method = RequestMethod.GET)
@@ -84,7 +85,6 @@ public class AdminController2 {
 
         model.addAttribute("orderDetail", orderDTO);
         model.addAttribute("orderDetail2", orderDetailDTO);
-
     }
 
     // 4. 상품 관리 페이지
@@ -100,7 +100,7 @@ public class AdminController2 {
 
     // 4. 상품 조회
     // URL 주소에서 "n"의 값을 찾아서 int pd_num에게 전달
-    @RequestMapping(value = "productView", method = RequestMethod.GET)
+    @RequestMapping(value = "admin2/productView", method = RequestMethod.GET)
     public void ProductView(@RequestParam("n") int pd_num, Model model) throws Exception{
 
         ProductViewVO productVO = productListService.productView(pd_num);
