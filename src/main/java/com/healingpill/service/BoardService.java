@@ -17,7 +17,12 @@ public interface BoardService {
     public  List<BoardVO> magazineView() throws Exception;
 
 
-    //게시글 상세조회
-    public BoardVO getBoardContents(int mg_no);
+    // 게시글 상세조회
+    public  BoardVO getBoardContents(int mg_no) throws Exception;
 
+    // 관리자 게시글 상세조회
+    public BoardVO adminMagazineView(int mg_no) throws Exception;
+
+    // 관리자 게시글 수정
+    public void magazineModify(BoardVO boardVO) throws Exception;
 }

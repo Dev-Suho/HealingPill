@@ -49,13 +49,7 @@
                                     />
                                 </div>
                                 <p class="text-base font-medium text-white">
-                                    By
-                                    <a
-                                            href="javascript:void(0)"
-                                            class="text-white hover:opacity-70"
-                                    >
-                                        Samuyl Joshi
-                                    </a>
+
                                 </p>
                             </div>
                             <div class="mb-4 flex items-center">
@@ -190,7 +184,7 @@
                       </span>
 
                                     <span class="text-sm italic text-body-color">
-                        “Andrio Domeco”
+
                       </span>
                                 </div>
                                 <div>
@@ -270,30 +264,14 @@
                                     class="wow fadeInUp mb-8 text-2xl font-bold text-dark sm:text-[26px]"
                                     data-wow-delay=".1s"
                             >
-                                What is it with your ideas?
+
                             </h3>
 
                             <p
                                     class="wow fadeInUp mb-8 text-base leading-relaxed text-body-color"
                                     data-wow-delay=".1s"
                             >
-                                At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                                vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                                iracundia signiferumque quo. Sed virtute suavitate
-                                suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                                adversarium interpretaris eu sit, eum viris impedit ne.
-                                Erant appareat corrumpit ei vel.
-                            </p>
-                            <p
-                                    class="wow fadeInUp mb-11 text-base leading-relaxed text-body-color"
-                                    data-wow-delay=".1s"
-                            >
-                                At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                                vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                                iracundia signiferumque quo. Sed virtute suavitate
-                                suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                                adversarium interpretaris eu sit, eum viris impedit ne.
-                                Erant appareat corrumpit ei vel.
+                                ${boardContents.mg_contents}
                             </p>
 
                             <div class="-mx-4 mb-12 flex flex-wrap items-center">

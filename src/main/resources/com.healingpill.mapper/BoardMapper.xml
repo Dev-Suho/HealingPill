@@ -5,20 +5,20 @@
 <mapper namespace="BoardMapper">
     <!-- 게시판 글 작성 -->
     <insert id="insert">
-        INSERT INTO MAGAZINE(MG_NO,MG_IMAGE,MG_TITLE, MG_CONTENT, MG_DATETIME)
-                    VALUES (MG_NO_SEQ.nextval,#{mg_image}, #{mg_title}, #{mg_content}, SYSDATE)
+        INSERT INTO MAGAZINE(MG_NO,MG_IMAGE,MG_TITLE, MG_CONTENT,MG_CONTENTS, MG_SUM, MG_DATETIME)
+                    VALUES (MG_NO_SEQ.nextval,#{mg_image}, #{mg_title}, #{mg_content}, #{mg_contents}, #{mg_sum}, SYSDATE)
     </insert>
     <!-- 게시판 글 조회 -->
     <select id="getMagazineList" resultType="com.healingpill.dto.BoardVO">
         SELECT * FROM MAGAZINE
     </select>
 
-    <select id="magazineList" resultType="com.healingpill.dto.MagazineViewVO">
+    <select id="magazineList" resultType="com.healingpill.dto.BoardVO">
         select * from MAGAZINE
     </select>
 
     <select id="read" parameterType="int" resultType="com.healingpill.dto.BoardVO">
-        SELECT MG_NO,MG_IMAGE,MG_TITLE,MG_DATETIME,MG_CONTENT FROM MAGAZINE WHERE MG_NO = #{mg_no}
+        SELECT MG_NO,MG_IMAGE,MG_TITLE,MG_DATETIME,MG_CONTENT,MG_SUM FROM MAGAZINE WHERE MG_NO = #{mg_no}
     </select>
     <!-- 게시글 삭제 -->
     <delete id="delete" parameterType="int">
@@ -29,4 +29,16 @@
     <select id="getBoardContents" parameterType="java.lang.Integer" resultType="com.healingpill.dto.BoardVO">
         select * FROM MAGAZINE WHERE mg_no=#{mg_no}
     </select>
+
+    <!-- 관리제 매거진 조회 -->
+    <select id="adminMagazineView" parameterType="int" resultType="com.healingpill.dto.BoardVO">
+        select * from MAGAZINE WHERE mg_no=#{mg_no}
+    </select>
+
+    <!-- 관리자 매거진 수정 -->
+    <update id="magazineModify">
+        update MAGAZINE set MG_TITLE = #{mg_title, jdbcType = VARCHAR}, MG_SUM = #{mg_sum, jdbcType = VARCHAR} ,
+                            MG_CONTENT = #{mg_content, jdbcType = VARCHAR}, MG_CONTENTS = #{mg_contents, jdbcType = VARCHAR}
+        where MG_NO = #{mg_no}
+    </update>
 </mapper>

@@ -31,89 +31,99 @@
                     <h3 class="wow zoomIn" data-wow-delay=".2s">MYPAGE</h3><br>
                 </div>
                 <div class="section-title">
-                    <form id="mypage_information" name="mypage_information"  method="post" action="mypage_information">
+                    <form role="form" action="/MypageModify" method="post" autocomplete="off">
+                        <input type="hidden" name="mem_num" value="${member.mem_num}">
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
                                 <span> 아이디 </span>
-                                <input type="text" class="form-control form-control-user" id="me_id" name="me_id" style="text-align:center;" value="${ member.mem_id }"
+                                <input type="text" class="form-control form-control-user" id="mem_id" name="mem_id" style="text-align:center;" value="${member.mem_id}"
                                        placeholder="아이디" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="password" class="form-control form-control-user" id="me_pwd" name="me_pwd" style="text-align:center;"
+                                <input type="password" class="form-control form-control-user" id="mem_password" name="mem_password" style="text-align:center;" value="${member.mem_password}"
                                        placeholder="비밀번호">
                             </div>
                         </div>
+                        <!-- 비밀번호 확인
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="password" class="form-control form-control-user" id="me_pwd2" style="text-align:center;"
+                                <input type="password" class="form-control form-control-user" id="mem_password2" style="text-align:center;"
                                        placeholder="비밀번호 확인">
                             </div>
                         </div>
+                        -->
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="mem_level" name="mem_level" style="text-align:center;" value="${ member.mem_sex }"
+                                <input type="text" class="form-control form-control-user"  style="text-align:center;"
                                        placeholder="등급" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="me_name" name="me_name" style="text-align:center;" value="${ member.mem_username }"
+                                <input type="text" class="form-control form-control-user"  style="text-align:center;" value="${member.mem_username}"
                                        placeholder="이름" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="mem_sex" name="mem_sex" style="text-align:center;" value="${ member.mem_sex }"
+                                <input type="text" class="form-control form-control-user"  style="text-align:center;" value="${member.mem_sex}"
                                        placeholder="성별" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="mem_birth" name="mem_sex" style="text-align:center;" value="${member.mem_birth_year}.${member.mem_birth_month}.${member.mem_birth_day}"
+                                <input type="text" class="form-control form-control-user"  style="text-align:center;" value="${member.mem_birth_year}.${member.mem_birth_month}.${member.mem_birth_day}"
                                        placeholder="생년월일" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="me_tel" name="me_tel" style="text-align:center;" value="${member.mem_phone}"
+                                <input type="text" class="form-control form-control-user" id="mem_phone" name="mem_phone" style="text-align:center;" value="${member.mem_phone}"
                                        placeholder="전화번호">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="me_email" name="me_email" style="text-align:center;" value="${member.mem_address}"
+                                <input type="text" class="form-control form-control-user" id="mem_address" name="mem_address" style="text-align:center;" value="${member.mem_address}"
                                        placeholder="주소">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="me_email" name="me_email" style="text-align:center;" value="${member.mem_email}"
+                                <input type="text" class="form-control form-control-user" id="mem_email" name="mem_email" style="text-align:center;" value="${member.mem_email}"
                                        placeholder="이메일 주소">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="me_email" name="me_email" style="text-align:center;" value=""
+                                <input type="text" class="form-control form-control-user"  style="text-align:center;" value=""
                                        placeholder="누적 주문 횟수" readonly="readonly">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="me_email" name="me_email" style="text-align:center;" value="${member.mem_register_datetime}"
+                                <input type="text" class="form-control form-control-user"  style="text-align:center;" value="${member.mem_register_datetime}"
                                        placeholder="가입일" readonly="readonly">
                             </div>
                         </div>
                         <div>
                             <button
+                                    type="submit"
+                                    style="border-color: #c7a8ff; background-color: #c7a8ff; color: black; WIDTH: 100pt; HEIGHT: 30pt"
+                                    id = "update_btn">수정 완료</button>
+                            <!--
+                            <button
                                     style="border-color: #c7a8ff; background-color: #c7a8ff; color: black; WIDTH: 100pt; HEIGHT: 30pt"
                                     type="button" class="btn" id="information_update_Btn"
                                     onclick="information_update();">수정 완료</button>
+                             -->
                             <button
                                     style="border-color: white; background-color: black; color: white; WIDTH: 80pt; HEIGHT: 30pt"
                                     type="button" class="btn center"
-                                    onclick="location.href='joinout_check'">취소</button>
+                                    onclick="location.href='/Mypage'">취소
+                            </button>
                         </div>
                     </form>
                 </div>

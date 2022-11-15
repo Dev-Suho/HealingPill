@@ -2,7 +2,7 @@ package com.healingpill.dao;
 
 import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.OrderDTO;
-import com.sun.org.apache.xpath.internal.operations.Or;
+//import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.List;
 
