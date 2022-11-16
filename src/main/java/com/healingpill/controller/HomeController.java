@@ -87,6 +87,22 @@ public class HomeController {
         return "about-us";
     }
 
+    // magazine 페이지 이동
+    @RequestMapping(value = "/magazine", method = RequestMethod.GET)
+    public String magazineGET() {
+        logger.debug("magazine 페이지 이동");
+
+        return "magazine";
+    }
+
+    // magazineDetail 페이지 이동
+    @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
+    public String magazineDetailGET() {
+        logger.debug("magazineDetail 페이지 이동");
+
+        return "magazineDetail";
+    }
+
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faqGET() {
