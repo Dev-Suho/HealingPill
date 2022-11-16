@@ -1,4 +1,3 @@
-/*
 package com.healingpill.controller;
 
 import javax.inject.Inject;
@@ -33,21 +32,21 @@ public class BoardController {
     @Inject
     BoardService service;
 
-    //게시판 글 작성
+    /*//게시판 글 작성
     @RequestMapping(value = "/write", method = RequestMethod.POST)
     public String write(BoardVO boardVO) throws Exception {
         logger.info("write");
         service.write(boardVO);
         return "redirect:/admin/magazine_list";
-    }
+    }*/
 
-    //게시판 글 삭제
+    /*//게시판 글 삭제
 
     @RequestMapping(value = "/admin/delete", method = RequestMethod.POST)
     public String delete(@RequestParam("num") int mg_no) throws Exception {
         service.delete(mg_no);
         return "redirect:/admin/cm_magazine";
-    }
+    }*/
 
     @RequestMapping(value = "/magazine", method = RequestMethod.GET)
     public String mainProductView(Model model) throws Exception {
@@ -64,7 +63,7 @@ public class BoardController {
         return "magazineDetail";
     }
 
-    //관리자 게시글 보기
+    /*//관리자 게시글 보기
     @RequestMapping(value = "/admin/magazine_list", method = RequestMethod.GET)
     public String ProductView(Model model) throws Exception {
 
@@ -72,13 +71,13 @@ public class BoardController {
         model.addAttribute("magazine", magazineList);
 
         return "/admin/magazine_list";
-    }
+    }*/
 
-    //게시글 삭제
+    /*//게시글 삭제
     @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
     public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
         service.delete(mg_no);
 
         return "redirect:/admin/magazine_list";
-    }
-}*/
+    }*/
+}

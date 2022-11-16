@@ -28,6 +28,7 @@ public class BoardDAOImpl implements BoardDAO {
     public List<BoardVO> magazineView() throws Exception {
         return sqlSession.selectList(NAMESPACE + "magazineList");
     }
+
     //게시글 디테일
     @Override
     public BoardVO read(int mg_no) throws Exception {

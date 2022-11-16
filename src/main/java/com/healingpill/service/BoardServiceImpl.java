@@ -7,7 +7,6 @@ import java.util.List;
 @Service
 public class BoardServiceImpl implements BoardService {
 
-
     private static final BoardService boardService = new BoardServiceImpl();
     public static final BoardService getInstance() {
         return boardService;

@@ -6,6 +6,26 @@ public class BoardVO {
 
     private int mg_no;
 
+    private String mg_sum;
+
+    public String getMg_sum() {
+        return mg_sum;
+    }
+
+    public void setMg_sum(String mg_sum) {
+        this.mg_sum = mg_sum;
+    }
+
+    private String mg_contents;
+
+    public String getMg_contents() {
+        return mg_contents;
+    }
+
+    public void setMg_contents(String mg_contents) {
+        this.mg_contents = mg_contents;
+    }
+
     public BoardVO() {
 
     }
@@ -15,9 +35,11 @@ public class BoardVO {
     public String getMg_image() {
         return mg_image;
     }
+
     public void setMg_image(String mg_image) {
         this.mg_image = mg_image;
     }
+
     private String mg_title;
     private String mg_content;
     private Date mg_datetime;

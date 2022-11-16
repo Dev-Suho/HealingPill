@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
@@ -161,7 +162,6 @@ public class AdminController2 {
     }
 
     // 4-6. 상품 삭제
-
     @RequestMapping(value = "/product/delete", method = RequestMethod.POST)
     public String postProductDelete(@RequestParam("num") int pd_num) throws Exception {
         productModifyService.productDelete(pd_num);
@@ -195,16 +195,10 @@ public class AdminController2 {
     }
 
     // 5-2. 매거진 삭제
-
-    @RequestMapping(value = "/admin/delete", method = RequestMethod.POST)
-    public String delete(@RequestParam("num") int mg_no) throws Exception {
-        service.delete(mg_no);
-        return "redirect:/admin2/magazine_add";
-    }
     @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
     public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
         service.delete(mg_no);
 
-        return "admin2/magazine_list";
+        return "redirect:/admin2/magazine_list";
     }
 }

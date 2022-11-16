@@ -37,7 +37,9 @@
                             <tr>
                                 <th><h5><b>매거진 번호</b></h5></th>
                                 <th><h5><b>제목</b></h5></th>
-                                <th><h5><b>내용</b></h5></th>
+                                <th><h5><b>소제목</b></h5></th>
+                                <th><h5><b>상세 내용 1</b></h5></th>
+                                <th><h5><b>상세 내용 2</b></h5></th>
                                 <th><h5><b>등록일</b></h5></th>
                                 <th><h5><b>관리</b></h5></th>
                             </tr>
@@ -48,9 +50,11 @@
                                     <tr>
                                         <td>${magazine.mg_no}</td>
                                         <td>${magazine.mg_title}</td>
+                                        <td>${magazine.mg_sum}</td>
                                         <td>${magazine.mg_content}</td>
+                                        <td>${magazine.mg_contents}</td>
                                         <td>${magazine.mg_datetime}</td>
-                                        <td><a href="/magazine/delete?mg_no=${magazine.mg_no}" onclick="return confirm('삭제하시겠습니까?');">삭제</a></td>
+                                        <td><a href="/admin2/magazine/delete?mg_no=${magazine.mg_no}" onclick="return confirm('삭제하시겠습니까?');">삭제</a></td>
                                     </tr>
                                 </form>
                             </c:forEach>
