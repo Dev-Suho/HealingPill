@@ -1,6 +1,7 @@
 package com.healingpill.controller;
 
 import com.healingpill.dto.*;
+import com.healingpill.service.MemberLoginService;
 import com.healingpill.service.OrderService;
 import com.healingpill.service.ProductListService;
 import com.healingpill.service.ShopService;
@@ -32,6 +33,8 @@ public class OrderController {
     @Inject
     ProductListService productListService;
 
+    @Inject
+    MemberLoginService memberLoginService;
 
     @ResponseBody
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)
@@ -107,18 +110,21 @@ public class OrderController {
         int savePoint = (int)(totalPrice * 0.05);
         orderDTO.setTotalPrice(totalPrice);
         orderDTO.setSavePoint(savePoint);
+
+        orderService.usePoint(orderDTO);
         orderService.savePoint(orderDTO);
-
         orderService.orderInfo(orderDTO);
-
 
         orderDetailDTO.setOrder_id(order_id);
         orderDetailDTO.setMem_id(mem_id);
+
         orderService.orderInfo_Details(orderDetailDTO);
-
-
-
         orderService.orderCount(orderDetailDTO);
+        orderService.deleteCart(orderDTO);
+
+        MemberDTO res = memberLoginService.login(memberDTO);
+        session.setAttribute("member", res);
+        session.setMaxInactiveInterval(3600);
 
         return "checkoutComplete";
     }
@@ -148,6 +154,7 @@ public class OrderController {
 
         orderDTO.setTotalPrice(totalPrice);
         orderDTO.setSavePoint(savePoint);
+        orderService.usePoint(orderDTO);
         orderService.savePoint(orderDTO);
 
         orderService.orderInfo(orderDTO);
@@ -156,6 +163,11 @@ public class OrderController {
         orderDetailDTO.setOrder_id(order_id);
         orderDetailDTO.setMem_id(mem_id);
         orderService.orderProduct(orderDetailDTO);
+
+        // 세션 재생성
+        MemberDTO res = memberLoginService.login(memberDTO);
+        session.setAttribute("member", res);
+        session.setMaxInactiveInterval(3600);
 
         return "checkoutComplete";
     }

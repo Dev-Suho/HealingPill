@@ -13,11 +13,11 @@ public class OrderDTO {
     private String order_phone;
     private String orderState;
     private int deliveryCost;
-    private double usePoint;
+    private int usePoint;
     private Date orderDate;
     private int totalPrice;
     private int savePoint;
-
+    private int mem_point;
 
     public String getOrder_id() {
         return order_id;
@@ -91,11 +91,11 @@ public class OrderDTO {
         this.deliveryCost = deliveryCost;
     }
 
-    public double getUsePoint() {
+    public int getUsePoint() {
         return usePoint;
     }
 
-    public void setUsePoint(double usePoint) {
+    public void setUsePoint(int usePoint) {
         this.usePoint = usePoint;
     }
 
@@ -121,5 +121,13 @@ public class OrderDTO {
 
     public void setSavePoint(int savePoint) {
         this.savePoint = savePoint;
+    }
+
+    public int getMem_point() {
+        return mem_point;
+    }
+
+    public void setMem_point(int mem_point) {
+        this.mem_point = mem_point;
     }
 }
