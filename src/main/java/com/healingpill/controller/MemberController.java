@@ -3,12 +3,17 @@ package com.healingpill.controller;
 import com.healingpill.dto.MemberDTO;
 import com.healingpill.dto.ProductVO;
 import com.healingpill.service.MemberModifyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -16,11 +21,45 @@ public class MemberController {
     @Inject
     MemberModifyService memberModifyService;
 
-    @RequestMapping(value = "/MypageModify", method = RequestMethod.POST)
-    public String postMemberModify(MemberDTO memberDTO) throws Exception {
-        memberModifyService.memberModify(memberDTO);
 
-        return "redirect:/MypageModify";
+    /*
+    @RequestMapping(value = "/MypageModify", method = RequestMethod.GET)
+    public String MypageModify() throws Exception {
+
+        return "/MypageModify";
+    }
+
+    @RequestMapping(value = "/MypageModify/action", method = RequestMethod.GET)
+    public String postMemberModify(MemberDTO searchVO) throws Exception {
+        memberModifyService.memberUpdate(searchVO);
+
+        return "redirect:/Mypage";
+    }
+
+     */
+    
+    // 회원정보 수정 페이지
+    @RequestMapping(value = "/MypageModify", method = RequestMethod.GET)
+    public String getMyPageModify(@RequestParam("num") int mem_num, Model model) throws Exception {
+
+        MemberDTO memberDTO = memberModifyService.myPageModifyView(mem_num);
+        model.addAttribute("member", memberDTO);
+
+        return "/MypageModify";
+    }
+    // 회원정보 수정
+    @RequestMapping(value = "/MypageModify", method = RequestMethod.POST)
+    public String postMyPageModify(MemberDTO memberDTO) throws Exception {
+        memberModifyService.myPageModify(memberDTO);
+
+        return "redirect:/Mypage";
+    }
+    // 회원 탈퇴
+    @RequestMapping(value = "Mypage/delete", method = RequestMethod.GET)
+    public String Memberdelete(@RequestParam("mem_num") int mem_num) throws Exception{
+        memberModifyService.memberDelete(mem_num);
+
+        return "redirect:/";
     }
 
 }

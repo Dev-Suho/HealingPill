@@ -73,6 +73,7 @@ public class AdminController2 {
 
         List<OrderDTO> orderList = adminService.orderList();
         model.addAttribute("orderList", orderList) ;
+        System.out.println("나와라");
         return "/admin2/order";
     }
 
@@ -201,4 +202,55 @@ public class AdminController2 {
 
         return "redirect:/admin2/magazine_list";
     }
+}
+    // 5-1. 매거진 작성
+    @RequestMapping(value = "/admin2/magazine_add")
+    public String adminmagazine() {
+        return "/admin2/magazine_add";
+    }
+
+
+    // 5-2. 매거진 삭제
+
+    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
+    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
+        service.delete(mg_no);
+
+        return "redirect:/admin2/magazine_list";
+    }
+
+    // 5-3. 매거진 등록
+    @RequestMapping(value = "/write", method = RequestMethod.POST)
+    public String write(BoardVO boardVO) throws Exception {
+        service.write(boardVO);
+        return "redirect:/admin2/magazine_list";
+    }
+
+    // 5-4. 매거진 조회
+    @RequestMapping(value = "/admin2/magazineView", method = RequestMethod.GET)
+    public void adminMagazineView(@RequestParam("n") int mg_no, Model model) throws Exception{
+
+        BoardVO boardVO = service.adminMagazineView(mg_no);
+        model.addAttribute("magazine", boardVO);
+    }
+
+    // 5-5 매거진 수정 페이지
+    @RequestMapping(value = "/magazineModify", method = RequestMethod.GET)
+    public String getMagazineModify(@RequestParam("num") int mg_no, Model model) throws Exception {
+
+        BoardVO boardVO = service.adminMagazineView(mg_no);
+        model.addAttribute("magazine", boardVO);
+
+        return "/admin2/magazineModify";
+    }
+
+    // 5-6 매거진 수정
+
+    @RequestMapping(value = "/magazineModify", method = RequestMethod.POST)
+    public String postMagazineModify(BoardVO boardVO) throws Exception {
+        service.magazineModify(boardVO);
+
+        return "redirect:/admin2/magazine_list";
+    }
+
 }

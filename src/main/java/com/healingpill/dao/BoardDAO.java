@@ -13,10 +13,16 @@ public interface BoardDAO {
     //게시글 삭제
     public void delete(int mg_no) throws Exception;
 
-
     //게시글 목록
     public List<BoardVO> magazineView() throws Exception;
 
-    //게시글 디테일
-    BoardVO read(int mg_no) throws Exception;
+
+    //게시글 상세보기
+    public BoardVO getBoardContents(int mg_no) throws Exception;
+
+    // 관리자 게시글 상세조회
+    public BoardVO adminMagazineView(int mg_no) throws Exception;
+
+    // 관리자 게시글 수정
+    public void magazineModify(BoardVO boardVO) throws Exception;
 }

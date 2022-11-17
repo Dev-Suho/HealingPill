@@ -48,6 +48,7 @@
                             <c:forEach items="${magazine}" var="magazine">
                                 <form role="form" method="post" autocomplete="off">
                                     <tr>
+                                    <tr onclick="location.href='/admin2/magazineView?n=${magazine.mg_no}'">
                                         <td>${magazine.mg_no}</td>
                                         <td>${magazine.mg_title}</td>
                                         <td>${magazine.mg_sum}</td>

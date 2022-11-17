@@ -51,13 +51,21 @@
     </select>
 
     <!-- mypage 회원 수정 mapper -->
-    <update id="MemberModify">
-        update MEMBER set MEM_PASSWORD = #{mem_password, jdbcType = VARCHAR} ,
-                          MEM_ADDRESS = #{mem_address, jdbcType = VARCHAR } ,
+    <update id="myPageModify">
+        update MEMBER set MEM_PASSWORD = #{mem_password, jdbcType = VARCHAR},
                           MEM_PHONE = #{mem_phone, jdbcType = VARCHAR},
+                          MEM_ADDRESS = #{mem_address, jdbcType = VARCHAR},
                           MEM_EMAIL = #{mem_email, jdbcType = VARCHAR}
-        where MEM_ID = ${mem_id}
-
+        where MEM_NUM = #{mem_num}
     </update>
 
+    <!-- mypage 회원 수정 페이지 -->
+    <select id="myPageModifyView" parameterType="int" resultType="com.healingpill.dto.MemberDTO">
+        select * from MEMBER where MEM_NUM = #{mem_num}
+    </select>
+
+    <!-- mypage 회원 탈퇴 -->
+    <delete id="memberDelete" parameterType="int">
+        DELETE MEMBER WHERE MEM_NUM = #{mem_num, jdbcType = NUMERIC}
+    </delete>
 </mapper>

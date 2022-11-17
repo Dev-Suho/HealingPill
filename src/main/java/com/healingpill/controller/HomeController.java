@@ -62,6 +62,7 @@ public class HomeController {
         return "/admin/cm_magazine";
     }
 
+<<<<<<<<< Temporary merge branch 1
     //매거진 관리
     @RequestMapping(value = "/admin/magazine_list")
     public String adminmagazine_list() { return "/admin/magazine_list";}

@@ -40,6 +40,18 @@
                             class="absolute top-0 left-0 z-10 flex h-full w-full items-end bg-gradient-to-t from-dark-700 to-transparent"
                     >
                         <div class="flex flex-wrap items-center p-4 pb-4 sm:p-8">
+                            <div class="mb-4 mr-5 flex items-center md:mr-10">
+                                <div class="mr-4 h-10 w-10 overflow-hidden rounded-full">
+                                    <img
+                                            src="resources/assets/images/magazine/${boardContents.mg_image}"
+                                            alt="image"
+                                            class="w-full"
+                                    />
+                                </div>
+                                <p class="text-base font-medium text-white">
+
+                                </p>
+                            </div>
                             <div class="mb-4 flex items-center">
                                 <p
                                         class="mr-5 flex items-center text-sm font-medium text-white md:mr-8"
@@ -136,15 +148,15 @@
                                     data-wow-delay=".1s
                     "
                             >
-                                <a href="/magazineDetail?mg_no=${magazine.mg_title}">
-                                    ${magazine.mg_title}
+                                <a href="/magazineDetail?mg_no=${boardContents.mg_title}">
+                                    ${boardContents.mg_title}
                                 </a>
                             </h2>
                             <p
                                     class="wow fadeInUp mb-8 text-base leading-relaxed text-body-color"
                                     data-wow-delay=".1s"
                             >
-                                ${magazine.mg_content}
+                                ${boardContents.mg_content}
                             </p>
 
 
@@ -170,15 +182,9 @@
                           />
                         </svg>
                       </span>
-                                    <p
-                                            class="mb-4 text-base font-medium italic leading-[26px] text-dark"
-                                    >
-                                        A spring of truth shall flow from it: like a new star it
-                                        shall scatter the darkness of ignorance, and cause a
-                                        light heretofore unknown to shine amongst men.
-                                    </p>
+
                                     <span class="text-sm italic text-body-color">
-                        “Andrio Domeco”
+
                       </span>
                                 </div>
                                 <div>
@@ -258,30 +264,14 @@
                                     class="wow fadeInUp mb-8 text-2xl font-bold text-dark sm:text-[26px]"
                                     data-wow-delay=".1s"
                             >
-                                What is it with your ideas?
+
                             </h3>
 
                             <p
                                     class="wow fadeInUp mb-8 text-base leading-relaxed text-body-color"
                                     data-wow-delay=".1s"
                             >
-                                At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                                vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                                iracundia signiferumque quo. Sed virtute suavitate
-                                suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                                adversarium interpretaris eu sit, eum viris impedit ne.
-                                Erant appareat corrumpit ei vel.
-                            </p>
-                            <p
-                                    class="wow fadeInUp mb-11 text-base leading-relaxed text-body-color"
-                                    data-wow-delay=".1s"
-                            >
-                                At quo cetero fastidii. Usu ex ornatus corpora sententiae,
-                                vocibus deleniti ut nec. Ut enim eripuit eligendi est, in
-                                iracundia signiferumque quo. Sed virtute suavitate
-                                suscipiantur ea, dolor this can eloquentiam ei pro. Suas
-                                adversarium interpretaris eu sit, eum viris impedit ne.
-                                Erant appareat corrumpit ei vel.
+                                ${boardContents.mg_contents}
                             </p>
 
                             <div class="-mx-4 mb-12 flex flex-wrap items-center">
