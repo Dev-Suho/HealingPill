@@ -56,8 +56,13 @@
                           MEM_ADDRESS = #{mem_address, jdbcType = VARCHAR } ,
                           MEM_PHONE = #{mem_phone, jdbcType = VARCHAR},
                           MEM_EMAIL = #{mem_email, jdbcType = VARCHAR}
-        where MEM_ID = ${mem_id}
+        where MEM_ID = #{mem_id}
 
     </update>
+
+    <select id="mem_orderList" resultType="com.healingpill.dto.OrderDTO">
+        select * from ORDER_REQUEST
+        where MEM_ID = #{mem_id, jdbcType = VARCHAR} ORDER BY ORDER_REGISTER_DATETIME DESC
+    </select>
 
 </mapper>

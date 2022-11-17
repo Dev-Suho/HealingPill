@@ -38,17 +38,15 @@
                             <th>주문번호</th>
                             <th>결제금액</th>
                             <th>처리현황</th>
-
                         </tr>
                         </thead>
                         <tbody>
                         <c:forEach items="${orderList}" var="orderList">
-                            <tr onClick="location.href='/ex/mypage_orderdetail?or_id=${orderList.getOr_id()}'">
-                                <td><c:out value="${orderList.getOr_datetime()}"/></td>
-                                <td><c:out value="${orderList.getOr_id() }"/></td>
-                                <td><c:out value="${orderList.getOr_price() }"/> 원</td>
-                                <td><c:if test="${orderList.getOr_cancel_state() eq 1}">주문 취소</c:if>
-                                    <c:if test="${orderList.getOr_cancel_state() eq 0}">결제 완료</c:if></td>
+                            <tr>
+                                <td><c:out value="${orderList.order_register_datetime}"/></td>
+                                <td><c:out value="${orderList.order_id}"/></td>
+                                <td><c:out value="${orderList.totalPrice}"/> 원</td>
+                                <td><c:out value="${orderList.order_State}"/> 원</td>
                             </tr>
                         </c:forEach>
                         </tbody>
