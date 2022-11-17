@@ -25,4 +25,6 @@ public interface ShopDAO {
 
     // 장바구니 확인
     public CartVO checkCart(CartVO cartVO) throws Exception;
+
+    public List<ProductViewVO> bestProductList() throws Exception;
 }

@@ -16,6 +16,7 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 import java.lang.reflect.Member;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -47,10 +48,10 @@ public class OrderController {
         return result;
     }
 
+    // 단일 상품 주문 페이지
     @RequestMapping(value = "/orderPage", method = RequestMethod.GET)
-    public String orderPage(@RequestParam("itemId") int pd_num, Model model, HttpSession session) throws Exception {
+    public String orderPage(@RequestParam("itemId") int pd_num, Model model, HttpSession session, OrderDetailDTO orderDetailDTO) throws Exception {
         MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
-
 
         ProductViewVO productViewVO = productListService.productView(pd_num);
         model.addAttribute("products", productViewVO);
@@ -59,6 +60,7 @@ public class OrderController {
         return "checkout";
     }
 
+    // 카트 상품 주문 페이지
     @RequestMapping(value = "/orderList", method = RequestMethod.GET)
     public String orderListPage(Model model, HttpSession session) throws Exception{
         MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
@@ -73,6 +75,7 @@ public class OrderController {
     }
 
 
+    // 주문 완료 페이지
     @RequestMapping(value = "/orderComplete", method = RequestMethod.GET)
     public String viewOrderComplete(){
         return "checkoutComplete";
@@ -98,17 +101,61 @@ public class OrderController {
 
         orderDTO.setOrder_id(order_id);
         orderDTO.setMem_id(mem_id);
-        orderService.orderInfo(orderDTO);
 
         // 포인트 적립
-        int totalPrice = orderDetailDTO.getTotalPrice();
+        int totalPrice = orderDTO.getTotalPrice();
         int savePoint = (int)(totalPrice * 0.05);
+        orderDTO.setTotalPrice(totalPrice);
+        orderDTO.setSavePoint(savePoint);
+        orderService.savePoint(orderDTO);
 
-        orderDetailDTO.setSavePoint(savePoint);
+        orderService.orderInfo(orderDTO);
+
+
         orderDetailDTO.setOrder_id(order_id);
+        orderDetailDTO.setMem_id(mem_id);
         orderService.orderInfo_Details(orderDetailDTO);
 
-        //orderService.orderCount(orderDetailDTO);
+
+
+        orderService.orderCount(orderDetailDTO);
+
+        return "checkoutComplete";
+    }
+
+    @RequestMapping(value = "/orderProduct", method = RequestMethod.POST)
+    public String singleOrder(HttpSession session, OrderDTO orderDTO, OrderDetailDTO orderDetailDTO) throws Exception {
+        MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+        String mem_id = memberDTO.getMem_id();
+
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        String ym = year + new DecimalFormat("00").format(cal.get(Calendar.MONTH) + 1);
+        String ymd = ym + new DecimalFormat("00").format(cal.get(Calendar.DATE));
+        String subNum = "";
+
+        for(int i = 1; i <= 6; i++){
+            subNum += (int)(Math.random() * 10);
+        }
+
+        String order_id = ymd + "_" + subNum;
+
+        orderDTO.setOrder_id(order_id);
+        orderDTO.setMem_id(mem_id);
+
+        int totalPrice = (orderDetailDTO.getPd_price() * orderDetailDTO.getOrder_stock());
+        int savePoint = (int)(totalPrice * 0.05);
+
+        orderDTO.setTotalPrice(totalPrice);
+        orderDTO.setSavePoint(savePoint);
+        orderService.savePoint(orderDTO);
+
+        orderService.orderInfo(orderDTO);
+
+
+        orderDetailDTO.setOrder_id(order_id);
+        orderDetailDTO.setMem_id(mem_id);
+        orderService.orderProduct(orderDetailDTO);
 
         return "checkoutComplete";
     }

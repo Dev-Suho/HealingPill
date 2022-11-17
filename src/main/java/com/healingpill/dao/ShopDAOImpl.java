@@ -45,4 +45,8 @@ public class ShopDAOImpl implements ShopDAO {
         return null;
     }
 
+    @Override
+    public List<ProductViewVO> bestProductList() throws Exception {
+        return sqlSession.selectList(NAMESPACE + "bestProductList");
+    }
 }

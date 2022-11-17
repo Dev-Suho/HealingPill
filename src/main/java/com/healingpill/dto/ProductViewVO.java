@@ -15,6 +15,8 @@ public class ProductViewVO {
 
     private String ctg_Name;
     private String ctg_CodeRef;
+    // 주문 수량
+    private int order_stock;
 
     public int getPd_num() {
         return pd_num;
@@ -102,5 +104,13 @@ public class ProductViewVO {
 
     public void setCtg_CodeRef(String ctg_CodeRef) {
         this.ctg_CodeRef = ctg_CodeRef;
+    }
+
+    public int getOrder_stock() {
+        return order_stock;
+    }
+
+    public void setOrder_stock(int order_stock) {
+        this.order_stock = order_stock;
     }
 }
