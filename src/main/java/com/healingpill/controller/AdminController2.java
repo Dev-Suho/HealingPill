@@ -4,12 +4,15 @@ import com.healingpill.dto.*;
 import com.healingpill.service.*;
 import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
@@ -31,6 +34,8 @@ public class AdminController2 {
     ProductListService productListService;
     @Inject
     ProductModifyService productModifyService;
+    @Inject
+    BoardService service;
 
     // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
     @Resource(name = "uploadPath")
@@ -101,7 +106,7 @@ public class AdminController2 {
         return "/admin2/product_list";
     }
 
-    // 4. 상품 조회
+    // 4-1. 상품 조회
     // URL 주소에서 "n"의 값을 찾아서 int pd_num에게 전달
     @RequestMapping(value = "admin2/productView", method = RequestMethod.GET)
     public void ProductView(@RequestParam("n") int pd_num, Model model) throws Exception{
@@ -110,7 +115,7 @@ public class AdminController2 {
         model.addAttribute("products", productVO);
     }
 
-    // 4-1. 카테고리 등록
+    // 4-2. 카테고리 등록
     @RequestMapping(value = "/product_add", method = RequestMethod.GET)
     public String getProductRegister(Model model) throws Exception {
         List<ProductCategoryVO> category = null;
@@ -125,7 +130,7 @@ public class AdminController2 {
         return "/admin2/product_add";
     }
 
-    // 4-2. 상품 등록
+    // 4-3. 상품 등록
     @RequestMapping(value = "/product_add", method = RequestMethod.POST)
     public String postProductRegister(ProductVO productVO, MultipartFile file) throws Exception {
         String imgUploadPath = uploadPath + File.separator + "imgUpload";
@@ -149,7 +154,7 @@ public class AdminController2 {
     }
 
 
-    // 4-3. 상품 수정 페이지
+    // 4-4. 상품 수정 페이지
     @RequestMapping(value = "/product/modify", method = RequestMethod.GET)
     public String getProductModify(@RequestParam("num") int pd_num, Model model) throws Exception{
         ProductViewVO productVO = productListService.productView(pd_num);
@@ -162,7 +167,7 @@ public class AdminController2 {
         return "/admin2/productModify";
     }
 
-    // 4-4. 상품 수정
+    // 4-5. 상품 수정
     @RequestMapping(value = "/product/modify", method = RequestMethod.POST)
     public String postProductModify(ProductVO productVO) throws Exception {
         productModifyService.productModify(productVO);
@@ -170,12 +175,44 @@ public class AdminController2 {
         return "redirect:/admin2/product_list";
     }
 
-    // 4-5. 상품 삭제
-
+    // 4-6. 상품 삭제
     @RequestMapping(value = "/product/delete", method = RequestMethod.POST)
     public String postProductDelete(@RequestParam("num") int pd_num) throws Exception {
         productModifyService.productDelete(pd_num);
 
         return "redirect:/admin2/product_list";
+    }
+
+    // 5. 매거진 조회
+    @RequestMapping(value = "/admin2/magazine_list")
+    public String adminmagazine_list() { return "/admin2/magazine_list";}
+
+    @RequestMapping(value = "/admin2/magazine_list", method = RequestMethod.GET)
+    public String ProductView(Model model) throws Exception {
+
+        List<BoardVO> magazineList = service.magazineView();
+        model.addAttribute("magazine", magazineList);
+
+        return "admin2/magazine_list";
+    }
+
+    // 5-1. 매거진 작성
+    @RequestMapping(value = "/admin2/magazine_add")
+    public String adminmagazine() {
+        return "/admin2/magazine_add";
+    }
+
+    @RequestMapping(value = "/write", method = RequestMethod.POST)
+    public String write(BoardVO boardVO) throws Exception {
+        service.write(boardVO);
+        return "redirect:/admin2/magazine_list";
+    }
+
+    // 5-2. 매거진 삭제
+    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
+    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
+        service.delete(mg_no);
+
+        return "redirect:/admin2/magazine_list";
     }
 }

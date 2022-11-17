@@ -125,6 +125,4 @@ public class ProductController {
 
         return "redirect:/admin/product_list";
     }
-
-
 }

@@ -5,23 +5,28 @@
 <mapper namespace="BoardMapper">
     <!-- 게시판 글 작성 -->
     <insert id="insert">
-        INSERT INTO MAGAZINE(MG_NO,MG_IMAGE,MG_TITLE, MG_CONTENT, MG_DATETIME)
-                    VALUES (MG_NO_SEQ.nextval,#{mg_image}, #{mg_title}, #{mg_content}, SYSDATE)
+        INSERT INTO MAGAZINE(MG_NO,MG_IMAGE,MG_TITLE, MG_CONTENT,MG_CONTENTS, MG_SUM, MG_DATETIME)
+        VALUES (MG_NO_SEQ.nextval,#{mg_image}, #{mg_title}, #{mg_content}, #{mg_contents}, #{mg_sum}, SYSDATE)
     </insert>
     <!-- 게시판 글 조회 -->
     <select id="getMagazineList" resultType="com.healingpill.dto.BoardVO">
         SELECT * FROM MAGAZINE
     </select>
-
+    <!-- 게시판 글 조회 -->
     <select id="magazineList" resultType="com.healingpill.dto.MagazineViewVO">
         select * from MAGAZINE
     </select>
 
     <select id="read" parameterType="int" resultType="com.healingpill.dto.BoardVO">
-        SELECT MG_NO,MG_IMAGE,MG_TITLE,MG_DATETIME,MG_CONTENT FROM MAGAZINE WHERE MG_NO = #{mg_no}
+        SELECT MG_NO,MG_IMAGE,MG_TITLE,MG_DATETIME,MG_SUM, MG_CONTENT, MG_CONTENTS FROM MAGAZINE WHERE MG_NO = #{mg_no}
     </select>
     <!-- 게시글 삭제 -->
     <delete id="delete" parameterType="int">
-       DELETE  MAGAZINE WHERE MG_NO = #{mg_no, jdbcType = NUMERIC}
+        DELETE  MAGAZINE WHERE MG_NO = #{mg_no, jdbcType = NUMERIC}
     </delete>
+    <!-- magazineDetail -->
+    <select id="getBoardContents" parameterType="java.lang.Integer" resultType="com.healingpill.dto.BoardVO">
+        select * FROM MAGAZINE WHERE mg_no=#{mg_no}
+    </select>
+
 </mapper>

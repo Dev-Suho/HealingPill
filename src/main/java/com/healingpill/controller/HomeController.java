@@ -55,6 +55,7 @@ public class HomeController {
     //관리자 주문 조회
     @RequestMapping(value = "/admin/order")
     public String adminorder() { return "/admin/order"; }
+
     //매거진 추가
     @RequestMapping(value = "/admin/cm_magazine")
     public String adminmagazine() {
@@ -65,8 +66,6 @@ public class HomeController {
     @RequestMapping(value = "/admin/magazine_list")
     public String adminmagazine_list() { return "/admin/magazine_list";}
 
-    @RequestMapping(value = "/admin/magazineView")
-    public String adminmagazineView() { return "/admin/magazineView"; }
 
     //메인 페이지
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
@@ -88,23 +87,6 @@ public class HomeController {
         return "about-us";
     }
 
-    // magazine 페이지 이동
-    @RequestMapping(value = "/magazine", method = RequestMethod.GET)
-    public String magazineGET() {
-        logger.debug("magazine 페이지 이동");
-
-        return "magazine";
-    }
-
-    // magazineDetail 페이지 이동
-    /*
-    @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
-    public String magazineDetailGET() {
-        logger.debug("magazineDetail 페이지 이동");
-
-        return "magazineDetail";
-    }
-    */
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faqGET() {
@@ -112,10 +94,6 @@ public class HomeController {
 
         return "faq";
     }
-
-    // FAQ 관리자 페이지
-
-
 
     // 이벤트 페이지 이동
     @RequestMapping(value = "/event", method = RequestMethod.GET)
