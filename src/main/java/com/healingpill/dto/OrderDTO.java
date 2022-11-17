@@ -3,7 +3,6 @@ package com.healingpill.dto;
 import java.util.Date;
 import java.util.List;
 
-//ORDER_REQUEST DB
 public class OrderDTO {
     private String order_id;
     private String order_name;
@@ -14,9 +13,11 @@ public class OrderDTO {
     private String order_phone;
     private String order_State;
     private int deliveryCost;
-    private double usePoint;
-
+    private int usePoint;
     private Date order_register_datetime;
+    private int totalPrice;
+    private int savePoint;
+    private int mem_point;
 
     public String getOrder_id() {
         return order_id;
@@ -98,13 +99,37 @@ public class OrderDTO {
         this.deliveryCost = deliveryCost;
     }
 
-    public double getUsePoint() {
+    public int getUsePoint() {
         return usePoint;
     }
 
-    public void setUsePoint(double usePoint) {
+    public void setUsePoint(int usePoint) {
         this.usePoint = usePoint;
     }
 
 
+
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public int getSavePoint() {
+        return savePoint;
+    }
+
+    public void setSavePoint(int savePoint) {
+        this.savePoint = savePoint;
+    }
+
+    public int getMem_point() {
+        return mem_point;
+    }
+
+    public void setMem_point(int mem_point) {
+        this.mem_point = mem_point;
+    }
 }

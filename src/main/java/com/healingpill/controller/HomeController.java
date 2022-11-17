@@ -4,7 +4,9 @@ package com.healingpill.controller;
 //import com.sun.org.slf4j.internal.LoggerFactory;
 
 import com.healingpill.dto.BoardVO;
+import com.healingpill.dto.ProductViewVO;
 import com.healingpill.service.BoardService;
+import com.healingpill.service.ShopService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -13,14 +15,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.inject.Inject;
+import java.util.List;
+
 @Controller
 public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
 
+    @Inject
+    ShopService shopService;
 
     @RequestMapping(value = "/")
-    public String main() {
+    public String main(Model model) throws Exception {
+
+        List<ProductViewVO> list = shopService.bestProductList();
+        model.addAttribute("list", list);
+
         return "MainPage";
     }
 
@@ -55,6 +66,7 @@ public class HomeController {
     //관리자 주문 조회
     @RequestMapping(value = "/admin/order")
     public String adminorder() { return "/admin/order"; }
+
     //매거진 추가
     @RequestMapping(value = "/admin/cm_magazine")
     public String adminmagazine() {
@@ -65,8 +77,6 @@ public class HomeController {
     @RequestMapping(value = "/admin/magazine_list")
     public String adminmagazine_list() { return "/admin/magazine_list";}
 
-    @RequestMapping(value = "/admin/magazineView")
-    public String adminmagazineView() { return "/admin/magazineView"; }
 
     //메인 페이지
     @RequestMapping(value = "/Main", method = RequestMethod.GET)
@@ -77,9 +87,6 @@ public class HomeController {
     @RequestMapping(value = "/Mypage" , method = RequestMethod.GET)
     public String Mypage() { return "/Mypage"; }
 
-    @RequestMapping(value = "/Mypage_order" , method = RequestMethod.GET)
-    public String Mypage_order() { return "/Mypage_order"; }
-
 
     @RequestMapping(value = "/about-us", method = RequestMethod.POST)
     public String aboutusPOST() {
@@ -88,23 +95,6 @@ public class HomeController {
         return "about-us";
     }
 
-    // magazine 페이지 이동
-    @RequestMapping(value = "/magazine", method = RequestMethod.GET)
-    public String magazineGET() {
-        logger.debug("magazine 페이지 이동");
-
-        return "magazine";
-    }
-
-    // magazineDetail 페이지 이동
-    /*
-    @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
-    public String magazineDetailGET() {
-        logger.debug("magazineDetail 페이지 이동");
-
-        return "magazineDetail";
-    }
-    */
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faqGET() {
@@ -112,10 +102,6 @@ public class HomeController {
 
         return "faq";
     }
-
-    // FAQ 관리자 페이지
-
-
 
     // 이벤트 페이지 이동
     @RequestMapping(value = "/event", method = RequestMethod.GET)

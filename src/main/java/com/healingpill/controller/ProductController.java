@@ -69,6 +69,7 @@ public class ProductController {
         // JSONArray를 사용해서 category를 JSON타입으로 변경한 뒤 category라는 변수로 지정
         model.addAttribute("category", JSONArray.fromObject(category));
 
+
         return "/admin/product_add";
     }
 
@@ -125,6 +126,5 @@ public class ProductController {
 
         return "redirect:/admin/product_list";
     }
-
-
 }
+

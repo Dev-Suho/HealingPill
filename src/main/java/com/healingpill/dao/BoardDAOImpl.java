@@ -1,12 +1,9 @@
 package com.healingpill.dao;
-
 import com.healingpill.dto.BoardVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
-
 import javax.inject.Inject;
 import java.util.List;
-
 @Repository
 public class BoardDAOImpl implements BoardDAO {
     @Inject

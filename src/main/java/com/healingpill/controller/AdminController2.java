@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
 
@@ -57,13 +58,17 @@ public class AdminController2 {
     }
 
     // 2-1. 회원 상세 페이지
-    // URL 주소에서 "num" 의 값을 찾아서 int mem_num 에게 전달
-    @RequestMapping(value = "admin2/member_detail", method = RequestMethod.GET)
-    public void member_detail(@RequestParam("mem") int mem_num , Model model ) throws Exception {
+    // URL 주소에서 "mem_id" 의 값을 찾아서 mem 에게 전달
+    @RequestMapping(value =  "admin2/member_detail", method = RequestMethod.GET)
+    public void member_detail(@RequestParam("mem") String mem_id , Model model) throws Exception {
 
-        AdminDTO adminDTO = adminService.member_detail(mem_num);
+        AdminDTO adminDTO = adminService.member_detail(mem_id);
+        List<OrderDTO> orderDTO = adminService.member_order(mem_id);
+
+
 
         model.addAttribute("member_detail",  adminDTO);
+        model.addAttribute("order", orderDTO);
     }
 
 
@@ -73,13 +78,22 @@ public class AdminController2 {
 
         List<OrderDTO> orderList = adminService.orderList();
         model.addAttribute("orderList", orderList) ;
+
         return "/admin2/order";
     }
 
 
     //  3-1. 관리자 주문 상세 페이지 창
-    @RequestMapping(value = "/order_detail")
-    public String adminorder_detail() { return "/admin2/order_detail"; }
+
+    @RequestMapping(value = { "admin2/order_detail","admin2/order_detail2",}, method = RequestMethod.GET)
+    public void orderDetail(@RequestParam("order") String order_id , Model model) throws Exception {
+
+        OrderDTO orderDTO = adminService.orderDetail(order_id);
+        List<OrderDetailDTO> orderDetailDTO = adminService.orderDetail2(order_id);
+
+        model.addAttribute("orderDetail", orderDTO);
+        model.addAttribute("orderDetail2", orderDetailDTO);
+    }
 
     // 4. 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)
@@ -94,7 +108,7 @@ public class AdminController2 {
 
     // 4-1. 상품 조회
     // URL 주소에서 "n"의 값을 찾아서 int pd_num에게 전달
-    @RequestMapping(value = "productView", method = RequestMethod.GET)
+    @RequestMapping(value = "admin2/productView", method = RequestMethod.GET)
     public void ProductView(@RequestParam("n") int pd_num, Model model) throws Exception{
 
         ProductViewVO productVO = productListService.productView(pd_num);
@@ -162,7 +176,6 @@ public class AdminController2 {
     }
 
     // 4-6. 상품 삭제
-
     @RequestMapping(value = "/product/delete", method = RequestMethod.POST)
     public String postProductDelete(@RequestParam("num") int pd_num) throws Exception {
         productModifyService.productDelete(pd_num);
@@ -189,48 +202,17 @@ public class AdminController2 {
         return "/admin2/magazine_add";
     }
 
-
-    // 5-2. 매거진 삭제
-
-    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
-    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
-        service.delete(mg_no);
-
-        return "redirect:/admin2/magazine_list";
-    }
-
-    // 5-3. 매거진 등록
     @RequestMapping(value = "/write", method = RequestMethod.POST)
     public String write(BoardVO boardVO) throws Exception {
         service.write(boardVO);
         return "redirect:/admin2/magazine_list";
     }
 
-    // 5-4. 매거진 조회
-    @RequestMapping(value = "/admin2/magazineView", method = RequestMethod.GET)
-    public void adminMagazineView(@RequestParam("n") int mg_no, Model model) throws Exception{
-
-        BoardVO boardVO = service.adminMagazineView(mg_no);
-        model.addAttribute("magazine", boardVO);
-    }
-
-    // 5-5 매거진 수정 페이지
-    @RequestMapping(value = "/magazineModify", method = RequestMethod.GET)
-    public String getMagazineModify(@RequestParam("num") int mg_no, Model model) throws Exception {
-
-        BoardVO boardVO = service.adminMagazineView(mg_no);
-        model.addAttribute("magazine", boardVO);
-
-        return "/admin2/magazineModify";
-    }
-
-    // 5-6 매거진 수정
-
-    @RequestMapping(value = "/magazineModify", method = RequestMethod.POST)
-    public String postMagazineModify(BoardVO boardVO) throws Exception {
-        service.magazineModify(boardVO);
+    // 5-2. 매거진 삭제
+    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
+    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
+        service.delete(mg_no);
 
         return "redirect:/admin2/magazine_list";
     }
-
 }

@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -49,15 +50,15 @@
                             <table class="table">
                                 <tr>
                                     <th>주문번호</th>
-                                    <td class="data_td">${member_detail.mem_id}</td>
+                                    <td class="data_td">${orderDetail.order_id}</td>
                                 </tr>
                                 <tr>
                                     <th>주문일</th>
-                                    <td class="data_td">${member_detail.mem_username}</td>
+                                    <td class="data_td"><fmt:formatDate value="${orderDetail.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                 </tr>
                                 <tr>
                                     <th>주문상태</th>
-                                    <td class="data_td">${member_detail.mem_email}</td>
+                                    <td class="data_td">${orderDetail.order_State}</td>
                                 </tr>
                             </table>
                         </div>
@@ -70,19 +71,19 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th>상품 이미지</th>
                                     <th>상품명</th>
                                     <th>수량</th>
                                     <th>판매가</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>상품 이미지</td>
-                                    <td>오메가</td>
-                                    <td>1</td>
-                                    <td>23,000</td>
-                                </tr>
+                                <c:forEach var="orderDetail2" items="${orderDetail2}">
+                                    <tr onclick="location.href='/admin2/productView?n=${orderDetail2.pd_num}'">
+                                        <td class="data_td">${orderDetail2.pd_num}</td>
+                                        <td class="data_td">${orderDetail2.order_stock}</td>
+                                        <td class="data_td"><fmt:formatNumber value="${orderDetail2.pd_price}" pattern="###,###,###"/></td>
+                                    </tr>
+                                </c:forEach>
                                 </tbody>
                             </table>
                         </div>
@@ -99,7 +100,7 @@
                                 <div class="d-flex flex-row align-items-center">
                                     <i class="mdi mdi-coin icon-lg text-warning"></i>
                                     <p class="mb-0 ml-1">
-                                    <h3>100,000</h3>
+                                    <h3><fmt:formatNumber value="${orderDetail.totalPrice}" pattern="###,###,###"/></h3>
                                     </p>
                                 </div>
                             </div>
