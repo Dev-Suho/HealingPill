@@ -30,10 +30,19 @@
         update PRODUCT p set p.PD_ORDER_QUANTITY = p.PD_ORDER_QUANTITY + (select c.CART_STOCK from CART c where p.PD_NUM = c.PD_NUM and c.MEM_ID = #{mem_id, jdbcType = VARCHAR})
     </update>
 
-
+    <!-- 포인트 저장 -->
     <update id="savePoint" parameterType="com.healingpill.dto.OrderDTO">
         update MEMBER set mem_point = mem_point + ${savePoint}
                 where mem_id = '${mem_id}'
     </update>
 
+    <!-- 포인트 사용 -->
+    <update id="usePoint" parameterType="com.healingpill.dto.OrderDTO">
+        update MEMBER set mem_point = mem_point - #{usePoint, jdbcType = NUMERIC}
+                where mem_id = #{mem_id, jdbcType = VARCHAR}
+    </update>
+
+    <delete id="deleteCart">
+        delete CART where mem_id = #{mem_id, jdbcType = VARCHAR}
+    </delete>
 </mapper>

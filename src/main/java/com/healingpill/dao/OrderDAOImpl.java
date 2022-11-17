@@ -37,4 +37,14 @@ public class OrderDAOImpl implements OrderDAO{
     public void orderCount(OrderDetailDTO orderDetailDTO) throws Exception {
         sqlSession.update(NAMESPACE + "orderCount", orderDetailDTO);
     }
+
+    @Override
+    public void usePoint(OrderDTO orderDTO) throws Exception {
+        sqlSession.update(NAMESPACE + "usePoint", orderDTO);
+    }
+
+    @Override
+    public void deleteCart(OrderDTO orderDTO) throws Exception {
+        sqlSession.delete(NAMESPACE + "deleteCart", orderDTO);
+    }
 }

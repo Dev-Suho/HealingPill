@@ -21,4 +21,10 @@ public interface OrderDAO {
 
     // 주문 수량 카운트
     public void orderCount(OrderDetailDTO orderDetailDTO) throws Exception;
+
+    // 포인트 사용
+    public void usePoint(OrderDTO orderDTO) throws Exception;
+
+    // 카트 삭제
+    public void deleteCart(OrderDTO orderDTO) throws Exception;
 }
