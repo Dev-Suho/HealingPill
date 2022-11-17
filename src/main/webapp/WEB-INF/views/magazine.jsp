@@ -57,14 +57,14 @@
                 </span>
                         <h3>
                             <a
-                                    href="/magazineDetail"
+                                    href="/magazineDetail?mg_no=${magazine.mg_no}"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
                                     ${magazine.mg_title}
                             </a>
                         </h3>
                         <p class="text-base text-body-color">
-                                ${magazine.mg_content.substring(0,2)}
+                                ${magazine.mg_sum}
                         </p>
                     </div>
                 </div>

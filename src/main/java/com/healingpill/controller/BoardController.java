@@ -28,19 +28,21 @@ import java.util.List;
 
 @Controller
 public class BoardController {
+
     private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
+
     @Inject
     BoardService service;
 
-    /*//게시판 글 작성
+    /*// 게시판 글 작성
     @RequestMapping(value = "/write", method = RequestMethod.POST)
     public String write(BoardVO boardVO) throws Exception {
         logger.info("write");
         service.write(boardVO);
         return "redirect:/admin/magazine_list";
-    }*/
+    }
 
-    /*//게시판 글 삭제
+    // 게시판 글 삭제
 
     @RequestMapping(value = "/admin/delete", method = RequestMethod.POST)
     public String delete(@RequestParam("num") int mg_no) throws Exception {
@@ -48,6 +50,7 @@ public class BoardController {
         return "redirect:/admin/cm_magazine";
     }*/
 
+    // 게시글 조회
     @RequestMapping(value = "/magazine", method = RequestMethod.GET)
     public String mainProductView(Model model) throws Exception {
         List<BoardVO> magazineList = service.magazineView();
@@ -55,15 +58,17 @@ public class BoardController {
         return "magazine";
     }
 
-    //게시글 디테일
-    @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
-    public String  read(BoardVO boardVO,Model model) throws Exception {
-        logger.info("read");
-        model.addAttribute("read",service.read(boardVO.getMg_no()));
-        return "magazineDetail";
+    // 게시글 상세 조회
+    @RequestMapping(value = "magazineDetail", method = RequestMethod.GET)
+    public String read(@ModelAttribute("searchVO") BoardVO serachVO, @RequestParam("mg_no")
+                       int mg_no,Model model) throws Exception {
+        BoardVO boardContents = service.getBoardContents(mg_no);
+        model.addAttribute("boardContents", boardContents);
+
+        return "/magazineDetail";
     }
 
-    /*//관리자 게시글 보기
+    /*// 관리자 게시글 보기
     @RequestMapping(value = "/admin/magazine_list", method = RequestMethod.GET)
     public String ProductView(Model model) throws Exception {
 
@@ -71,13 +76,17 @@ public class BoardController {
         model.addAttribute("magazine", magazineList);
 
         return "/admin/magazine_list";
-    }*/
+    }
 
-    /*//게시글 삭제
+    // 게시글 삭제
     @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
     public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
         service.delete(mg_no);
 
         return "redirect:/admin/magazine_list";
+<<<<<<<<< Temporary merge branch 1
+    }
+=========
     }*/
+>>>>>>>>> Temporary merge branch 2
 }

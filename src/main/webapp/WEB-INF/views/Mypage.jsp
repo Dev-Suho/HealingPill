@@ -76,12 +76,11 @@
                         </table>
                         <br>
                         <div>
-                            <button
-                                    style="border-color: #c7a8ff; background-color: #c7a8ff; color: black; WIDTH: 100pt; HEIGHT: 30pt"
-                                    type="button" class="btn" id = "modify_btn" >회원정보 수정</button>
-                            <button
-                                    style="border-color: white; background-color: black; color: white; WIDTH: 80pt; HEIGHT: 30pt"
-                                    type="button" class="btn center"  id = "delete_btn" >회원 탈퇴</button>
+                            <a      style="border-color: #c7a8ff; background-color: #c7a8ff; color: black; WIDTH: 100pt; HEIGHT: 30pt"
+                                    href="MypageModify?num=${member.mem_num}">회원정보 수정</a>
+
+                            <a      style="border-color: white; background-color: black; color: white; WIDTH: 80pt; HEIGHT: 30pt"
+                                    href="/Mypage/delete?mem_num=${member.mem_num}" onclick="return confirm('삭제하시겠습니까?');">회원 탈퇴</a>
                         </div>
                         <br />
                     </form>
@@ -95,19 +94,5 @@
     </div>
 </section>
 
-<script>
-    var formObj = $("form[role='form']");
-
-    $("#modify_btn").click(function (){
-        formObj.attr("action", "/MypageModify");
-        formObj.attr("method", "get");
-        formObj.submit();
-    });
-
-    $("#delete_btn").click(function (){
-        formObj.attr("action", "");
-        formObj.submit();
-    });
-</script>
 <!--/ End Shopping Cart -->
 <%@ include file="layout/footer.jsp" %>

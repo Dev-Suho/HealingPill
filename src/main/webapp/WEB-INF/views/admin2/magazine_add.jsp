@@ -39,7 +39,6 @@
                             <p class="card-description">
                                 매거진 등록
                             </p>
-                            <br><br><br>
                             <div id="sform">
                                 <div class="form-group">
                                     <div class="select_img"><img src="" /></div><br><br>
@@ -51,7 +50,7 @@
                                             if(this.files && this.files[0]) {
                                                 var reader = new FileReader;
                                                 reader.onload = function(data) {
-                                                    $(".select_img img").attr("src", data.target.result).width(400);
+                                                    $(".select_img img").attr("src", data.target.result).width(500);
                                                 }
                                                 reader.readAsDataURL(this.files[0]);
                                             }
@@ -66,13 +65,12 @@
                 <div class="col-lg-6 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <br><br>
                             <div class="form-group">
                                 <label>매거진 제목</label>
                                 <input type="text" class="form-control form-control-lg" id="mg_title" name="mg_title" placeholder="Magazine title" aria-label="Magazine title">
                             </div>
                             <div class="form-group">
-                                <label>썸네일 설명</label>
+                                <label>매거진 소제목</label>
                                 <input type="text" class="form-control form-control-lg" id="mg_sum" name="mg_sum" placeholder="Short text" aria-label="Short text">
                             </div>
 

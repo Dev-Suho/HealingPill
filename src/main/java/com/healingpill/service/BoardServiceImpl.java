@@ -19,7 +19,6 @@ public class BoardServiceImpl implements BoardService {
     public void write(BoardVO boardVO) throws Exception {
         dao.write(boardVO);
     }
-
     //게시글 삭제
     @Override
     public void  delete(int mg_no) throws Exception {
@@ -30,9 +29,24 @@ public class BoardServiceImpl implements BoardService {
     public List<BoardVO> magazineView() throws Exception {
         return dao.magazineView();
     }
-    //게시글 디테일
+
+    //게시글 상세 보기
     @Override
-    public BoardVO read(int mg_no) throws Exception {
-        return dao.read(mg_no);
+    public BoardVO getBoardContents(int mg_no)  throws Exception{
+        return dao.getBoardContents(mg_no);
     }
+
+
+    // 관리자 게시글 상세조회
+    @Override
+    public BoardVO adminMagazineView(int mg_no) throws Exception {
+        return dao.adminMagazineView(mg_no);
+    };
+
+    // 관리자 게시글 수정
+    @Override
+    public void magazineModify(BoardVO boardVO) throws Exception {
+        dao.magazineModify(boardVO);
+    }
+<<<<<<<<< Temporary merge branch 1
 }

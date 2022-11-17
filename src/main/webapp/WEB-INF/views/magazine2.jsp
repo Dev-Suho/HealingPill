@@ -41,7 +41,7 @@
             <div class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <div class="wow fadeInUp group mb-10" data-wow-delay=".1s">
                     <div class="mb-8 overflow-hidden rounded">
-                        <a href="/magazineDetail?mg_no=${magazine.mg_no}" class="block">
+                        <a href="/magazineDetail?mg_no=${magazine.mg_no} " class="block">
                             <img
                                     src="resources/assets/images/magazine/${magazine.mg_image}"
                                     alt="image"
@@ -54,18 +54,18 @@
                         class="mb-5 inline-block rounded bg-secondary py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
                 >
 
-                        ${magazine.mg_datetime}
+                    <a href="/magazineDetail?mg_no=${magazine.mg_no} " class="block">${magazine.mg_datetime}</a>
                 </span>
                         <h3>
                             <a
                                     href="/magazineDetail"
                                     class="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
                             >
-                                    ${magazine.mg_title}
+                                <a href="/magazineDetail?mg_no=${magazine.mg_no} " class="block">${magazine.mg_title}</a>
                             </a>
                         </h3>
                         <p class="text-base text-body-color" style="font-size: 10px">
-                                ${magazine.mg_content.substring(0,2)}
+                        <h2><a href="/magazineDetail?mg_no=${magazine.mg_no} " class="block">${magazine.mg_sum}</a></h2>
                         </p>
                     </div>
                 </div>
