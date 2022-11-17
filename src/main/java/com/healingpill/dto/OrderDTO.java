@@ -11,10 +11,10 @@ public class OrderDTO {
     private String mem_address2;
     private String mem_address3;
     private String order_phone;
-    private String orderState;
+    private String order_State;
     private int deliveryCost;
     private int usePoint;
-    private Date orderDate;
+    private Date order_register_datetime;
     private int totalPrice;
     private int savePoint;
     private int mem_point;
@@ -75,12 +75,20 @@ public class OrderDTO {
         this.order_phone = order_phone;
     }
 
-    public String getOrderState() {
-        return orderState;
+    public String getOrder_State() {
+        return order_State;
     }
 
-    public void setOrderState(String orderState) {
-        this.orderState = orderState;
+    public void setOrder_State(String order_State) {
+        this.order_State = order_State;
+    }
+
+    public Date getOrder_register_datetime() {
+        return order_register_datetime;
+    }
+
+    public void setOrder_register_datetime(Date order_register_datetime) {
+        this.order_register_datetime = order_register_datetime;
     }
 
     public int getDeliveryCost() {
@@ -99,13 +107,7 @@ public class OrderDTO {
         this.usePoint = usePoint;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
-    }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
-    }
 
     public int getTotalPrice() {
         return totalPrice;

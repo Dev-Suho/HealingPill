@@ -156,13 +156,13 @@
 
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
-                        <span class="menu-title">주문 관리</span>
+                        <span class="menu-title">주문 관리</span>`
                         <i class="menu-arrow"></i>
                         <i class="mdi mdi mdi-cart menu-icon"></i>
                     </a>
                     <div class="collapse" id="ui-basic2">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="admin2/order">주문 조회</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin2/order">주문 조회</a></li>
                         </ul>
                     </div>
                 </li>
