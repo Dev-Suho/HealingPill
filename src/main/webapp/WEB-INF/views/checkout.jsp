@@ -22,7 +22,12 @@
 </div>
 <!-- End Breadcrumbs -->
 
-<!--====== Checkout Form Steps Part Start ======-->
+<form role="form" method="post" action="orderProduct" autocomplete="off">
+    <input type="hidden" name="mem_id" value="${member.mem_id}">
+    <input type="hidden" name="deliveryCost" value=0>
+    <input type="hidden" name="pd_num" value="${products.pd_num}">
+    <input type="hidden" name="pd_price" value="${products.pd_price}">
+    <!--====== Checkout Form Steps Part Start ======-->
 <section class="checkout-wrapper section">
     <div class="container">
         <div class="row justify-content-center">
@@ -87,7 +92,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single-form button">
-                                            <button class="btn" data-bs-toggle="collapse"
+                                            <button type="button" class="btn" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseFour" aria-expanded="false"
                                                     aria-controls="collapseFour">다음</button>
                                         </div>
@@ -126,7 +131,7 @@
                                             <div class="cart-single-list">
                                                 <div class="row align-items-center">
                                                     <div class="col-lg-1 col-md-1 col-12">
-                                                        <a href="orderComplete"><img src="${products.pd_subImage}"></a>
+                                                        <a href="orderComplete"><img src="resources\ ${products.pd_subImage}"></a>
                                                     </div>
                                                     <div class="col-lg-4 col-md-3 col-12">
                                                         <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
@@ -137,11 +142,11 @@
                                                     </div>
                                                     <div class="col-lg-2 col-md-2 col-12">
                                                         <div class="count-input">
-                                                            <input type="text" class="quantity_input" value="1">
-                                                            <span>
-                                                                        <button class="plus_btn">+</button>
-                                                                        <button class="minus_btn">-</button>
-                                                                    </span>
+                                                            <input type="text" class="quantity_input" name="order_stock" value="1">
+                                                                <span>
+                                                                   <button type="button" class="plus_btn">+</button>
+                                                                    <button type="button" class="minus_btn">-</button>
+                                                                </span>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-4 col-md-4 col-12">
@@ -201,7 +206,7 @@
                                                 <div class="single-form form-default">
                                                     <label>포인트 사용</label>
                                                     <div class="form-input form">
-                                                        <input type="text" placeholder="사용할 포인트를 입력해주세요">
+                                                        <input name="usePoint" type="text" placeholder="사용할 포인트를 입력해주세요">
                                                         <p>현재 보유하신 포인트 : <fmt:formatNumber value="${member.mem_point}" pattern="###,###,###원"/></p>
                                                     </div>
                                                 </div>
@@ -222,27 +227,23 @@
 
                         <div class="sub-total-price">
                             <div class="total-price">
-                                <p class="value">상품 가격 1 :</p>
-                                <p class="price">$144.00</p>
+                                <p class="value">${products.pd_name} :</p>
+                                <p class="price">${products.pd_price}</p>
                             </div>
-                            <div class="total-price shipping">
-                                <p class="value">상품 가격 2 :</p>
-                                <p class="price">$10.50</p>
-                            </div>
-                            <div class="total-price discount">
-                                <p class="value">상품 가격 3 :</p>
-                                <p class="price">$10.00</p>
+                            <div class="total-price">
+                                <p class="value">배송료 : </p>
+                                <p class="price">0</p>
                             </div>
                         </div>
 
                         <div class="total-payable">
                             <div class="payable-price">
                                 <p class="value">총 결제 금액 :</p>
-                                <p class="price">$164.50</p>
+                                <p class="price"><fmt:formatNumber pattern="###,###,###" value="${products.pd_price}"/>원</p>
                             </div>
                         </div>
                         <div class="price-table-btn button">
-                            <a href="/checkoutComplete" class="btn btn-alt">결제하기</a>
+                            <input type="submit" class="btn btn-alt" value="결제하기"></button>
                         </div>
                     </div>
                 </div>
@@ -250,6 +251,8 @@
         </div>
     </div>
 </section>
+</form>
+
 <!--====== Checkout Form Steps Part Ends ======-->
 
 <script language="javascript">

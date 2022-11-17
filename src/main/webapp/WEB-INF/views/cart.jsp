@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <div class="col-lg-1 col-md-1 col-12">
-                            <a href="product-details.html"><img src="${cartList.pd_subImage}" alt="#"></a>
+                            <a href="product-details.html"><img src="resources\ ${cartList.pd_subImage}" alt="#"></a>
                         </div>
                         <div class="col-lg-3 col-md-3 col-12">
                             <h5 class="product-name"><a href="product-details.html">

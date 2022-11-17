@@ -5,8 +5,9 @@ public class OrderDetailDTO {
     private String order_id;
     private int pd_num;
     private int order_stock;
-    private int totalPrice;
-    private int savePoint;
+    private int pd_price;
+    // 테이블에 없는 값
+    private String mem_id;
 
     public int getOrderItem_id() {
         return orderItem_id;
@@ -40,19 +41,21 @@ public class OrderDetailDTO {
         this.order_stock = order_stock;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
+    public int getPd_price() {
+        return pd_price;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setPd_price(int pd_price) {
+        this.pd_price = pd_price;
     }
 
-    public int getSavePoint() {
-        return savePoint;
+    public String getMem_id() {
+        return mem_id;
     }
 
-    public void setSavePoint(int savePoint) {
-        this.savePoint = savePoint;
+    public void setMem_id(String mem_id) {
+        this.mem_id = mem_id;
     }
+
+
 }

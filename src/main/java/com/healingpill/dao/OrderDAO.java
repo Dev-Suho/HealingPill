@@ -2,6 +2,8 @@ package com.healingpill.dao;
 
 import com.healingpill.dto.*;
 
+import java.util.List;
+
 public interface OrderDAO {
 
     String NAMESPACE = "order.";
@@ -11,6 +13,18 @@ public interface OrderDAO {
 
     public void orderInfo_Details(OrderDetailDTO orderDetailDTO) throws Exception;
 
-    // 주문수량 체크
+    // 단일 상품 구매
+    public void orderProduct(OrderDetailDTO orderDetailDTO) throws Exception;
+
+    // 포인트 적립
+    public void savePoint(OrderDTO orderDTO) throws Exception;
+
+    // 주문 수량 카운트
     public void orderCount(OrderDetailDTO orderDetailDTO) throws Exception;
+
+    // 포인트 사용
+    public void usePoint(OrderDTO orderDTO) throws Exception;
+
+    // 카트 삭제
+    public void deleteCart(OrderDTO orderDTO) throws Exception;
 }
