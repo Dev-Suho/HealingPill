@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
 import javax.inject.Inject;
 import java.io.File;
 import java.util.List;
@@ -35,7 +34,6 @@ public class ProductController {
     ProductModifyService productModifyService;
     
     // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
-    @Resource(name = "uploadPath")
     private String uploadPath;
     // 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)

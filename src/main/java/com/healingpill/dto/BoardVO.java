@@ -36,7 +36,7 @@ public class BoardVO {
         return mg_image;
     }
 
-    public void setMg_image(int mg_image) {
+    public void setMg_image(String mg_image) {
         this.mg_image = mg_image;
     }
 

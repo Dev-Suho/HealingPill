@@ -6,45 +6,8 @@ public class MagazineViewVO {
     private String mg_title;
     private String mg_content;
     private String mg_datetime;
-
-    private String mg_sum;
-
-    private String mg_contents;
-
-    public String getMg_sum() {
-        return mg_sum;
-    }
-
-    public void setMg_sum(String mg_sum) {
-        this.mg_sum = mg_sum;
-    }
-
-    public String getMg_contents() {
-        return mg_contents;
-    }
-
-    public void setMg_contents(String mg_contents) {
-        this.mg_contents = mg_contents;
-    }
-
     private String mg_sum;
     private String mg_contents;
-
-    public String getMg_sum() {
-        return mg_sum;
-    }
-
-    public void setMg_sum(String mg_sum) {
-        this.mg_sum = mg_sum;
-    }
-
-    public String getMg_contents() {
-        return mg_contents;
-    }
-
-    public void setMg_contents(String mg_contents) {
-        this.mg_contents = mg_contents;
-    }
 
     public int getMg_no() {
         return mg_no;
@@ -84,5 +47,21 @@ public class MagazineViewVO {
 
     public void setMg_datetime(String mg_datetime) {
         this.mg_datetime = mg_datetime;
+    }
+
+    public String getMg_sum() {
+        return mg_sum;
+    }
+
+    public void setMg_sum(String mg_sum) {
+        this.mg_sum = mg_sum;
+    }
+
+    public String getMg_contents() {
+        return mg_contents;
+    }
+
+    public void setMg_contents(String mg_contents) {
+        this.mg_contents = mg_contents;
     }
 }

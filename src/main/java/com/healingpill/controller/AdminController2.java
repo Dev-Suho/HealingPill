@@ -4,15 +4,12 @@ import com.healingpill.dto.*;
 import com.healingpill.service.*;
 import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
@@ -39,6 +36,7 @@ public class AdminController2 {
     // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
     @Resource(name = "uploadPath")
     private String uploadPath;
+
 
     // 1. 메인 페이지
     @RequestMapping(value = "/admin2/index")
@@ -183,55 +181,31 @@ public class AdminController2 {
         return "admin2/magazine_list";
     }
 
-    // 5-1. 매거진 작성
-    @RequestMapping(value = "/admin2/magazine_add")
-    public String adminmagazine() {
-        return "/admin2/magazine_add";
-    }
-
-    @RequestMapping(value = "/write", method = RequestMethod.POST)
-    public String write(BoardVO boardVO) throws Exception {
-        service.write(boardVO);
-        return "redirect:/admin2/magazine_list";
-    }
-
-    // 5-2. 매거진 삭제
-    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
-    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
-        service.delete(mg_no);
-
-        return "redirect:/admin2/magazine_list";
-    }
-}
-    // 5-1. 매거진 작성
-    @RequestMapping(value = "/admin2/magazine_add")
-    public String adminmagazine() {
-        return "/admin2/magazine_add";
-    }
-
-
-    // 5-2. 매거진 삭제
-
-    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
-    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
-        service.delete(mg_no);
-
-        return "redirect:/admin2/magazine_list";
-    }
-
-    // 5-3. 매거진 등록
-    @RequestMapping(value = "/write", method = RequestMethod.POST)
-    public String write(BoardVO boardVO) throws Exception {
-        service.write(boardVO);
-        return "redirect:/admin2/magazine_list";
-    }
-
-    // 5-4. 매거진 조회
     @RequestMapping(value = "/admin2/magazineView", method = RequestMethod.GET)
     public void adminMagazineView(@RequestParam("n") int mg_no, Model model) throws Exception{
 
         BoardVO boardVO = service.adminMagazineView(mg_no);
         model.addAttribute("magazine", boardVO);
+    }
+
+    // 5-1. 매거진 작성
+    @RequestMapping(value = "/admin2/magazine_add")
+    public String adminmagazine() {
+        return "/admin2/magazine_add";
+    }
+
+    @RequestMapping(value = "/write", method = RequestMethod.POST)
+    public String write(BoardVO boardVO) throws Exception {
+        service.write(boardVO);
+        return "redirect:/admin2/magazine_list";
+    }
+
+    // 5-2. 매거진 삭제
+    @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
+    public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
+        service.delete(mg_no);
+
+        return "redirect:/admin2/magazine_list";
     }
 
     // 5-5 매거진 수정 페이지
@@ -244,7 +218,7 @@ public class AdminController2 {
         return "/admin2/magazineModify";
     }
 
-    // 5-6 매거진 수정
+    // 5-6 매거진 수정 새로고침
 
     @RequestMapping(value = "/magazineModify", method = RequestMethod.POST)
     public String postMagazineModify(BoardVO boardVO) throws Exception {

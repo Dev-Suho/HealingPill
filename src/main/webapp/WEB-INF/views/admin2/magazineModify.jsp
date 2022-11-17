@@ -47,7 +47,7 @@
                             <div id="sform">
                                 <div class="card-body">
                                     <blockquote class="blockquote blockquote-warning">
-                                        <h3><b> 이미지</b></h3>
+                                        <h3><b>매거진 이미지</b></h3>
                                     </blockquote>
                                 </div>
                                 <ul class="list-arrow">
@@ -66,20 +66,20 @@
                         <div class="card-body">
                             <br><br>
                             <div class="form-group">
-                                <label>제목</label>
+                                <label>매거진 제목</label>
                                 <input type="text" class="form-control form-control-lg" id="mg_title" name="mg_title" value="${magazine.mg_title}" placeholder="Magazine name" aria-label="Magazine name">
                             </div>
                             <div class="form-group">
-                                <label>소제목</label>
+                                <label>매거진 소제목</label>
                                 <input type="text" class="form-control form-control-lg" id="mg_sum" name="mg_sum" value="${magazine.mg_sum}" placeholder="Magazine Summary" aria-label="Magazine Summary">
                             </div>
                             <div class="form-group">
-                                <label>내용 1</label>
-                                <input type="text" class="form-control form-control-lg" id="mg_content" name="mg_content" value="${magazine.mg_content}" placeholder="Magazine Content" aria-label="Magazine Content">
+                                <label>매거진 상세 내용 1</label>
+                                <textarea class="form-control" id="mg_content" name="mg_content" rows="10" placeholder="Detail text" aria-label="Detail text">${magazine.mg_content}</textarea>
                             </div>
                             <div class="form-group">
-                                <label>내용 2</label>
-                                <input type="text" class="form-control form-control-lg" id="mg_contents" name="mg_contents" value="${magazine.mg_contents}" placeholder="Magazine Content2" aria-label="Magazine Content2">
+                                <label>매거진 상세 내용 2</label>
+                                <textarea class="form-control" id="mg_contents" name="mg_contents" rows="10" placeholder="Detail text" aria-label="Detail text">${magazine.mg_contents}</textarea>
                             </div>
 
                             <div id="sform2">

@@ -7,8 +7,6 @@
     <insert id="insert">
         INSERT INTO MAGAZINE(MG_NO,MG_IMAGE,MG_TITLE, MG_CONTENT,MG_CONTENTS, MG_SUM, MG_DATETIME)
         VALUES (MG_NO_SEQ.nextval,#{mg_image}, #{mg_title}, #{mg_content}, #{mg_contents}, #{mg_sum}, SYSDATE)
-        INSERT INTO MAGAZINE(MG_NO,MG_IMAGE,MG_TITLE, MG_CONTENT,MG_CONTENTS, MG_SUM, MG_DATETIME)
-                    VALUES (MG_NO_SEQ.nextval,#{mg_image}, #{mg_title}, #{mg_content}, #{mg_contents}, #{mg_sum}, SYSDATE)
     </insert>
     <!-- 게시판 글 조회 -->
     <select id="getMagazineList" resultType="com.healingpill.dto.BoardVO">

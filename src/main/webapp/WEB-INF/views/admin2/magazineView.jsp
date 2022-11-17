@@ -25,7 +25,7 @@
     <div class="content-wrapper">
         <div class="page-header">
             <h3 class="page-title">
-                <i class="mdi mdi-barcode icon-md text-primary"></i>  Product Details
+                <i class="mdi mdi mdi-desktop-mac icon-md text-primary"></i>  Magazine Details
             </h3>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -63,8 +63,39 @@
                 <div class="col-lg-6 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <br><br><br><br><br><br>
                             <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th><h5><b>제목</b></h5></th>
+                                </thead>
+                                <tr>
+                                    <td class="data_td">${magazine.mg_title}</td>
+                                </tr>
+                                <tr>
+                                    <th><h5><b>소제목</b></h5></th>
+                                </tr>
+                                <tr>
+                                    <td class="data_td">${magazine.mg_sum}</td>
+                                </tr>
+                                <tr>
+                                    <th><h5><b>내용 1</b></h5></th>
+                                </tr>
+                                <tr>
+                                    <td class="data_td">${magazine.mg_content}</td>
+                                </tr>
+                                <tr>
+                                    <th><h5><b>내용 2</b></h5></th>
+                                </tr>
+                                <tr>
+                                    <td class="data_td">${magazine.mg_contents}</td>
+                                </tr>
+                                <tr>
+                                    <th><h5><b>작성일</b></h5></th>
+                                </tr>
+                                <tr>
+                                    <td class="data_td"><fmt:formatDate value="${magazine.mg_datetime}" pattern="yyyy-MM-dd"/></td>
+                                </tr>
+<%--
                                 <tr>
                                     <th class="jb-th-1"><h5><b>제목</b></h5></th>
                                     <td class="data_td"><h5>${magazine.mg_title}</h5></td>
@@ -84,7 +115,7 @@
                                 <tr>
                                     <th class="jb-th-1"><h5><b>작성일</b></h5></th>
                                     <td class="data_td"><h5>${magazine.mg_datetime}</h5></td>
-                                </tr>
+                                </tr>--%>
                             </table>
                             <div id="sform2">
                                 <br><br><br>

@@ -62,7 +62,6 @@ public class HomeController {
         return "/admin/cm_magazine";
     }
 
-<<<<<<<<< Temporary merge branch 1
     //매거진 관리
     @RequestMapping(value = "/admin/magazine_list")
     public String adminmagazine_list() { return "/admin/magazine_list";}
@@ -86,22 +85,6 @@ public class HomeController {
         logger.debug("about-us 페이지 이동");
 
         return "about-us";
-    }
-
-    // magazine 페이지 이동
-    @RequestMapping(value = "/magazine", method = RequestMethod.GET)
-    public String magazineGET() {
-        logger.debug("magazine 페이지 이동");
-
-        return "magazine";
-    }
-
-    // magazineDetail 페이지 이동
-    @RequestMapping(value = "/magazineDetail", method = RequestMethod.GET)
-    public String magazineDetailGET() {
-        logger.debug("magazineDetail 페이지 이동");
-
-        return "magazineDetail";
     }
 
     // FAQ 페이지 이동

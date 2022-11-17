@@ -28,9 +28,9 @@
             <div class="col-12">
                 <div class="section-title">
                     <h2 class="wow zoomIn" data-wow-delay=".2s">건강 설문 결과</h2><br>
-                    <h3 class="wow fadeInUp" data-wow-delay=".4s">@@님의 건강설문 결과표</h3>
+                    <h3 class="wow fadeInUp" data-wow-delay=".4s">유진님의 건강설문 결과표</h3>
                     <p class="wow fadeInUp" data-wow-delay=".6s">성별 : 여성</p>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">나이 : ##세</p>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">나이 : 23세</p>
                 </div>
                 <div class="section-title">
                     <h2 class="wow zoomIn" data-wow-delay=".2s">추천 영양 성분</h2><br>
@@ -39,9 +39,6 @@
                     <a class="btn btn-outline-info" href="#" role="button">유산균</a>
                 </div>
                 <div class="section_contents_area">
-                    영양 성분에 대한 정보 <br>
-                    오메가 어쩌고 저쩌고 <br>
-                    비타민 어쩌고 저쩌고 이거는 디비에 있는 영양성분 정보 가져오기
                 </div>
             </div>
         </div>
