@@ -76,9 +76,6 @@ public class HomeController {
     @RequestMapping(value = "/Mypage" , method = RequestMethod.GET)
     public String Mypage() { return "/Mypage"; }
 
-    @RequestMapping(value = "/Mypage_order" , method = RequestMethod.GET)
-    public String Mypage_order() { return "/Mypage_order"; }
-
 
     @RequestMapping(value = "/about-us", method = RequestMethod.POST)
     public String aboutusPOST() {

@@ -70,20 +70,17 @@
                                 <div class="container" style="min-height: calc(452px);">
                                     <div class="service_guide_area">
                                         <!--개인정보 section-->
-                                        <h2 id="qTitle" maxallowed="1">
-                                            <p style="font-size: 20px"><strong> @@님이 불편하시거나 걱정되는 3가지를 선택하세요. </strong>
-                                            </p><br>
+                                        <h2 id="q2" maxallowed="1">
+                                            <p style="font-size: 20px"><strong> @@님이 불편하시거나 걱정되는 3가지를 선택하세요. </strong></p><br>
                                             <p style="font-size: 15px"><strong> 우선적으로 관리가 필요한 것을 선택하세요. </strong></p>
                                             <br><br>
                                         </h2>
-                                        <section
-                                                class="relative z-20 overflow-hidden bg-white pt-5 pb-5 lg:pt-[120px] lg:pb-[90px]"
-                                        >
+                                        <section  class="relative z-20 overflow-hidden bg-white pt-5 pb-5 lg:pt-[120px] lg:pb-[90px]">
                                             <ul class="question-answer-wrap" align="left" style="margin-left: 500px;">
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="혈관/혈액순환" data-only="null">
                                                         <span></span> 혈관/혈액순환
                                                     </label>
                                                 </li>
@@ -91,7 +88,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="소화/장" data-only="null">
                                                         <span></span> 소화/장
                                                     </label>
                                                 </li>
@@ -99,7 +96,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="피부" data-only="null">
                                                         <span></span> 피부
                                                     </label>
                                                 </li>
@@ -107,7 +104,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="눈" data-only="null">
                                                         <span></span> 눈
                                                     </label>
                                                 </li>
@@ -115,7 +112,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="두뇌활동" data-only="null">
                                                         <span></span> 두뇌활동
                                                     </label>
                                                 </li>
@@ -123,7 +120,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="피로감" data-only="null">
                                                         <span></span> 피로감
                                                     </label>
                                                 </li>
@@ -131,7 +128,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="뼈와 관절" data-only="null">
                                                         <span></span> 뼈와 관절
                                                     </label>
                                                 </li>
@@ -139,7 +136,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="면역" data-only="null">
                                                         <span></span> 면역
                                                     </label>
                                                 </li>
@@ -147,7 +144,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="모발" data-only="null">
                                                         <span></span> 모발
                                                     </label>
                                                 </li>
@@ -155,7 +152,7 @@
                                                 <li>
                                                     <label class="label-radio label-question">
                                                         <input type="checkbox" class="input-radio input-answer"
-                                                               name="answer" value="353" data-only="null">
+                                                               name="q2" value="없음" data-only="null">
                                                         <span></span> 선택할 것이 없어요.
                                                     </label>
                                                 </li>
@@ -485,7 +482,7 @@
                                                         </div>
                                                         <br><br><Br>
                                                         <div class="bot_btn_area type01" style="text-align: center">
-                                                            <button type="button" onclick="location.href='surveyresult'">결과
+                                                            <button type="submit" onclick="location.href='surveyresult'">결과
                                                                 보러가기 →
                                                             </button>
                                                         </div>
