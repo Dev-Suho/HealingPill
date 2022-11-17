@@ -151,6 +151,4 @@
                         </div>
                     </div>
             <!-- content-wrapper ends -->
-
-
 <%@ include file="layout/footer.jsp" %>
