@@ -11,7 +11,7 @@
                 #{mem_address2, jdbcType = VARCHAR}, #{mem_address3, jdbcType = VARCHAR}, #{deliveryCost, jdbcType = NUMERIC},
                 #{usePoint, jdbcType = NUMERIC}, #{order_phone, jdbcType = VARCHAR}, #{totalPrice, jdbcType = NUMERIC}, #{savePoint, jdbcType = NUMERIC})
     </insert>
-    
+
     <!-- 카트 주문 상세 정보 -->
     <insert id="orderRequestDetails">
         insert into ORDER_ITEM
@@ -23,7 +23,7 @@
     <insert id="orderProduct" parameterType="com.healingpill.dto.OrderDetailDTO">
         insert into ORDER_ITEM
         VALUES (order_product_seq.nextval, #{order_id, jdbcType = VARCHAR}, #{pd_num, jdbcType = NUMERIC}, #{order_stock, jdbcType = NUMERIC},
-               #{pd_price, jdbcType = NUMERIC})
+                #{pd_price, jdbcType = NUMERIC})
     </insert>
 
     <update id="orderCount" parameterType="com.healingpill.dto.ProductVO">
@@ -33,13 +33,13 @@
     <!-- 포인트 저장 -->
     <update id="savePoint" parameterType="com.healingpill.dto.OrderDTO">
         update MEMBER set mem_point = mem_point + ${savePoint}
-                where mem_id = '${mem_id}'
+        where mem_id = '${mem_id}'
     </update>
 
     <!-- 포인트 사용 -->
     <update id="usePoint" parameterType="com.healingpill.dto.OrderDTO">
         update MEMBER set mem_point = mem_point - #{usePoint, jdbcType = NUMERIC}
-                where mem_id = #{mem_id, jdbcType = VARCHAR}
+        where mem_id = #{mem_id, jdbcType = VARCHAR}
     </update>
 
     <delete id="deleteCart">

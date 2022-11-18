@@ -13,9 +13,20 @@ public class MemberModifyDAOImpl implements MemberModifyDAO{
     private SqlSession sqlSession;
     
     //회원 수정
+
     @Override
-    public void memberModify(MemberDTO memberDTO) throws Exception {
-        sqlSession.update(NAMESPACE + "memberModify", memberDTO);
+    public void myPageModify(MemberDTO memberDTO) throws Exception {
+        sqlSession.update(NAMESPACE + "myPageModify", memberDTO);
     }
 
+    // 회원 수정 페이지
+    public MemberDTO myPageModifyView(int mem_num) throws Exception {
+        return sqlSession.selectOne(NAMESPACE + "myPageModifyView", mem_num);
+    }
+    // 회원 탈퇴
+    @Override
+    public void memberDelete(int mem_num) throws Exception
+    {
+        sqlSession.delete(NAMESPACE + "memberDelete", mem_num);
+    }
 }
