@@ -35,7 +35,7 @@
                     <div class="product-images">
                         <main id="gallery">
                             <div class="main-img">
-                                <img src="${products.pd_mainImage}" id="current" alt="#">
+                                <img src="resources\ ${products.pd_mainImage}" id="current" alt="#">
                             </div>
 
                         </main>
@@ -44,6 +44,7 @@
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="product-info">
                         <input type="hidden" class = "pd_num" value="${products.pd_num}"/>
+                        <input type="hidden" class = "pd_price" value="${products.pd_price}"/>
                         <h2 class="title">${products.pd_name}</h2>
                         <p class="category"><i class="lni lni-tag"></i> ${products.ctg_Name}</p>
                         <h3 class="price"><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###"/></h3>
@@ -96,10 +97,12 @@
                     $(".addCart_btn").click(function() {
                         const pd_num = $(".pd_num").val();
                         const cart_stock = $(".quantity_input").val();
+                        const pd_price = $(".pd_price").val();
 
                         const data = {
                             pd_num : pd_num,
-                            cart_stock : cart_stock
+                            cart_stock : cart_stock,
+                            pd_price : pd_price
                         };
 
                         $.ajax({

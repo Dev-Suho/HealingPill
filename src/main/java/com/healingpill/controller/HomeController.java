@@ -4,7 +4,9 @@ package com.healingpill.controller;
 //import com.sun.org.slf4j.internal.LoggerFactory;
 
 import com.healingpill.dto.BoardVO;
+import com.healingpill.dto.ProductViewVO;
 import com.healingpill.service.BoardService;
+import com.healingpill.service.ShopService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -13,14 +15,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.inject.Inject;
+import java.util.List;
+
 @Controller
 public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
 
+    @Inject
+    ShopService shopService;
 
     @RequestMapping(value = "/")
-    public String main() {
+    public String main(Model model) throws Exception {
+
+        List<ProductViewVO> list = shopService.bestProductList();
+        model.addAttribute("list", list);
+
         return "MainPage";
     }
 
@@ -110,5 +121,4 @@ public class HomeController {
 
         return "jusoPopup";
     }
-
 }

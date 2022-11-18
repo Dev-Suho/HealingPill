@@ -26,7 +26,27 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public void orderProduct(OrderDetailDTO orderDetailDTO) throws Exception {
+        orderDAO.orderProduct(orderDetailDTO);
+    }
+
+    @Override
+    public void savePoint(OrderDTO orderDTO) throws Exception {
+        orderDAO.savePoint(orderDTO);
+    }
+
+    @Override
     public void orderCount(OrderDetailDTO orderDetailDTO) throws Exception {
         orderDAO.orderCount(orderDetailDTO);
+    }
+
+    @Override
+    public void usePoint(OrderDTO orderDTO) throws Exception{
+        orderDAO.usePoint(orderDTO);
+    }
+
+    @Override
+    public void deleteCart(OrderDTO orderDTO) throws Exception {
+        orderDAO.deleteCart(orderDTO);
     }
 }

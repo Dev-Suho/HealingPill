@@ -24,4 +24,5 @@ public interface ShopService {
     // 카트 확인
     public CartVO checkCart(CartVO cartVO) throws Exception;
 
+    public List<ProductViewVO> bestProductList() throws Exception;
 }

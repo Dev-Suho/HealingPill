@@ -133,26 +133,7 @@ public class MemberDTO {
         this.mem_point = mem_point;
     }
 
-    @Override
-    public String toString() {
-        return "MemberDTO{" +
-                "mem_num=" + mem_num +
-                ", mem_id='" + mem_id + '\'' +
-                ", mem_password='" + mem_password + '\'' +
-                ", mem_username='" + mem_username + '\'' +
-                ", mem_phone='" + mem_phone + '\'' +
-                ", mem_birth_year='" + mem_birth_year + '\'' +
-                ", mem_birth_month=" + mem_birth_month +
-                ", mem_birth_day=" + mem_birth_day +
-                ", mem_address='" + mem_address + '\'' +
-                ", mem_email='" + mem_email + '\'' +
-                ", mem_sex='" + mem_sex + '\'' +
-                ", mem_register_datetime=" + mem_register_datetime +
-                ", mem_is_admin='" + mem_is_admin + '\'' +
-                '}';
-    }
-
-    public MemberDTO(int mem_num, String mem_id, String mem_password, String mem_username, String mem_phone, String mem_birth_year, String mem_birth_month, String mem_birth_day, String mem_address, String mem_email, String mem_sex, Date mem_register_datetime, String mem_is_admin) {
+    public MemberDTO(int mem_num, String mem_id, String mem_password, String mem_username, String mem_phone, String mem_birth_year, String mem_birth_month, String mem_birth_day, String mem_address, String mem_email, String mem_sex, Date mem_register_datetime, String mem_is_admin, int mem_point) {
         this.mem_num = mem_num;
         this.mem_id = mem_id;
         this.mem_password = mem_password;
@@ -166,6 +147,27 @@ public class MemberDTO {
         this.mem_sex = mem_sex;
         this.mem_register_datetime = mem_register_datetime;
         this.mem_is_admin = mem_is_admin;
+        this.mem_point = mem_point;
+    }
+
+    @Override
+    public String toString() {
+        return "MemberDTO{" +
+                "mem_num=" + mem_num +
+                ", mem_id='" + mem_id + '\'' +
+                ", mem_password='" + mem_password + '\'' +
+                ", mem_username='" + mem_username + '\'' +
+                ", mem_phone='" + mem_phone + '\'' +
+                ", mem_birth_year='" + mem_birth_year + '\'' +
+                ", mem_birth_month='" + mem_birth_month + '\'' +
+                ", mem_birth_day='" + mem_birth_day + '\'' +
+                ", mem_address='" + mem_address + '\'' +
+                ", mem_email='" + mem_email + '\'' +
+                ", mem_sex='" + mem_sex + '\'' +
+                ", mem_register_datetime=" + mem_register_datetime +
+                ", mem_is_admin='" + mem_is_admin + '\'' +
+                ", mem_point=" + mem_point +
+                '}';
     }
 }
 

@@ -14,9 +14,11 @@ public class OrderDTO {
     private String order_phone;
     private String order_State;
     private int deliveryCost;
-    private double usePoint;
-
+    private int usePoint;
     private Date order_register_datetime;
+    private int totalPrice;
+    private int savePoint;
+    private int mem_point;
 
     public String getOrder_id() {
         return order_id;
@@ -82,14 +84,6 @@ public class OrderDTO {
         this.order_State = order_State;
     }
 
-    public Date getOrder_register_datetime() {
-        return order_register_datetime;
-    }
-
-    public void setOrder_register_datetime(Date order_register_datetime) {
-        this.order_register_datetime = order_register_datetime;
-    }
-
     public int getDeliveryCost() {
         return deliveryCost;
     }
@@ -98,13 +92,43 @@ public class OrderDTO {
         this.deliveryCost = deliveryCost;
     }
 
-    public double getUsePoint() {
+    public int getUsePoint() {
         return usePoint;
     }
 
-    public void setUsePoint(double usePoint) {
+    public void setUsePoint(int usePoint) {
         this.usePoint = usePoint;
     }
 
+    public Date getOrder_register_datetime() {
+        return order_register_datetime;
+    }
 
+    public void setOrder_register_datetime(Date order_register_datetime) {
+        this.order_register_datetime = order_register_datetime;
+    }
+
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public int getSavePoint() {
+        return savePoint;
+    }
+
+    public void setSavePoint(int savePoint) {
+        this.savePoint = savePoint;
+    }
+
+    public int getMem_point() {
+        return mem_point;
+    }
+
+    public void setMem_point(int mem_point) {
+        this.mem_point = mem_point;
+    }
 }
