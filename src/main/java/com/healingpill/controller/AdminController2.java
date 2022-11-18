@@ -4,15 +4,19 @@ import com.healingpill.dto.*;
 import com.healingpill.service.*;
 import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
 
@@ -37,7 +41,6 @@ public class AdminController2 {
     @Resource(name = "uploadPath")
     private String uploadPath;
 
-
     // 1. 메인 페이지
     @RequestMapping(value = "/admin2/index")
     public String admin2index() {
@@ -55,13 +58,17 @@ public class AdminController2 {
     }
 
     // 2-1. 회원 상세 페이지
-    // URL 주소에서 "num" 의 값을 찾아서 int mem_num 에게 전달
-    @RequestMapping(value = "admin2/member_detail", method = RequestMethod.GET)
-    public void member_detail(@RequestParam("mem") int mem_num , Model model ) throws Exception {
+    // URL 주소에서 "mem_id" 의 값을 찾아서 mem 에게 전달
+    @RequestMapping(value =  "admin2/member_detail", method = RequestMethod.GET)
+    public void member_detail(@RequestParam("mem") String mem_id , Model model) throws Exception {
 
-        AdminDTO adminDTO = adminService.member_detail(mem_num);
+        AdminDTO adminDTO = adminService.member_detail(mem_id);
+        List<OrderDTO> orderDTO = adminService.member_order(mem_id);
+
+
 
         model.addAttribute("member_detail",  adminDTO);
+        model.addAttribute("order", orderDTO);
     }
 
 
@@ -71,14 +78,22 @@ public class AdminController2 {
 
         List<OrderDTO> orderList = adminService.orderList();
         model.addAttribute("orderList", orderList) ;
-        System.out.println("나와라");
+
         return "/admin2/order";
     }
 
 
     //  3-1. 관리자 주문 상세 페이지 창
-    @RequestMapping(value = "/order_detail")
-    public String adminorder_detail() { return "/admin2/order_detail"; }
+
+    @RequestMapping(value = { "admin2/order_detail","admin2/order_detail2",}, method = RequestMethod.GET)
+    public void orderDetail(@RequestParam("order") String order_id , Model model) throws Exception {
+
+        OrderDTO orderDTO = adminService.orderDetail(order_id);
+        List<OrderDetailDTO> orderDetailDTO = adminService.orderDetail2(order_id);
+
+        model.addAttribute("orderDetail", orderDTO);
+        model.addAttribute("orderDetail2", orderDetailDTO);
+    }
 
     // 4. 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)
@@ -93,7 +108,7 @@ public class AdminController2 {
 
     // 4-1. 상품 조회
     // URL 주소에서 "n"의 값을 찾아서 int pd_num에게 전달
-    @RequestMapping(value = "productView", method = RequestMethod.GET)
+    @RequestMapping(value = "admin2/productView", method = RequestMethod.GET)
     public void ProductView(@RequestParam("n") int pd_num, Model model) throws Exception{
 
         ProductViewVO productVO = productListService.productView(pd_num);

@@ -63,7 +63,7 @@
                         </li>
                         <li>
                             <a
-                                    href="login"
+                                    href="/login"
                                     class="mx-2 my-1 inline-block rounded-md bg-[#f5f8ff] py-3 px-6 text-base font-medium text-dark hover:bg-primary hover:text-white"
                             >
                                 로그인 하러가기

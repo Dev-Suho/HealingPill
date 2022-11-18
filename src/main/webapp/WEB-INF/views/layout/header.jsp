@@ -98,12 +98,10 @@
                                         <%--<li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>--%>
                                     </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="admin/index" class="active" aria-label="Toggle navigation">관리자</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="admin2/index" class="active" aria-label="Toggle navigation">관리자2</a>
-                                </li>
+                                <!-- 관리자 로그인 시 관리자 버튼 누를 수 있게 -->
+                                        <li class="nav-item">
+                                            <a href="admin2/customer" class="active" aria-label="Toggle navigation">관리자2</a>
+                                        </li>
                             </ul>
                         </div> <!-- navbar collapse -->
                         <c:choose>

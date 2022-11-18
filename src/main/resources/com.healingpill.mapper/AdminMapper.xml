@@ -14,11 +14,30 @@
     <!-- index.jsp -> 회원 누르면 회원 상세정보 -->
     <select id="member_detail" resultType="com.healingpill.dto.AdminDTO">
         SELECT * FROM MEMBER
-        WHERE MEM_NUM=#{mem_num , jdbcType = NUMERIC}
+        WHERE MEM_ID=#{mem_id, jdbcType = VARCHAR}
+    </select>
+
+    <!-- member_detail-> 회원 누르면 주문 내역 -->
+    <select id="member_order" resultType="com.healingpill.dto.OrderDTO">
+        SELECT * FROM ORDER_REQUEST
+        WHERE MEM_ID = #{mem_id, jdbcType = VARCHAR}
     </select>
 
     <!-- 관리자 페이지 order.jsp -> 주문 리스트 불러오기 -->
     <select id="orderList"  resultType="com.healingpill.dto.OrderDTO">
         SELECT * FROM ORDER_REQUEST
     </select>
+
+    <!-- order.jsp -> 주문 정보 누르면 해당 주문 order_request 상세정보 -->
+    <select id="orderDetail" resultType="com.healingpill.dto.OrderDTO">
+        SELECT * FROM ORDER_REQUEST
+        WHERE ORDER_ID =#{order_id , jdbcType = VARCHAR}
+    </select>
+
+    <!-- order.jsp -> 주문정보 누르면 주문 상세정보 -->
+    <select id="orderDetail2" resultType="com.healingpill.dto.OrderDetailDTO">
+        SELECT * FROM ORDER_ITEM
+        WHERE ORDER_ID=#{order_id , jdbcType = VARCHAR}
+    </select>
+
 </mapper>

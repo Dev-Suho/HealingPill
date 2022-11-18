@@ -28,6 +28,12 @@
             <form method="get" action="orderSearch" class="form-inline" style="font-size: 15pt">
             <div class="input-group">
                 <div class="input-group-prepend">
+                    <%--<button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">전체</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" value="mem_id">주문자</a>
+                        <a class="dropdown-item" value="or_id">주문 번호</a>
+                        <a class="dropdown-item" value="all">전체</a>
+                    </div>--%>
                     <select class="btn btn-sm btn-outline-primary dropdown-toggle" id="searchType" name="searchType" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <option value="all">전체</option>
                         <option value="mem_id">주문자</option>
@@ -60,11 +66,11 @@
                             </thead>
                             <tbody>
                             <c:forEach items="${orderList}" var="orderList">
-                                <tr>
+                                <tr onclick="window.open('/admin2/order_detail?order=${orderList.order_id}','order_detail','width=800, height=750')">
                                     <td><fmt:formatDate value="${orderList.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                     <td>${orderList.order_id}</td>
                                     <td>${orderList.order_name}</td>
-                                    <td>결제 금액</td>
+                                    <td><fmt:formatNumber value="${orderList.totalPrice}" pattern="###,###,###"/></td>
                                     <td>${orderList.mem_address1},${orderList.mem_address2},${orderList.mem_address3}</td>
                                     <td>${orderList.order_phone}</td>
                                 </tr>

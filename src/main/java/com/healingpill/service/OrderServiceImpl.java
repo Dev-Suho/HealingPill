@@ -4,6 +4,7 @@ import com.healingpill.dao.OrderDAO;
 import com.healingpill.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.support.SessionStatus;
 
 import javax.inject.Inject;
 import java.util.ArrayList;

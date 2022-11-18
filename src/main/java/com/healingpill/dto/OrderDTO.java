@@ -3,7 +3,6 @@ package com.healingpill.dto;
 import java.util.Date;
 import java.util.List;
 
-//ORDER_REQUEST DB
 public class OrderDTO {
     private String order_id;
     private String order_name;
@@ -84,6 +83,14 @@ public class OrderDTO {
         this.order_State = order_State;
     }
 
+    public Date getOrder_register_datetime() {
+        return order_register_datetime;
+    }
+
+    public void setOrder_register_datetime(Date order_register_datetime) {
+        this.order_register_datetime = order_register_datetime;
+    }
+
     public int getDeliveryCost() {
         return deliveryCost;
     }
@@ -100,13 +107,7 @@ public class OrderDTO {
         this.usePoint = usePoint;
     }
 
-    public Date getOrder_register_datetime() {
-        return order_register_datetime;
-    }
 
-    public void setOrder_register_datetime(Date order_register_datetime) {
-        this.order_register_datetime = order_register_datetime;
-    }
 
     public int getTotalPrice() {
         return totalPrice;

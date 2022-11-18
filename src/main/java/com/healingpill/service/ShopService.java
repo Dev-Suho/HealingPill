@@ -25,4 +25,5 @@ public interface ShopService {
     public CartVO checkCart(CartVO cartVO) throws Exception;
 
     public List<ProductViewVO> bestProductList() throws Exception;
+
 }
