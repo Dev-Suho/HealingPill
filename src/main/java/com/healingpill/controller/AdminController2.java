@@ -203,7 +203,22 @@ public class AdminController2 {
     }
 
     @RequestMapping(value = "/write", method = RequestMethod.POST)
-    public String write(BoardVO boardVO) throws Exception {
+    public String write(BoardVO boardVO, MultipartFile file) throws Exception {
+
+        //사진 업로드
+        String imgUploadPath = uploadPath + File.separator + "imgUpload";
+        String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
+        String fileName = null;
+
+        if(file != null) {
+            fileName = UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(), ymdPath);
+        }
+        else {
+            fileName = uploadPath + File.separator + "images" + File.separator + "none.png";
+        }
+
+        boardVO.setMg_image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
+
         service.write(boardVO);
         return "redirect:/admin2/magazine_list";
     }
@@ -215,4 +230,33 @@ public class AdminController2 {
 
         return "redirect:/admin2/magazine_list";
     }
+
+
+    // 5-4. 매거진 조회
+    @RequestMapping(value = "/admin2/magazineView", method = RequestMethod.GET)
+    public void adminMagazineView(@RequestParam("n") int mg_no, Model model) throws Exception{
+
+        BoardVO boardVO = service.adminMagazineView(mg_no);
+        model.addAttribute("magazine", boardVO);
+    }
+
+    // 5-5 매거진 수정 페이지
+    @RequestMapping(value = "/magazineModify", method = RequestMethod.GET)
+    public String getMagazineModify(@RequestParam("num") int mg_no, Model model) throws Exception {
+
+        BoardVO boardVO = service.adminMagazineView(mg_no);
+        model.addAttribute("magazine", boardVO);
+
+        return "/admin2/magazineModify";
+    }
+
+    // 5-6 매거진 수정
+
+    @RequestMapping(value = "/magazineModify", method = RequestMethod.POST)
+    public String postMagazineModify(BoardVO boardVO) throws Exception {
+        service.magazineModify(boardVO);
+
+        return "redirect:/admin2/magazine_list";
+    }
+
 }
