@@ -36,7 +36,7 @@
                     <ul id="accordionExample">
                         <li>
                             <h6 class="title" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                aria-expanded="true" aria-controls="collapseThree">주문자 정보 </h6>
+                                aria-expanded="true" aria-controls="collapseThree">배송 정보 </h6>
                             <section class="checkout-steps-form-content collapse show" id="collapseThree"
                                      aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="row">
@@ -66,11 +66,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
+                                        <div class="single-form form-default">
+                                            <div style=" text-align: center;">
+                                                <br><button type="button" class="btn btn-outline-info" onclick="goPopup();">주소 찾기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
                                         <div class="single-form form-default">
                                             <label>우편번호</label>
                                             <div class="form-input form">
-                                                <input type="text" name="mem_address1" placeholder="우편번호" >
+                                                <input type="text" id="mem_address1" name="mem_address1" placeholder="우편번호" >
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +85,7 @@
                                         <div class="single-form form-default">
                                             <label>주소</label>
                                             <div class="form-input form">
-                                                <input type="text" name="mem_address2" placeholder="주소">
+                                                <input type="text" id="mem_address2" name="mem_address2" placeholder="주소">
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +93,7 @@
                                         <div class="single-form form-default">
                                             <label>상세주소</label>
                                             <div class="form-input form">
-                                                <input type="text" name="mem_address3" placeholder="상세주소">
+                                                <input type="text" id="mem_address3" name="mem_address3" placeholder="상세주소">
                                             </div>
                                         </div>
                                     </div>
@@ -171,37 +178,6 @@
 
                                         </div>
                                         <div class="row">
-                                            <div class="col-12">
-                                                <div class="checkout-payment-form">
-                                                    <div class="single-form form-default">
-                                                        <label>카드 번호</label>
-                                                        <div class="form-input form">
-                                                            <input id="credit-input" type="text"
-                                                                   placeholder="0000-0000-0000-0000">
-                                                        </div>
-                                                    </div>
-                                                    <div class="payment-card-info">
-                                                        <div class="single-form form-default mm-yy">
-                                                            <label>만료일</label>
-                                                            <div class="expiration d-flex">
-                                                                <div class="form-input form">
-                                                                    <input type="text" placeholder="MM">
-                                                                </div>
-                                                                <div class="form-input form">
-                                                                    <input type="text" placeholder="YYYY">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="single-form form-default">
-                                                            <label>CVC/CVV <span><i
-                                                                    class="mdi mdi-alert-circle"></i></span></label>
-                                                            <div class="form-input form">
-                                                                <input type="text" placeholder="***">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="col-md-6">
                                                 <div class="single-form form-default">
                                                     <label>포인트 사용</label>
@@ -259,13 +235,16 @@
     function goPopup() {
         // 주소검색을 수행할 팝업 페이지를 호출합니다.
         // 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://www.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
-        var pop = window.open("/juso","pop","width=570,height=420, scrollbars=yes, resizable=yes");
+        var pop = window.open("/juso","pop","width=600,height=500, scrollbars=yes, resizable=yes");
     }
 
-    function jusoCallBack(roadFullAddr) {
-        var roadAddress = document.querySelector("#roadAddress");
-        roadAddress.value = roadFullAddr;
-
+    function jusoCallBack(zipNo, roadFullAddr, addrDetail) {
+        var mem_address1 = document.querySelector("#mem_address1");
+        var mem_address2 = document.querySelector("#mem_address2");
+        var mem_address3 = document.querySelector("#mem_address3");
+        mem_address1.value = zipNo;
+        mem_address2.value = roadFullAddr;
+        mem_address3.value = addrDetail;
     }
 </script>
 

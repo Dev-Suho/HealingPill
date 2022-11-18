@@ -22,7 +22,7 @@
                #{mem_phone, jdbcType = VARCHAR}, #{mem_birth_year, jdbcType = VARCHAR},
                #{mem_birth_month, jdbcType = NUMERIC},#{mem_birth_day, jdbcType = NUMERIC},
                #{mem_sex, jdbcType = VARCHAR}, #{mem_address, jdbcType = VARCHAR},
-               #{mem_email, jdbcType = VARCHAR}, sysdate, #{mem_is_admin, jdbcType = VARCHAR})
+               #{mem_email, jdbcType = VARCHAR}, sysdate, #{mem_is_admin, jdbcType = VARCHAR}, #{mem_point, jdbcType = NUMERIC})
     </insert>
 
     <select id="idCheck" resultType="com.healingpill.dto.MemberDTO">
