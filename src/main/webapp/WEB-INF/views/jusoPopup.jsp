@@ -8,6 +8,8 @@
         request.setCharacterEncoding("UTF-8");  //한글깨지면 주석제거
         String inputYn = request.getParameter("inputYn");
         String roadFullAddr = request.getParameter("roadFullAddr");
+        String addrDetail = request.getParameter("addrDetail");
+        String zipNo = request.getParameter("zipNo");
     %>
 </head>
 <script language="javascript">
@@ -24,7 +26,7 @@
             document.form.action="https://www.juso.go.kr/addrlink/addrLinkUrl.do"; //인터넷망
             document.form.submit();
         }else{
-            opener.jusoCallBack("<%= roadFullAddr %>");
+            opener.jusoCallBack("<%= roadFullAddr %>","<%=addrDetail%>","<%=zipNo%>");
             window.close();
         }
     }

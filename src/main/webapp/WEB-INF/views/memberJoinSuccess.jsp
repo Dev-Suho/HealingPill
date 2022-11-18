@@ -32,7 +32,7 @@
     String mem_email = (String) request.getAttribute("mem_email");
     String mem_sex = (String) request.getAttribute("mem_sex");
     String mem_is_admin = (String) request.getAttribute("mem_is_admin");
-
+    int mem_point = (Integer) request.getAttribute("mem_point");
 %>
 
 <!-- ====== memberJoinSuccess Section Start -->
@@ -63,7 +63,7 @@
                         </li>
                         <li>
                             <a
-                                    href="Login"
+                                    href="login"
                                     class="mx-2 my-1 inline-block rounded-md bg-[#f5f8ff] py-3 px-6 text-base font-medium text-dark hover:bg-primary hover:text-white"
                             >
                                 로그인 하러가기
@@ -76,9 +76,5 @@
     </div>
 </section>
 <!-- ====== 404 Section End -->
-
-
-
-
 
 <%@ include file="layout/footer.jsp" %>
