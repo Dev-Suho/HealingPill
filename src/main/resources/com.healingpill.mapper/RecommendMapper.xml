@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="recommend">
+
+    <!-- 영양제 추천 결과 출력 -->
+    <select id="recommendResult" resultType="com.healingpill.dto.RecommendDTO">
+        select * from PRODUCT p, PRODUCT_CATEGORY pc where p.ctg_code in (select ctg_code from PRODUCT_CATEGORY where p.CTG_CODE = pc.CTG_CODE and CTG_NAME in
+            <foreach collection="array" index="index" item="ctg" open="(" close="))" separator=",">
+                #{ctg, jdbcType = VARCHAR}
+            </foreach>
+    </select>
+
+    <!-- 카테고리 추천 결과 -->
+    <select id="ctgResult" resultType="com.healingpill.dto.RecommendDTO">
+        select distinct CTG_NAME from PRODUCT_CATEGORY where CTG_NAME in
+        <foreach collection="array" index="index" item="ctg" open="(" close=")" separator=",">
+            #{ctg, jdbcType = VARCHAR}
+        </foreach>
+    </select>
+
+    <!-- 추천 결과 저장 -->
+    <insert id="insertResult" parameterType="com.healingpill.dto.RecommendDTO">
+        insert into recommend values (recommend_seq.nextval, #{mem_id, jdbcType = VARCHAR}, #{ctg_code, jdbcType = NUMERIC}, #{ctg_name, jdbcType = VARCHAR}, sysdate)
+    </insert>
+
+</mapper>

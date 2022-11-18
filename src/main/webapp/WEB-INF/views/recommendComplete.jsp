@@ -8,11 +8,11 @@
         <div class="row align-items-center">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
                 <div class="breadcrumbs-content">
-                    <h1 class="page-title">결제완료</h1>
+                    <h1 class="page-title">저장완료</h1>
                 </div>
                 <ul class="breadcrumb-nav">
                     <li><a href="/">Home</a></li>
-                    <li>영양제 결제완료</li>
+                    <li>영양제 추천 결과 저장완료</li>
                 </ul>
             </div>
         </div>
