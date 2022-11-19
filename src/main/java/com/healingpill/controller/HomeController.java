@@ -26,6 +26,7 @@ public class HomeController {
     @Inject
     ShopService shopService;
 
+    @RequestMapping(value = {"/", "/healingPill"})
     // 메인 페이지
     @RequestMapping(value = "/")
     public String main(Model model) throws Exception {
