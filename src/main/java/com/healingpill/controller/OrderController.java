@@ -5,7 +5,6 @@ import com.healingpill.service.MemberLoginService;
 import com.healingpill.service.OrderService;
 import com.healingpill.service.ProductListService;
 import com.healingpill.service.ShopService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,15 +14,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
-import java.lang.reflect.Member;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 @Controller
 public class OrderController {
-
     @Inject
     OrderService orderService;
 

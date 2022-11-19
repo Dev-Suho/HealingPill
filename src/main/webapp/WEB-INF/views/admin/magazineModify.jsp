@@ -34,7 +34,7 @@
                 </ol>
             </nav>
         </div>
-        <form role="form" action="/admin2/magazineModify" method="post" autocomplete="off">
+        <form role="form" action="/admin/magazineModify" method="post" autocomplete="off">
             <input type="hidden" name="mg_no" value="${magazine.mg_no}"/>
             <div class="row">
                 <div class="col-md-6 grid-margin stretch-card">
@@ -99,7 +99,7 @@
 
             $("#back_btn").click(function (){
 
-                formObj.attr("action", "/admin2/magazine_list");
+                formObj.attr("action", "/admin/magazine_list");
                 formObj.attr("method", "get");
                 formObj.submit();
             });

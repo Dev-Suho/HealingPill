@@ -100,7 +100,7 @@
                                 </li>
                                 <!-- 관리자 로그인 시 관리자 버튼 누를 수 있게 -->
                                         <li class="nav-item">
-                                            <a href="admin2/customer" class="active" aria-label="Toggle navigation">관리자2</a>
+                                            <a href="admin/customer" class="active" aria-label="Toggle navigation">관리자</a>
                                         </li>
                             </ul>
                         </div> <!-- navbar collapse -->

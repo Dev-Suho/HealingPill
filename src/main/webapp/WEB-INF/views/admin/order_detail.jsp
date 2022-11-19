@@ -78,7 +78,7 @@
                                 </thead>
                                 <tbody>
                                 <c:forEach var="orderDetail2" items="${orderDetail2}">
-                                    <tr onclick="location.href='/admin2/productView?n=${orderDetail2.pd_num}'">
+                                    <tr onclick="location.href='/admin/productView?n=${orderDetail2.pd_num}'">
                                         <td class="data_td">${orderDetail2.pd_num}</td>
                                         <td class="data_td">${orderDetail2.order_stock}</td>
                                         <td class="data_td"><fmt:formatNumber value="${orderDetail2.pd_price}" pattern="###,###,###"/></td>

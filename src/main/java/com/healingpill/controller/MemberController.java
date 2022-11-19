@@ -1,5 +1,6 @@
 package com.healingpill.controller;
 
+import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.MemberDTO;
 import com.healingpill.dto.OrderDTO;
 import com.healingpill.dto.ProductVO;
@@ -85,5 +86,4 @@ public class MemberController {
         return "/Mypage_order";
 
     }
-
 }

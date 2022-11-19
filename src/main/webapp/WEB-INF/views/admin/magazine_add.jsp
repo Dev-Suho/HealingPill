@@ -19,7 +19,7 @@
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
-        <form role="form" method="post" action="/admin2/write" id="magazineForm" name="magazineForm">
+        <form role="form" method="post" action="/admin/write" id="magazineForm" name="magazineForm">
             <div class="page-header">
                 <h3 class="page-title">
                     <b>매거진 등록</b>
