@@ -22,26 +22,8 @@
 
 <!-- ajax -->
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-<script>
-    $("#idCheck").click(function (){
-        var query = {mem_id : $("#mem_id").val()};
 
-        $.ajax({
-            url : "idCheck",
-            type : "post",
-            data : query,
-            success : function (data) {
-                if(data == 1) {
-                    $(".result .msg").text("사용 불가");
-                    $(".result .msg").attr("style", "color:#f00")
-                } else {
-                    $(".result .msg").text("사용 가능");
-                    $(".result .msg").attr("style", "color:#00f")
-                }
-            }
-        });
-    });
-</script>
+
 
 
 <!-- ====== Forms Section Start -->
@@ -68,15 +50,11 @@
                                     name = "mem_id"
                                     type="text"
                                     placeholder="아이디"
-                                    class="bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
+                                    class="mem_id bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
                             />
-                            <input type = "text" name = "id" class = "input_id">
-                            <font id = "checkId" size = "2"></font>
+                            <button class="idChk btn btn-outline-info" type="button" id = "idChk" onclick="fn_idChk();" value="N">중복 체크</button>
                         </div>
                         <div class="check_font" id="id_check"></div>
-                        <div class="mb-6">
-                            <button type="button" id = "idCheck" class="btn btn-outline-info">아이디 중복 체크</button>
-                        </div>
                         <p class="result">
                             <span class="msg">아이디를 확인해주세요</span>
                         </p>
@@ -171,7 +149,9 @@
                         </div>
                         <div class="mb-10">
                             <input
+                                    disabled = "disabled"
                                     type="submit"
+                                    id="submit"
                                     value="회원가입"
                                     class="bordder-info w-full cursor-pointer rounded-md border bg-secondary py-3 px-5 text-base text-white transition duration-300 ease-in-out hover:shadow-md"
                             />
@@ -469,6 +449,35 @@
     </div>
 </section>
 <!-- ====== Forms Section End -->
+<!--<script src = “js/jquery-3.6.0.min.js"></script>-->
+<script>
+    function fn_idChk() {
+
+        var mem_id = $('.mem_id').val();
+        //var data = {mem_id : mem_id}
+
+        $.ajax({
+            url : "/idChk",
+            type: "POST",
+            data: {mem_id : mem_id},
+            datatype: 'json',
+            success : function (data) {
+                if(data == 1){
+                    alert("중복된 아이디입니다.");
+                    $("#submit").attr("disabled", "disabled");
+                }else if(data == 0){
+                    $("#idChk").attr("value", "Y");
+                    alert("사용가능한 아이디입니다.");
+                    $("#submit").removeAttr("disabled");
+                }
+                console.log("성공 여부" + result);
+            },
+            error : function (request, status, error) {
+                alert("status : " + request.status + ", message : " + request.responseText + ", error : " + error);
+            }
+        })
+    }
+</script>
 
 <script language="javascript">
     function goPopup() {
@@ -485,29 +494,6 @@
 
 
 
-<script src = “js/jquery-3.6.0.min.js"></script>
-<script>
-    $('.input_id').focusout(function() {
-        let userId = $('.input_id').val(); // input_id
-        $.ajax({
-            url: "IdcheckService",
-            type: "post",
-            data: {userId: userId},
-            datatype: 'json',
-            success: function (result) {
-                if (result == 0) {
-                    $("#checkId").html('사용할 수 없는 아이디입니다.');
-                    $("#checkId").attr('color', 'red');
-                } else {
-                    $("#checkId").html('사용가능한 아이디입니다.');
-                    $("#checkId").attr('color', 'green');
-                }
-            },
-            error: function () {
-                alert("서버 요청 실패");
-            }
-        })
-    })
-</script>
+
 
 <%@ include file="layout/footer.jsp" %>

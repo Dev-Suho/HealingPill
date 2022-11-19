@@ -23,4 +23,13 @@ public class MemberJoinDAOImpl implements MemberJoinDAO {
     public MemberDTO idCheck(String mem_id) throws Exception {
         return sqlSession.selectOne(NAMESPACE + "idCheck", mem_id);
     }
+
+    // 아이디 중복 체크
+    @Override
+    public int idChk(String mem_id) throws Exception {
+        int result = sqlSession.selectOne(NAMESPACE + "idChk", mem_id);
+        return result;
+    }
+
+
 }

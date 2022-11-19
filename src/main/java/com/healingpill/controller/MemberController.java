@@ -4,14 +4,13 @@ import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.MemberDTO;
 import com.healingpill.dto.OrderDTO;
 import com.healingpill.dto.ProductVO;
+import com.healingpill.service.MemberLoginService;
 import com.healingpill.service.MemberModifyService;
 import com.healingpill.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.inject.Inject;
@@ -35,12 +34,9 @@ public class MemberController {
     @RequestMapping(value = "/MypageModify", method = RequestMethod.GET)
     public String MypageModify() throws Exception {
 
-        return "/MypageModify";
-    }
+    @Autowired
+    private MemberLoginService memberLoginService;
 
-    @RequestMapping(value = "/MypageModify/action", method = RequestMethod.GET)
-    public String postMemberModify(MemberDTO searchVO) throws Exception {
-        memberModifyService.memberUpdate(searchVO);
 
         return "redirect:/Mypage";
     }
@@ -58,8 +54,22 @@ public class MemberController {
     }
     // 회원정보 수정
     @RequestMapping(value = "/MypageModify", method = RequestMethod.POST)
-    public String postMyPageModify(MemberDTO memberDTO) throws Exception {
+    public String postMyPageModify(MemberDTO memberDTO, HttpServletRequest request) throws Exception {
         memberModifyService.myPageModify(memberDTO);
+
+        //수정 적용
+        HttpSession session = request.getSession();
+        System.out.println("세션 아이디 : " + session.getId());
+
+        // 세션 유효시간
+        session.setMaxInactiveInterval(3600);
+        System.out.println("세션 유효시간 : " + session.getMaxInactiveInterval());
+
+        MemberDTO res = memberLoginService.login(memberDTO);
+
+        session.setAttribute("member", res);
+        // 수정 적용
+
 
         return "redirect:/Mypage";
     }
