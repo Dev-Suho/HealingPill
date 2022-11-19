@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class CartInterceptor implements HandlerInterceptor {
+public class LoginInterceptor implements HandlerInterceptor {
 
-    /*
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HttpSession session = request.getSession();
@@ -17,13 +17,12 @@ public class CartInterceptor implements HandlerInterceptor {
         MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
 
         if(memberDTO == null) {
-            response.sendRedirect("/");
+            response.sendRedirect("/login");
             return false;
         } else {
             return true;
         }
     }
 
-     */
 
 }

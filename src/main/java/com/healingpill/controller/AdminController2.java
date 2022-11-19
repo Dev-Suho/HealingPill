@@ -41,7 +41,6 @@ public class AdminController2 {
     @Resource(name = "uploadPath")
     private String uploadPath;
 
-
     // 1. 메인 페이지
     @RequestMapping(value = "/admin2/index")
     public String admin2index() {

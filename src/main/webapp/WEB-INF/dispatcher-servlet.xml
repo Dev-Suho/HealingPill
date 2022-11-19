@@ -17,7 +17,6 @@
     <!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
-    <context:component-scan base-package="com.healingpill.config"/>
     <context:component-scan base-package="com.healingpill.controller"/>
     <context:component-scan base-package="com.healingpill.dao"/>
     <context:component-scan base-package="com.healingpill.dto"/>
@@ -48,7 +47,13 @@
             <mvc:mapping path="/cart/**"/>
             <!-- 예외 url -->
             <mvc:exclude-mapping path="/cart/add/"/>
-            <beans:bean id="CartIntercepter" class="com.healingpill.Interceptor.CartInterceptor"/>
+            <beans:bean id="CartInterceptor" class="com.healingpill.Interceptor.CartInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/surveyquestion"/>
+            <mvc:mapping path="/orderProduct"/>
+            <mvc:mapping path="/orderList"/>
+            <beans:bean id = "SurveyInterceptor" class="com.healingpill.Interceptor.LoginInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>
