@@ -36,7 +36,7 @@
             <div class="col-12">
                 <div class="section-title">
                     <h2 class="wow zoomIn" data-wow-delay=".2s">건강 설문 결과</h2><br>
-                    <h3 class="wow fadeInUp" data-wow-delay=".4s">${member.mem_username}님의 건강설문 결과표</h3>
+                    <h3 class="wow fadeInUp" data-wow-delay=".4s">${member.mem_username}님의 건강설문 결과표<br></h3>
                     <p class="wow fadeInUp" data-wow-delay=".6s">성별 : ${member.mem_sex}</p>
                     <p class="wow fadeInUp" data-wow-delay=".6s">나이 : ${memberAge}세</p>
                 </div>
@@ -48,6 +48,7 @@
                 </div>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="section-title">
                 <h2 class="wow zoomIn" data-wow-delay=".2s">추천 제품</h2>

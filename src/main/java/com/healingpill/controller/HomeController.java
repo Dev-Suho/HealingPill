@@ -26,31 +26,14 @@ public class HomeController {
     @Inject
     ShopService shopService;
 
-    @RequestMapping(value = {"/", "/healingPill"})
     // 메인 페이지
-    @RequestMapping(value = "/")
+    @RequestMapping(value = {"/", "/healingPill"})
     public String main(Model model) throws Exception {
 
         List<ProductViewVO> list = shopService.bestProductList();
         model.addAttribute("list", list);
 
         return "MainPage";
-    }
-
-    // 나만의 영양제
-    @RequestMapping(value = "/survey")
-    public String survey() {
-        return "survey";
-    }
-
-    @RequestMapping(value = "/surveyquestion")
-    public String surveyquestion() {
-        return "surveyquestion";
-    }
-
-    @RequestMapping(value = "/surveyresult")
-    public String surveyresult() {
-        return "surveyresult";
     }
 
     // 마이 페이지
