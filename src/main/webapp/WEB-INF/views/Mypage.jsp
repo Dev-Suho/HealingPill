@@ -47,15 +47,13 @@
                                 <td>${member.mem_username}</td>
                                 <td style="background-color:#c7a8ff" ><b>성별</b></td>
                                 <td>${member.mem_sex}</td>
-                                <td style="background-color:#c7a8ff"><b>등급 </b></td>
-                                <td> 등급란</td>
                             <tr>
                                 <td style="background-color:#c7a8ff"><b>이메일</b></td>
                                 <td>${member.mem_email}</td>
                             <tr>
                             <tr>
                                 <td style="background-color:#c7a8ff"><b>생년월일</b></td>
-                                <td></td>
+                                <td>${member.mem_birth_year}년 ${member.mem_birth_month}월 ${member.mem_birth_day}일</td>
                             <tr>
                             <tr>
                                 <td style="background-color:#c7a8ff"><b>전화번호</b></td>
@@ -64,10 +62,6 @@
                             <tr>
                                 <td style="background-color:#c7a8ff"><b>주소</b></td>
                                 <td>${member.mem_address}</td>
-                            <tr>
-                            <tr>
-                                <td style="background-color:#c7a8ff"><b>누적 주문 횟수 </b></td>
-                                <td> </td>
                             <tr>
                             <tr>
                                 <td style="background-color:#c7a8ff"><b>가입일</b></td>
