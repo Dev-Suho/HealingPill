@@ -35,7 +35,8 @@
     </beans:bean>
 
     <!-- 일반 파일 업로드 경로 -->
-    <mvc:resources mapping="\imgUpload\**" location="\resources\imgUpload" />
+    <mvc:resources mapping="/imgUpload/**" location="/resources/imgUpload/" />
+
 
     <!-- 파일크기제한 10485660바이트 -> 10메가바이트 -->
     <beans:bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">

@@ -23,6 +23,7 @@
                         <a href="/Mypage" class="btn">회원 정보 수정</a>
                         <a href="/Mypage_order" class="btn">주문 내역</a>
                         <a href="/Mypage_survey" class="btn">나만의 영양제 결과보기</a>
+                        <a href="/Mypage_order?id=${member.mem_id}" class="btn">주문 내역</a>
                     </div>
                 </div>
             </div>

@@ -45,4 +45,9 @@
     <delete id="deleteCart">
         delete CART where mem_id = #{mem_id, jdbcType = VARCHAR}
     </delete>
+
+    <!-- 회원 주문 조회 -->
+    <select id="myPageOrder" resultType="com.healingpill.dto.OrderDTO">
+        SELECT * FROM ORDER_REQUEST WHERE mem_id = #{mem_id}
+    </select>
 </mapper>

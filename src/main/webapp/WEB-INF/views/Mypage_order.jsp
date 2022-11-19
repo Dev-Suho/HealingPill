@@ -44,14 +44,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <c:forEach items="${orderList}" var="orderList">
-                                <tr>
-                                    <td><c:out value="${orderList.order_register_datetime}"/></td>
-                                    <td><c:out value="${orderList.order_id}"/></td>
-                                    <td><c:out value="${orderList.totalPrice}"/> 원</td>
-                                    <td><c:out value="${orderList.order_State}"/> 원</td>
-                                </tr>
-                            </c:forEach>
+                        <c:forEach items="${order}" var="order">
+                            <tr>
+                                <td><fmt:formatDate value="${order.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
+                                <td><c:out value="${order.order_id}"/></td>
+                                <td><c:out value="${order.totalPrice}"/> 원</td>
+                                <td><c:out value="${order.order_State}"/></td>
+                            </tr>
+                        </c:forEach>
                         </tbody>
                     </table>
                 </form>

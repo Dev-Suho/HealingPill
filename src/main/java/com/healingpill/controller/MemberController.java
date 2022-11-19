@@ -12,10 +12,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.slf4j.Logger;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.xml.ws.http.HTTPException;
+import java.io.Console;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -81,6 +84,7 @@ public class MemberController {
         return "redirect:/";
     }
 
+    /*
     @RequestMapping (value = "/Mypage_order", method = RequestMethod.GET)
     public String mem_orderList(HttpSession session , OrderDTO order, Model model) throws Exception {
 
@@ -95,5 +99,18 @@ public class MemberController {
 
         return "/Mypage_order";
 
+    }
+
+     */
+    @RequestMapping(value = "/Mypage_order", method = RequestMethod.GET)
+    public String myOrder(@RequestParam("id") String mem_id ,Model model) throws Exception {
+
+        System.out.println(mem_id);
+
+        List<OrderDTO> order = memberService.myPageOrder(mem_id);
+        model.addAttribute("order", order);
+
+
+        return "/Mypage_order";
     }
 }

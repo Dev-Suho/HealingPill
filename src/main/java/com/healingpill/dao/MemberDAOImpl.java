@@ -21,5 +21,10 @@ public class MemberDAOImpl implements MemberDAO {
         return sqlSession.selectList(NAMESPACE + "mem_orderList", orderDTO);
     }
 
+    @Override
+    public List<OrderDTO> myPageOrder(String mem_id) throws Exception {
+        return sqlSession.selectList("order.myPageOrder", mem_id);
+    }
+
 
 }
