@@ -28,6 +28,9 @@
         <constructor-arg index="0" ref="sqlSession"/>
     </bean>
 
+    <!-- 업로드 관련 빈 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></bean>
+
     <!-- scan -->
     <context:component-scan base-package="com.healingpill.service"></context:component-scan>
     <context:component-scan base-package="com.healingpill.dao"></context:component-scan>

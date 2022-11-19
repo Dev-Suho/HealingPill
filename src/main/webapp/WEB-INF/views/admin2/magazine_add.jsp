@@ -19,7 +19,7 @@
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
-        <form role="form" method="post" autocomplete="off" id="magazineForm" name="magazineForm"  action="/admin2/write">
+        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data" id="magazineForm" name="magazineForm"  action="/admin2/write">
             <div class="page-header">
                 <h3 class="page-title">
                     <b>매거진 등록</b>
@@ -43,12 +43,10 @@
                             <div id="sform">
                                 <div class="form-group">
                                     <div class="select_img"><img src="" /></div><br><br>
-                                    <input type="file" id="mg_image" name="mg_image" class="file-upload-default">
+                                    <input type="file" id="mg_image" name="file" class="file-upload-default">
                                     <button class="file-upload-browse btn btn-gradient-danger btn-rounded btn-fw" type="button"><i class="mdi mdi-upload btn-icon-prepend"></i>Upload</button><br><br>
                                     <input type="text" class="form-control file-upload-info" style="text-align:center"; disabled placeholder="선택된 파일 없음">
-
                                     <script>
-
                                         $("#mg_image").change(function (){
                                             if(this.files && this.files[0]) {
                                                 var reader = new FileReader;
@@ -58,10 +56,7 @@
                                                 reader.readAsDataURL(this.files[0]);
                                             }
                                         });
-
-
                                     </script>
-
                                     <br><%= request.getSession().getServletContext().getRealPath("/")%>
                                 </div>
                             </div>
