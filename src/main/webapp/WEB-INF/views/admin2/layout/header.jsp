@@ -27,7 +27,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-               <a class="navbar-brand brand-logo" href="/admin2/index"><h3>HealingPill</h3></a>
+               <a class="navbar-brand brand-logo" href="../MainPage"><h3>HealingPill</h3></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
             <ul class="navbar-nav navbar-nav-right">
@@ -37,9 +37,13 @@
                             <img src="/resources/admin/images/faces/face1.jpg" alt="image">
                             <span class="availability-status online"></span>
                         </div>
-                        <div class="nav-profile-text">
-                            <p class="mb-1 text-black">관리자 이름</p>
-                        </div>
+                        <c:choose>
+                        <c:when test="${admin != null}">
+                            <div class="nav-profile-text">
+                                <p class="mb-1 text-black">${member.mem_username}</p>
+                            </div>
+                        </c:when>
+                        </c:choose>
                     </a>
                     <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                         <a class="dropdown-item" href="#">
@@ -156,7 +160,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
-                        <span class="menu-title">주문 관리</span>`
+                        <span class="menu-title">주문 관리</span>
                         <i class="menu-arrow"></i>
                         <i class="mdi mdi mdi-cart menu-icon"></i>
                     </a>
