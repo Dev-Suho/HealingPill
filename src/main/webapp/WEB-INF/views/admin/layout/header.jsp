@@ -37,9 +37,13 @@
                             <img src="/resources/admin/images/faces/face1.jpg" alt="image">
                             <span class="availability-status online"></span>
                         </div>
-                        <div class="nav-profile-text">
-                            <p class="mb-1 text-black">관리자 이름</p>
-                        </div>
+                        <c:choose>
+                            <c:when test="${admin != null}">
+                                <div class="nav-profile-text">
+                                    <p class="mb-1 text-black">${member.mem_username}</p>
+                                </div>
+                            </c:when>
+                        </c:choose>
                     </a>
                     <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                         <a class="dropdown-item" href="#">

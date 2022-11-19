@@ -82,7 +82,7 @@
                                     </tr>
                                     <tr>
                                         <th>포인트</th>
-                                        <td class="data_td"></td>
+                                        <td class="data_td">${member_detail.mem_point}</td>
                                     </tr>
                                 </table>
                             </div>
@@ -136,6 +136,34 @@
                                     </div>
                                 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">맞춤 영양제 내역</h4>
+                                <p class="card-description">
+                                    나만의 영양제 추천 내역
+                                </p>
+                                <table class="table table-striped"  id="">
+                                    <thead>
+                                    <tr>
+                                        <th><b>설문 일자</b></th>
+                                        <th><b>카테고리 코드</b></th>
+                                        <th><b>카테고리 이름</b></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach var="rec" items="${recommendList}">
+                                        <tr>
+                                            <td class="data_td"><fmt:formatDate value="${rec.rc_register_datetime}" pattern="yyyy-MM-dd"/></td>
+                                            <td class="data_td">${rec.ctg_code}</td>
+                                            <td class="data_td">${rec.ctg_name}</td>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

@@ -21,7 +21,7 @@
                     <h1 class="page-title">마이페이지</h1><br>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/Mypage" class="btn">회원 정보 수정</a>
-                        <a href="/Mypage_order" class="btn">주문 내역</a>
+                        <a href="/Mypage_order?id=${member.mem_id}" class="btn">주문 내역</a>
                         <a href="/Mypage_survey" class="btn">나만의 영양제 결과보기</a>
                     </div>
                 </div>

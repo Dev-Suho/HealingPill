@@ -33,7 +33,7 @@ public class AdminController {
         return "/admin/index";
     }
 
-    // 2. 회원 조회
+    // 2. 관리자 회원 조회
     @RequestMapping (value = "/admin/customer", method = RequestMethod.GET)
     public String memberList(Model model) throws Exception {
 
@@ -43,21 +43,24 @@ public class AdminController {
         return "/admin/customer";
     }
 
-    // 2-1. 회원 상세 페이지
+    // 2-1. 관리자 회원 상세 페이지
     // URL 주소에서 "mem_id" 의 값을 찾아서 mem 에게 전달
+    // 해당 주문 내역 불러오기
+    // 나만의 영양제 추천 내역 불러오기
     @RequestMapping(value =  "admin/member_detail", method = RequestMethod.GET)
     public void member_detail(@RequestParam("mem") String mem_id , Model model) throws Exception {
 
         AdminDTO adminDTO = adminService.member_detail(mem_id);
         List<OrderDTO> orderDTO = adminService.member_order(mem_id);
 
-
+        List<RecommendDTO> recommendDTO = adminService.recommendList(mem_id);
 
         model.addAttribute("member_detail",  adminDTO);
         model.addAttribute("order", orderDTO);
+        model.addAttribute("recommendList", recommendDTO);
     }
 
-    //3. order.jsp : 주문 리스트 불러오기
+    // 3. 관리자 주문 리스트 불러오기
     @RequestMapping (value = "admin/order", method = RequestMethod.GET)
     public String orderList(Model model) throws Exception {
 

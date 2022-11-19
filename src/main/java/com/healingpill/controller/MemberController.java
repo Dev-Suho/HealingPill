@@ -17,7 +17,7 @@ import org.slf4j.Logger;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.xml.ws.http.HTTPException;
+//import javax.xml.ws.http.HTTPException;
 import java.io.Console;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -32,19 +32,8 @@ public class MemberController {
     @Inject
     MemberService memberService;
 
-
-    /*
-    @RequestMapping(value = "/MypageModify", method = RequestMethod.GET)
-    public String MypageModify() throws Exception {
-
     @Autowired
     private MemberLoginService memberLoginService;
-
-
-        return "redirect:/Mypage";
-    }
-
-     */
 
     // 회원정보 수정 페이지
     @RequestMapping(value = "/MypageModify", method = RequestMethod.GET)
@@ -76,6 +65,7 @@ public class MemberController {
 
         return "redirect:/Mypage";
     }
+
     // 회원 탈퇴
     @RequestMapping(value = "Mypage/delete", method = RequestMethod.GET)
     public String Memberdelete(@RequestParam("mem_num") int mem_num) throws Exception{

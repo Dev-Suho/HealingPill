@@ -56,4 +56,3 @@ public class BoardServiceImpl implements BoardService {
         dao.magazineModify(boardVO);
     }
 }
-}

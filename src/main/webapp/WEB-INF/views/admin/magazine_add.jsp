@@ -19,8 +19,7 @@
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
-        <form role="form" method="post" action="/admin/write" id="magazineForm" name="magazineForm">
-        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data" id="magazineForm" name="magazineForm"  action="/admin2/write">
+        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data" id="magazineForm" name="magazineForm"  action="/admin/write">
             <div class="page-header">
                 <h3 class="page-title">
                     <b>매거진 등록</b>

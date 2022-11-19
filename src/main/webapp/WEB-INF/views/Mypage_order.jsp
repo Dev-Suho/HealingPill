@@ -6,6 +6,12 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
+<style>
+    th, td {
+        text-align: center;
+    }
+</style>
+
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -15,7 +21,7 @@
                     <h1 class="page-title">마이페이지</h1><br>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/Mypage" class="btn">회원 정보 수정</a>
-                        <a href="/Mypage_order" class="btn">주문 내역</a>
+                        <a href="/Mypage_order?id=${member.mem_id}" class="btn">주문 내역</a>
                         <a href="/Mypage_survey" class="btn">나만의 영양제 결과보기</a>
                     </div>
                 </div>
@@ -36,7 +42,6 @@
                     <table class="table table-bordered" id="memberList">
                         <thead>
                         <tr class="table-primary">
-                            <th> # </th>
                             <th> 주문 일자 </th>
                             <th> 주문 번호 </th>
                             <th> 결제 금액 </th>
@@ -48,7 +53,7 @@
                             <tr>
                                 <td><fmt:formatDate value="${order.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                 <td><c:out value="${order.order_id}"/></td>
-                                <td><c:out value="${order.totalPrice}"/> 원</td>
+                                <td><c:out value="${order.totalPrice}"/>원</td>
                                 <td><c:out value="${order.order_State}"/></td>
                             </tr>
                         </c:forEach>

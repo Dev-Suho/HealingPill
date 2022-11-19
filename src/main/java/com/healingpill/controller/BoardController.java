@@ -82,8 +82,20 @@ public class BoardController {
         return "/admin/magazine_add";
     }
 
-    @RequestMapping(value = "/admin/write", method = RequestMethod.POST)
-    public String write(BoardVO boardVO) throws Exception {
+    @RequestMapping(value = "admin/write", method = RequestMethod.POST)
+    public String write(BoardVO boardVO, MultipartFile file) throws Exception {
+        String imgUploadPath = uploadPath + File.separator + "imgUpload";
+        String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
+        String fileName = null;
+
+        if(file != null) {
+            fileName = UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(), ymdPath);
+        } else {
+            fileName = uploadPath + File.separator + "images" + File.separator + "none.png";
+        }
+        // 파일의 정보, 원본 파일과 썸네일 저장 경로를 DB에 저장하기 위해 SET
+        boardVO.setMg_image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
+
         service.write(boardVO);
         return "redirect:/admin/magazine_list";
     }

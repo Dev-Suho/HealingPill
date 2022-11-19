@@ -21,9 +21,8 @@
                     <h1 class="page-title">마이페이지</h1><br>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/Mypage" class="btn">회원 정보 수정</a>
-                        <a href="/Mypage_order" class="btn">주문 내역</a>
-                        <a href="/Mypage_survey" class="btn">나만의 영양제 결과보기</a>
                         <a href="/Mypage_order?id=${member.mem_id}" class="btn">주문 내역</a>
+                        <a href="/Mypage_survey" class="btn">나만의 영양제 결과보기</a>
                     </div>
                 </div>
             </div>
@@ -38,7 +37,6 @@
                 <div class="section-title">
                     <h3 class="wow zoomIn" data-wow-delay=".2s">MY PAGE</h3><br>
                 </div>
-
                 <form role="form" method="post" autocomplete="off">
                 <table class="table table-bordered">
                     <tr>
@@ -86,10 +84,10 @@
                         <td><fmt:formatDate value="${member.mem_register_datetime}" pattern="yyyy-MM-dd"/></td>
                     </tr>
                 </table>
-                <br><br>
+                <br>
                 <div class="button" align="center">
                     <a href="MypageModify?num=${member.mem_num}" class="btn">회원 정보 수정</a>
-                    <a href="/Mypage/delete?mem_num=${member.mem_num}" onclick="return confirm('삭제하시겠습니까?');" class="btn btn-alt">회원 탈퇴</a>
+                    <a href="/Mypage/delete?mem_num=${member.mem_num}" onclick="return confirm('탈퇴하시겠습니까?');" class="btn btn-alt">회원 탈퇴</a>
                 </div>
                 </form>
             </div>
