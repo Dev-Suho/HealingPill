@@ -6,6 +6,12 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
+<style>
+    th, td {
+        text-align: center;
+    }
+</style>
+
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -29,29 +35,26 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h3 class="wow zoomIn" data-wow-delay=".2s">ORDER LIST</h3><br>
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">SURVEY RESULT</h3><br>
                 </div>
 
                 <form role="form" method="post" autocomplete="off">
-                    <table class="table table-bordered" id="memberList">
+                    <table class="table table-bordered">
                         <thead>
                         <tr class="table-primary">
                             <th> # </th>
-                            <th> 주문 일자 </th>
-                            <th> 주문 번호 </th>
-                            <th> 결제 금액 </th>
-                            <th> 처리 현황 </th>
+                            <th> 설문 일자 </th>
+                            <th> 카테고리 코드 </th>
+                            <th> 카테고리 이름 </th>
                         </tr>
                         </thead>
                         <tbody>
-                            <c:forEach items="${orderList}" var="orderList">
-                                <tr>
-                                    <td><c:out value="${orderList.order_register_datetime}"/></td>
-                                    <td><c:out value="${orderList.order_id}"/></td>
-                                    <td><c:out value="${orderList.totalPrice}"/> 원</td>
-                                    <td><c:out value="${orderList.order_State}"/> 원</td>
-                                </tr>
-                            </c:forEach>
+                        <tr>
+                            <td> 1 </td>
+                            <td> 2022-11-19 </td>
+                            <td> 100 </td>
+                            <td> 비타민 </td>
+                        </tr>
                         </tbody>
                     </table>
                 </form>
@@ -59,5 +62,6 @@
         </div>
     </div>
 </section>
+
 <!--/ End Shopping Cart -->
 <%@ include file="layout/footer.jsp" %>
