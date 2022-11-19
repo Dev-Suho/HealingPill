@@ -23,6 +23,12 @@
         WHERE MEM_ID = #{mem_id, jdbcType = VARCHAR}
     </select>
 
+    <!-- member_detail -> 맞춤 영양제 내역 -->
+    <select id="recommendList" resultType="com.healingpill.dto.RecommendDTO">
+        SELECT * FROM recommend
+        WHERE MEM_ID = #{mem_id, jdbcType = VARCHAR}
+    </select>
+
     <!-- 관리자 페이지 order.jsp -> 주문 리스트 불러오기 -->
     <select id="orderList"  resultType="com.healingpill.dto.OrderDTO">
         SELECT * FROM ORDER_REQUEST

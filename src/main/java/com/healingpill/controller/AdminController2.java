@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
@@ -59,18 +60,20 @@ public class AdminController2 {
 
     // 2-1. 회원 상세 페이지
     // URL 주소에서 "mem_id" 의 값을 찾아서 mem 에게 전달
+    // 해당 주문 내역 불러오기
+    // 나만의 영양제 추천 내역 불러오기
     @RequestMapping(value =  "admin2/member_detail", method = RequestMethod.GET)
     public void member_detail(@RequestParam("mem") String mem_id , Model model) throws Exception {
 
         AdminDTO adminDTO = adminService.member_detail(mem_id);
         List<OrderDTO> orderDTO = adminService.member_order(mem_id);
-
+        List<RecommendDTO> recommendDTO = adminService.recommendList(mem_id);
 
 
         model.addAttribute("member_detail",  adminDTO);
         model.addAttribute("order", orderDTO);
+        model.addAttribute("recommendList", recommendDTO);
     }
-
 
     //3. order.jsp : 주문 리스트 불러오기
     @RequestMapping (value = "admin2/order", method = RequestMethod.GET)
