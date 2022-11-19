@@ -73,6 +73,10 @@
                                         <td class="data_td">${member_detail.mem_phone}</td>
                                     </tr>
                                     <tr>
+                                        <th>적립금</th>
+                                        <td class="data_td">${member_detail.mem_point}</td>
+                                    </tr>
+                                    <tr>
                                         <th>주소</th>
                                         <td class="data_td">${member_detail.mem_address}</td>
                                     </tr>
