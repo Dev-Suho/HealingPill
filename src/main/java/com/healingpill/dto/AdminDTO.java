@@ -18,6 +18,8 @@ public class AdminDTO {
     private Date mem_register_datetime;
     private String mem_is_admin;
 
+    private int mem_point;
+
     public int getMem_num() {
         return mem_num;
     }
@@ -122,4 +124,11 @@ public class AdminDTO {
         this.mem_is_admin = mem_is_admin;
     }
 
+    public int getMem_point() {
+        return mem_point;
+    }
+
+    public void setMem_point(int mem_point) {
+        this.mem_point = mem_point;
+    }
 }

@@ -3,6 +3,7 @@ package com.healingpill.dao;
 import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.OrderDTO;
 import com.healingpill.dto.OrderDetailDTO;
+import com.healingpill.dto.RecommendDTO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
@@ -30,6 +31,12 @@ public class AdminDAOImpl implements AdminDAO {
     public List<OrderDTO> member_order(String mem_id) throws Exception {
         return  sqlSession.selectList(NAMESPACE + "member_order", mem_id);
     }
+
+    @Override
+    public List<RecommendDTO> recommendList(String mem_id) throws Exception {
+        return sqlSession.selectList(NAMESPACE + "recommendList", mem_id);
+    }
+
     @Override
     public List<OrderDTO> orderList() throws Exception {
         return sqlSession.selectList( NAMESPACE + "orderList");
