@@ -53,7 +53,7 @@
                                 <ul class="list-arrow">
                                     <div class="form-group">
                                         <h4><li>원본 이미지</li></h4>
-                                        <img src = "${magazine.mg_image}"/>
+                                        <img src = "resources\ ${magazine.mg_image}"/>
                                     </div>
                                 </ul>
                             </div>

@@ -71,9 +71,9 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th>상품명</th>
-                                    <th>수량</th>
-                                    <th>판매가</th>
+                                    <th><b>상품명</b></th>
+                                    <th><b>수량</b></th>
+                                    <th><b>판매가</b></th>
                                 </tr>
                                 </thead>
                                 <tbody>

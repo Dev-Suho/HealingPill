@@ -80,6 +80,10 @@
                                         <th>가입일</th>
                                         <td class="data_td"><fmt:formatDate value="${member_detail.mem_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                     </tr>
+                                    <tr>
+                                        <th>포인트</th>
+                                        <td class="data_td"></td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>
@@ -94,10 +98,10 @@
                                 <table class="table table-striped"  id="order">
                                     <thead>
                                     <tr>
-                                        <th>주문 일자</th>
-                                        <th>주문 번호</th>
-                                        <th>결제 금액</th>
-                                        <th>처리 현황</th>
+                                        <th><b>주문 일자</b></th>
+                                        <th><b>주문 번호</b></th>
+                                        <th><b>결제 금액</b></th>
+                                        <th><b>처리 현황</b></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -142,11 +146,10 @@
                                 <p class="card-description">
                                     회원에 관한 정보 메모
                                 </p>
-                                <div class="col-md-4 d-flex align-items-center">
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="exampleTextarea1" cols="500" rows="10" placeholder="내용을 입력하세요."></textarea>
-                                    </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="exampleTextarea1" rows="10" placeholder="내용을 입력하세요."></textarea>
                                 </div>
+                                <button type="submit" class="btn btn-gradient-primary btn-rounded btn-fw" style="float:right">메모 저장</button>
                             </div>
                         </div>
                     </div>

@@ -53,11 +53,11 @@
                                 <ul class="list-arrow">
                                     <div class="form-group">
                                         <h4><li>원본 이미지</li></h4>
-                                        <img src = "${products.pd_mainImage}"/>
+                                        <img src = "resources\ ${products.pd_mainImage}"/>
                                     </div>
                                     <div class="form-group">
                                         <h4><li>썸네일</li></h4>
-                                        <img src = "${products.pd_subImage}"/>
+                                        <img src = "resources\ ${products.pd_subImage}"/>
                                     </div>
                                 </ul>
                             </div>

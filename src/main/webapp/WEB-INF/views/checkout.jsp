@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single-form button">
-                                            <button class="btn" data-bs-toggle="collapse"
+                                            <button type="button" class="btn" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseFour" aria-expanded="false"
                                                     aria-controls="collapseFour">다음</button>
                                         </div>

@@ -1,7 +1,7 @@
 package com.healingpill.dao;
 
 import com.healingpill.dto.OrderDTO;
-import com.sun.org.apache.xml.internal.utils.NameSpace;
+//import com.sun.org.apache.xml.internal.utils.NameSpace;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

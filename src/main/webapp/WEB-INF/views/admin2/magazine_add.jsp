@@ -39,6 +39,7 @@
                             <p class="card-description">
                                 매거진 등록
                             </p>
+                            <br><br>
                             <div id="sform">
                                 <div class="form-group">
                                     <div class="select_img"><img src="" /></div><br><br>

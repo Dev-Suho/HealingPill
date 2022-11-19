@@ -30,7 +30,7 @@
                         <th><h5>ID</h5></th>
                         <th><h5><b>이름</b></h5></th>
                         <th><h5><b>생년월일</b></h5></th>
-                        <th><h5><b>번호</b></h5></th>
+                        <th><h5><b>휴대폰 번호</b></h5></th>
                       </tr>
                     </thead>
                     <tbody>
