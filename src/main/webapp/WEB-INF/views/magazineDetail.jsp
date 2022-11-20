@@ -32,7 +32,7 @@
               "
                 >
                     <img
-                            src="resources/assets/images/magazine/${boardContents.mg_image}"
+                            src="resources/${boardContents.mg_image}"
                             alt="image"
                             class="h-full w-full object-cover object-center"
                     />
@@ -43,7 +43,7 @@
                             <div class="mb-4 mr-5 flex items-center md:mr-10">
                                 <div class="mr-4 h-10 w-10 overflow-hidden rounded-full">
                                     <img
-                                            src="resources/assets/images/magazine/${boardContents.mg_image}"
+                                            src="resources/${boardContents.mg_image}"
                                             alt="image"
                                             class="w-full"
                                     />
