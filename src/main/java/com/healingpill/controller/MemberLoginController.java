@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.healingpill.service.MemberLoginService;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.PrintWriter;
 
 @Controller
 public class MemberLoginController {
@@ -29,7 +31,7 @@ public class MemberLoginController {
     }
 
     @RequestMapping(value = "/memberLogin", method = RequestMethod.POST)
-    public String memberLogin(MemberDTO memberDTO, HttpServletRequest request) {
+    public String memberLogin(MemberDTO memberDTO, HttpServletRequest request, HttpServletResponse response) throws Exception {
         logger.debug("Login 성공");
 
         // 세션 생성
@@ -42,15 +44,25 @@ public class MemberLoginController {
 
         MemberDTO res = memberLoginService.login(memberDTO);
 
-        if (res!= null) {
+        if (res == null) {
             session.setAttribute("member", res);
-            System.out.println("로그인성공");
-
-            return "redirect:/";
-        } else {
             System.out.println("로그인 실패");
+
             return "redirect:login";
+
+        } else if (res.getMem_is_admin().equals("admin")){
+            session.setAttribute("admin", res);
+            session.setAttribute("member", res);
+            response.setContentType("text/html; charset=UTF-8");
+            PrintWriter out = response.getWriter();
+            out.println("<script>alert('메인 관리자 권한으로 로그인 되었습니다.');window.open('/admin2/customer','_blanck');</script>");
+            out.flush();
+
+
         }
+            session.setAttribute("member", res);
+            return "redirect:/";
+        
     }
 
     @RequestMapping(value = "/Logout", method = RequestMethod.GET)
