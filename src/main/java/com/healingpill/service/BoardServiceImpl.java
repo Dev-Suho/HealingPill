@@ -23,6 +23,7 @@ public class BoardServiceImpl implements BoardService {
     public void write(BoardVO boardVO) throws Exception {
         dao.write(boardVO);
     }
+
     //게시글 삭제
     @Override
     public void  delete(int mg_no) throws Exception {
@@ -34,6 +35,7 @@ public class BoardServiceImpl implements BoardService {
         return dao.magazineView();
     }
 
+
     //게시글 상세 보기
     @Override
     public BoardVO getBoardContents(int mg_no)  throws Exception{
@@ -42,6 +44,7 @@ public class BoardServiceImpl implements BoardService {
 
 
     // 관리자 게시글 상세조회
+
     @Override
     public BoardVO adminMagazineView(int mg_no) throws Exception {
         return dao.adminMagazineView(mg_no);

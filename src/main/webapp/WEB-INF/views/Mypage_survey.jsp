@@ -35,28 +35,26 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h3 class="wow zoomIn" data-wow-delay=".2s">ORDER LIST</h3><br>
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">SURVEY RESULT</h3><br>
                 </div>
 
                 <form role="form" method="post" autocomplete="off">
-                    <table class="table table-bordered" id="memberList">
+                    <table class="table table-bordered">
                         <thead>
                         <tr class="table-primary">
-                            <th> 주문 일자 </th>
-                            <th> 주문 번호 </th>
-                            <th> 결제 금액 </th>
-                            <th> 처리 현황 </th>
+                            <th> # </th>
+                            <th> 설문 일자 </th>
+                            <th> 카테고리 코드 </th>
+                            <th> 카테고리 이름 </th>
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach items="${order}" var="order">
-                            <tr>
-                                <td><fmt:formatDate value="${order.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
-                                <td><c:out value="${order.order_id}"/></td>
-                                <td><c:out value="${order.totalPrice}"/>원</td>
-                                <td><c:out value="${order.order_State}"/></td>
-                            </tr>
-                        </c:forEach>
+                        <tr>
+                            <td> 1 </td>
+                            <td> 2022-11-19 </td>
+                            <td> 100 </td>
+                            <td> 비타민 </td>
+                        </tr>
                         </tbody>
                     </table>
                 </form>
@@ -64,5 +62,6 @@
         </div>
     </div>
 </section>
+
 <!--/ End Shopping Cart -->
 <%@ include file="layout/footer.jsp" %>

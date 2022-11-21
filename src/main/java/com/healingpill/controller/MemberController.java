@@ -16,9 +16,11 @@ import org.slf4j.Logger;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.xml.ws.http.HTTPException;
+//import javax.xml.ws.http.HTTPException;
 import java.io.Console;
 import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -42,6 +44,7 @@ public class MemberController {
 
         return "/MypageModify";
     }
+    // 회원정보 수정
 
     @RequestMapping(value = "/MypageModify", method = RequestMethod.POST)
     public String postMyPageModify(MemberDTO memberDTO, HttpServletRequest request) throws Exception {
@@ -63,6 +66,7 @@ public class MemberController {
 
         return "redirect:/Mypage";
     }
+
     // 회원 탈퇴
     @RequestMapping(value = "Mypage/delete", method = RequestMethod.GET)
     public String Memberdelete(@RequestParam("mem_num") int mem_num) throws Exception{
@@ -100,5 +104,4 @@ public class MemberController {
 
         return "/Mypage_order";
     }
-
 }

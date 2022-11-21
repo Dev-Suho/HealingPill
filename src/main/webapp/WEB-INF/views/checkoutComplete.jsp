@@ -32,8 +32,11 @@
                     <h2
                             class="mb-8 text-3xl font-bold text-dark sm:text-4xl lg:text-[40px] xl:text-[42px]"
                     >
-                        ${orderList}결제가 완료되었습니다! ${memberInfo}
+                        결제가 완료되었습니다!
                     </h2>
+                    <div class="button">
+                        <a href="allProducts" class="btn btn-alt">계속 쇼핑하기</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,4 +45,3 @@
 <!-- ====== 404 Section End -->
 
 <%@ include file="layout/footer.jsp" %>
-

@@ -12,6 +12,7 @@
     <select id="getMagazineList" resultType="com.healingpill.dto.BoardVO">
         SELECT * FROM MAGAZINE
     </select>
+    <!-- 게시판 글 조회 -->
 
     <select id="magazineList" resultType="com.healingpill.dto.BoardVO">
         select * from MAGAZINE

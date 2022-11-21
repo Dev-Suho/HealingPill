@@ -1,85 +1,80 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: pc
+  Date: 2022-11-03
+  Time: 오후 1:23
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%@include file="layout/header.jsp"%>
-<!DOCTYPE html>
-<html lang="en">
-<body class="sb-nav-fixed">
-<div id="layoutSidenav_content">
-    <main>
-        <div class="container-fluid px-4">
-            <h1 class="mt-4">주문 목록</h1><br>
-            <div class="container-fluid">
-                <form method="get" action="orderSearch" class="form-inline"
-                      style="font-size: 15pt">
-                    <select id="searchType" name="searchType" size="1">
+<%@ include file="layout/header.jsp" %>
+<!-- partial -->
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <b>주문 목록</b>
+            </h3>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">주문 조회</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">주문 관리</li>
+                </ol>
+            </nav>
+        </div>
+        <%--<div class="col-md-12 form-group">
+            <form method="get" action="orderSearch" class="form-inline" style="font-size: 15pt">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <select class="btn btn-sm btn-outline-primary dropdown-toggle" id="searchType" name="searchType" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <option value="all">전체</option>
                         <option value="mem_id">주문자</option>
                         <option value="or_id">주문번호</option>
-                        <option value="all">전체</option>
                     </select>
-                    <input
-                        id="keyword" name="keyword" style="width: 500px; height: 30px;"
-                        type="text" placeholder="검색창">&nbsp;
-                    <button class="btn btn-secondary" type="submit">
-                        <span style="font-size: 12pt">검색</span>
-                    </button>
-                </form>
-                <br>
-            </div>
-            <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                    주문목록
                 </div>
-                <div class="card-body">
-                    <table class="table table-hover" id="datatablesSimple">
-                        <thead>
-                        <tr>
-                            <th>주문일자</th>
-                            <th>주문번호</th>
-                            <th>주문자</th>
-                            <th>결제금액</th>
-                            <th>배송지</th>
-                            <th>휴대폰 번호</th>
-                        </tr>
-                        </thead>
-                        <tfoot>
-                        <tr>
-                            <th>주문일자</th>
-                            <th>주문번호</th>
-                            <th>주문자</th>
-                            <th>결제금액</th>
-                            <th>배송지</th>
-                            <th>휴대폰 번호</th>
-                        </tr>
-                        </tfoot>
-                        <tbody>
-                        <tr>
-                            <td>2022-09-28</td>
-                            <td>20220928_000001</td>
-                            <td>정유진</td>
-                            <td>121,500</td>
-                            <td>(21529) 옥련동 쌍용아파트</td>
-                            <td>010-5054-6393</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <input type="text" class="form-control form-control-lg" id="keyword" name="keyword" placeholder="검색어를 입력하세요." aria-label="Text input with dropdown button">
+                <button class="btn btn-sm btn-gradient-primary" type="button">검색</button>
+            </div>
+            </form>
+        </div>--%>
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Order Chart</h4>
+                        <p class="card-description">
+                            주문 차트
+                        </p>
+                        <table class="table" id="datatablesSimple">
+                            <thead>
+                            <tr>
+                                <th><h5><b>주문 일자</b></h5></th>
+                                <th><h5><b>주문 번호</b></h5></th>
+                                <th><h5><b>주문자</b></h5></th>
+                                <th><h5><b>결제 금액</b></h5></th>
+                                <th><h5><b>배송지</b></h5></th>
+                                <th><h5><b>휴대폰 번호</b></h5></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${orderList}" var="orderList">
+                                <tr onclick="window.open('/admin/order_detail?order=${orderList.order_id}','order_detail','width=800, height=750')">
+                                    <td><fmt:formatDate value="${orderList.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
+                                    <td>${orderList.order_id}</td>
+                                    <td>${orderList.order_name}</td>
+                                    <td><fmt:formatNumber value="${orderList.totalPrice}" pattern="###,###,###"/></td>
+                                    <td>${orderList.mem_address1},${orderList.mem_address2},${orderList.mem_address3}</td>
+                                    <td>${orderList.order_phone}</td>
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer class="py-4 bg-light mt-auto">
-        <div class="container-fluid px-4">
-            <div class="d-flex align-items-center justify-content-between small">
-                <div class="text-muted">Copyright &copy; Your Website 2022</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-</div>
-</body>
-</html>
+    </div>
+    <!-- content-wrapper ends -->
+    <%@ include file="layout/footer.jsp" %>

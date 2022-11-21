@@ -46,7 +46,7 @@
                             </c:if>
 
                             <c:if test = "${check == 0}">
-                                <label>찾으시는 아이디는 ${mem_password} 입니다</label>
+                                <label>귀하의 비밀번호는 '${mem_password}' 입니다.</label>
                             </c:if>
 
                         </ul>
@@ -62,7 +62,7 @@
                         </li>
                         <li>
                             <a
-                                    href="Login"
+                                    href="login"
                                     class="mx-2 my-1 inline-block rounded-md bg-[#f5f8ff] py-3 px-6 text-base font-medium text-dark hover:bg-primary hover:text-white"
                             >
                                 로그인 하러가기

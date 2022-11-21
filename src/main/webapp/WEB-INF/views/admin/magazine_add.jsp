@@ -19,7 +19,7 @@
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
-        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data" id="magazineForm" name="magazineForm"  action="/admin2/write">
+        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data" id="magazineForm" name="magazineForm"  action="/admin/write">
             <div class="page-header">
                 <h3 class="page-title">
                     <b>매거진 등록</b>
@@ -39,7 +39,7 @@
                             <p class="card-description">
                                 매거진 등록
                             </p>
-
+                            <br><br>
                             <div id="sform">
                                 <div class="form-group">
                                     <div class="select_img"><img src="" /></div><br><br>
@@ -78,20 +78,19 @@
                                 <input type="text" class="form-control form-control-lg" id="mg_title" name="mg_title" placeholder="Magazine title" aria-label="Magazine title">
                             </div>
                             <div class="form-group">
-                                <label>한 줄 설명</label>
+                                <label>매거진 소제목</label>
                                 <input type="text" class="form-control form-control-lg" id="mg_sum" name="mg_sum" placeholder="Short text" aria-label="Short text">
                             </div>
 
                             <div class="form-group">
-                                <label>매거진 상세 내용</label>
-                                <input type="text" class="form-control form-control-lg" id="mg_content" name="mg_content" placeholder="Detail text" aria-label="Detail text">
+                                <label>매거진 상세 내용 1</label>
+                                <textarea class="form-control" id="mg_content" name="mg_content" rows="10" placeholder="Detail text" aria-label="Detail text"></textarea>
                             </div>
 
                             <div class="form-group">
-                                <label>매거진 상세 내용</label>
-                                <input type="text" class="form-control form-control-lg" id="mg_contents" name="mg_contents" placeholder="Detail text" aria-label="Detail text">
+                                <label>매거진 상세 내용 2</label>
+                                <textarea class="form-control" id="mg_contents" name="mg_contents" rows="10" placeholder="Detail text" aria-label="Detail text"></textarea>
                             </div>
-
                             <div id="sform2">
                                 <button type="submit" class="btn btn-gradient-primary mr-2 modBtn">매거진 추가</button>
                                 <button type="reset" class="btn btn-light">입력 취소</button>

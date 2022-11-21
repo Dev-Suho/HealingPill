@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import javax.inject.Inject;
 import java.io.File;
 import java.util.List;
@@ -32,10 +33,12 @@ public class ProductController {
     ProductListService productListService;
     @Inject
     ProductModifyService productModifyService;
-    
+
     // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
+    @Resource(name = "uploadPath")
     private String uploadPath;
-    // 상품 관리 페이지
+
+    // 4. 관리자 상품 관리 페이지
     @RequestMapping(value = "/product_list", method = RequestMethod.GET)
     public String productListView(Model model) throws Exception {
 
@@ -46,16 +49,16 @@ public class ProductController {
         return "/admin/product_list";
     }
 
-    // 상품 목록 페이지
+    // 4-1. 관리자 상품 조회
     // URL 주소에서 "n"의 값을 찾아서 int pd_num에게 전달
-    @RequestMapping(value = "productView", method = RequestMethod.GET)
+    @RequestMapping(value = "admin/productView", method = RequestMethod.GET)
     public void ProductView(@RequestParam("n") int pd_num, Model model) throws Exception{
 
         ProductViewVO productVO = productListService.productView(pd_num);
         model.addAttribute("products", productVO);
     }
 
-    // 카테고리 등록
+    // 4-2. 관리자 카테고리 등록
     @RequestMapping(value = "/product_add", method = RequestMethod.GET)
     public String getProductRegister(Model model) throws Exception {
         List<ProductCategoryVO> category = null;
@@ -67,11 +70,10 @@ public class ProductController {
         // JSONArray를 사용해서 category를 JSON타입으로 변경한 뒤 category라는 변수로 지정
         model.addAttribute("category", JSONArray.fromObject(category));
 
-
         return "/admin/product_add";
     }
 
-    // 상품 등록
+    // 4-3. 관리자 상품 등록
     @RequestMapping(value = "/product_add", method = RequestMethod.POST)
     public String postProductRegister(ProductVO productVO, MultipartFile file) throws Exception {
         String imgUploadPath = uploadPath + File.separator + "imgUpload";
@@ -95,7 +97,7 @@ public class ProductController {
     }
 
 
-    // 상품 수정 페이지
+    // 4-4. 관리자 상품 수정 페이지
     @RequestMapping(value = "/product/modify", method = RequestMethod.GET)
     public String getProductModify(@RequestParam("num") int pd_num, Model model) throws Exception{
         ProductViewVO productVO = productListService.productView(pd_num);
@@ -108,7 +110,7 @@ public class ProductController {
         return "/admin/productModify";
     }
 
-    // 상품 수정
+    // 4-5. 관리자 상품 수정
     @RequestMapping(value = "/product/modify", method = RequestMethod.POST)
     public String postProductModify(ProductVO productVO) throws Exception {
         productModifyService.productModify(productVO);
@@ -116,8 +118,7 @@ public class ProductController {
         return "redirect:/admin/product_list";
     }
 
-    // 상품 삭제
-
+    // 4-6. 관리자 상품 삭제
     @RequestMapping(value = "/product/delete", method = RequestMethod.POST)
     public String postProductDelete(@RequestParam("num") int pd_num) throws Exception {
         productModifyService.productDelete(pd_num);

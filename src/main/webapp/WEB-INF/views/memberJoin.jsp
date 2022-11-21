@@ -51,13 +51,10 @@
                                     type="text"
                                     placeholder="아이디"
                                     class="mem_id bordder-[#E9EDF4] w-full rounded-md border bg-[#FCFDFE] py-3 px-5 text-base text-body-color placeholder-[#ACB6BE] outline-none transition focus:border-primary focus-visible:shadow-none"
-                            />
-                            <button class="idChk btn btn-outline-info" type="button" id = "idChk" onclick="fn_idChk();" value="N">중복 체크</button>
+                            /><br><br>
+                            <button class="idChk btn btn-outline-info" type="button" id = "idChk" onclick="fn_idChk();" value="N">아이디 중복 체크</button>
                         </div>
                         <div class="check_font" id="id_check"></div>
-                        <p class="result">
-                            <span class="msg">아이디를 확인해주세요</span>
-                        </p>
                         <div class="mb-6">
                             <input
                                     name = "mem_password"
@@ -486,10 +483,9 @@
         var pop = window.open("/juso","pop","width=600,height=500, scrollbars=yes, resizable=yes");
     }
 
-    function jusoCallBack(roadFullAddr) {
+    function jusoCallBack(roadFullAddr, addrDetail) {
         var roadAddress = document.querySelector("#roadAddress");
         roadAddress.value = roadFullAddr;
-
     }
 </script>
 

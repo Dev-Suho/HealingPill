@@ -43,7 +43,7 @@
                     <div class="mb-8 overflow-hidden rounded">
                         <a href="/magazineDetail?mg_no=${magazine.mg_no}" class="block">
                             <img
-                                    src="resources/assets/images/magazine/${magazine.mg_image}"
+                                    src="resources\ ${magazine.mg_image}"
                                     alt="image"
                                     class="w-full transition group-hover:rotate-6 group-hover:scale-125"
                             />

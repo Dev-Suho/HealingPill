@@ -1,88 +1,134 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
-<style>
-  #adminheader{
-    padding-left: 79%;
-  }
-</style>
 <head>
-  <title>HEALINGPILL 관리자</title>
-  <link href ="/resources/assets/css/adminstyles.css" rel="stylesheet"/>
-  <link href = "https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HealingPill Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/resources/admin/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/resources/admin/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/resources/admin/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="/resources/assets/images/favicon.svg" />
+    <style>
+        th, td {
+            text-align: center;
+        }
+    </style>
 </head>
-<body class="sb-nav-fixed">
-<nav class="sb-topnav navbar navbar-expand navbar-light" style="background-color:#6f42c1; " >
-  <!-- Navbar Brand-->
-  <a class="navbar-brand ps-3" href="/" style="color:white; font-size:15pt">HealingPill</a>
-  <!-- Sidebar Toggle-->
-  <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-  <!-- Navbar Search-->
-  <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-    <div class="input-group">
-      <input class="form-control" type="text" placeholder="검색" aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-      <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-    </div>
-  </form>
-  <!-- Navbar-->
-</nav>
-<div id="layoutSidenav">
-  <div id="layoutSidenav_nav">
-    <nav class="sb-sidenav accordion sb-sidenav-light"  style="background-color:#6f42c1; " id="sidenavAccordion">
-      <div class="sb-sidenav-menu">
-        <div class="nav">
-          <div class="sb-sidenav-menu-heading">회원관리</div>
-          <a class="nav-link" href="index.html" style="color:white; font-size:12pt" >
-            <div class="sb-nav-link-icon" ><i class="fas fa-tachometer-alt"></i></div>
-            회원조회
-          </a>
-          <div class="sb-sidenav-menu-heading">주문관리</div>
-          <a class="nav-link" href="/admin/order" style="color:white; font-size:12pt">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            주문조회
-          </a>
-          <div class="sb-sidenav-menu-heading">상품관리</div>
-          <a class="nav-link" href="/admin/product_add" style="color:white; font-size:12pt">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            상품 등록
-          </a>
-          <a class="nav-link" href="/admin/product_list" style="color:white; font-size:12pt">
-            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-            상품 관리
-          </a>
-          <div class="sb-sidenav-menu-heading">커뮤니티관리</div>
-          <a class="nav-link" href="/admin/cm_magazine" style="color:white; font-size:12pt" >
-            <div class="sb-nav-link-icon" ><i class="fas fa-tachometer-alt"></i></div>
-            매거진 등록
-          </a>
-          <a class="nav-link" href="/admin/magazine_list" style="color:white; font-size:12pt" >
-            <div class="sb-nav-link-icon" ><i class="fas fa-tachometer-alt"></i></div>
-            매거진 관리
-          </a>
-          <div class="sb-sidenav-menu-heading">관리</div>
-          <a class="nav-link" href="charts.html" style="color:white; font-size:12pt">
-            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-            Charts
-          </a>
-          <a class="nav-link" href="tables.html" style="color:white; font-size:12pt">
-            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-            Tables
-          </a>
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+               <a class="navbar-brand brand-logo" href="/"><h3>HealingPill</h3></a>
         </div>
-      </div>
-      <div class="sb-sidenav-footer">
-        <div class="small">Logged in as:</div>
-        HealingPill
-      </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item nav-profile">
+                    <a class="nav-link" id="profile" href="#" aria-expanded="false">
+                        <div class="nav-profile-img">
+                            <img src="/resources/admin/images/faces/face1.jpg" alt="image">
+                            <span class="availability-status online"></span>
+                        </div>
+                        <c:choose>
+                            <c:when test="${admin != null}">
+                                <div class="nav-profile-text">
+                                    <p class="mb-1 text-black">${member.mem_username}</p>
+                                </div>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-cached mr-2 text-success"></i>
+                            Activity Log
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-logout mr-2 text-primary"></i>
+                            Signout
+                        </a>
+                    </div>
+                </li>
+        </div>
     </nav>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <link href= "/resources/assets/js/adminscripts.js" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
 
-</body>
-</html>
+    <!-- Sidebar Section -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <li class="nav-item nav-profile">
+                    <a href="#" class="nav-link">
+                        <div class="nav-profile-image">
+                            <img src="/resources/admin/images/faces/personal-security.png" alt="profile">
+                            <span class="login-status online"></span> <!--change to offline or busy as needed-->
+                        </div>
+                        <div class="nav-profile-text d-flex flex-column">
+                            <span class="font-weight-bold mb-2">${member.mem_username}</span>
+                            <span class="text-secondary text-small">Project Manager</span>
+                        </div>
+                        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="menu-title">회원 관리</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-account-circle menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic1">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="/admin/customer">회원 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="menu-title">주문 관리</span>`
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi mdi-cart menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic2">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="/admin/order">주문 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="menu-title">상품 관리</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi mdi-pill menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic3">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="/admin/product_add">상품 등록</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin/product_list">상품 조회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="menu-title">매거진 관리</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi mdi-book-open-page-variant menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic4">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="/admin/magazine_add">매거진 등록</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/admin/magazine_list">매거진 관리</a></li>
+                        </ul>
+                    </div>
+                </li>
+        </nav>
+
+        </c:when>
+</c:choose>

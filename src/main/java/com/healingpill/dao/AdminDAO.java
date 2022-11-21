@@ -4,6 +4,7 @@ import com.healingpill.dto.AdminDTO;
 import com.healingpill.dto.OrderDTO;
 import com.healingpill.dto.OrderDetailDTO;
 import com.healingpill.dto.RecommendDTO;
+//import com.sun.org.apache.xpath.internal.operations.Or;
 import org.apache.commons.collections.functors.ExceptionPredicate;
 
 import java.util.List;
@@ -32,7 +33,6 @@ public interface AdminDAO {
 
     // ORDER에 ORDER_ID 값으로 주문 상세정보 ( 제품 )
     public List<OrderDetailDTO> orderDetail2(String order_id) throws Exception;
-
 
 
 }

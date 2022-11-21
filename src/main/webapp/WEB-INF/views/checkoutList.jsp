@@ -73,17 +73,9 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single-form form-default">
-                                            <label>우편번호</label>
-                                            <div class="form-input form">
-                                                <input type="text" id="mem_address1" name="mem_address1" placeholder="우편번호" >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="single-form form-default">
                                             <label>주소</label>
                                             <div class="form-input form">
-                                                <input type="text" id="mem_address2" name="mem_address2" placeholder="주소">
+                                                <input type="text" id="mem_address1" name="mem_address1" placeholder="주소">
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +83,15 @@
                                         <div class="single-form form-default">
                                             <label>상세주소</label>
                                             <div class="form-input form">
-                                                <input type="text" id="mem_address3" name="mem_address3" placeholder="상세주소">
+                                                <input type="text" id="mem_address2" name="mem_address2" placeholder="상세주소">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="single-form form-default">
+                                            <label>우편번호</label>
+                                            <div class="form-input form">
+                                                <input type="text" id="mem_address3" name="mem_address3" placeholder="우편번호" >
                                             </div>
                                         </div>
                                     </div>
@@ -223,13 +223,13 @@
         var pop = window.open("/juso","pop","width=600,height=500, scrollbars=yes, resizable=yes");
     }
 
-    function jusoCallBack(zipNo, roadFullAddr, addrDetail) {
+    function jusoCallBack(roadFullAddr, addrDetail, zipNo) {
         var mem_address1 = document.querySelector("#mem_address1");
         var mem_address2 = document.querySelector("#mem_address2");
         var mem_address3 = document.querySelector("#mem_address3");
-        mem_address1.value = zipNo;
-        mem_address2.value = roadFullAddr;
-        mem_address3.value = addrDetail;
+        mem_address1.value = roadFullAddr;
+        mem_address2.value = addrDetail;
+        mem_address3.value = zipNo;
     }
 </script>
 
