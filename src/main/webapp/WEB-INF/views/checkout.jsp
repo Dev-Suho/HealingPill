@@ -149,10 +149,10 @@
                                                     </div>
                                                     <div class="col-lg-2 col-md-2 col-12">
                                                         <div class="count-input">
-                                                            <input type="text" class="quantity_input" name="order_stock" value="1">
                                                                 <span>
-                                                                   <button type="button" class="plus_btn">+</button>
-                                                                    <button type="button" class="minus_btn">-</button>
+                                                                    <button type="button" class="minus_btn"><i class="bi bi-dash-circle"></i></button>
+                                                                    <input type="text" class="quantity_input" name="order_stock" value="1">
+                                                                    <button type="button" class="plus_btn"><i class="bi bi-plus-circle"></i></button>
                                                                 </span>
                                                         </div>
                                                     </div>

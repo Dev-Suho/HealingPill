@@ -43,9 +43,8 @@
     <div class="container">
         <div class="cart-list-head">
             <div class="col-lg-1 col-md-1 col-12">
-                <input type="checkbox" name = "allCheck" id = "allCheck"/><label for="allCheck"><p>전체선택</p></label>
+                &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="form-check-input" name = "allCheck" id = "allCheck"/><label for="allCheck"><p> 전체 선택</p></label>
             </div>
-
             <div>
                 <button type="button" class="selectDeleteBtn">선택 삭제</button>
             </div>
@@ -87,13 +86,13 @@
                         <p>수량</p>
                     </div>
                     <div class="col-lg-2 col-md-2 col-12">
-                        <p>상품금액</p>
+                        <p>상품 금액</p>
                     </div>
                     <div class="col-lg-2 col-md-2 col-12">
-                        <p>총 주문금액</p>
+                        <p>총 주문 금액</p>
                     </div>
                     <div class="col-lg-1 col-md-2 col-12">
-                        <p>삭제</p>
+                        <p>상품 삭제</p>
                     </div>
                 </div>
             </div>
@@ -141,7 +140,7 @@
                             <p><fmt:formatNumber pattern="###,###,###" value="${cartList.pd_price * cartList.cart_stock}"/></p>
                         </div>
                         <div class="col-lg-1 col-md-2 col-12">
-                            <a class="remove-item-${cartList.cart_id}" data-cartNum="${cartList.cart_id}"><i class="lni lni-close"></i></a>
+                            <a class="remove-item-${cartList.cart_id}" data-cartNum="${cartList.cart_id}"><i class="bi bi-x-circle-fill"></i></a>
                             <script>
                                 $(".remove-item-${cartList.cart_id}").click(function () {
                                     const confirm_val = confirm("선택한 상품을 삭제하시겠습니까?");
@@ -176,7 +175,6 @@
                 </div>
                 <c:set var = "sum" value="${sum + (cartList.pd_price * cartList.cart_stock)}"/>
             </c:forEach>
-
         </div>
         <div class="row">
             <div class="col-12">
@@ -196,7 +194,7 @@
                                     <li class="last">결제 금액<span><fmt:formatNumber pattern="###,###,###원" value="${sum}"/></span></li>
                                 </ul>
                                 <div class="button">
-                                    <a class="order_btn" href="orderList">결제하기</a>
+                                    <a class="btn order_btn" href="orderList">결제하기</a>
                                     <a href="allProducts" class="btn btn-alt">계속 쇼핑하기</a>
                                 </div>
 

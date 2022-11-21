@@ -47,31 +47,31 @@
                         <input type="hidden" class = "pd_price" value="${products.pd_price}"/>
                         <h2 class="title">${products.pd_name}</h2>
                         <p class="category"><i class="lni lni-tag"></i> ${products.ctg_Name}</p>
-                        <h3 class="price"><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###"/></h3>
+                        <h3 class="price"><fmt:formatNumber value="${products.pd_price}" pattern="###,###,###"/>원</h3>
                         <p class="info-text">${products.pd_content}</p>
                         <div class="row">
-
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group quantity">
-                                    <label for="color">구매 수량</label>
-                                    <input type="text" class="quantity_input" name="order_stock" value="1">
-                                    <span>
-                                        <button class="plus_btn">+</button>
-                                        <button class="minus_btn">-</button>
-                                    </span>
+                                    <label><h2><b>구매 수량</b></h2></label>
                                 </div>
                             </div>
+                            <ul class="list-inline pb-3">
+                                <li class="list-inline-item"><span class="btn btn-light minus_btn" id="btn-minus">-</span></li>
+                                <input type="text" class="quantity_input" name="order_stock" value="1">
+                                <li class="list-inline-item"><span class="btn btn-light plus_btn" id="btn-plus">+</span></li>
+                            </ul>
                         </div>
                         <div class="bottom-content">
                             <div class="row align-items-end">
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="button cart-button">
-                                        <button class="addCart_btn" style="width: 100%;"><i class="bi bi-bag-plus"></i>장바구니</button>
+                                        <button class="btn addCart_btn" style="width: 100%;"><i class="bi bi-bag-plus"></i>장바구니</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="wish-button">
-                                        <button class="buy_btn"><a href="orderPage?itemId=${products.pd_num}"><i class="bi bi-cash-coin"></i>구매하기</a></button>
+                                        <button class="btn buy_btn"><a href="orderPage?itemId=${products.pd_num}"><i class="bi bi-cash-coin"></i>구매하기</a></button>
+
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@
                 </script>
             </div>
         </div>
-        <div class="product-details-info">
+        <%--<div class="product-details-info">
             <div class="single-block">
                 <div class="row">
                     <div class="col-lg-6 col-12">
@@ -171,128 +171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-12">
-                    <div class="single-block give-review">
-                        <h4>4.5 (Overall)</h4>
-                        <ul>
-                            <li>
-                                <span>5 stars - 38</span>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                            </li>
-                            <li>
-                                <span>4 stars - 10</span>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star"></i>
-                            </li>
-                            <li>
-                                <span>3 stars - 3</span>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star"></i>
-                                <i class="lni lni-star"></i>
-                            </li>
-                            <li>
-                                <span>2 stars - 1</span>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star"></i>
-                                <i class="lni lni-star"></i>
-                                <i class="lni lni-star"></i>
-                            </li>
-                            <li>
-                                <span>1 star - 0</span>
-                                <i class="lni lni-star-filled"></i>
-                                <i class="lni lni-star"></i>
-                                <i class="lni lni-star"></i>
-                                <i class="lni lni-star"></i>
-                                <i class="lni lni-star"></i>
-                            </li>
-                        </ul>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn review-btn" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                            Leave a Review
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-12">
-                    <div class="single-block">
-                        <div class="reviews">
-                            <h4 class="title">Latest Reviews</h4>
-                            <!-- Start Single Review -->
-                            <div class="single-review">
-                                <img src="https://via.placeholder.com/150x150" alt="#">
-                                <div class="review-info">
-                                    <h4>Awesome quality for the price
-                                        <span>Jacob Hammond
-                                            </span>
-                                    </h4>
-                                    <ul class="stars">
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor...</p>
-                                </div>
-                            </div>
-                            <!-- End Single Review -->
-                            <!-- Start Single Review -->
-                            <div class="single-review">
-                                <img src="https://via.placeholder.com/150x150" alt="#">
-                                <div class="review-info">
-                                    <h4>My husband love his new...
-                                        <span>Alex Jaza
-                                            </span>
-                                    </h4>
-                                    <ul class="stars">
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star"></i></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor...</p>
-                                </div>
-                            </div>
-                            <!-- End Single Review -->
-                            <!-- Start Single Review -->
-                            <div class="single-review">
-                                <img src="https://via.placeholder.com/150x150" alt="#">
-                                <div class="review-info">
-                                    <h4>I love the built quality...
-                                        <span>Jacob Hammond
-                                            </span>
-                                    </h4>
-                                    <ul class="stars">
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                        <li><i class="lni lni-star-filled"></i></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor...</p>
-                                </div>
-                            </div>
-                            <!-- End Single Review -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>--%>
     </div>
 </section>
 <!-- End Item Details -->
