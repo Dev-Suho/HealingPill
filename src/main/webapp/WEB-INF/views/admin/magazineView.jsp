@@ -53,7 +53,7 @@
                                 <ul class="list-arrow">
                                     <div class="form-group">
                                         <h4><li>원본 이미지</li></h4>
-                                        <img src = "resources\ ${magazine.mg_image}"/>
+                                        <img src = "${magazine.mg_image}"/>
                                     </div>
                                 </ul>
                             </div>
@@ -95,27 +95,6 @@
                                 <tr>
                                     <td class="data_td"><fmt:formatDate value="${magazine.mg_datetime}" pattern="yyyy-MM-dd"/></td>
                                 </tr>
-<%--
-                                <tr>
-                                    <th class="jb-th-1"><h5><b>제목</b></h5></th>
-                                    <td class="data_td"><h5>${magazine.mg_title}</h5></td>
-                                </tr>
-                                <tr>
-                                    <th class="jb-th-1"><h5><b>소제목</b></h5></th>
-                                    <td class="data_td"><h5>${magazine.mg_sum}</h5></td>
-                                </tr>
-                                <tr>
-                                    <th class="jb-th-1"><h5><b>내용 1</b></h5></th>
-                                    <td class="data_td"><h5>${magazine.mg_content}</h5></td>
-                                </tr>
-                                <tr>
-                                    <th class="jb-th-1"><h5><b>내용 2</b></h5></th>
-                                    <td class="data_td"><h5>${magazine.mg_contents}</h5></td>
-                                </tr>
-                                <tr>
-                                    <th class="jb-th-1"><h5><b>작성일</b></h5></th>
-                                    <td class="data_td"><h5>${magazine.mg_datetime}</h5></td>
-                                </tr>--%>
                             </table>
                             <div id="sform2">
                                 <br><br><br>
