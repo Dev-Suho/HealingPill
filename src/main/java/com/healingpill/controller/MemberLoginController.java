@@ -55,7 +55,7 @@ public class MemberLoginController {
             session.setAttribute("member", res);
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter out = response.getWriter();
-            out.println("<script>alert('메인 관리자 권한으로 로그인 되었습니다.');window.open('/admin2/customer','_blanck');</script>");
+            out.println("<script>alert('메인 관리자 권한으로 로그인 되었습니다.');window.open('/admin2/customer','_self');</script>");
             out.flush();
 
 
