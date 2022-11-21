@@ -57,5 +57,15 @@ public class OrderDetailDTO {
         this.mem_id = mem_id;
     }
 
-
+    @Override
+    public String toString() {
+        return "OrderDetailDTO{" +
+                "orderItem_id=" + orderItem_id +
+                ", order_id='" + order_id + '\'' +
+                ", pd_num=" + pd_num +
+                ", order_stock=" + order_stock +
+                ", pd_price=" + pd_price +
+                ", mem_id='" + mem_id + '\'' +
+                '}';
+    }
 }

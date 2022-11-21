@@ -35,7 +35,7 @@
                     <div class="product-images">
                         <main id="gallery">
                             <div class="main-img">
-                                <img src="resources\ ${products.pd_mainImage}" id="current" alt="#">
+                                <img src="${products.pd_mainImage}" id="current" alt="#">
                             </div>
 
                         </main>

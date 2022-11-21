@@ -76,7 +76,11 @@
     </delete>
 
     <!-- mypage 주문 내역 -->
-    <select id="myPageOrder">
-        select A.MEM_NUM, B.* from member A, order_request B  WHERE  A.MEM_ID = B.MEM_ID and A.MEM_NUM = #{mem_num};
+    <select id="myPageOrder"  resultType="com.healingpill.dto.OrderDTO">
+        select * from order_request where mem_id = #{mem_id, jdbcType = VARCHAR}
+    </select>
+
+    <select id="myPageSurvey" parameterType="String" resultType="com.healingpill.dto.RecommendDTO">
+        select * from recommend where mem_id = #{mem_id, jdbcType = VARCHAR}
     </select>
 </mapper>

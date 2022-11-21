@@ -21,8 +21,8 @@
                     <h1 class="page-title">마이페이지</h1><br>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/Mypage" class="btn">회원 정보 수정</a>
-                        <a href="/Mypage_order?id=${member.mem_id}" class="btn">주문 내역</a>
-                        <a href="/Mypage_survey" class="btn">나만의 영양제 결과보기</a>
+                        <a href="/myOrder?id=${member.mem_id}" class="btn">주문 내역</a>
+                        <a href="/myPageSurvey?id=${member.mem_id}" class="btn">나만의 영양제 결과보기</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         </thead>
                         <tbody>
                         <c:forEach items="${order}" var="order">
-                            <tr>
+                            <tr onclick="window.open('/myPageorderDetail?order=${order.order_id}','myPageorderDetail','width=800, height=750')">
                                 <td><fmt:formatDate value="${order.order_register_datetime}" pattern="yyyy-MM-dd"/></td>
                                 <td><c:out value="${order.order_id}"/></td>
                                 <td><c:out value="${order.totalPrice}"/>원</td>

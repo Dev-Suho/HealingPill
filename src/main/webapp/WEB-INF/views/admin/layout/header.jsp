@@ -91,7 +91,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
-                        <span class="menu-title">주문 관리</span>`
+                        <span class="menu-title">주문 관리</span>
                         <i class="menu-arrow"></i>
                         <i class="mdi mdi mdi-cart menu-icon"></i>
                     </a>

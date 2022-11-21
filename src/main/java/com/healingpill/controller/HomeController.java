@@ -39,7 +39,8 @@ public class HomeController {
     // 마이 페이지
     @RequestMapping(value = "/Mypage" , method = RequestMethod.GET)
     public String Mypage() { return "/Mypage"; }
-
+    @RequestMapping(value = "/Mypage_orderDetail" , method = RequestMethod.GET)
+    public String Mypage_orderDetail() { return "/Mypage_orderDetail"; }
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faqGET() {
