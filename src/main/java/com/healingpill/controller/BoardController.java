@@ -37,39 +37,6 @@ public class BoardController {
     @Resource(name = "uploadPath")
     private String uploadPath;
 
-    // 게시글 조회
-    @RequestMapping(value = "/magazine", method = RequestMethod.GET)
-    //게시판 글 작성
-
-    /*
-    @RequestMapping(value = "/write", method = RequestMethod.POST)
-    public String write(BoardVO boardVO) throws Exception {
-        logger.info("write");
-        service.write(boardVO);
-        return "redirect:/admin/magazine_list";
-    }
-
-
-     */
-    @RequestMapping(value = "/write", method = RequestMethod.POST)
-    public String write(BoardVO boardVO, MultipartFile file) throws Exception {
-        String imgUploadPath = uploadPath + File.separator + "imgUpload";
-        String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
-        String fileName = null;
-
-        if(file != null) {
-            fileName = UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(), ymdPath);
-        } else {
-            fileName = uploadPath + File.separator + "images" + File.separator + "none.png";
-        }
-        // 파일의 정보, 원본 파일과 썸네일 저장 경로를 DB에 저장하기 위해 SET
-        boardVO.setMg_image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
-
-        service.write(boardVO);
-        return "redirect:/admin/magazine_list";
-    }
-
-
     //게시판 글 삭제
 
     @RequestMapping(value = "/admin/delete", method = RequestMethod.POST)
@@ -79,7 +46,7 @@ public class BoardController {
     }
 
     // 게시글 조회
-    @RequestMapping(value = "/magazine2", method = RequestMethod.GET)
+    @RequestMapping(value = "/magazine", method = RequestMethod.GET)
     public String mainProductView(Model model) throws Exception {
         List<BoardVO> magazineList = service.magazineView();
         model.addAttribute("magazine", magazineList);

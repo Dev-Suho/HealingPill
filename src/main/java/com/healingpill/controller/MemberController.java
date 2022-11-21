@@ -75,6 +75,7 @@ public class MemberController {
         return "redirect:/";
     }
 
+
     /*
     @RequestMapping (value = "/Mypage_order", method = RequestMethod.GET)
     public String mem_orderList(HttpSession session , OrderDTO order, Model model) throws Exception {
