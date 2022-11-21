@@ -26,6 +26,7 @@ public class HomeController {
     @Inject
     ShopService shopService;
 
+    // 메인 페이지
     @RequestMapping(value = {"/", "/healingPill"})
     public String main(Model model) throws Exception {
 
@@ -35,49 +36,9 @@ public class HomeController {
         return "MainPage";
     }
 
-    //관리자 페이지
-    //상품추가
-    @RequestMapping(value = "/admin/product_add")
-    public String pdadd() {
-        return "/admin/product_add";
-    }
-
-    //관리자 첫 페이지
-    @RequestMapping(value = "/admin/index")
-    public String adminindex() {
-        return "/admin/index";
-    }
-    //관리자 주문 조회
-    @RequestMapping(value = "/admin/order")
-    public String adminorder() { return "/admin/order"; }
-
-    //매거진 추가
-    @RequestMapping(value = "/admin/cm_magazine")
-    public String adminmagazine() {
-        return "/admin/cm_magazine";
-    }
-
-    //매거진 관리
-    @RequestMapping(value = "/admin/magazine_list")
-    public String adminmagazine_list() { return "/admin/magazine_list";}
-
-
-    //메인 페이지
-    @RequestMapping(value = "/Main", method = RequestMethod.GET)
-    public String MainPage() {
-        return "MainPage";
-    }
-
+    // 마이 페이지
     @RequestMapping(value = "/Mypage" , method = RequestMethod.GET)
     public String Mypage() { return "/Mypage"; }
-
-
-    @RequestMapping(value = "/about-us", method = RequestMethod.POST)
-    public String aboutusPOST() {
-        logger.debug("about-us 페이지 이동");
-
-        return "about-us";
-    }
 
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
@@ -102,5 +63,4 @@ public class HomeController {
 
         return "jusoPopup";
     }
-
 }

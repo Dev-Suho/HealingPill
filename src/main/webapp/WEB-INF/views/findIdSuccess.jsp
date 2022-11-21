@@ -47,7 +47,7 @@
                             </c:if>
 
                             <c:if test = "${check == 0}">
-                                <label>찾으시는 아이디는 ${mem_id} 입니다</label>
+                                <label>귀하의 아이디는 '${mem_id}' 입니다.</label>
                             </c:if>
 
                         </ul>

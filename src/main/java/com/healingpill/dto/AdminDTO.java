@@ -17,7 +17,6 @@ public class AdminDTO {
     private String mem_sex;
     private Date mem_register_datetime;
     private String mem_is_admin;
-
     private int mem_point;
 
     public int getMem_num() {

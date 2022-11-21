@@ -19,7 +19,7 @@
 <!-- partial -->
 <div class="main-panel">
     <div class="content-wrapper">
-        <form role="form" method="post" action="/admin2/write" id="magazineForm" name="magazineForm">
+        <form role="form" method="post" autocomplete="off" enctype="multipart/form-data" id="magazineForm" name="magazineForm"  action="/admin/write">
             <div class="page-header">
                 <h3 class="page-title">
                     <b>매거진 등록</b>
@@ -39,11 +39,12 @@
                             <p class="card-description">
                                 매거진 등록
                             </p>
+                            <br><br>
                             <div id="sform">
                                 <div class="form-group">
                                     <div class="select_img"><img src="" /></div><br><br>
-                                    <input type="file" id="mg_image" name="mg_image" class="file-upload-default">
-                                    <button class="file-upload-browse btn btn-gradient-info btn-rounded btn-fw" type="button"><i class="mdi mdi-upload btn-icon-prepend"></i>Upload</button><br><br>
+                                    <input type="file" id="mg_image" name="file" class="file-upload-default">
+                                    <button class="file-upload-browse btn btn-gradient-danger btn-rounded btn-fw" type="button"><i class="mdi mdi-upload btn-icon-prepend"></i>Upload</button><br><br>
                                     <input type="text" class="form-control file-upload-info" style="text-align:center"; disabled placeholder="선택된 파일 없음">
                                     <script>
                                         $("#mg_image").change(function (){
@@ -59,12 +60,19 @@
                                     <br><%= request.getSession().getServletContext().getRealPath("/")%>
                                 </div>
                             </div>
+                            <!--
+                            <div class="form_group">
+                                <label for = "mg_image">사진 추가</label><input type="file" class="form-control" id="mg_image" name="mg_image" placeholder="매거진 사진" value="">
+
+                            </div>
+                            -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
+                            <br><br>
                             <div class="form-group">
                                 <label>매거진 제목</label>
                                 <input type="text" class="form-control form-control-lg" id="mg_title" name="mg_title" placeholder="Magazine title" aria-label="Magazine title">

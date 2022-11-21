@@ -22,4 +22,12 @@ public class MemberJoinServiceImpl implements MemberJoinService{
     public MemberDTO idCheck(String mem_id) throws Exception {
         return memberJoinDAO.idCheck(mem_id);
     }
+    //아이디 중복 체크
+    @Override
+    public int idChk(String mem_id) throws Exception {
+        int result = memberJoinDAO.idChk(mem_id);
+        return result;
+    }
+
+
 }

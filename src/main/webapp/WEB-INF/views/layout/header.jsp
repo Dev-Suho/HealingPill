@@ -39,6 +39,7 @@
     <!-- 추가 -->
     <link rel="stylesheet" href="resources/shops/css/main.css" />
 
+
     <!-- ==== WOW JS ==== -->
     <script src="resources/assets/js_login/wow.min.js"></script>
     <script>
@@ -97,6 +98,10 @@
                                         <li class="nav-item"><a href="/magazine">매거진</a></li>
                                         <%--<li class="nav-item"><a href="/event">이벤트 정보 안내</a></li>--%>
                                     </ul>
+                                </li>
+                                <!-- 관리자 로그인 시 관리자 버튼 누를 수 있게 -->
+                                <li class="nav-item">
+                                    <a href="admin/customer" class="active" aria-label="Toggle navigation">관리자</a>
                                 </li>
                             </ul>
                         </div> <!-- navbar collapse -->

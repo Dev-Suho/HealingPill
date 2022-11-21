@@ -30,6 +30,12 @@
         where MEM_ID = #{mem_id, jdbcType = VARCHAR}
     </select>
 
+    <!-- 아이디 중복 체크 -->
+    <select id="idChk" resultType="int">
+        SELECT COUNT(*) FROM MEMBER
+        WHERE MEM_ID  = #{mem_id}
+    </select>
+
     <select id="findId" resultType="com.healingpill.dto.MemberDTO">
         select * from MEMBER
         where MEM_PHONE = #{mem_phone, jdbcType = VARCHAR}
@@ -68,4 +74,9 @@
     <delete id="memberDelete" parameterType="int">
         DELETE MEMBER WHERE MEM_NUM = #{mem_num, jdbcType = NUMERIC}
     </delete>
+
+    <!-- mypage 주문 내역 -->
+    <select id="myPageOrder">
+        select A.MEM_NUM, B.* from member A, order_request B  WHERE  A.MEM_ID = B.MEM_ID and A.MEM_NUM = #{mem_num};
+    </select>
 </mapper>

@@ -1,8 +1,10 @@
 package com.healingpill.dto;
 
+import org.apache.ibatis.session.ResultHandler;
+
 import java.util.Date;
 
-public class MemberDTO {
+public class MemberDTO  {
     public MemberDTO() {
     }
 

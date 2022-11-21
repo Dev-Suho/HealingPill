@@ -21,6 +21,12 @@ public class RecommendController {
     @Inject
     private RecommendService recommendService;
 
+    // 마이페이지 나만의 영양제
+    @RequestMapping(value = "/Mypage_survey")
+    public String mypageSurvey() {
+        return "Mypage_survey";
+    }
+
     // 나만의 영양제 찾기 페이지
     @RequestMapping(value = "/survey")
     public String survey() {
