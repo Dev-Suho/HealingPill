@@ -16,7 +16,6 @@ import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
-import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.List;
@@ -199,12 +198,6 @@ public class AdminController2 {
         return "admin2/magazine_list";
     }
 
-    @RequestMapping(value = "/admin2/magazineView", method = RequestMethod.GET)
-    public void adminMagazineView(@RequestParam("n") int mg_no, Model model) throws Exception{
-
-        BoardVO boardVO = service.adminMagazineView(mg_no);
-        model.addAttribute("magazine", boardVO);
-    }
 
     // 5-1. 매거진 작성
     @RequestMapping(value = "/admin2/magazine_add")
@@ -213,17 +206,42 @@ public class AdminController2 {
     }
 
     @RequestMapping(value = "/write", method = RequestMethod.POST)
-    public String write(BoardVO boardVO) throws Exception {
+    public String write(BoardVO boardVO, MultipartFile file) throws Exception {
+
+        //사진 업로드
+        String imgUploadPath = uploadPath + File.separator + "imgUpload";
+        String ymdPath = UploadFileUtils.calcPath(imgUploadPath);
+        String fileName = null;
+
+        if(file != null) {
+            fileName = UploadFileUtils.fileUpload(imgUploadPath, file.getOriginalFilename(), file.getBytes(), ymdPath);
+        }
+        else {
+            fileName = uploadPath + File.separator + "images" + File.separator + "none.png";
+        }
+
+        boardVO.setMg_image(File.separator + "imgUpload" + ymdPath + File.separator + fileName);
+
         service.write(boardVO);
         return "redirect:/admin2/magazine_list";
     }
 
     // 5-2. 매거진 삭제
+
     @RequestMapping(value = "magazine/delete", method = RequestMethod.GET)
     public String Magazinedelete(@RequestParam("mg_no") int mg_no) throws Exception {
         service.delete(mg_no);
 
         return "redirect:/admin2/magazine_list";
+    }
+
+
+    // 5-4. 매거진 조회
+    @RequestMapping(value = "/admin2/magazineView", method = RequestMethod.GET)
+    public void adminMagazineView(@RequestParam("n") int mg_no, Model model) throws Exception{
+
+        BoardVO boardVO = service.adminMagazineView(mg_no);
+        model.addAttribute("magazine", boardVO);
     }
 
     // 5-5 매거진 수정 페이지

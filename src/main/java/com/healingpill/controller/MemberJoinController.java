@@ -22,6 +22,7 @@ public class MemberJoinController {
     @Autowired
     MemberJoinServiceImpl memberJoinServiceImpl;
 
+    @Autowired
     private MemberJoinService memberJoinService;
 
     @RequestMapping(value = "Join")
@@ -75,6 +76,15 @@ public class MemberJoinController {
             result = 1;
         }
 
+        return result;
+    }
+
+    @RequestMapping(value = "/idChk", method = RequestMethod.POST)
+    @ResponseBody
+    public int idChk(String mem_id) throws Exception {
+        logger.info("idChk Controller");
+        logger.info(mem_id);
+        int result = memberJoinService.idChk(mem_id);
         return result;
     }
 }
