@@ -137,7 +137,7 @@
                                                 <div class="cart-single-list">
                                                     <div class="row align-items-center">
                                                         <div class="col-lg-1 col-md-1 col-12">
-                                                            <a href="allProducts"><img src="resources\ ${products.pd_subImage}"></a>
+                                                            <a href="allProducts"><img src="${products.pd_subImage}"></a>
                                                         </div>
                                                         <div class="col-lg-4 col-md-3 col-12">
                                                             <h5 class="product-name"><a href="allProductsDetail?itemId=${products.pd_num}">
@@ -165,7 +165,7 @@
                                                     <div class="single-form form-default">
                                                         <label>포인트 사용</label>
                                                         <div class="form-input form">
-                                                            <input name="usePoint" type="text" placeholder="사용할 포인트를 입력해주세요">
+                                                            <input name="usePoint" type="text" placeholder="사용할 포인트를 입력해주세요" value="0">
                                                             <p>현재 보유하신 포인트 : <fmt:formatNumber value="${member.mem_point}" pattern="###,###,###원"/></p>
                                                         </div>
                                                     </div>

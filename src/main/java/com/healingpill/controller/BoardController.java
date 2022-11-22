@@ -34,9 +34,16 @@ public class BoardController {
     @Inject
     BoardService service;
 
-    // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
     @Resource(name = "uploadPath")
     private String uploadPath;
+
+    //게시판 글 삭제
+
+    @RequestMapping(value = "/admin/delete", method = RequestMethod.POST)
+    public String delete(@RequestParam("num") int mg_no) throws Exception {
+        service.delete(mg_no);
+        return "redirect:/admin/cm_magazine";
+    }
 
     // 게시글 조회
     @RequestMapping(value = "/magazine", method = RequestMethod.GET)
@@ -60,6 +67,7 @@ public class BoardController {
     @RequestMapping(value = "/admin/magazine_list")
     public String adminmagazine_list() { return "/admin/magazine_list";}
 
+    //관리자 게시글 보기
     @RequestMapping(value = "/admin/magazine_list", method = RequestMethod.GET)
     public String ProductView(Model model) throws Exception {
 

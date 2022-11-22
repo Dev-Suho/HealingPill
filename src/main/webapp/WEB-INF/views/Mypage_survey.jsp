@@ -21,8 +21,8 @@
                     <h1 class="page-title">마이페이지</h1><br>
                     <div class="button wow fadeInUp" data-wow-delay=".8s">
                         <a href="/Mypage" class="btn">회원 정보 수정</a>
-                        <a href="/Mypage_order?id=${member.mem_id}" class="btn">주문 내역</a>
-                        <a href="/Mypage_survey" class="btn">나만의 영양제 결과보기</a>
+                        <a href="/myOrder?id=${member.mem_id}" class="btn">주문 내역</a>
+                        <a href="/myPageSurvey?id=${member.mem_id}" class="btn">나만의 영양제 결과보기</a>
                     </div>
                 </div>
             </div>
@@ -42,19 +42,19 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr class="table-primary">
-                            <th> # </th>
                             <th> 설문 일자 </th>
                             <th> 카테고리 코드 </th>
                             <th> 카테고리 이름 </th>
                         </tr>
                         </thead>
                         <tbody>
+                        <c:forEach items="${survey}" var="survey">
                         <tr>
-                            <td> 1 </td>
-                            <td> 2022-11-19 </td>
-                            <td> 100 </td>
-                            <td> 비타민 </td>
+                            <td> <fmt:formatDate value="${survey.rc_register_datetime}" pattern="yyyy-MM-dd"></fmt:formatDate></td>
+                            <td> ${survey.ctg_code} </td>
+                            <td> ${survey.ctg_name} </td>
                         </tr>
+                        </c:forEach>
                         </tbody>
                     </table>
                 </form>

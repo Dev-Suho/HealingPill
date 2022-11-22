@@ -47,5 +47,4 @@ public class OrderDAOImpl implements OrderDAO{
     public void deleteCart(OrderDTO orderDTO) throws Exception {
         sqlSession.delete(NAMESPACE + "deleteCart", orderDTO);
     }
-
 }

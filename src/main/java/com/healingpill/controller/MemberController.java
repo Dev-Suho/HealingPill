@@ -1,9 +1,6 @@
 package com.healingpill.controller;
 
-import com.healingpill.dto.AdminDTO;
-import com.healingpill.dto.MemberDTO;
-import com.healingpill.dto.OrderDTO;
-import com.healingpill.dto.ProductVO;
+import com.healingpill.dto.*;
 import com.healingpill.service.MemberLoginService;
 import com.healingpill.service.MemberModifyService;
 import com.healingpill.service.MemberService;
@@ -35,6 +32,7 @@ public class MemberController {
     @Autowired
     private MemberLoginService memberLoginService;
 
+
     // 회원정보 수정 페이지
     @RequestMapping(value = "/MypageModify", method = RequestMethod.GET)
     public String getMyPageModify(@RequestParam("num") int mem_num, Model model) throws Exception {
@@ -45,6 +43,7 @@ public class MemberController {
         return "/MypageModify";
     }
     // 회원정보 수정
+
     @RequestMapping(value = "/MypageModify", method = RequestMethod.POST)
     public String postMyPageModify(MemberDTO memberDTO, HttpServletRequest request) throws Exception {
         memberModifyService.myPageModify(memberDTO);
@@ -74,33 +73,31 @@ public class MemberController {
         return "redirect:/";
     }
 
-    /*
-    @RequestMapping (value = "/Mypage_order", method = RequestMethod.GET)
-    public String mem_orderList(HttpSession session , OrderDTO order, Model model) throws Exception {
+    @RequestMapping(value = "myOrder", method = RequestMethod.GET)
+    public String myOrder(@RequestParam("id") String mem_id, Model model) throws Exception {
 
-        MemberDTO member = (MemberDTO) session.getAttribute("member");
-        String userID = member.getMem_id();
+        List<OrderDTO> orderDTO = memberService.myPageOrder(mem_id);
 
-        order.setMem_id(userID);
+        model.addAttribute("order", orderDTO);
 
-        List<OrderDTO> mem_orderList = memberService.mem_orderList(order);
-
-        model.addAttribute("orderList", mem_orderList);
-
-        return "/Mypage_order";
-
+        return "Mypage_order";
     }
 
-     */
-    @RequestMapping(value = "/Mypage_order", method = RequestMethod.GET)
-    public String myOrder(@RequestParam("id") String mem_id ,Model model) throws Exception {
+    // 회원 주문내역 제품 상세 정보
+    @RequestMapping(value = "myPageorderDetail", method = RequestMethod.GET)
+    public String  myPageorderDetail(@RequestParam("order") String order_id , Model model) throws Exception {
 
-        System.out.println(mem_id);
+        List<OrderDetailDTO> OrderDetailDTO = memberService.myPageorderDetail(order_id);
 
-        List<OrderDTO> order = memberService.myPageOrder(mem_id);
-        model.addAttribute("order", order);
+        model.addAttribute("myPageorderDetail", OrderDetailDTO);
+        return "Mypage_orderDetail";
+    }
 
+    @RequestMapping(value = "myPageSurvey", method = RequestMethod.GET)
+    public String myPageSurvey(@RequestParam("id") String mem_id, Model model) throws Exception{
+        List<RecommendDTO> recommendDTO = memberService.myPageSurvey(mem_id);
+        model.addAttribute("survey", recommendDTO);
 
-        return "/Mypage_order";
+        return "Mypage_survey";
     }
 }

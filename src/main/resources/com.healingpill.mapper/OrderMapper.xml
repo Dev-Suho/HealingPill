@@ -46,8 +46,10 @@
         delete CART where mem_id = #{mem_id, jdbcType = VARCHAR}
     </delete>
 
-    <!-- 회원 주문 조회 -->
-    <select id="myPageOrder" resultType="com.healingpill.dto.OrderDTO">
-        SELECT * FROM ORDER_REQUEST WHERE mem_id = #{mem_id}
+    <!-- 제품 상세 조회 -->
+    <select id="myPageorderDetail" parameterType="String" resultType="com.healingpill.dto.OrderDetailDTO">
+        SELECT * FROM ORDER_ITEM
+        WHERE ORDER_ID=#{order_id , jdbcType = VARCHAR}
     </select>
+
 </mapper>

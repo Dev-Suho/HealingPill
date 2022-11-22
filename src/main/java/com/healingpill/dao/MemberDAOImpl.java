@@ -1,7 +1,8 @@
 package com.healingpill.dao;
 
 import com.healingpill.dto.OrderDTO;
-//import com.sun.org.apache.xml.internal.utils.NameSpace;
+import com.healingpill.dto.OrderDetailDTO;
+import com.healingpill.dto.RecommendDTO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -17,14 +18,18 @@ public class MemberDAOImpl implements MemberDAO {
     private SqlSession sqlSession;
 
     @Override
-    public List<OrderDTO> mem_orderList(OrderDTO orderDTO) throws Exception {
-        return sqlSession.selectList(NAMESPACE + "mem_orderList", orderDTO);
+    public List<OrderDTO> myPageOrder(String mem_id) throws Exception {
+        return sqlSession.selectList(NAMESPACE + "myPageOrder", mem_id);
+
     }
 
     @Override
-    public List<OrderDTO> myPageOrder(String mem_id) throws Exception {
-        return sqlSession.selectList("order.myPageOrder", mem_id);
+    public List<OrderDetailDTO> myPageorderDetail(String order_id) throws Exception{
+        return sqlSession.selectList( "order.myPageorderDetail", order_id);
     }
 
-
+    @Override
+    public List<RecommendDTO> myPageSurvey(String mem_id) throws Exception {
+        return sqlSession.selectList(NAMESPACE + "myPageSurvey", mem_id);
+    }
 }
