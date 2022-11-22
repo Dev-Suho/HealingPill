@@ -9,6 +9,16 @@ public class OrderDetailDTO {
     // 테이블에 없는 값
     private String mem_id;
 
+    private String pd_name;
+
+    public String getPd_name() {
+        return pd_name;
+    }
+
+    public void setPd_name(String pd_name) {
+        this.pd_name = pd_name;
+    }
+
     public int getOrderItem_id() {
         return orderItem_id;
     }

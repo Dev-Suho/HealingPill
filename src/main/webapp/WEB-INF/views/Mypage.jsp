@@ -74,7 +74,10 @@
                     <tr>
                         <th class="table-primary"><b>주소</b></th>
                         <td>${member.mem_address}</td>
-                    </tr>
+                    </tr><tr>
+                    <th class="table-primary"><b>포인트</b></th>
+                    <td>${member.mem_point}</td>
+                </tr>
                     <%--<tr>
                         <th class="table-primary"><b>누적 주문 횟수</b></th>
                         <td></td>

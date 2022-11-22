@@ -5,6 +5,26 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>HealingPill Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="/resources/admin/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/resources/admin/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/resources/admin/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="/resources/assets/images/favicon.svg" />
+  <style>
+    th, td {
+      text-align: center;
+    }
+  </style>
+</head>
+
 <style>
   th, td {
     text-align: center;
@@ -42,8 +62,8 @@
                   </thead>
                   <tbody>
                   <c:forEach var="myPageorderDetail" items="${myPageorderDetail}">
-                    <tr>
-                      <td class="data_td">${myPageorderDetail.pd_num}</td>
+                    <tr >
+                      <td class="data_td" onclick="location.href='/allProductsDetail?itemId=${myPageorderDetail.pd_num}'">${myPageorderDetail.pd_num}</td>
                       <td class="data_td">${myPageorderDetail.order_stock}</td>
                       <td class="data_td"><fmt:formatNumber value="${myPageorderDetail.pd_price}" pattern="###,###,###"/></td>
                     </tr>
@@ -53,24 +73,6 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">총 결제 금액</h4>
-                <p class="card-description">
-                  주문 건 결제 금액 + 배송비 = 총 결제 금액
-                </p>
-                <div class="col-md-4 d-flex align-items-center">
-                  <div class="d-flex flex-row align-items-center">
-                    <i class="mdi mdi-coin icon-lg text-warning"></i>
-                    <p class="mb-0 ml-1">
-                    <h3></h3>
-                    </p>
-                  </div>
-                </div>
 
-              </div>
-            </div>
-          </div>
 </section>
 <!--/ End Shopping Cart -->
