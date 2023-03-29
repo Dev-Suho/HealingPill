@@ -3,6 +3,7 @@ package com.healingpill.controller;
 import com.healingpill.dto.MemberDTO;
 import com.healingpill.dto.RecommendDTO;
 import com.healingpill.service.RecommendService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +19,12 @@ import java.util.List;
 @Controller
 public class RecommendController {
 
-    @Inject
-    private RecommendService recommendService;
+    private final RecommendService recommendService;
+
+    @Autowired
+    public RecommendController(RecommendService recommendService) {
+        this.recommendService = recommendService;
+    }
 
     // 마이페이지 나만의 영양제
     @RequestMapping(value = "/Mypage_survey")

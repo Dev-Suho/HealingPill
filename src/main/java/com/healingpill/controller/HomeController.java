@@ -9,6 +9,7 @@ import com.healingpill.service.BoardService;
 import com.healingpill.service.ShopService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,8 +24,13 @@ public class HomeController {
 
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
 
-    @Inject
-    ShopService shopService;
+
+    private final ShopService shopService;
+
+    @Autowired
+    public HomeController(ShopService shopService) {
+        this.shopService = shopService;
+    }
 
     // 메인 페이지
     @RequestMapping(value = {"/", "/healingPill"})
@@ -38,9 +44,9 @@ public class HomeController {
 
     // 마이 페이지
     @RequestMapping(value = "/Mypage" , method = RequestMethod.GET)
-    public String Mypage() { return "/Mypage"; }
+    public String myPage() { return "/Mypage"; }
     @RequestMapping(value = "/Mypage_orderDetail" , method = RequestMethod.GET)
-    public String Mypage_orderDetail() { return "/Mypage_orderDetail"; }
+    public String myPage_orderDetail() { return "/Mypage_orderDetail"; }
     // FAQ 페이지 이동
     @RequestMapping(value = "/faq", method = RequestMethod.GET)
     public String faqGET() {

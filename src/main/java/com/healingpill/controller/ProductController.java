@@ -9,6 +9,7 @@ import com.healingpill.service.ProductModifyService;
 import com.healingpill.service.ProductRegisterService;
 import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,14 +26,19 @@ import java.util.List;
 @RequestMapping("/admin/*")
 public class ProductController {
 
-    @Inject
-    ProductCategoryService productCategoryService;
-    @Inject
-    ProductRegisterService productRegisterService;
-    @Inject
-    ProductListService productListService;
-    @Inject
-    ProductModifyService productModifyService;
+
+    private final ProductCategoryService productCategoryService;
+    private final ProductRegisterService productRegisterService;
+    private final ProductListService productListService;
+    private final ProductModifyService productModifyService;
+
+    @Autowired
+    public ProductController(ProductCategoryService productCategoryService, ProductRegisterService productRegisterService, ProductListService productListService, ProductModifyService productModifyService) {
+        this.productCategoryService = productCategoryService;
+        this.productRegisterService = productRegisterService;
+        this.productListService = productListService;
+        this.productModifyService = productModifyService;
+    }
 
     // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
     @Resource(name = "uploadPath")

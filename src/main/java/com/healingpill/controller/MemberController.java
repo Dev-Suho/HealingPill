@@ -23,15 +23,16 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class MemberController {
 
-    @Inject
-    MemberModifyService memberModifyService;
-
-    @Inject
-    MemberService memberService;
+    private final MemberModifyService memberModifyService;
+    private final MemberService memberService;
+    private final MemberLoginService memberLoginService;
 
     @Autowired
-    private MemberLoginService memberLoginService;
-
+    public MemberController(MemberModifyService memberModifyService, MemberService memberService, MemberLoginService memberLoginService) {
+        this.memberModifyService = memberModifyService;
+        this.memberService = memberService;
+        this.memberLoginService = memberLoginService;
+    }
 
     // 회원정보 수정 페이지
     @RequestMapping(value = "/MypageModify", method = RequestMethod.GET)

@@ -5,6 +5,7 @@ import com.healingpill.service.MemberLoginService;
 import com.healingpill.service.OrderService;
 import com.healingpill.service.ProductListService;
 import com.healingpill.service.ShopService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,17 +21,19 @@ import java.util.List;
 
 @Controller
 public class OrderController {
-    @Inject
-    OrderService orderService;
 
-    @Inject
-    ShopService shopService;
+    private final OrderService orderService;
+    private final ShopService shopService;
+    private final ProductListService productListService;
+    private final MemberLoginService memberLoginService;
 
-    @Inject
-    ProductListService productListService;
-
-    @Inject
-    MemberLoginService memberLoginService;
+    @Autowired
+    public OrderController(OrderService orderService, ShopService shopService, ProductListService productListService, MemberLoginService memberLoginService) {
+        this.orderService = orderService;
+        this.shopService = shopService;
+        this.productListService = productListService;
+        this.memberLoginService = memberLoginService;
+    }
 
     @ResponseBody
     @RequestMapping(value = "/confirm", method = RequestMethod.POST)

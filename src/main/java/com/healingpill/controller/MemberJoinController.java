@@ -19,11 +19,14 @@ public class MemberJoinController {
     // 로그 기록을 남기기 위한 Logger 클래스
     private static final Logger logger = LoggerFactory.getLogger(MemberJoinController.class);
 
-    @Autowired
-    MemberJoinServiceImpl memberJoinServiceImpl;
+    private final MemberJoinServiceImpl memberJoinServiceImpl;
+    private final MemberJoinService memberJoinService;
 
     @Autowired
-    private MemberJoinService memberJoinService;
+    public MemberJoinController(MemberJoinServiceImpl memberJoinServiceImpl, MemberJoinService memberJoinService) {
+        this.memberJoinServiceImpl = memberJoinServiceImpl;
+        this.memberJoinService = memberJoinService;
+    }
 
     @RequestMapping(value = "Join")
     public String memberJoin() {

@@ -3,6 +3,7 @@ package com.healingpill.controller;
 import com.healingpill.dto.*;
 import com.healingpill.service.ProductListService;
 import com.healingpill.service.ShopService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,11 +19,14 @@ import java.util.List;
 @Controller
 public class ShopController {
 
-    @Inject
-    ProductListService productListService;
+    private final ProductListService productListService;
+    private final ShopService shopService;
 
-    @Inject
-    ShopService shopService;
+    @Autowired
+    public ShopController(ProductListService productListService, ShopService shopService) {
+        this.productListService = productListService;
+        this.shopService = shopService;
+    }
 
     // 전 제품 보기 페이지
     @RequestMapping(value = "/allProducts", method = RequestMethod.GET)

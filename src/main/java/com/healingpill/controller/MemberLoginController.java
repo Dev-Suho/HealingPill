@@ -21,8 +21,13 @@ import java.io.PrintWriter;
 public class MemberLoginController {
     private Logger logger = LoggerFactory.getLogger(MemberLoginController.class);
 
+
+    private final MemberLoginService memberLoginService;
+
     @Autowired
-    private MemberLoginService memberLoginService;
+    public MemberLoginController(MemberLoginService memberLoginService) {
+        this.memberLoginService = memberLoginService;
+    }
 
     @RequestMapping(value = "/login")
     public String login() {

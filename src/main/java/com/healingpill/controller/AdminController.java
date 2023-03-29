@@ -4,6 +4,7 @@ import com.healingpill.dto.*;
 import com.healingpill.service.*;
 import com.healingpill.utils.UploadFileUtils;
 import net.sf.json.JSONArray;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +21,12 @@ import java.util.List;
 @RequestMapping("/admin/*")
 public class AdminController {
 
-    @Inject
-    AdminService adminService;
+    private final AdminService adminService;
+
+    @Autowired
+    public AdminController(AdminService adminService) {
+        this.adminService = adminService;
+    }
 
     // dispatcher-servlet.xml에서 설정한 uploadPath를 추가
     @Resource(name = "uploadPath")

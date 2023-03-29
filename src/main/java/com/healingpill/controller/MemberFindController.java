@@ -14,8 +14,12 @@ import java.util.logging.Logger;
 @Controller
 public class MemberFindController {
 
+    private final MemberFindService memberFindService;
+
     @Autowired
-    private MemberFindService memberFindService;
+    public MemberFindController(MemberFindService memberFindService) {
+        this.memberFindService = memberFindService;
+    }
 
     @RequestMapping(value = "findIdView", method = RequestMethod.GET)
     public String findIdView() throws Exception {
